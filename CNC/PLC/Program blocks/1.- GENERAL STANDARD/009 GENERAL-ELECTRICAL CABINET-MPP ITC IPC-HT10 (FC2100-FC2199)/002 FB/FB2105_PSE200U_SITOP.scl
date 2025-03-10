@@ -1,0 +1,588 @@
+﻿FUNCTION_BLOCK "FB2105_PSE200U_SITOP"
+{ S7_Optimized_Access := 'FALSE' }
+AUTHOR : DFCS
+FAMILY : SITOP
+NAME : PSE200U
+VERSION : 2.3
+   VAR_INPUT 
+      impulse : Bool;
+      reset : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      done : Bool;
+      busy : Bool;
+      channelState : Byte;
+      status : Word;
+      error : Bool;
+   END_VAR
+
+   VAR 
+      statImpulseOld : Bool;
+      statResetOld : Bool;
+      statTimeSaver : Struct
+         TimeTckRisingEdge : Time;
+         TimeTckFallingEdge : Time;
+         RisingEdgeDetected : Bool;
+         FallingEdgeDetected : Bool;
+         stateEdge : Int;
+      END_STRUCT;
+      statDeltaTimeImpulse : Time;
+      statDeltaTimePause : Time;
+      statStartImpulseDetected : Bool;
+      statImpulseDetected : Bool;
+      statChannelState : Byte;
+      statChannelStateBool { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} AT statChannelState : Array[0..7] of Bool;
+      statTimePauseSave0 : Time;
+      statTimePauseSave1 : Time;
+      statTimePauseSave2 : Time;
+      statTimePauseSave3 : Time;
+      statTimePauseSave4 : Time;
+      statTimeImpulseSave0 : Time;
+      statTimeImpulseSave1 : Time;
+      statTimeImpulseSave2 : Time;
+      statTimeImpulseSave3 : Time;
+      statTimeImpulseSave4 : Time;
+      statFrameImulseDetected : Bool;
+      statNumberOfImpulses : Int;
+      statChannelActive1 : Bool;
+      statChannelActive2 : Bool;
+      statChannelActive3 : Bool;
+      statChannelActive4 : Bool;
+      statCountChannelPos : Int;
+      statCurrentPos1 : Int;
+      statCurrentPos2 : Int;
+      statCurrentPos3 : Int;
+      statCurrentPos4 : Int;
+      statTimeToImpulse : Time;
+      statTimePause : Time;
+      statTimeImpulse : Time;
+      statTimeFrame : Time;
+      statFrameOk : Bool;
+      statCycleTimeNok : Bool;
+      statSysTime : Time;
+      statSysTimeOld : Time;
+      statDeltaSysTime : Time;
+      instSysTimer {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      statSysTimerStart : Bool;
+      statStatus : Word;
+      statIndex : Int;
+      statSysTimerRun : Time;
+      instWatchDogTimerR {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      statWatchDogTimerStartR : Bool;
+      statWatchDogTimerRunR : Time;
+      instWatchDogTimerF {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      statWatchDogTimerStartF : Bool;
+      statWatchDogTimerRunF : Time;
+      statResetRequest : Bool;
+   END_VAR
+
+   VAR_TEMP 
+      tempLatchTime : Time;
+   END_VAR
+
+   VAR CONSTANT 
+      STATE_IDLE : Int := 0;
+      STATE_EVALUATION : Int := 1;
+      STATE_ERROR : Int := 2;
+      TIME_FRAME_MAX : Time := T#2S_850MS;
+      TIME_FRAME_MIN : Time := T#2S_650MS;
+      TIME_STARTIMPULSE_MIN : Time := T#400MS;
+      TIME_STARTIMPULSE_MAX : Time := T#600MS;
+      TIME_IMPULSE_MIN : Time := T#150MS;
+      TIME_IMPULSE_MAX : Time := T#350MS;
+      TIME_PAUSE1_MIN : Time := T#150MS;
+      TIME_PAUSE1_MAX : Time := T#350MS;
+      TIME_PAUSE2_MIN : Time := T#650MS;
+      TIME_PAUSE2_MAX : Time := T#850MS;
+      TIME_PAUSE3_MIN : Time := T#1S_150MS;
+      TIME_PAUSE3_MAX : Time := T#1S_350MS;
+      TIME_PAUSE4_MIN : Time := T#1S_650MS;
+      TIME_PAUSE4_MAX : Time := T#1S_850MS;
+      TIME_PAUSE_FRAME_MIN : Time := T#2S_150MS;
+      TIME_PAUSE_FRAME_MAX : Time := T#2S_350MS;
+   END_VAR
+
+
+BEGIN
+	   
+	    // Calculate cycle time
+	    #statSysTime := TIME_TCK();
+	    #statDeltaSysTime := #statSysTime - #statSysTimeOld;
+	    
+	    IF (#statDeltaSysTime < t#0ms)
+	    THEN
+	        #statDeltaSysTime := #statDeltaSysTime + T#2147483647ms;
+	        
+	        IF #statDeltaSysTime < t#0ms
+	        THEN
+	            #statCycleTimeNok := true;
+	            #statSysTimeOld := #statSysTime;
+	            RETURN;
+	        ELSE
+	            #statCycleTimeNok := false;
+	        END_IF;
+	        
+	    ELSIF #statDeltaSysTime >= t#102ms
+	    THEN
+	        #statCycleTimeNok := true;
+	        #statSysTimerStart := true;
+	    ELSE
+	        #statCycleTimeNok := false;
+	        #statSysTimerStart := false;
+	    END_IF;
+	    
+	    //REGION edgeDetection
+	        
+	        IF ((#reset = true)
+	            AND (#statResetOld = false))
+	        THEN
+	            #statSysTimerStart := false;
+	            #statWatchDogTimerStartR := false;
+	            #statWatchDogTimerStartF := false;
+	            #statResetRequest := true;
+	            #statIndex := #STATE_IDLE;
+	        END_IF;
+	        
+	        //Rising edge at impulse input
+	        IF ((#impulse = True)
+	            AND (#statImpulseOld = False))
+	        THEN
+	            #tempLatchTime := TIME_TCK();
+	            #statTimeSaver.RisingEdgeDetected := true;
+	            #statTimeSaver.stateEdge := 15;
+	            #statTimeSaver.TimeTckRisingEdge := #tempLatchTime;
+	            #statWatchDogTimerStartR := true;
+	            #statWatchDogTimerStartF := false;
+	            
+	            IF (#busy = false) THEN
+	        
+	                #busy := true;
+	                #done := false;
+	                #error := false;
+	                #status := 16#0000;
+	            END_IF;
+	
+	            
+	            IF #statCycleTimeNok = false
+	                AND #statResetRequest = false
+	            THEN
+	                #statIndex := #STATE_EVALUATION;
+	            END_IF;
+	        END_IF;
+	        
+	        //Falling edge at impulse input
+	        IF ((#impulse = False)
+	            AND (#statImpulseOld = True))
+	        THEN
+	            #tempLatchTime := TIME_TCK();
+	            #statTimeSaver.FallingEdgeDetected := true;
+	            #statTimeSaver.stateEdge := 16;
+	            #statTimeSaver.TimeTckFallingEdge := #tempLatchTime;
+	            #statWatchDogTimerStartF:=true;
+	            #statWatchDogTimerStartR:=false;
+	            
+	            IF #statCycleTimeNok = FALSE
+	                AND #statResetRequest = false
+	            THEN
+	                #statIndex := #STATE_EVALUATION;
+	            END_IF;
+	        END_IF;
+	        
+	        
+	    //END_REGION
+	    
+	    IF #statTimeSaver.FallingEdgeDetected = false AND
+	        #statTimeSaver.RisingEdgeDetected = FALSE
+	    THEN
+	        #statWatchDogTimerStartR := true;
+	        #statWatchDogTimerStartF := true;
+	    END_IF;
+	    
+	    CASE #statIndex OF
+	        #STATE_IDLE:  // IDLE_STATE
+	            #done := false;
+	            #error := false;
+	            #busy := false;
+	            #status := 16#0000;
+	            #statStatus := 16#0000;
+	            #channelState := 16#00;
+	            #statChannelState := 16#00;
+	            #statFrameOk := false;
+	            #statCycleTimeNok := false;
+	            #statStartImpulseDetected := false;
+	            #statFrameImulseDetected := false;
+	            #statResetRequest := false;
+	            #statTimeSaver.RisingEdgeDetected:=false;
+	            #statTimeSaver.FallingEdgeDetected:=false;
+	            
+	        #STATE_EVALUATION:  //State: impulse detection
+	            
+	            //Delta time calculation
+	            IF ((#statTimeSaver.RisingEdgeDetected = True)
+	                AND (#statTimeSaver.FallingEdgeDetected = True))
+	            THEN
+	                
+	                IF #statTimeSaver.stateEdge = 15 //pos. edge, evaluate delta pause
+	                THEN
+	                    #statDeltaTimePause := #statTimeSaver.TimeTckRisingEdge - #statTimeSaver.TimeTckFallingEdge;
+	                    
+	                    IF (#statDeltaTimePause < t#0ms)
+	                    THEN
+	                        #statDeltaTimePause := #statDeltaTimePause + T#2147483647ms;
+	                        
+	                        IF (#statDeltaTimePause < t#0ms)
+	                        THEN
+	                            #statIndex := #STATE_IDLE;
+	                            #statTimeSaver.FallingEdgeDetected := false;
+	                            RETURN;
+	                        END_IF;
+	                        
+	                    ELSIF (#statDeltaTimePause > #TIME_FRAME_MAX)
+	                    THEN
+	                        #statIndex := #STATE_IDLE;
+	                        #statTimeSaver.FallingEdgeDetected := false;
+	                        RETURN;
+	                    END_IF;
+	                    #statTimeSaver.FallingEdgeDetected := false;
+	                END_IF;
+	                
+	                IF #statTimeSaver.stateEdge = 16 // neg. edge, evaluate delta impulse
+	                THEN
+	                    #statImpulseDetected := true;
+	                    #statDeltaTimeImpulse := #statTimeSaver.TimeTckFallingEdge - #statTimeSaver.TimeTckRisingEdge;
+	                    
+	                    IF (#statDeltaTimeImpulse < t#0ms)
+	                    THEN
+	                        #statDeltaTimeImpulse := #statDeltaTimeImpulse + T#2147483647ms;
+	                        
+	                        IF (#statDeltaTimeImpulse < t#0ms)
+	                        THEN
+	                            #statIndex := #STATE_IDLE;
+	                            #statTimeSaver.RisingEdgeDetected := false;
+	                            RETURN;
+	                        END_IF;
+	                        
+	                    ELSIF (#statDeltaTimeImpulse > #TIME_FRAME_MAX)
+	                    THEN
+	                        #statIndex := #STATE_IDLE;
+	                        #statTimeSaver.RisingEdgeDetected := false;
+	                        RETURN;
+	                    END_IF;
+	                    #statTimeSaver.RisingEdgeDetected := false;
+	                END_IF;
+	            END_IF;
+	            
+	            //Start bit detection
+	            IF ((#statDeltaTimeImpulse >= #TIME_STARTIMPULSE_MIN)
+	                AND (#statDeltaTimeImpulse <= #TIME_STARTIMPULSE_MAX))
+	                AND (#statImpulseDetected = True)
+	            THEN
+	                #statImpulseDetected := False;
+	                #statNumberOfImpulses := 0;
+	                #statCountChannelPos := 0;
+	                
+	                IF #statCurrentPos1 = 0
+	                THEN
+	                    #statTimeImpulseSave1 := t#0ms;
+	                    #statTimePauseSave1 := t#0ms;
+	                END_IF;
+	                
+	                IF #statCurrentPos2 = 0
+	                THEN
+	                    #statTimeImpulseSave2 := t#0ms;
+	                    #statTimePauseSave2 := t#0ms;
+	                END_IF;
+	                
+	                IF #statCurrentPos3 = 0
+	                THEN
+	                    #statTimeImpulseSave3 := t#0ms;
+	                    #statTimePauseSave3 := t#0ms;
+	                END_IF;
+	                
+	                IF #statCurrentPos4 = 0
+	                THEN
+	                    #statTimeImpulseSave4 := t#0ms;
+	                    #statTimePauseSave4 := t#0ms;
+	                END_IF;
+	                
+	                #statTimePauseSave0 := #statDeltaTimePause;
+	                #statTimeImpulseSave0 := #statDeltaTimeImpulse;
+	                
+	                // get time in sum of imulses
+	                #statTimeImpulse := #statTimeImpulseSave0 + #statTimeImpulseSave1 + #statTimeImpulseSave2 + #statTimeImpulseSave3 + #statTimeImpulseSave4;
+	                
+	                //get time in sum of pauses
+	                #statTimePause := #statTimePauseSave0 + #statTimePauseSave1 + #statTimePauseSave2 + #statTimePauseSave3 + #statTimePauseSave4;
+	                
+	                // get length of frame
+	                #statTimeFrame := #statTimeImpulse + #statTimePause;
+	                
+	                IF (#statTimeFrame >= t#2650ms)
+	                    AND (#statTimeFrame <= #TIME_FRAME_MAX)
+	                    AND (#statTimeToImpulse <= #TIME_FRAME_MIN)
+	                THEN
+	                    #statFrameOk := true;
+	                END_IF;
+	                
+	                IF #statFrameOk = TRUE
+	                    AND #statCycleTimeNok = FALSE
+	                THEN
+	                    // Daten Ã¼bernehmen
+	                    #done := true;
+	                    #busy := false;
+	                    #statFrameOk := false;
+	                    
+	                    IF #statChannelActive1 = true
+	                    THEN
+	                        #statChannelStateBool[0] := false;
+	                    ELSE
+	                        #statChannelStateBool[0] := true;
+	                    END_IF;
+	                    
+	                    IF #statChannelActive2 = true
+	                    THEN
+	                        #statChannelStateBool[1] := false;
+	                    ELSE
+	                        #statChannelStateBool[1] := true;
+	                    END_IF;
+	                    
+	                    IF #statChannelActive3 = true
+	                    THEN
+	                        #statChannelStateBool[2] := false;
+	                    ELSE
+	                        #statChannelStateBool[2] := true;
+	                    END_IF;
+	                    
+	                    IF #statChannelActive4 = true
+	                    THEN
+	                        #statChannelStateBool[3] := false;
+	                    ELSE
+	                        #statChannelStateBool[3] := true;
+	                    END_IF;
+	                    
+	                    #channelState := #statChannelState;
+	                END_IF;
+	                
+	                
+	                // channel 4 ok
+	                IF (#statDeltaTimePause >= #TIME_PAUSE1_MIN) AND
+	                    (#statDeltaTimePause <= #TIME_PAUSE1_MAX)
+	                THEN
+	                    #statChannelActive4 := true;
+	                    // channel 4 ok not ok
+	                ELSIF
+	                    (#statDeltaTimePause >= #TIME_PAUSE2_MIN) AND
+	                    (#statDeltaTimePause <= #TIME_PAUSE2_MAX)
+	                THEN
+	                    #statChannelActive4 := false;
+	                    // channel 3 and 4 not ok    
+	                ELSIF
+	                    (#statDeltaTimePause >= #TIME_PAUSE3_MIN) AND
+	                    (#statDeltaTimePause <= #TIME_PAUSE3_MAX)
+	                THEN
+	                    #statChannelActive3 := false;
+	                    #statChannelActive4 := false;
+	                    // channel 2, 3, 4 not ok
+	                ELSIF
+	                    (#statDeltaTimePause >= #TIME_PAUSE4_MIN) AND
+	                    (#statDeltaTimePause <= #TIME_PAUSE4_MAX)
+	                THEN
+	                    #statChannelActive2 := false;
+	                    #statChannelActive3 := false;
+	                    #statChannelActive4 := false;
+	                    // channel 1, 2, 3, 4 not ok
+	                ELSIF
+	                    (#statDeltaTimePause >= #TIME_PAUSE_FRAME_MIN) AND
+	                    (#statDeltaTimePause <= #TIME_PAUSE_FRAME_MAX)
+	                THEN
+	                    #statChannelActive1 := false;
+	                    #statChannelActive2 := false;
+	                    #statChannelActive3 := false;
+	                    #statChannelActive4 := false;
+	                END_IF;
+	                
+	                #statCountChannelPos := 4;
+	                
+	                #statCurrentPos1 := 0;
+	                #statCurrentPos2 := 0;
+	                #statCurrentPos3 := 0;
+	                #statCurrentPos4 := 0;
+	                
+	                // Imulse bit detection
+	            ELSIF ((#statDeltaTimeImpulse >= #TIME_IMPULSE_MIN)
+	                AND (#statDeltaTimeImpulse <= #TIME_IMPULSE_MAX))
+	                AND (#statImpulseDetected = True)
+	            THEN
+	                #statImpulseDetected := False;
+	                #statFrameImulseDetected := true;
+	            END_IF;
+	            
+	            //Channel detection
+	            
+	            IF #statFrameImulseDetected = TRUE
+	            THEN
+	                #statFrameImulseDetected := FALSE;
+	                
+	                IF #statCountChannelPos = 4
+	                THEN
+	                    #statCurrentPos1 := #statCountChannelPos;
+	                    #statTimeImpulseSave1 := #statDeltaTimeImpulse;
+	                    #statTimePauseSave1 := #statDeltaTimePause;
+	                    #statTimeToImpulse := t#0ms;
+	                    #statTimeToImpulse := #statTimeToImpulse + #statDeltaTimeImpulse + #statDeltaTimePause;
+	                    
+	                    //channel 1 ok
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE1_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE1_MAX)
+	                    THEN
+	                        #statChannelActive1 := true;
+	                        #statCountChannelPos := 1; // Pos 1 detected
+	                    END_IF;
+	                    
+	                    // channel 1 not ok
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE2_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE2_MAX)
+	                    THEN
+	                        #statChannelActive1 := false;
+	                        #statChannelActive2 := true;
+	                        #statCountChannelPos := 2; // go to next Pos 2
+	                    END_IF;
+	                    
+	                    // channel 1 and 2 not ok
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE3_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE3_MAX)
+	                    THEN
+	                        #statChannelActive1 := false;
+	                        #statChannelActive2 := false;
+	                        #statChannelActive3 := true;
+	                        #statCountChannelPos := 2; // go to next Pos 2
+	                    END_IF;
+	                    
+	                    // channel 1, 2 and 3 not ok
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE4_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE4_MAX)
+	                    THEN
+	                        #statChannelActive1 := false;
+	                        #statChannelActive2 := false;
+	                        #statChannelActive3 := FALSE;
+	                        #statChannelActive4 := true;
+	                        #statCountChannelPos := 0;
+	                    END_IF;
+	                ELSIF #statCountChannelPos = 1
+	                THEN
+	                    #statCurrentPos2 := #statCountChannelPos;
+	                    #statTimeImpulseSave2 := #statDeltaTimeImpulse;
+	                    #statTimePauseSave2 := #statDeltaTimePause;
+	                    #statTimeToImpulse := #statTimeToImpulse + #statDeltaTimeImpulse + #statDeltaTimePause;
+	                    
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE1_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE1_MAX)
+	                    THEN
+	                        #statChannelActive2 := true;
+	                        #statCountChannelPos := 2; // go to next pos 2
+	                    END_IF;
+	                    
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE2_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE2_MAX)
+	                    THEN
+	                        #statChannelActive2 := false;
+	                        #statChannelActive3 := true;
+	                        #statCountChannelPos := 2; // go to next Pos 2
+	                    END_IF;
+	                    
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE3_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE3_MAX)
+	                    THEN
+	                        #statChannelActive2 := false;
+	                        #statChannelActive3 := false;
+	                        #statChannelActive4 := true;
+	                        #statCountChannelPos := 0;
+	                    END_IF;
+	                ELSIF #statCountChannelPos = 2
+	                THEN
+	                    #statCurrentPos3 := #statCountChannelPos;
+	                    #statTimeImpulseSave3 := #statDeltaTimeImpulse;
+	                    #statTimePauseSave3 := #statDeltaTimePause;
+	                    #statTimeToImpulse := #statTimeToImpulse + #statDeltaTimeImpulse + #statDeltaTimePause;
+	                    
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE1_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE1_MAX)
+	                    THEN
+	                        #statChannelActive3 := true;
+	                        #statCountChannelPos := 3; // go to next pos 3
+	                    END_IF;
+	                    
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE2_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE2_MAX)
+	                    THEN
+	                        #statChannelActive3 := false;
+	                        #statChannelActive4 := true;
+	                        #statCountChannelPos := 0;
+	                    END_IF;
+	                ELSIF #statCountChannelPos = 3
+	                THEN
+	                    #statCurrentPos4 := #statCountChannelPos;
+	                    #statTimeImpulseSave4 := #statDeltaTimeImpulse;
+	                    #statTimePauseSave4 := #statDeltaTimePause;
+	                    #statTimeToImpulse := #statTimeToImpulse + #statDeltaTimeImpulse + #statDeltaTimePause;
+	                    
+	                    IF (#statDeltaTimePause >= #TIME_PAUSE1_MIN)
+	                        AND (#statDeltaTimePause <= #TIME_PAUSE1_MAX)
+	                    THEN
+	                        #statChannelActive4 := true;
+	                    END_IF;
+	                    #statCountChannelPos := 0; // go to pos 0
+	                END_IF;
+	            END_IF;
+	            
+	        #STATE_ERROR:
+	            #error := true;
+	            #busy := false;
+	            #done := false;
+	            #statSysTimerStart := false;
+	            #statWatchDogTimerStartR := false;
+	            #statWatchDogTimerStartF := false;
+	            #status := #statStatus;
+	            #statStatus := w#16#0000;
+	            #statIndex := #STATE_IDLE;
+	        ELSE  // Statement section ELSE
+	            #statIndex := #STATE_IDLE;
+	    END_CASE;
+	    
+	    #instWatchDogTimerR(IN := #statWatchDogTimerStartR,
+	                       PT := t#6s);
+	    #statWatchDogTimerRunR:= #instWatchDogTimerR.ET;
+	    
+	    
+	    #instWatchDogTimerF(IN := #statWatchDogTimerStartF,
+	                       PT := t#6s); 
+	    #statWatchDogTimerRunF:= #instWatchDogTimerF.ET;
+	          
+	    #instSysTimer(IN := #statSysTimerStart,
+	                  PT := T#4s);
+	    #statSysTimerRun:= #instSysTimer.ET; 
+	    
+	    IF  (#instWatchDogTimerR.Q = true)
+	        OR (#instWatchDogTimerF.Q = true)
+	        THEN
+	        #statIndex := #STATE_ERROR;
+	        #statStatus := 16#8002;
+	    END_IF;
+	      
+	    
+	    IF #instSysTimer.Q=true
+	    THEN
+	        #statIndex := #STATE_ERROR;
+	        #statStatus := 16#8001;
+	    END_IF;
+	    
+	    //Edge control
+	    #statImpulseOld := #impulse;
+	    #statResetOld := #reset;
+	    
+	    // Cycle time control
+	    #statSysTimeOld := #statSysTime;
+	
+END_FUNCTION_BLOCK
+

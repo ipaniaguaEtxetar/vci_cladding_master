@@ -1,0 +1,162 @@
+﻿FUNCTION_BLOCK "FB7238_VARIABLES_PLC_HMI_FEEDERS"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      GAS_FLOW_RATE_ACTUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      GAS_FLOW_RATE_AUTO { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      DISC_SPEED_ACTUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      DISC_SPEED_AUTO { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_ACTUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_AUTO { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      HOPPER_TEMP_ACTUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      HOPPER_TEMP_AUTO { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      HEATER_STATUS { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      HOPPER_STATUS { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      SELECTED_GAS : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      HEATER_ON { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      HOPPER_ON { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      DISC_SPEED_WARN_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      DISC_SPEED_ALRM_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      DISC_SPEED_WARN_LOW_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      DISC_SPEED_ALRM_LOW_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      GAS_FLOW_RATE_WARN_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      GAS_FLOW_RATE_ALRM_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      GAS_FLOW_RATE_WARN_LOW_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      GAS_FLOW_RATE_ALRM_LOW_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_WARN_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_ALRM_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_WARN_LOW_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_ALRM_LOW_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      TEMP_ALRM_UP_LIMIT { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      HOPPER_TEMP_MANUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      STIRRER_SPEED_MANUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      DISC_SPEED_MANUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      GAS_FLOW_RATE_MANUAL { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      HOPPER_ON_REQ : Bool;
+      HOPPER_OFF_REQ : Bool;
+      HEATER_ON_REQ : Bool;
+      HEATER_OFF_REQ : Bool;
+      START_SEQUENCE_GAS_STEPS { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      START_SEQUENCE_DISK_STEPS { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      STOP_SEQUENCE_GAS_STEPS { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      STOP_SEQUENCE_DISK_STEP { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      STOP_SEQUENCE_PAUSE_STEP { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      SELECTED_ARGON_GAS : Bool;
+      SELECTED_NITROGEN_GAS : Bool;
+      SELECTED_HELIUM_GAS : Bool;
+      SELECTED_ARGON30_GAS : Bool;
+   END_VAR
+
+   VAR_IN_OUT 
+      FEEDER_LINE_OUT : "UDT_Feeder Line";
+   END_VAR
+
+
+BEGIN
+	// HOPPER ON REQUEST
+	#HOPPER_ON_REQ := #FEEDER_LINE_OUT.HOPPER_ON_MANUAL_REQUEST;
+	// HOPPER OFF REQUEST
+	#HOPPER_OFF_REQ := #FEEDER_LINE_OUT.HOPPER_OFF_MANUAL_REQUEST;
+	// HEATER ON REQUEST
+	#HEATER_ON_REQ := #FEEDER_LINE_OUT.HEATER_ON_MANUAL_REQUEST;
+	// HEATER OFF REQUEST
+	#HEATER_OFF_REQ := #FEEDER_LINE_OUT.HEATER_OFF_MANUAL_REQUEST;
+	// GAS FLOW RATE ACTUAL
+	#FEEDER_LINE_OUT.GAS_FLOW_RATE_ACTUAL := #GAS_FLOW_RATE_ACTUAL;
+	// GAS FLOW RATE AUTO
+	#FEEDER_LINE_OUT.GAS_FLOW_RATE_AUTO := #GAS_FLOW_RATE_AUTO;
+	// GAS FLOW RATE MANUAL
+	#GAS_FLOW_RATE_MANUAL := #FEEDER_LINE_OUT.GAS_FLOW_RATE_MANUAL;
+	// DISC SPEED ACTUAL
+	#FEEDER_LINE_OUT.DISC_SPEED_ACTUAL := #DISC_SPEED_ACTUAL;
+	// DISC SPEED AUTO
+	#FEEDER_LINE_OUT.DISC_SPEED_AUTO := #DISC_SPEED_AUTO;
+	// DISC SPEED MANUAL
+	#DISC_SPEED_MANUAL := #FEEDER_LINE_OUT.DISC_SPEED_MANUAL;
+	// STIRRER SPEED ACTUAL
+	#FEEDER_LINE_OUT.STIRRER_SPEED_ACTUAL := #STIRRER_SPEED_ACTUAL;
+	// STIRRER SPEED AUTO
+	#FEEDER_LINE_OUT.STIRRER_SPEED_AUTO := #STIRRER_SPEED_AUTO;
+	// STIRRER SPEED MANUAL
+	#STIRRER_SPEED_MANUAL := #FEEDER_LINE_OUT.STIRRER_SPEED_MANUAL;
+	// HOPPER TEMPERATURE ACTUAL
+	#FEEDER_LINE_OUT.HOPPER_TEMP_ACTUAL := #HOPPER_TEMP_ACTUAL;
+	// HOPPER TEMPERATURE AUTO
+	#FEEDER_LINE_OUT.HOPPER_TEMP_AUTO := #HOPPER_TEMP_AUTO;
+	// HOPPER TEMPERATURE MANUAL
+	#HOPPER_TEMP_MANUAL := #FEEDER_LINE_OUT.HOPPER_TEMP_MANUAL;
+	(* // HEATER ON
+	#HEATER_ON := #FEEDER_LINE_OUT."Heater ON Manual Request"; *)
+	// HEATER STATUS
+	#FEEDER_LINE_OUT.HEATER_STATUS := #HEATER_STATUS;
+	(* // HOPPER ON
+	#HOPPER_ON := #FEEDER_LINE_OUT."Hopper ON Manual Request"; *)
+	// HOPPER STATUS
+	#FEEDER_LINE_OUT.HOPPER_STATUS := #HOPPER_STATUS;
+	//SELECTED GAS
+	#SELECTED_ARGON_GAS := #SELECTED_GAS = 1;
+	#SELECTED_NITROGEN_GAS := #SELECTED_GAS = 2;
+	#SELECTED_HELIUM_GAS := #SELECTED_GAS = 3;
+	#SELECTED_ARGON30_GAS := #SELECTED_GAS = 4;
+	
+	// START SEQUENCE GAS STEPS
+	IF #FEEDER_LINE_OUT.START_SEQUENCE_GAS_STEPS >= 5 THEN
+	    #START_SEQUENCE_GAS_STEPS := #FEEDER_LINE_OUT.START_SEQUENCE_GAS_STEPS;
+	ELSE
+	    #START_SEQUENCE_GAS_STEPS := 5;
+	END_IF;
+	// START SEQUENCE DISK STEPS
+	IF #FEEDER_LINE_OUT.START_SEQUENCE_DISK_STEPS >= 1 THEN
+	    #START_SEQUENCE_DISK_STEPS := #FEEDER_LINE_OUT.START_SEQUENCE_DISK_STEPS;
+	ELSE
+	    #START_SEQUENCE_DISK_STEPS := 1;
+	END_IF;
+	// STOP SEQUENCE GAS STEPS
+	IF #FEEDER_LINE_OUT.STOP_SEQUENCE_GAS_STEPS >= 1 THEN
+	    #STOP_SEQUENCE_GAS_STEPS := #FEEDER_LINE_OUT.STOP_SEQUENCE_GAS_STEPS;
+	ELSE
+	    #STOP_SEQUENCE_GAS_STEPS := 1;
+	END_IF;
+	// STOP SEQUENCE DISK STEPS
+	IF #FEEDER_LINE_OUT.STOP_SEQUENCE_DISK_STEPS >= 1 THEN
+	    #STOP_SEQUENCE_DISK_STEP := #FEEDER_LINE_OUT.STOP_SEQUENCE_DISK_STEPS;
+	ELSE
+	    #STOP_SEQUENCE_DISK_STEP := 1;
+	END_IF;
+	// STOP SEQUENCE GAS PAUSE STEP
+	IF #FEEDER_LINE_OUT.STOP_SEQUENCE_PAUSE_STEP >= 1 THEN
+	    #STOP_SEQUENCE_PAUSE_STEP := #FEEDER_LINE_OUT.STOP_SEQUENCE_PAUSE_STEP;
+	ELSE
+	    #STOP_SEQUENCE_PAUSE_STEP := 1;
+	END_IF;
+	// DISC SPEED WARNING UPPER LIMIT
+	#DISC_SPEED_WARN_UP_LIMIT := #FEEDER_LINE_OUT.DISC_SPEED_WARNING_UPPER_LIMIT;
+	// DISC SPEED ALARM UPPER LIMIT
+	#DISC_SPEED_ALRM_UP_LIMIT := #FEEDER_LINE_OUT.DISC_SPEED_ALARM_UPPER_LIMIT;
+	// DISC SPEED WARNING LOWER LIMIT
+	#DISC_SPEED_WARN_LOW_LIMIT := #FEEDER_LINE_OUT.DISC_SPEED_WARNING_LOWER_LIMIT;
+	// DISC SPEED ALARM LOWER LIMIT
+	#DISC_SPEED_ALRM_LOW_LIMIT := #FEEDER_LINE_OUT.DISC_SPEED_ALARM_LOWER_LIMIT;
+	// GAS FLOW RATE WARNING UPPER LIMIT
+	#GAS_FLOW_RATE_WARN_UP_LIMIT := #FEEDER_LINE_OUT.GAS_FLOW_RATE_WARNING_UPPER_LIMIT;
+	// GAS FLOW RATE ALARM UPPER LIMIT
+	#GAS_FLOW_RATE_ALRM_UP_LIMIT := #FEEDER_LINE_OUT.GAS_FLOW_RATE_ALARM_UPPER_LIMIT;
+	// GAS FLOW RATE WARNING LOWER LIMIT
+	#GAS_FLOW_RATE_WARN_LOW_LIMIT := #FEEDER_LINE_OUT.GAS_FLOW_RATE_WARNING_LOWER_LIMIT;
+	// GAS FLOW RATE ALARM LOWER LIMIT
+	#GAS_FLOW_RATE_ALRM_LOW_LIMIT := #FEEDER_LINE_OUT.GAS_FLOW_RATE_ALARM_LOWER_LIMIT;
+	// STIRRER SPEED WARNING UPPER LIMIT
+	#STIRRER_SPEED_WARN_UP_LIMIT := #FEEDER_LINE_OUT.STIRRER_SPEED_WARNING_UPPER_LIMIT;
+	// STIRRER SPEED ALARM UPPER LIMIT
+	#STIRRER_SPEED_ALRM_UP_LIMIT := #FEEDER_LINE_OUT.STIRRER_SPEED_ALARM_UPPER_LIMIT;
+	// STIRRER SPEED WARNING LOWER LIMIT
+	#STIRRER_SPEED_WARN_LOW_LIMIT := #FEEDER_LINE_OUT.STIRRER_SPEED_WARNING_LOWER_LIMIT;
+	// STIRRER SPEED ALARM LOWER LIMIT
+	#STIRRER_SPEED_ALRM_LOW_LIMIT := #FEEDER_LINE_OUT.STIRRER_SPEED_ALARM_LOWER_LIMIT;
+	// HOPPER TEMPERATURE ALARM UPPER LIMIT
+	#TEMP_ALRM_UP_LIMIT := #FEEDER_LINE_OUT.HOPPER_TEMP_ALARM_UPPER_LIMIT;
+END_FUNCTION_BLOCK
+

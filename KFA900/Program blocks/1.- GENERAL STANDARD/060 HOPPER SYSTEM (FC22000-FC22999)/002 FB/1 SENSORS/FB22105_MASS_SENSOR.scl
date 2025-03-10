@@ -1,0 +1,114 @@
+﻿FUNCTION_BLOCK "FB22105_MASS_SENSOR"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      INPUT_VALUE : Real;   // MASS SENSOR INPUT
+      CLEAR_INTERNAL_LOG : Bool;   // CLEAR INTERNAL LOG VALUES
+      "SAVE MAX VALUES" : Bool;   // SAVE MAX MASS VALUE
+   END_VAR
+
+   VAR_OUTPUT 
+      OUT_OF_LIMITS_WARNING : Bool;   // OUT OF LIMITS WANING
+      OUT_OF_LIMITS_ALARM : Bool;   // OUT OF LIMITS ALARM
+   END_VAR
+
+   VAR 
+      OUTPUT : Struct
+         POWDER_WEIGHT : Real;   // POWDER WEIGHT VALUE OUTPUT
+      END_STRUCT;
+      INPUT_SETTINGS : Struct
+         UNIT_NUMBER : DInt;
+         HOPPER_NUMBER : DInt;
+      END_STRUCT;
+      ALARMS_SETTINGS : Struct
+         LOWER_LIMIT_WARNING : Real;   // LOWER LIMIT WARNING
+         LOWER_LIMIT_ALARM : Real;   // LOWER LIMIT ALARM
+         HIGHER_LIMIT_WARNING : Real;   // HIGHER LIMIT WARNING
+         HIGHER_LIMIT_ALARM : Real;   // HIGHER LIMIT ALARM
+         CONFIGURATION_ERROR_ALARM : Bool;   // CONFIGURATION ERROR ALARM
+      END_STRUCT;
+      LOG : Struct
+         DATE_MAX_MASS : Date_And_Time;   // DATE MAX MASS VALUE
+         VALUE_MAX_MASS : Real;   // MAX MASS VALUE
+      END_STRUCT;
+   END_VAR
+
+   VAR_TEMP 
+      RETVAL : Real;
+   END_VAR
+
+   VAR CONSTANT 
+      ZERO : Int := 0;
+      ZERO_DATE : Date_And_Time := DT#1990-01-01-00:00:00;
+   END_VAR
+
+
+BEGIN
+	// Check if the warning and error limits settings are logically consistent.
+	IF #ALARMS_SETTINGS.HIGHER_LIMIT_WARNING < #ALARMS_SETTINGS.LOWER_LIMIT_WARNING
+	    OR #ALARMS_SETTINGS.HIGHER_LIMIT_ALARM < #ALARMS_SETTINGS.LOWER_LIMIT_ALARM
+	    OR #ALARMS_SETTINGS.LOWER_LIMIT_ALARM > #ALARMS_SETTINGS.LOWER_LIMIT_WARNING
+	    OR #ALARMS_SETTINGS.HIGHER_LIMIT_WARNING > #ALARMS_SETTINGS.HIGHER_LIMIT_ALARM THEN
+	    // If any alarm settings are incorrect, indicate an error configuration.
+	    #ALARMS_SETTINGS.CONFIGURATION_ERROR_ALARM := TRUE;
+	ELSE
+	    // If alarm settings are correct, clear the error configuration.
+	    #ALARMS_SETTINGS.CONFIGURATION_ERROR_ALARM := FALSE;
+	    
+	    // Determine if the output mass is within the warning limit boundaries.
+	    IF #INPUT_VALUE < #ALARMS_SETTINGS.LOWER_LIMIT_WARNING OR #INPUT_VALUE > #ALARMS_SETTINGS.HIGHER_LIMIT_WARNING THEN
+	        // If outside the warning limits, set the warning flag.
+	        #OUT_OF_LIMITS_WARNING := TRUE;
+	    ELSE
+	        // If inside the warning limits, clear the warning flag.
+	        #OUT_OF_LIMITS_WARNING := FALSE;
+	    END_IF;
+	    
+	    // Determine if the output mass is within the error limit boundaries.
+	    IF #INPUT_VALUE < #ALARMS_SETTINGS.LOWER_LIMIT_ALARM OR #INPUT_VALUE > #ALARMS_SETTINGS.HIGHER_LIMIT_ALARM THEN
+	        // If outside the error limits, set the error flag.
+	        #OUT_OF_LIMITS_ALARM := TRUE;
+	    ELSE
+	        // If inside the error limits, clear the error flag.
+	        #OUT_OF_LIMITS_ALARM := FALSE;
+	    END_IF;
+	END_IF;
+	//SET IS ALARM BIT
+	IF #OUT_OF_LIMITS_ALARM THEN
+	    IF #INPUT_SETTINGS.UNIT_NUMBER = 1 THEN
+	        "DB442_HOPPERS_ALARM_DECODING".ALARMS_UNIT_01.HOPPER[#INPUT_SETTINGS.HOPPER_NUMBER].IS_ALARMS := 1;
+	    ELSE
+	        "DB442_HOPPERS_ALARM_DECODING".ALARMS_UNIT_02.HOPPER[#INPUT_SETTINGS.HOPPER_NUMBER].IS_ALARMS := 1;
+	    END_IF;
+	END_IF;
+	//KEEP IS ALARM BIT SET UNTIL RESET
+	IF #INPUT_SETTINGS.UNIT_NUMBER = 1 THEN
+	    IF "DB442_HOPPERS_ALARM_DECODING".ALARMS_UNIT_01.HOPPER[#INPUT_SETTINGS.HOPPER_NUMBER].IS_ALARMS THEN
+	        "DB442_HOPPERS_ALARM_DECODING".ALARMS_UNIT_01.HOPPER[#INPUT_SETTINGS.HOPPER_NUMBER].IS_ALARMS := 1;
+	    END_IF;
+	ELSE
+	    IF "DB442_HOPPERS_ALARM_DECODING".ALARMS_UNIT_02.HOPPER[#INPUT_SETTINGS.HOPPER_NUMBER].IS_ALARMS THEN
+	        "DB442_HOPPERS_ALARM_DECODING".ALARMS_UNIT_02.HOPPER[#INPUT_SETTINGS.HOPPER_NUMBER].IS_ALARMS := 1;
+	    END_IF;
+	END_IF;
+	
+	// Log the highest value of mass measured and store the current date and time.
+	IF #"SAVE MAX VALUES" THEN
+	    IF #INPUT_VALUE > #LOG.VALUE_MAX_MASS THEN
+	        // Update the log with the new highest value of mass.
+	        #LOG.VALUE_MAX_MASS := #INPUT_VALUE;
+	        // Store the date and time of the highest mass value reading.
+	        #RETVAL := RD_SYS_T(#LOG.DATE_MAX_MASS);
+	    END_IF;
+	END_IF;
+	
+	IF #CLEAR_INTERNAL_LOG THEN
+	    // Clear the highest value of mass.
+	    #LOG.VALUE_MAX_MASS := #ZERO;
+	    //  Clear the date and time of the highest mass value reading.
+	    #LOG.DATE_MAX_MASS := #ZERO_DATE;
+	END_IF;
+	
+	
+END_FUNCTION_BLOCK
+

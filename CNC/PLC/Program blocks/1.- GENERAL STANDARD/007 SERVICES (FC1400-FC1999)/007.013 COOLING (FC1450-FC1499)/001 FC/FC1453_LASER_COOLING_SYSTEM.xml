@@ -1,0 +1,1659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:16:33.0692349Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="COOLING_FLOW_AUX" Datatype="Real" />
+    <Member Name="COOLING_FLOW_AUX_1" Datatype="Real" />
+    <Member Name="COOLING_FLOW_AUX_2" Datatype="Int" />
+    <Member Name="COOLING_TEMP_AUX" Datatype="Real" />
+    <Member Name="COOLING_TEMP_AUX_1" Datatype="Real" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>FC1453_LASER_COOLING_SYSTEM</Name>
+      <Number>1453</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0011_1000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0011_1000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="COOLING_U01_LASER_OUTPUT_FLOW_VALUE_INPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="COOLING_U01_LASER_OUTPUT_TEMP_VALUE_INPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="U01_LASER_COOLING_NOZZLE_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="U01_LASER_COOLING_NOZZLE_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="U01_LASER_COOLING_HEAD_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="U01_LASER_COOLING_HEAD_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_READY" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="36">
+      <Constant>
+        <ConstantType>UInt</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736310" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736311" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736312" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736313" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736314" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736315" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736240" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736241" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736242" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736243" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736244" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736245" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736250" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736251" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736252" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736253" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736254" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736255" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741400" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741401" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741402" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741403" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741405" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741406" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741407" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741408" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741410" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741411" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="65">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741412" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741413" />
+      </Symbol>
+    </Access>
+    <Call UId="67">
+      <CallInfo Name="FB1453_LASER_COOLING_ALARMS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="68">
+          <Component Name="DB1471_UNIT_01_LASER_COOLING_ALARMS" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="OPTIONS_1" Section="Input" Type="Byte" />
+        <Parameter Name="LASER_OUTPUT_FLOW_LOW_VALUE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="NOZZLE_FLOW_LOW_VALUE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="HEAD_FLOW_LOW_VALUE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="LASER_OUTPUT_OVERTEMPERATURE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="NOZZLE_OVERTEMPERATURE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="HEAD_OVERTEMPERATURE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="LASER_OUTPUT_FLOW_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="LASER_OUTPUT_TEMP_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="NOZZLE_COOLING_FLOW_RAW_INPUT" Section="Input" Type="Word" />
+        <Parameter Name="NOZZLE_COOLING_TEMP_RAW_INPUT" Section="Input" Type="Word" />
+        <Parameter Name="HEAD_COOLING_FLOW_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="HEAD_COOLING_TEMP_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="LASER_READY" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_ALARM" Section="Input" Type="UInt" />
+        <Parameter Name="OUTPUT_LOW_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_LOW_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_LOW_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_LOW_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_TEMP_WARNING" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="69">
+      <Powerrail />
+      <NameCon UId="67" Name="en" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="21" />
+      <NameCon UId="67" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="22" />
+      <NameCon UId="67" Name="OPTIONS_1" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="23" />
+      <NameCon UId="67" Name="LASER_OUTPUT_FLOW_LOW_VALUE_ALM_BIT" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="24" />
+      <NameCon UId="67" Name="NOZZLE_FLOW_LOW_VALUE_ALM_BIT" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="25" />
+      <NameCon UId="67" Name="HEAD_FLOW_LOW_VALUE_ALM_BIT" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="26" />
+      <NameCon UId="67" Name="LASER_OUTPUT_OVERTEMPERATURE_ALM_BIT" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="27" />
+      <NameCon UId="67" Name="NOZZLE_OVERTEMPERATURE_ALM_BIT" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="28" />
+      <NameCon UId="67" Name="HEAD_OVERTEMPERATURE_ALM_BIT" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="29" />
+      <NameCon UId="67" Name="LASER_OUTPUT_FLOW_RAW_INPUT" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="30" />
+      <NameCon UId="67" Name="LASER_OUTPUT_TEMP_RAW_INPUT" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="31" />
+      <NameCon UId="67" Name="NOZZLE_COOLING_FLOW_RAW_INPUT" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="32" />
+      <NameCon UId="67" Name="NOZZLE_COOLING_TEMP_RAW_INPUT" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="33" />
+      <NameCon UId="67" Name="HEAD_COOLING_FLOW_RAW_INPUT" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="34" />
+      <NameCon UId="67" Name="HEAD_COOLING_TEMP_RAW_INPUT" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="35" />
+      <NameCon UId="67" Name="LASER_READY" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="36" />
+      <NameCon UId="67" Name="UNIT_ALARM" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="67" Name="OUTPUT_LOW_FLOW_ALARM" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="67" Name="OUTPUT_HIGH_FLOW_ALARM" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="67" Name="OUTPUT_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="67" Name="OUTPUT_LOW_TEMP_ALARM" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="67" Name="OUTPUT_HIGH_TEMP_ALARM" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="67" Name="OUTPUT_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="67" Name="NOZZLE_LOW_FLOW_ALARM" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="67" Name="NOZZLE_HIGH_FLOW_ALARM" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="67" Name="NOZZLE_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="67" Name="NOZZLE_LOW_TEMP_ALARM" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="67" Name="NOZZLE_HIGH_TEMP_ALARM" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="67" Name="NOZZLE_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="67" Name="HEAD_LOW_FLOW_ALARM" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="67" Name="HEAD_HIGH_FLOW_ALARM" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="67" Name="HEAD_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="67" Name="HEAD_LOW_TEMP_ALARM" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="67" Name="HEAD_HIGH_TEMP_ALARM" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="67" Name="HEAD_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="67" Name="OUTPUT_LOW_FLOW_WARNING" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="67" Name="OUTPUT_HIGH_FLOW_WARNING" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="67" Name="OUTPUT_LOW_TEMP_WARNING" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="67" Name="OUTPUT_HIGH_TEMP_WARNING" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="67" Name="NOZZLE_LOW_FLOW_WARNING" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="67" Name="NOZZLE_HIGH_FLOW_WARNING" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="67" Name="NOZZLE_LOW_TEMP_WARNING" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="67" Name="NOZZLE_HIGH_TEMP_WARNING" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="67" Name="HEAD_LOW_FLOW_WARNING" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="67" Name="HEAD_HIGH_FLOW_WARNING" />
+      <IdentCon UId="64" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="67" Name="HEAD_LOW_TEMP_WARNING" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="67" Name="HEAD_HIGH_TEMP_WARNING" />
+      <IdentCon UId="66" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 LASER OUTPUT FLOW LOW ALARM GIVEN BY BIT INPUT
+2#0000_0010 OPTIONS 0 BIT 1 NOZZLE FLOW LOW ALARM GIVEN BY BIT INPUT
+2#0000_0100 OPTIONS 0 BIT 2 HEAD FLOW LOW ALARM GIVEN BY BIT INPUT
+2#0000_1000 OPTIONS 0 BIT 3 LASER OUTPUT FLOW ALARMS GIVEN BY ANALOG VALUE
+2#0001_0000 OPTIONS 0 BIT 4 NOZZLE FLOW ALARMS GIVEN BY ANALOG VALUE
+2#0010_0000 OPTIONS 0 BIT 5 HEAD FLOW ALARMS GIVEN BY ANALOG VALUE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE
+
+2#0000_0001 OPTIONS 1 BIT 0 LASER OUTPUT TEMP HIGH ALARM GIVEN BY BIT INPUT
+2#0000_0010 OPTIONS 1 BIT 1 NOOZLE TEMP HIGH ALARM GIVEN BY BIT INPUT
+2#0000_0100 OPTIONS 1 BIT 2 HEAD TEMP HIGH ALARM GIVEN BY BIT INPUT
+2#0000_1000 OPTIONS 1 BIT 3 LASER OUTPUT TEMP ALARMS GIVEN BY ANALOG VALUE
+2#0001_0000 OPTIONS 1 BIT 4 NOZZLE TEMP ALARMS GIVEN BY ANALOG VALUE
+2#0010_0000 OPTIONS 1 BIT 5 HEAD TEMP ALARMS GIVEN BY ANALOG VALUE
+2#0100_0000 OPTIONS 1 BIT 6 SPARE OPTION
+2#1000_0000 OPTIONS 1 BIT 7 SPARE OPTION</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB1453 LASER COOLING UNIT 01</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0011_1000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0011_1000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="COOLING_U02_LASER_OUTPUT_FLOW_VALUE_INPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="COOLING_U02_LASER_OUTPUT_TEMP_VALUE_INPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="U02_LASER_COOLING_NOZZLE_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="U02_LASER_COOLING_NOZZLE_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="U02_LASER_COOLING_HEAD_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="U02_LASER_COOLING_HEAD_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_READY" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="36">
+      <Constant>
+        <ConstantType>UInt</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736318" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736319" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736320" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736321" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736322" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736323" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736220" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736221" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736222" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736223" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736224" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736225" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736230" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736231" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736232" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736233" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736234" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736235" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741440" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741441" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741442" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741443" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741445" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741446" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741447" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741448" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741450" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741451" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="65">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741452" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741453" />
+      </Symbol>
+    </Access>
+    <Call UId="67">
+      <CallInfo Name="FB1453_LASER_COOLING_ALARMS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="68">
+          <Component Name="DB1472_UNIT_02_LASER_COOLING_ALARMS" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="OPTIONS_1" Section="Input" Type="Byte" />
+        <Parameter Name="LASER_OUTPUT_FLOW_LOW_VALUE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="NOZZLE_FLOW_LOW_VALUE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="HEAD_FLOW_LOW_VALUE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="LASER_OUTPUT_OVERTEMPERATURE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="NOZZLE_OVERTEMPERATURE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="HEAD_OVERTEMPERATURE_ALM_BIT" Section="Input" Type="Bool" />
+        <Parameter Name="LASER_OUTPUT_FLOW_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="LASER_OUTPUT_TEMP_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="NOZZLE_COOLING_FLOW_RAW_INPUT" Section="Input" Type="Word" />
+        <Parameter Name="NOZZLE_COOLING_TEMP_RAW_INPUT" Section="Input" Type="Word" />
+        <Parameter Name="HEAD_COOLING_FLOW_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="HEAD_COOLING_TEMP_RAW_INPUT" Section="Input" Type="DInt" />
+        <Parameter Name="LASER_READY" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_ALARM" Section="Input" Type="UInt" />
+        <Parameter Name="OUTPUT_LOW_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_LOW_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_FLOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_TEMP_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_LOW_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_LOW_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="OUTPUT_HIGH_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_LOW_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="NOZZLE_HIGH_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_FLOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_LOW_TEMP_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_HIGH_TEMP_WARNING" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="69">
+      <Powerrail />
+      <NameCon UId="67" Name="en" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="21" />
+      <NameCon UId="67" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="22" />
+      <NameCon UId="67" Name="OPTIONS_1" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="23" />
+      <NameCon UId="67" Name="LASER_OUTPUT_FLOW_LOW_VALUE_ALM_BIT" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="24" />
+      <NameCon UId="67" Name="NOZZLE_FLOW_LOW_VALUE_ALM_BIT" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="25" />
+      <NameCon UId="67" Name="HEAD_FLOW_LOW_VALUE_ALM_BIT" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="26" />
+      <NameCon UId="67" Name="LASER_OUTPUT_OVERTEMPERATURE_ALM_BIT" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="27" />
+      <NameCon UId="67" Name="NOZZLE_OVERTEMPERATURE_ALM_BIT" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="28" />
+      <NameCon UId="67" Name="HEAD_OVERTEMPERATURE_ALM_BIT" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="29" />
+      <NameCon UId="67" Name="LASER_OUTPUT_FLOW_RAW_INPUT" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="30" />
+      <NameCon UId="67" Name="LASER_OUTPUT_TEMP_RAW_INPUT" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="31" />
+      <NameCon UId="67" Name="NOZZLE_COOLING_FLOW_RAW_INPUT" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="32" />
+      <NameCon UId="67" Name="NOZZLE_COOLING_TEMP_RAW_INPUT" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="33" />
+      <NameCon UId="67" Name="HEAD_COOLING_FLOW_RAW_INPUT" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="34" />
+      <NameCon UId="67" Name="HEAD_COOLING_TEMP_RAW_INPUT" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="35" />
+      <NameCon UId="67" Name="LASER_READY" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="36" />
+      <NameCon UId="67" Name="UNIT_ALARM" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="67" Name="OUTPUT_LOW_FLOW_ALARM" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="67" Name="OUTPUT_HIGH_FLOW_ALARM" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="67" Name="OUTPUT_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="67" Name="OUTPUT_LOW_TEMP_ALARM" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="67" Name="OUTPUT_HIGH_TEMP_ALARM" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="67" Name="OUTPUT_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="67" Name="NOZZLE_LOW_FLOW_ALARM" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="67" Name="NOZZLE_HIGH_FLOW_ALARM" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="67" Name="NOZZLE_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="67" Name="NOZZLE_LOW_TEMP_ALARM" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="67" Name="NOZZLE_HIGH_TEMP_ALARM" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="67" Name="NOZZLE_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="67" Name="HEAD_LOW_FLOW_ALARM" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="67" Name="HEAD_HIGH_FLOW_ALARM" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="67" Name="HEAD_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="67" Name="HEAD_LOW_TEMP_ALARM" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="67" Name="HEAD_HIGH_TEMP_ALARM" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="67" Name="HEAD_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="67" Name="OUTPUT_LOW_FLOW_WARNING" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="67" Name="OUTPUT_HIGH_FLOW_WARNING" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="67" Name="OUTPUT_LOW_TEMP_WARNING" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="67" Name="OUTPUT_HIGH_TEMP_WARNING" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="67" Name="NOZZLE_LOW_FLOW_WARNING" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="67" Name="NOZZLE_HIGH_FLOW_WARNING" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="67" Name="NOZZLE_LOW_TEMP_WARNING" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="67" Name="NOZZLE_HIGH_TEMP_WARNING" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="67" Name="HEAD_LOW_FLOW_WARNING" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="67" Name="HEAD_HIGH_FLOW_WARNING" />
+      <IdentCon UId="64" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="67" Name="HEAD_LOW_TEMP_WARNING" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="67" Name="HEAD_HIGH_TEMP_WARNING" />
+      <IdentCon UId="66" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 LASER OUTPUT FLOW LOW ALARM GIVEN BY BIT INPUT
+2#0000_0010 OPTIONS 0 BIT 1 NOZZLE FLOW LOW ALARM GIVEN BY BIT INPUT
+2#0000_0100 OPTIONS 0 BIT 2 HEAD FLOW LOW ALARM GIVEN BY BIT INPUT
+2#0000_1000 OPTIONS 0 BIT 3 LASER OUTPUT FLOW ALARMS GIVEN BY ANALOG VALUE
+2#0001_0000 OPTIONS 0 BIT 4 NOZZLE FLOW ALARMS GIVEN BY ANALOG VALUE
+2#0010_0000 OPTIONS 0 BIT 5 HEAD FLOW ALARMS GIVEN BY ANALOG VALUE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE
+
+2#0000_0001 OPTIONS 1 BIT 0 LASER OUTPUT TEMP HIGH ALARM GIVEN BY BIT INPUT
+2#0000_0010 OPTIONS 1 BIT 1 NOOZLE TEMP HIGH ALARM GIVEN BY BIT INPUT
+2#0000_0100 OPTIONS 1 BIT 2 HEAD TEMP HIGH ALARM GIVEN BY BIT INPUT
+2#0000_1000 OPTIONS 1 BIT 3 LASER OUTPUT TEMP ALARMS GIVEN BY ANALOG VALUE
+2#0001_0000 OPTIONS 1 BIT 4 NOZZLE TEMP ALARMS GIVEN BY ANALOG VALUE
+2#0010_0000 OPTIONS 1 BIT 5 HEAD TEMP ALARMS GIVEN BY ANALOG VALUE
+2#0100_0000 OPTIONS 1 BIT 6 SPARE OPTION
+2#1000_0000 OPTIONS 1 BIT 7 SPARE OPTION</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB1453 LASER COOLING UNIT 02</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="COOLING_U01_LASER_OUTPUT_FLOW_VALUE_INPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="COOLING_FLOW_AUX" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="COOLING_FLOW_AUX" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0166667</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="COOLING_FLOW_AUX_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="COOLING_U01_LASER_OUTPUT_TEMP_VALUE_INPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="COOLING_TEMP_AUX" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="COOLING_TEMP_AUX" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="30">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.01</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="COOLING_TEMP_AUX_1" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="32" />
+    <Part Name="Convert" UId="33" DisabledENO="true">
+      <TemplateValue Name="SrcType" Type="Type">DInt</TemplateValue>
+      <TemplateValue Name="DestType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="Mul" UId="34" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Convert" UId="35" DisabledENO="true">
+      <TemplateValue Name="SrcType" Type="Type">DInt</TemplateValue>
+      <TemplateValue Name="DestType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="Mul" UId="36" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="en" />
+      <NameCon UId="35" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="33" Name="eno" />
+      <NameCon UId="34" Name="en" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="33" Name="out" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="in1" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="34" Name="in2" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="34" Name="out" />
+      <IdentCon UId="26" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="eno" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="out" />
+      <IdentCon UId="28" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="in1" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="30" />
+      <NameCon UId="36" Name="in2" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="36" Name="out" />
+      <IdentCon UId="31" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>COOLING</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="32" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="33" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="34" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="35" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="36" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

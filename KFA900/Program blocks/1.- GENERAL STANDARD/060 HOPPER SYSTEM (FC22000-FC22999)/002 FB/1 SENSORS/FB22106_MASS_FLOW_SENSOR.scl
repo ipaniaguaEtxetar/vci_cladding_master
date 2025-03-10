@@ -1,0 +1,161 @@
+﻿FUNCTION_BLOCK "FB22106_MASS_FLOW_SENSOR"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      MASS_VALUE : Real;   // MASS INPUT VALUE
+      MASS_IS_FLOWING : Bool;   // MASS IS FLOWING
+      CLEAR_INTERNAL_LOG : Bool;   // CLEAR INTERNAL LOG VALUES
+      SAVE_MAX_VALUE : Bool;   // SAVE MAX FLOW VALUE
+   END_VAR
+
+   VAR_OUTPUT 
+      OUT_OF_LIMIT_WARNING : Bool;   // OUT OF LIMITS WARNING
+      OUT_OF_LIMIT_ALARM : Bool;   // OUT OF LIMITS ALARM
+   END_VAR
+
+   VAR 
+      OUTPUT : Struct
+         MASS_FLOW : Real;   // MASS FLOW VALUE
+      END_STRUCT;
+      INPUT_SETTINGS : Struct
+         INTERVALS_FOR_MASS_FLOW : ULInt;   // INTERVALS FOR MASS FLOW CALCULATION
+      END_STRUCT;
+      "ALARMS SETTINGS" : Struct
+         LOWER_LIMIT_WARNING : Real;   // LOWER LIMIT WARNING
+         LOWER_LIMIT_ALARM : Real;   // LOWER LIMIT ALARM
+         HIGHER_LIMIT_WARNING : Real;   // HIGHER LIMIT WARNING
+         HIGHER_LIMIT_ALARM : Real;   // HIGHER LIMIT ALARM
+         CONFIGURATION_ERROR_ALARM : Bool;   // CONFIGURATION ERROR ALARM
+      END_STRUCT;
+      LOG : Struct
+         DATE_MAX_MASS_FLOW : Date_And_Time;   // DATE MAX MASS FLOW
+         MAX_MASS_FLOW_VALUE : Real;   // MAX MASS FLOW VALUE
+      END_STRUCT;
+      INTERNAL : Struct
+         PREVIOUS_TIME : Time;   // PREVIOUS TIME
+         PREVIOUS_MASS : Real;   // PREVIOUS MASS
+         DELTA_MASS : Real;   // DELTA MASS
+         DELTA_TIME : ULInt;   // DELTA TIME
+         LAST_MASS_TIME : ULInt;   // LAST MASS TIME
+         MASS_FLOW_BUFFER : Array[0..99] of Real;   // MASS FLOW BUFFER
+         MASS_FLOW_BUFFER_POS : Int;   // MASS FLOW BUFFER POSITION
+      END_STRUCT;
+   END_VAR
+
+   VAR_TEMP 
+      RETVAL : Int;
+      CURRENT_UNIX_TIME : ULInt;
+      DELTA_TIME_MINUTES : Real;
+      DELTA_MASS_G : Real;
+      "COUNTER" : Int;
+      MASS_FLOW_SUM : Real;
+      MASS_FLOW_TEMP : Real;
+   END_VAR
+
+   VAR CONSTANT 
+      ZERO : Int := 0;
+      ZERO_DATE : Date_And_Time := DT#1990-01-01-00:00:00;
+   END_VAR
+
+
+BEGIN
+	// Check if mass flow calculation is enabled.
+	// 
+	
+	#CURRENT_UNIX_TIME :="DB2441_TIMESTAMP_CONTROLLER.DATE".UNIX_TIMESTAMP_MILISECONDS + ("DB2441_TIMESTAMP_CONTROLLER.DATE".UNITX_TIMESTAMP_SECONDS * 1000);
+	IF #MASS_IS_FLOWING THEN
+	    // Calculate the time difference between the current and last mass flow measurement.
+	    #INTERNAL.DELTA_TIME := #CURRENT_UNIX_TIME - #INTERNAL.LAST_MASS_TIME;
+	    // Proceed with mass flow calculation if the elapsed time is greater or equal to the preset interval.
+	    
+	    // Calculate the change in mass since the last update.
+	    #INTERNAL.DELTA_MASS := #INTERNAL.PREVIOUS_MASS - #MASS_VALUE;
+	    
+	    IF (#INTERNAL.DELTA_TIME) >= #INPUT_SETTINGS.INTERVALS_FOR_MASS_FLOW THEN
+	        
+	        #DELTA_TIME_MINUTES := ULINT_TO_REAL(#INTERNAL.DELTA_TIME) / (60 * 1000);
+	        #DELTA_MASS_G := #INTERNAL.DELTA_MASS * 1000;
+	        
+	        // Convert the mass flow to grams per minute (g/min) considering the delta time in milliseconds.
+	        #MASS_FLOW_TEMP := #DELTA_MASS_G / #DELTA_TIME_MINUTES;
+	        
+	        //Save the mass flow in the buffer
+	        #INTERNAL.MASS_FLOW_BUFFER[#INTERNAL.MASS_FLOW_BUFFER_POS] := #MASS_FLOW_TEMP;
+	        #INTERNAL.MASS_FLOW_BUFFER_POS := #INTERNAL.MASS_FLOW_BUFFER_POS + 1;
+	        
+	        // Update the previous mass and time for the next calculation cycle.
+	        #INTERNAL.PREVIOUS_MASS := #MASS_VALUE;
+	        #INTERNAL.LAST_MASS_TIME := #CURRENT_UNIX_TIME;
+	        
+	    END_IF;
+	    
+	    IF #INTERNAL.MASS_FLOW_BUFFER_POS >= 10 THEN
+	        //Move the buffer pointer
+	        #INTERNAL.MASS_FLOW_BUFFER_POS := 0;
+	    END_IF;
+	    
+	    FOR #COUNTER := 0 TO 9 BY 1 DO
+	        #MASS_FLOW_SUM := #MASS_FLOW_SUM + #INTERNAL.MASS_FLOW_BUFFER[#COUNTER];
+	    END_FOR;
+	    
+	    #OUTPUT.MASS_FLOW := #MASS_FLOW_SUM / 10;
+	    
+	    
+	ELSE
+	    // If mass flow calculation is not enabled, set the mass flow to 0.
+	    #OUTPUT.MASS_FLOW := 0.0;
+	END_IF;
+	
+	
+	
+	// Check if the warning and error limits settings are logically consistent.
+	IF #"ALARMS SETTINGS".HIGHER_LIMIT_WARNING < #"ALARMS SETTINGS".LOWER_LIMIT_WARNING
+	    OR #"ALARMS SETTINGS".HIGHER_LIMIT_ALARM < #"ALARMS SETTINGS".LOWER_LIMIT_ALARM
+	    OR #"ALARMS SETTINGS".LOWER_LIMIT_ALARM > #"ALARMS SETTINGS".LOWER_LIMIT_WARNING
+	    OR #"ALARMS SETTINGS".HIGHER_LIMIT_WARNING > #"ALARMS SETTINGS".HIGHER_LIMIT_ALARM THEN
+	    // If any alarm settings are incorrect, indicate an error configuration.
+	    #"ALARMS SETTINGS".CONFIGURATION_ERROR_ALARM := TRUE;
+	ELSE
+	    // If alarm settings are correct, clear the error configuration.
+	    #"ALARMS SETTINGS".CONFIGURATION_ERROR_ALARM := FALSE;
+	    
+	    // Determine if the output mass is within the warning limit boundaries.
+	    IF #OUTPUT.MASS_FLOW < #"ALARMS SETTINGS".LOWER_LIMIT_WARNING OR #OUTPUT.MASS_FLOW > #"ALARMS SETTINGS".HIGHER_LIMIT_WARNING THEN
+	        // If outside the warning limits, set the warning flag.
+	        #OUT_OF_LIMIT_WARNING := TRUE;
+	    ELSE
+	        // If inside the warning limits, clear the warning flag.
+	        #OUT_OF_LIMIT_WARNING := FALSE;
+	    END_IF;
+	    
+	    // Determine if the output mass is within the error limit boundaries.
+	    IF #OUTPUT.MASS_FLOW < #"ALARMS SETTINGS".LOWER_LIMIT_ALARM OR #OUTPUT.MASS_FLOW > #"ALARMS SETTINGS".HIGHER_LIMIT_ALARM THEN
+	        // If outside the error limits, set the error flag.
+	        #OUT_OF_LIMIT_ALARM := TRUE;
+	    ELSE
+	        // If inside the error limits, clear the error flag.
+	        #OUT_OF_LIMIT_ALARM := FALSE;
+	    END_IF;
+	END_IF;
+	
+	
+	
+	// Log the highest value of mass measured and store the current date and time.
+	IF #SAVE_MAX_VALUE THEN
+	    IF #OUTPUT.MASS_FLOW > #LOG.MAX_MASS_FLOW_VALUE THEN
+	        // Update the log with the new highest value of mass.
+	        #LOG.MAX_MASS_FLOW_VALUE := #OUTPUT.MASS_FLOW;
+	        // Store the date and time of the highest mass value reading.
+	        #RETVAL := RD_SYS_T(#LOG.DATE_MAX_MASS_FLOW);
+	    END_IF;
+	END_IF;
+	
+	IF #CLEAR_INTERNAL_LOG THEN
+	    // Clear the highest value of mass.
+	    #LOG.MAX_MASS_FLOW_VALUE := #ZERO;
+	    //  Clear the date and time of the highest mass value reading.
+	    #LOG.DATE_MAX_MASS_FLOW := #ZERO_DATE;
+	END_IF;
+	
+END_FUNCTION_BLOCK
+

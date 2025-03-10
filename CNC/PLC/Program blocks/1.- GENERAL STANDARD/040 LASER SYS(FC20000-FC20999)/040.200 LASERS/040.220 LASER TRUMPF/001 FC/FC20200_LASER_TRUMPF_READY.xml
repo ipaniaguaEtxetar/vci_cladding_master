@@ -1,0 +1,2048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:16:59.578456Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="ret_val_1" Datatype="Int" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC20200_LASER_TRUMPF_READY</Name>
+      <Number>20200</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Any</ConstantType>
+        <ConstantValue>P#I2600.0 BYTE 16</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="ret_val_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>LASER UNIT 01 INPUTS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Any</ConstantType>
+        <ConstantValue>P#I2700.0 BYTE 16</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="ret_val_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>LASER UNIT 02 INPUTS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7262_UNIT_01_LASER_ENABLE_DISABLE" />
+        <Component Name="ENABLED" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>450</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>16000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_504" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_506" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_508" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_READY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_IS_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="FAULT_LASER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="EXT_ACTIV_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="PROG_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="SAFE_DOORS_U01_CLOSED_AND_LOCKED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_ASSIGNED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_WARNING_LAP_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="UNIT_01_ST_3_ANY_CYCLE_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB20230_TRUMPF_LASER_UNIT_01_ACTIVE" />
+        <Component Name="DATA" />
+        <Component Name="LASER ACTIVE START GENERAL CONDITIONS" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="40">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="LIGHTPATH" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="PROGRAMNO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="POWER_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="PROCESSING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="POWER_PORTION_CORE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="LASER_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="EXT_CONTROL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="LASER_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736000" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736001" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736002" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736003" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736004" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736005" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736006" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736007" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736008" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736009" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736010" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736011" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736012" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="64" />
+    <Call UId="65">
+      <CallInfo Name="FB20200_TRUMPF_READY" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="66">
+          <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
+        </Instance>
+        <Parameter Name="iLIMIT_MIN_POWER" Section="Input" Type="Int" />
+        <Parameter Name="iLIMIT_MAX_POWER" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_POWER" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_PROCESSING" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_POWER_PORTION_CORE" Section="Input" Type="Int" />
+        <Parameter Name="iSTATUS_READY_LASER_READY" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_IS_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSYSTEM_ERROR_LASER_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iEXTERNAL_CONTROL_READY" Section="Input" Type="Bool" />
+        <Parameter Name="iPROGRAM_ACTIVE" Section="Input" Type="Bool" />
+        <Parameter Name="iSOURCE_ENABLED" Section="Input" Type="Bool" />
+        <Parameter Name="iCOOLING_UNIT_FLOW_PRESENT" Section="Input" Type="Bool" />
+        <Parameter Name="iCOOLING_UNIT_OVERTEMPERATURE" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ENABLE_POWER_SEQ" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_DISABLE_POWER_SEQ" Section="Input" Type="Bool" />
+        <Parameter Name="iSAFETY_GATES_CLOSED_LOCKED" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ASSIGNED" Section="Input" Type="Bool" />
+        <Parameter Name="iMACHINE_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iMACHINE_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_READY_F_CIRCUIT_BRAKER" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_WARNING_LAP_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSTATION_UNIT_ANY_CYCLE_ACT" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ACT_START_GEN_CONDITION" Section="Input" Type="Bool" />
+        <Parameter Name="iUNIT_NO" Section="Input" Type="Byte" />
+        <Parameter Name="oLIGHT_PATH" Section="Output" Type="Byte" />
+        <Parameter Name="oPROGRAM_NUMBER" Section="Output" Type="Byte" />
+        <Parameter Name="oPOWER_VALUE" Section="Output" Type="DInt" />
+        <Parameter Name="oPROCESSING_VALUE" Section="Output" Type="DInt" />
+        <Parameter Name="oPOWER_PORTION_CORE_VALUE" Section="Output" Type="DInt" />
+        <Parameter Name="oLASER_RESET_FAULT_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oLASER_REQUEST" Section="Output" Type="Bool" />
+        <Parameter Name="oEXTERNAL_CONTROL" Section="Output" Type="Bool" />
+        <Parameter Name="oLASER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="oLASER_ARM" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_RHP_SEOC_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="oREADY_TO_EMISSION" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CIRCUIT_BREAKER_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_WARNING_LASER" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_NOT_READY" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_NOT_SWITCHED_ON" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_ANALOG_CONTROL_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_NOT_ASSIGNED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_OVERTEMPERATURE_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_SC_STATUS_ACTIVE" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_ACTIVE_PANEL_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FAULT" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="75">
+      <Powerrail />
+      <NameCon UId="64" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="21" />
+      <NameCon UId="64" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="64" Name="out" />
+      <NameCon UId="65" Name="en" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="22" />
+      <NameCon UId="65" Name="iLIMIT_MIN_POWER" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="23" />
+      <NameCon UId="65" Name="iLIMIT_MAX_POWER" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="24" />
+      <NameCon UId="65" Name="iCOMMAND_POWER" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="25" />
+      <NameCon UId="65" Name="iCOMMAND_PROCESSING" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="26" />
+      <NameCon UId="65" Name="iCOMMAND_POWER_PORTION_CORE" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="27" />
+      <NameCon UId="65" Name="iSTATUS_READY_LASER_READY" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="28" />
+      <NameCon UId="65" Name="iLASER_IS_ON" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="29" />
+      <NameCon UId="65" Name="iSYSTEM_ERROR_LASER_FAULT" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="30" />
+      <NameCon UId="65" Name="iEXTERNAL_CONTROL_READY" />
+    </Wire>
+    <Wire UId="87">
+      <IdentCon UId="31" />
+      <NameCon UId="65" Name="iPROGRAM_ACTIVE" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="32" />
+      <NameCon UId="65" Name="iSOURCE_ENABLED" />
+    </Wire>
+    <Wire UId="89">
+      <OpenCon UId="67" />
+      <NameCon UId="65" Name="iCOOLING_UNIT_FLOW_PRESENT" />
+    </Wire>
+    <Wire UId="90">
+      <OpenCon UId="68" />
+      <NameCon UId="65" Name="iCOOLING_UNIT_OVERTEMPERATURE" />
+    </Wire>
+    <Wire UId="91">
+      <OpenCon UId="69" />
+      <NameCon UId="65" Name="iLASER_ENABLE_POWER_SEQ" />
+    </Wire>
+    <Wire UId="92">
+      <OpenCon UId="70" />
+      <NameCon UId="65" Name="iLASER_DISABLE_POWER_SEQ" />
+    </Wire>
+    <Wire UId="93">
+      <IdentCon UId="33" />
+      <NameCon UId="65" Name="iSAFETY_GATES_CLOSED_LOCKED" />
+    </Wire>
+    <Wire UId="94">
+      <IdentCon UId="34" />
+      <NameCon UId="65" Name="iLASER_ASSIGNED" />
+    </Wire>
+    <Wire UId="95">
+      <IdentCon UId="35" />
+      <NameCon UId="65" Name="iMACHINE_ON" />
+    </Wire>
+    <Wire UId="96">
+      <IdentCon UId="36" />
+      <NameCon UId="65" Name="iMACHINE_ON_DELAYED" />
+    </Wire>
+    <Wire UId="97">
+      <OpenCon UId="71" />
+      <NameCon UId="65" Name="iLASER_READY_F_CIRCUIT_BRAKER" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="37" />
+      <NameCon UId="65" Name="iLASER_WARNING_LAP_ON" />
+    </Wire>
+    <Wire UId="99">
+      <IdentCon UId="38" />
+      <NameCon UId="65" Name="iSTATION_UNIT_ANY_CYCLE_ACT" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="39" />
+      <NameCon UId="65" Name="iLASER_ACT_START_GEN_CONDITION" />
+    </Wire>
+    <Wire UId="101">
+      <IdentCon UId="40" />
+      <NameCon UId="65" Name="iUNIT_NO" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="65" Name="oLIGHT_PATH" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="65" Name="oPROGRAM_NUMBER" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="65" Name="oPOWER_VALUE" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="65" Name="oPROCESSING_VALUE" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="65" Name="oPOWER_PORTION_CORE_VALUE" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="65" Name="oLASER_RESET_FAULT_ERROR" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="65" Name="oLASER_REQUEST" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="65" Name="oEXTERNAL_CONTROL" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="65" Name="oLASER_ON" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="65" Name="oLASER_ARM" />
+      <OpenCon UId="72" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="65" Name="oSTATION_RHP_SEOC_ALARMS" />
+      <OpenCon UId="73" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="65" Name="oSTATION_WARNING" />
+      <OpenCon UId="74" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="65" Name="oREADY_TO_EMISSION" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="65" Name="oALARM_CIRCUIT_BREAKER_ALARM" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="116">
+      <NameCon UId="65" Name="oALARM_LASER_ERROR" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="117">
+      <NameCon UId="65" Name="oALARM_WARNING_LASER" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="118">
+      <NameCon UId="65" Name="oALARM_LASER_NOT_READY" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="119">
+      <NameCon UId="65" Name="oALARM_LASER_NOT_SWITCHED_ON" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="120">
+      <NameCon UId="65" Name="oALARM_ANALOG_CONTROL_ERROR" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="121">
+      <NameCon UId="65" Name="oALARM_LASER_NOT_ASSIGNED" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="122">
+      <NameCon UId="65" Name="oALARM_OVERTEMPERATURE_ALARM" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="123">
+      <NameCon UId="65" Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="124">
+      <NameCon UId="65" Name="oALARM_LASER_SC_STATUS_ACTIVE" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="125">
+      <NameCon UId="65" Name="oALARM_ACTIVE_PANEL_ERROR" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="126">
+      <NameCon UId="65" Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="127">
+      <NameCon UId="65" Name="oALARM_FAULT" />
+      <IdentCon UId="63" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL LASER UNIT 01</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7263_UNIT_02_LASER_ENABLE_DISABLE" />
+        <Component Name="ENABLED" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>500</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>20000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_514" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_516" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_518" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_READY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_IS_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="FAULT_LASER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="EXT_ACTIV_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="PROG_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="SAFE_DOORS_U02_CLOSED_AND_LOCKED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_ASSIGNED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="LASER_WARNING_LAP_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB20230_TRUMPF_LASER_UNIT_01_ACTIVE" />
+        <Component Name="DATA" />
+        <Component Name="LASER ACTIVE START GENERAL CONDITIONS" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="LIGHTPATH" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="PROGRAMNO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="POWER_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="PROCESSING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="POWER_PORTION_CORE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="LASER_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="EXT_CONTROL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="LASER_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736050" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736051" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736052" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736053" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736054" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736055" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736056" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736057" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736058" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736059" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736060" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736061" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736062" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="63" />
+    <Call UId="64">
+      <CallInfo Name="FB20200_TRUMPF_READY" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="65">
+          <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
+        </Instance>
+        <Parameter Name="iLIMIT_MIN_POWER" Section="Input" Type="Int" />
+        <Parameter Name="iLIMIT_MAX_POWER" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_POWER" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_PROCESSING" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_POWER_PORTION_CORE" Section="Input" Type="Int" />
+        <Parameter Name="iSTATUS_READY_LASER_READY" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_IS_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSYSTEM_ERROR_LASER_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iEXTERNAL_CONTROL_READY" Section="Input" Type="Bool" />
+        <Parameter Name="iPROGRAM_ACTIVE" Section="Input" Type="Bool" />
+        <Parameter Name="iSOURCE_ENABLED" Section="Input" Type="Bool" />
+        <Parameter Name="iCOOLING_UNIT_FLOW_PRESENT" Section="Input" Type="Bool" />
+        <Parameter Name="iCOOLING_UNIT_OVERTEMPERATURE" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ENABLE_POWER_SEQ" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_DISABLE_POWER_SEQ" Section="Input" Type="Bool" />
+        <Parameter Name="iSAFETY_GATES_CLOSED_LOCKED" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ASSIGNED" Section="Input" Type="Bool" />
+        <Parameter Name="iMACHINE_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iMACHINE_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_READY_F_CIRCUIT_BRAKER" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_WARNING_LAP_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSTATION_UNIT_ANY_CYCLE_ACT" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ACT_START_GEN_CONDITION" Section="Input" Type="Bool" />
+        <Parameter Name="iUNIT_NO" Section="Input" Type="Byte" />
+        <Parameter Name="oLIGHT_PATH" Section="Output" Type="Byte" />
+        <Parameter Name="oPROGRAM_NUMBER" Section="Output" Type="Byte" />
+        <Parameter Name="oPOWER_VALUE" Section="Output" Type="DInt" />
+        <Parameter Name="oPROCESSING_VALUE" Section="Output" Type="DInt" />
+        <Parameter Name="oPOWER_PORTION_CORE_VALUE" Section="Output" Type="DInt" />
+        <Parameter Name="oLASER_RESET_FAULT_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oLASER_REQUEST" Section="Output" Type="Bool" />
+        <Parameter Name="oEXTERNAL_CONTROL" Section="Output" Type="Bool" />
+        <Parameter Name="oLASER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="oLASER_ARM" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_RHP_SEOC_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="oREADY_TO_EMISSION" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CIRCUIT_BREAKER_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_WARNING_LASER" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_NOT_READY" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_NOT_SWITCHED_ON" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_ANALOG_CONTROL_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_NOT_ASSIGNED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_OVERTEMPERATURE_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_SC_STATUS_ACTIVE" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_ACTIVE_PANEL_ERROR" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FAULT" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="75">
+      <Powerrail />
+      <NameCon UId="63" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="21" />
+      <NameCon UId="63" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="63" Name="out" />
+      <NameCon UId="64" Name="en" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="22" />
+      <NameCon UId="64" Name="iLIMIT_MIN_POWER" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="23" />
+      <NameCon UId="64" Name="iLIMIT_MAX_POWER" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="24" />
+      <NameCon UId="64" Name="iCOMMAND_POWER" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="25" />
+      <NameCon UId="64" Name="iCOMMAND_PROCESSING" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="26" />
+      <NameCon UId="64" Name="iCOMMAND_POWER_PORTION_CORE" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="27" />
+      <NameCon UId="64" Name="iSTATUS_READY_LASER_READY" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="28" />
+      <NameCon UId="64" Name="iLASER_IS_ON" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="29" />
+      <NameCon UId="64" Name="iSYSTEM_ERROR_LASER_FAULT" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="30" />
+      <NameCon UId="64" Name="iEXTERNAL_CONTROL_READY" />
+    </Wire>
+    <Wire UId="87">
+      <IdentCon UId="31" />
+      <NameCon UId="64" Name="iPROGRAM_ACTIVE" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="32" />
+      <NameCon UId="64" Name="iSOURCE_ENABLED" />
+    </Wire>
+    <Wire UId="89">
+      <OpenCon UId="66" />
+      <NameCon UId="64" Name="iCOOLING_UNIT_FLOW_PRESENT" />
+    </Wire>
+    <Wire UId="90">
+      <OpenCon UId="67" />
+      <NameCon UId="64" Name="iCOOLING_UNIT_OVERTEMPERATURE" />
+    </Wire>
+    <Wire UId="91">
+      <OpenCon UId="68" />
+      <NameCon UId="64" Name="iLASER_ENABLE_POWER_SEQ" />
+    </Wire>
+    <Wire UId="92">
+      <OpenCon UId="69" />
+      <NameCon UId="64" Name="iLASER_DISABLE_POWER_SEQ" />
+    </Wire>
+    <Wire UId="93">
+      <IdentCon UId="33" />
+      <NameCon UId="64" Name="iSAFETY_GATES_CLOSED_LOCKED" />
+    </Wire>
+    <Wire UId="94">
+      <IdentCon UId="34" />
+      <NameCon UId="64" Name="iLASER_ASSIGNED" />
+    </Wire>
+    <Wire UId="95">
+      <IdentCon UId="35" />
+      <NameCon UId="64" Name="iMACHINE_ON" />
+    </Wire>
+    <Wire UId="96">
+      <IdentCon UId="36" />
+      <NameCon UId="64" Name="iMACHINE_ON_DELAYED" />
+    </Wire>
+    <Wire UId="97">
+      <OpenCon UId="70" />
+      <NameCon UId="64" Name="iLASER_READY_F_CIRCUIT_BRAKER" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="37" />
+      <NameCon UId="64" Name="iLASER_WARNING_LAP_ON" />
+    </Wire>
+    <Wire UId="99">
+      <OpenCon UId="71" />
+      <NameCon UId="64" Name="iSTATION_UNIT_ANY_CYCLE_ACT" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="38" />
+      <NameCon UId="64" Name="iLASER_ACT_START_GEN_CONDITION" />
+    </Wire>
+    <Wire UId="101">
+      <IdentCon UId="39" />
+      <NameCon UId="64" Name="iUNIT_NO" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="64" Name="oLIGHT_PATH" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="64" Name="oPROGRAM_NUMBER" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="64" Name="oPOWER_VALUE" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="64" Name="oPROCESSING_VALUE" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="64" Name="oPOWER_PORTION_CORE_VALUE" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="64" Name="oLASER_RESET_FAULT_ERROR" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="64" Name="oLASER_REQUEST" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="64" Name="oEXTERNAL_CONTROL" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="64" Name="oLASER_ON" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="64" Name="oLASER_ARM" />
+      <OpenCon UId="72" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="64" Name="oSTATION_RHP_SEOC_ALARMS" />
+      <OpenCon UId="73" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="64" Name="oSTATION_WARNING" />
+      <OpenCon UId="74" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="64" Name="oREADY_TO_EMISSION" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="64" Name="oALARM_CIRCUIT_BREAKER_ALARM" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="116">
+      <NameCon UId="64" Name="oALARM_LASER_ERROR" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="117">
+      <NameCon UId="64" Name="oALARM_WARNING_LASER" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="118">
+      <NameCon UId="64" Name="oALARM_LASER_NOT_READY" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="119">
+      <NameCon UId="64" Name="oALARM_LASER_NOT_SWITCHED_ON" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="120">
+      <NameCon UId="64" Name="oALARM_ANALOG_CONTROL_ERROR" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="121">
+      <NameCon UId="64" Name="oALARM_LASER_NOT_ASSIGNED" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="122">
+      <NameCon UId="64" Name="oALARM_OVERTEMPERATURE_ALARM" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="123">
+      <NameCon UId="64" Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="124">
+      <NameCon UId="64" Name="oALARM_LASER_SC_STATUS_ACTIVE" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="125">
+      <NameCon UId="64" Name="oALARM_ACTIVE_PANEL_ERROR" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="126">
+      <NameCon UId="64" Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="127">
+      <NameCon UId="64" Name="oALARM_FAULT" />
+      <IdentCon UId="62" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL LASER UNIT 02</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB20200_GENERAL_LASER" />
+        <Component Name="ALL LASERS READY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB20200_GENERAL_LASER" />
+        <Component Name="ALL LASERS UNIT 1 READY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB20200_GENERAL_LASER" />
+        <Component Name="ALL LASERS UNIT 2 READY" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="29" />
+    <Part Name="Contact" UId="30" />
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="Coil" UId="34" />
+    <Part Name="Contact" UId="35" />
+    <Part Name="Coil" UId="36" />
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="22" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="24" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="25" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="26" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="33" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>ALL LASER READY</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="ret_val_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Any</ConstantType>
+        <ConstantValue>P#Q2600.0 BYTE 16</ConstantValue>
+      </Constant>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="43" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>LASER UNIT 01 OUTPUTS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="48" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="ret_val_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Any</ConstantType>
+        <ConstantValue>P#Q2700.0 BYTE 16</ConstantValue>
+      </Constant>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="49" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>LASER UNIT 02 OUTPUTS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="51" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="53" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="54" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>FC20200 LASER TRUMPF READY</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="55" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="56" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="57" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

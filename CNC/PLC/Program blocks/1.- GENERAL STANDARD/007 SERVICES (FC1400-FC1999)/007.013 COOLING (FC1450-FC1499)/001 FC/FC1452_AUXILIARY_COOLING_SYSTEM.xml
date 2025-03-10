@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:16:32.8967602Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="FLOW_AUX" Datatype="Real" />
+    <Member Name="TEMPERATURE_AUX" Datatype="Int" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC1452_AUXILIARY_COOLING_SYSTEM</Name>
+      <Number>1452</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; SHIELD COOLING SYSTEM  UNITS 01 &amp; 02&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="AUXILIARY_COOLING_LOW_LVL_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_DUMMY_OFF" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="AUXILIARY_COOLING_TEMP_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="M_DUMMY_OFF" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_1111</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="26">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_1111</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB2103_ELECTRICAL_CABINET" />
+        <Component Name="INPUT_CHILLER_BREAKER_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="COOLING_UNIT_01_02_FEEDBACK_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="U01_SHIELD_COOLING_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="U01_SHIELD_COOLING_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="U02_SHIELD_COOLING_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="U02_SHIELD_COOLING_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="LTLP_DirectKeyGetMovNoData" />
+        <Component Name="PowerUp" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>29</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708417" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708418" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708419" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708420" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708423" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708425" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741256" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708424" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741257" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708427" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741258" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708426" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741259" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708428" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708429" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708432" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708434" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741264" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708433" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741265" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708436" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741266" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708435" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741267" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708437" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708438" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOff29" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOn29" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup29ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup29ExecutableRight" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="COOLING_SECONDARY_SHIELD_SWITCH_ON" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="65">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="66" />
+    <Part Name="Contact" UId="67" />
+    <Part Name="Contact" UId="68" />
+    <Call UId="69">
+      <CallInfo Name="FB1452_AUXILIARY_COOLING_SYSTEM" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="70">
+          <Component Name="DB1461_SHIELD_AUX_COOLING_SYSTEM" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="OPTIONS_1" Section="Input" Type="Byte" />
+        <Parameter Name="CIRCUIT_BREAKER_INPUT" Section="Input" Type="Bool" />
+        <Parameter Name="CONTACTOR_FEEDBACK" Section="Input" Type="Bool" />
+        <Parameter Name="LOW_LEVEL_ALM" Section="Input" Type="Bool" />
+        <Parameter Name="OVERTEMPERATURE_ALM" Section="Input" Type="Bool" />
+        <Parameter Name="U01_FLOW_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="U01_TEMP_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="U02_FLOW_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="U02_TEMP_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="HMI_REQ_LINE" Section="Input" Type="Bool" />
+        <Parameter Name="U01_U02_BREAKER_TRIPPED_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_U02_CONTACTOR_FEEDBACK_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_U02_LOW_LEVEL_INPUT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_U02_OVERTEMPERATURE_INPUT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_FEEDBACK_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_FEEDBACK_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_COND_OFF" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_COND_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_EXECU_LEFT" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_EXECU_RIGHT" Section="Output" Type="Bool" />
+        <Parameter Name="MAIN_VALVE" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="71">
+      <Powerrail />
+      <NameCon UId="69" Name="en" />
+      <NameCon UId="65" Name="in" />
+      <NameCon UId="67" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="21" />
+      <NameCon UId="65" Name="operand" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="65" Name="out" />
+      <NameCon UId="66" Name="in" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="22" />
+      <NameCon UId="66" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="66" Name="out" />
+      <NameCon UId="69" Name="LOW_LEVEL_ALM" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="23" />
+      <NameCon UId="67" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="67" Name="out" />
+      <NameCon UId="68" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="24" />
+      <NameCon UId="68" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="68" Name="out" />
+      <NameCon UId="69" Name="OVERTEMPERATURE_ALM" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="25" />
+      <NameCon UId="69" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="26" />
+      <NameCon UId="69" Name="OPTIONS_1" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="27" />
+      <NameCon UId="69" Name="CIRCUIT_BREAKER_INPUT" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="28" />
+      <NameCon UId="69" Name="CONTACTOR_FEEDBACK" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="29" />
+      <NameCon UId="69" Name="U01_FLOW_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="30" />
+      <NameCon UId="69" Name="U01_TEMP_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="31" />
+      <NameCon UId="69" Name="U02_FLOW_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="87">
+      <IdentCon UId="32" />
+      <NameCon UId="69" Name="U02_TEMP_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="33" />
+      <NameCon UId="69" Name="HMI_REQ_LINE" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="69" Name="U01_U02_BREAKER_TRIPPED_ALARM" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="69" Name="U01_U02_CONTACTOR_FEEDBACK_ALARM" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="69" Name="U01_U02_LOW_LEVEL_INPUT_ALARM" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="69" Name="U01_U02_OVERTEMPERATURE_INPUT_ALARM" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="69" Name="U01_FLOW_FEEDBACK_ALARM" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="69" Name="U01_FLOW_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="69" Name="U01_FLOW_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="69" Name="U01_FLOW_LOW_LIMIT_ALARM" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="69" Name="U01_FLOW_LOW_LIMIT_WARNING" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="69" Name="U01_TEMP_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="69" Name="U01_TEMP_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="69" Name="U01_TEMP_LOW_LIMIT_ALARM" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="69" Name="U01_TEMP_LOW_LIMIT_WARNING" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="69" Name="U01_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="69" Name="U01_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="69" Name="U02_FLOW_FEEDBACK_ALARM" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="69" Name="U02_FLOW_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="69" Name="U02_FLOW_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="69" Name="U02_FLOW_LOW_LIMIT_ALARM" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="69" Name="U02_FLOW_LOW_LIMIT_WARNING" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="69" Name="U02_TEMP_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="69" Name="U02_TEMP_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="69" Name="U02_TEMP_LOW_LIMIT_ALARM" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="69" Name="U02_TEMP_LOW_LIMIT_WARNING" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="69" Name="U02_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="69" Name="U02_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="69" Name="HMI_POWER_UP_COND_OFF" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="116">
+      <NameCon UId="69" Name="HMI_POWER_UP_COND_ON" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="117">
+      <NameCon UId="69" Name="HMI_POWER_UP_EXECU_LEFT" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="118">
+      <NameCon UId="69" Name="HMI_POWER_UP_EXECU_RIGHT" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="119">
+      <NameCon UId="69" Name="MAIN_VALVE" />
+      <IdentCon UId="64" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 GENERAL CIRCUIT BRAKER ALARM
+2#0000_0010 OPTIONS 0 BIT 1 GENERAL CONTACTOR FEEDBACK ALARM
+2#0000_0100 OPTIONS 0 BIT 2 UNIT 01 FLOW SETPOINT ALARM
+2#0000_1000 OPTIONS 0 BIT 3 UNIT 01 TEMPERATURE SETPOINT ALARM
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE
+
+2#0000_0001 OPTIONS 1 BIT 0 FIRST FEEDBACK FLOW TEMPERATURE SENSOR (UNIT 01)
+2#0000_0010 OPTIONS 1 BIT 1 SECOND FEEDBACK FLOW TEMPERATURE SENSOR (UNIT 02)
+2#0000_0100 OPTIONS 1 BIT 2 UNIT 02 FLOW SETPOINT ALARM
+2#0000_1000 OPTIONS 1 BIT 3 UNIT 02 TEMPERATURE SETPOINT ALARM
+2#0001_0000 OPTIONS 1 BIT 4 SPARE
+2#0010_0000 OPTIONS 1 BIT 5 SPARE
+2#0100_0000 OPTIONS 1 BIT 6 SPARE
+2#1000_0000 OPTIONS 1 BIT 7 SPARE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB1452 SHIELD AUXILIARY COOLING SYSTEM</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="SECUNDARY_COOLING_BUFFER_LOW_LVL_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_DUMMY_OFF" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SECUNDARY_COOLING_BUFFER_TEMP_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="M_DUMMY_OFF" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_1111</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="26">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0000</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB2103_ELECTRICAL_CABINET" />
+        <Component Name="INPUT_CHILLER_BREAKER_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="COOLING_BUFFER_FEEDBACK_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="U02_SHIELD_COOLING_FLOW_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="U02_SHIELD_COOLING_TEMP_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="32">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="LTLP_DirectKeyGetMovNoData" />
+        <Component Name="PowerUp" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>41</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708443" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708444" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708445" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708446" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708449" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708451" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741272" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708450" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741273" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708453" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741274" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708452" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741275" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708454" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708455" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708458" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708460" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741280" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708459" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741281" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708462" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741282" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708461" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="741283" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708463" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708464" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOff41" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOn41" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup41ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup41ExecutableRight" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="COOLING_SECONDARY_BUFFER_SWITCH_ON" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="65">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="66" />
+    <Part Name="Contact" UId="67" />
+    <Part Name="Contact" UId="68" />
+    <Call UId="69">
+      <CallInfo Name="FB1452_AUXILIARY_COOLING_SYSTEM" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="70">
+          <Component Name="DB1463_CELL_COOLING_BUFFER_AUX_SYSTEM" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="OPTIONS_1" Section="Input" Type="Byte" />
+        <Parameter Name="CIRCUIT_BREAKER_INPUT" Section="Input" Type="Bool" />
+        <Parameter Name="CONTACTOR_FEEDBACK" Section="Input" Type="Bool" />
+        <Parameter Name="LOW_LEVEL_ALM" Section="Input" Type="Bool" />
+        <Parameter Name="OVERTEMPERATURE_ALM" Section="Input" Type="Bool" />
+        <Parameter Name="U01_FLOW_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="U01_TEMP_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="U02_FLOW_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="U02_TEMP_ACTUAL_RAW_VALUE" Section="Input" Type="Int" />
+        <Parameter Name="HMI_REQ_LINE" Section="Input" Type="Bool" />
+        <Parameter Name="U01_U02_BREAKER_TRIPPED_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_U02_CONTACTOR_FEEDBACK_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_U02_LOW_LEVEL_INPUT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_U02_OVERTEMPERATURE_INPUT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_FEEDBACK_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U01_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U01_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_FEEDBACK_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_HIGH_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_HIGH_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_LOW_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_LOW_LIMIT_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="U02_FLOW_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="U02_TEMP_SETPOINT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_COND_OFF" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_COND_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_EXECU_LEFT" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_POWER_UP_EXECU_RIGHT" Section="Output" Type="Bool" />
+        <Parameter Name="MAIN_VALVE" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="71">
+      <Powerrail />
+      <NameCon UId="69" Name="en" />
+      <NameCon UId="65" Name="in" />
+      <NameCon UId="67" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="21" />
+      <NameCon UId="65" Name="operand" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="65" Name="out" />
+      <NameCon UId="66" Name="in" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="22" />
+      <NameCon UId="66" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="66" Name="out" />
+      <NameCon UId="69" Name="LOW_LEVEL_ALM" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="23" />
+      <NameCon UId="67" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="67" Name="out" />
+      <NameCon UId="68" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="24" />
+      <NameCon UId="68" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="68" Name="out" />
+      <NameCon UId="69" Name="OVERTEMPERATURE_ALM" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="25" />
+      <NameCon UId="69" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="26" />
+      <NameCon UId="69" Name="OPTIONS_1" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="27" />
+      <NameCon UId="69" Name="CIRCUIT_BREAKER_INPUT" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="28" />
+      <NameCon UId="69" Name="CONTACTOR_FEEDBACK" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="29" />
+      <NameCon UId="69" Name="U01_FLOW_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="30" />
+      <NameCon UId="69" Name="U01_TEMP_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="31" />
+      <NameCon UId="69" Name="U02_FLOW_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="87">
+      <IdentCon UId="32" />
+      <NameCon UId="69" Name="U02_TEMP_ACTUAL_RAW_VALUE" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="33" />
+      <NameCon UId="69" Name="HMI_REQ_LINE" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="69" Name="U01_U02_BREAKER_TRIPPED_ALARM" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="69" Name="U01_U02_CONTACTOR_FEEDBACK_ALARM" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="69" Name="U01_U02_LOW_LEVEL_INPUT_ALARM" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="69" Name="U01_U02_OVERTEMPERATURE_INPUT_ALARM" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="69" Name="U01_FLOW_FEEDBACK_ALARM" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="69" Name="U01_FLOW_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="69" Name="U01_FLOW_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="69" Name="U01_FLOW_LOW_LIMIT_ALARM" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="69" Name="U01_FLOW_LOW_LIMIT_WARNING" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="69" Name="U01_TEMP_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="69" Name="U01_TEMP_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="69" Name="U01_TEMP_LOW_LIMIT_ALARM" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="69" Name="U01_TEMP_LOW_LIMIT_WARNING" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="69" Name="U01_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="69" Name="U01_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="69" Name="U02_FLOW_FEEDBACK_ALARM" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="69" Name="U02_FLOW_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="69" Name="U02_FLOW_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="69" Name="U02_FLOW_LOW_LIMIT_ALARM" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="69" Name="U02_FLOW_LOW_LIMIT_WARNING" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="69" Name="U02_TEMP_HIGH_LIMIT_ALARM" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="69" Name="U02_TEMP_HIGH_LIMIT_WARNING" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="69" Name="U02_TEMP_LOW_LIMIT_ALARM" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="69" Name="U02_TEMP_LOW_LIMIT_WARNING" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="69" Name="U02_FLOW_SETPOINT_ALARM" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="69" Name="U02_TEMP_SETPOINT_ALARM" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="69" Name="HMI_POWER_UP_COND_OFF" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="116">
+      <NameCon UId="69" Name="HMI_POWER_UP_COND_ON" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="117">
+      <NameCon UId="69" Name="HMI_POWER_UP_EXECU_LEFT" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="118">
+      <NameCon UId="69" Name="HMI_POWER_UP_EXECU_RIGHT" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="119">
+      <NameCon UId="69" Name="MAIN_VALVE" />
+      <IdentCon UId="64" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 GENERAL CIRCUIT BRAKER ALARM
+2#0000_0010 OPTIONS 0 BIT 1 GENERAL CONTACTOR FEEDBACK ALARM
+2#0000_0100 OPTIONS 0 BIT 2 UNIT 01 FLOW SETPOINT ALARM
+2#0000_1000 OPTIONS 0 BIT 3 UNIT 01 TEMPERATURE SETPOINT ALARM
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE
+
+2#0000_0001 OPTIONS 1 BIT 0 FIRST FEEDBACK FLOW TEMPERATURE SENSOR (UNIT 01)
+2#0000_0010 OPTIONS 1 BIT 1 SECOND FEEDBACK FLOW TEMPERATURE SENSOR (UNIT 02)
+2#0000_0100 OPTIONS 1 BIT 2 UNIT 02 FLOW SETPOINT ALARM
+2#0000_1000 OPTIONS 1 BIT 3 UNIT 02 TEMPERATURE SETPOINT ALARM
+2#0001_0000 OPTIONS 1 BIT 4 SPARE
+2#0010_0000 OPTIONS 1 BIT 5 SPARE
+2#0100_0000 OPTIONS 1 BIT 6 SPARE
+2#1000_0000 OPTIONS 1 BIT 7 SPARE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB1452 CELL COOLING BUFFER AUXILIARY COOLING SYSTEM</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="27" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="28" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="29" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="2A" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="2B" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

@@ -1,0 +1,865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:15:47.1248737Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>ETXETAR</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="O_BYTE_0" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">OPTIONS BYTE 0</MultiLanguageText>
+      </Comment>
+      <Member Name="BA_BUTTONS" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">BA MODE BUTTONS OPTION</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="CHANGE_MODE_SEOC_ALARM" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">CHANGE MODE SEOC ALARM OPTION</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="MODE_SELECTED_MEMORY" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">MODE SELECTED MEMORY OPTION</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+  </Section>
+  <Section Name="Constant">
+    <Member Name="FC_NUMBER" Datatype="DInt" Accessibility="Public">
+      <StartValue>2002</StartValue>
+    </Member>
+  </Section>
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>FC2002_BA_MODE</Name>
+      <Number>2002</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="ENABLING_DEV_SWTCHD_ON_FROM_UNIT_01_MAIN_SAFETY_DOOR_AREA" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="ENABLING_DEV_SWTCHD_ON_FROM_UNIT_02_MAIN_SAFETY_DOOR_AREA" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="POWER_ON_W_ENABLE_BUTT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="ANY_MACHINE_CYCLE_RUN" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="26">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0100</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="BA_MODES_BA1_BUTTON_I" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="BA_MODES_BA2_BUTTON_I" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="BA_MODES_BA3_BUTTON_I" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB2100_GENERAL" />
+        <Component Name="SAFETY_GATES_CLOSED_LOCKED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="START_SERVICES_GLOBAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="GENERAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="BA" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740069" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740072" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740073" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740074" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740075" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="BA_MODES_BA1_LED_Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="BA_MODES_BA2_LED_Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="BA_MODES_BA3_LED_Q" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="43">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="44">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="45" />
+    <Part Name="Contact" UId="46" />
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="48">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="49" />
+    <Call UId="50">
+      <CallInfo Name="FB2002_BA_MODE" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="51">
+          <Component Name="DB2002_BA_MODES_MG1" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="BA1_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="BA2_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="BA3_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="BA5_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="SAFETY_ENABLED_W_DOOR_OPENED" Section="Input" Type="Bool" />
+        <Parameter Name="SAFETY_GATES_CLSD_AND_LCKD" Section="Input" Type="Bool" />
+        <Parameter Name="START_SERVICES_GLOBAL" Section="Input" Type="Bool" />
+        <Parameter Name="ANY_MCH_CYCLE_RUN" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET_FAULTS" Section="Input" Type="Bool" />
+        <Parameter Name="NO_BA_MODE_SLCTD_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA1_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA2_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA3_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA5_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="BA1_MODE_LED_O" Section="Output" Type="Bool" />
+        <Parameter Name="BA2_MODE_LED_O" Section="Output" Type="Bool" />
+        <Parameter Name="BA3_MODE_LED_O" Section="Output" Type="Bool" />
+        <Parameter Name="MODE_GROUP_GENERAL_DB" Section="InOut" Type="&quot;AUTO_SINGLE_SEMI_MANUAL&quot;" />
+        <Parameter Name="MODE_GROUP_BA_DB" Section="InOut" Type="&quot;BA_MODE&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="53">
+      <Powerrail />
+      <NameCon UId="50" Name="en" />
+      <NameCon UId="43" Name="in" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="21" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="22" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="23" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="50" Name="SAFETY_ENABLED_W_DOOR_OPENED" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="24" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="25" />
+      <NameCon UId="48" Name="operand" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="48" Name="out" />
+      <NameCon UId="49" Name="in" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="ANY_MCH_CYCLE_RUN" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="50" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="27" />
+      <NameCon UId="50" Name="BA1_BUTTON_I" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="28" />
+      <NameCon UId="50" Name="BA2_BUTTON_I" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="29" />
+      <NameCon UId="50" Name="BA3_BUTTON_I" />
+    </Wire>
+    <Wire UId="70">
+      <OpenCon UId="52" />
+      <NameCon UId="50" Name="BA5_BUTTON_I" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="30" />
+      <NameCon UId="50" Name="SAFETY_GATES_CLSD_AND_LCKD" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="31" />
+      <NameCon UId="50" Name="START_SERVICES_GLOBAL" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="MCH_RESET_FAULTS" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="33" />
+      <NameCon UId="50" Name="MODE_GROUP_GENERAL_DB" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="34" />
+      <NameCon UId="50" Name="MODE_GROUP_BA_DB" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="50" Name="NO_BA_MODE_SLCTD_WRN" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="CHANGE_TO_BA1_MODE_WRN" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="78">
+      <NameCon UId="50" Name="CHANGE_TO_BA2_MODE_WRN" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="50" Name="CHANGE_TO_BA3_MODE_WRN" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="50" Name="CHANGE_TO_BA5_MODE_WRN" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="50" Name="BA1_MODE_LED_O" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="50" Name="BA2_MODE_LED_O" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="50" Name="BA3_MODE_LED_O" />
+      <IdentCon UId="42" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 BA BUTTONS
+2#0000_0010 OPTIONS 0 BIT 1 CHANGE MODE SEOC ALARM
+2#0000_0100 OPTIONS 0 BIT 2 MODE SELECTED MEMORY
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE
+</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>BA MODES MODE GROUP 1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="ENABLE_DEVICE_FROM_ROBOR_CELL_DOOR_AREA" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="POWER_ON_W_ENABLE_BUTT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0100</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="BA_MODES_BA1_BUTTON_I" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="BA_MODES_BA2_BUTTON_I" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="BA_MODES_BA3_BUTTON_I" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SAFE_INPUT_ROBOT_CELL_CLOSED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="START_SERVICES_GLOBAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="UNIT_03_ANY_CYCLE_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="GENERAL_MACHINE" />
+        <Component Name="FROM_CELL_TO_MACHINE_GENERAL" />
+        <Component Name="CELL_MEAS_STA_RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB2011_MODES_GENERAL_MG2" />
+        <Component Name="GENERAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB2011_MODES_GENERAL_MG2" />
+        <Component Name="BA" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740091" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740094" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740095" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740096" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="740097" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="BA_MODES_BA1_LED_Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="BA_MODES_BA2_LED_Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="BA_MODES_BA3_LED_Q" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42" />
+    <Call UId="43">
+      <CallInfo Name="FB2002_BA_MODE" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="44">
+          <Component Name="DB2003_BA_MODES_MG2" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="BA1_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="BA2_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="BA3_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="BA5_BUTTON_I" Section="Input" Type="Bool" />
+        <Parameter Name="SAFETY_ENABLED_W_DOOR_OPENED" Section="Input" Type="Bool" />
+        <Parameter Name="SAFETY_GATES_CLSD_AND_LCKD" Section="Input" Type="Bool" />
+        <Parameter Name="START_SERVICES_GLOBAL" Section="Input" Type="Bool" />
+        <Parameter Name="ANY_MCH_CYCLE_RUN" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET_FAULTS" Section="Input" Type="Bool" />
+        <Parameter Name="NO_BA_MODE_SLCTD_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA1_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA2_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA3_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="CHANGE_TO_BA5_MODE_WRN" Section="Output" Type="Bool" />
+        <Parameter Name="BA1_MODE_LED_O" Section="Output" Type="Bool" />
+        <Parameter Name="BA2_MODE_LED_O" Section="Output" Type="Bool" />
+        <Parameter Name="BA3_MODE_LED_O" Section="Output" Type="Bool" />
+        <Parameter Name="MODE_GROUP_GENERAL_DB" Section="InOut" Type="&quot;AUTO_SINGLE_SEMI_MANUAL&quot;" />
+        <Parameter Name="MODE_GROUP_BA_DB" Section="InOut" Type="&quot;BA_MODE&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="46">
+      <Powerrail />
+      <NameCon UId="43" Name="en" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="SAFETY_ENABLED_W_DOOR_OPENED" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="24" />
+      <NameCon UId="43" Name="BA1_BUTTON_I" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="25" />
+      <NameCon UId="43" Name="BA2_BUTTON_I" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="26" />
+      <NameCon UId="43" Name="BA3_BUTTON_I" />
+    </Wire>
+    <Wire UId="55">
+      <OpenCon UId="45" />
+      <NameCon UId="43" Name="BA5_BUTTON_I" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="43" Name="SAFETY_GATES_CLSD_AND_LCKD" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="28" />
+      <NameCon UId="43" Name="START_SERVICES_GLOBAL" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="29" />
+      <NameCon UId="43" Name="ANY_MCH_CYCLE_RUN" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="30" />
+      <NameCon UId="43" Name="MCH_RESET_FAULTS" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="31" />
+      <NameCon UId="43" Name="MODE_GROUP_GENERAL_DB" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="32" />
+      <NameCon UId="43" Name="MODE_GROUP_BA_DB" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="43" Name="NO_BA_MODE_SLCTD_WRN" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="CHANGE_TO_BA1_MODE_WRN" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="43" Name="CHANGE_TO_BA2_MODE_WRN" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="43" Name="CHANGE_TO_BA3_MODE_WRN" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="66">
+      <NameCon UId="43" Name="CHANGE_TO_BA5_MODE_WRN" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="43" Name="BA1_MODE_LED_O" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="68">
+      <NameCon UId="43" Name="BA2_MODE_LED_O" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="43" Name="BA3_MODE_LED_O" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 BA BUTTONS
+2#0000_0010 OPTIONS 0 BIT 1 CHANGE MODE SEOC ALARM
+2#0000_0100 OPTIONS 0 BIT 2 MODE SELECTED MEMORY
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE
+</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>BA MODES MODE GROUP 2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="1C" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="1D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="1E" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="1F" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="20" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

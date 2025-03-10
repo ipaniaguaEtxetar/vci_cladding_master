@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:16:41.1384592Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <DBAccessibleFromOPCUA>false</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <InstanceOfName>LTLP_SLDiagnosticToIdent</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="ENABLE" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="ResetReaderDone" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="ReadReaderDone" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="SetReaderDone" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="StateOfDoneCmd" Datatype="DWord" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="DeviceIdent" Datatype="TO_IDENT" Version="1.1" Remanence="NonRetain" Accessibility="Public">
+      <Sections>
+        <Section Name="Input" />
+        <Section Name="Output" />
+        <Section Name="InOut" />
+        <Section Name="Static">
+          <Member Name="HW_ID" Datatype="Word" />
+          <Member Name="CM_CHANNEL" Datatype="Int" />
+          <Member Name="LADDR" Datatype="Word" />
+          <Member Name="CONFIGURATION" Datatype="IID_IN_PARAMETERS" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="config_mode" Datatype="Byte" />
+                <Member Name="connected_reader" Datatype="Word" />
+                <Member Name="param_buffer" Datatype="Array[1..16] of Byte" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="DIAGNOSTIC" Datatype="IID_IN_DIAGNOSTIC" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="error_buffer" Datatype="Array[1..5] of IID_IN_ERRORBUF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="cmd" Datatype="Byte" />
+                      <Member Name="attribute" Datatype="Byte" />
+                      <Member Name="last_error_status" Datatype="DWord" />
+                      <Member Name="last_error_timestamp_dat" Datatype="Date" />
+                      <Member Name="last_error_timestamp_tod" Datatype="Time_Of_Day" />
+                      <Member Name="last_move_error" Datatype="Int" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="buf_offset" Datatype="Int" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="STATIC" Datatype="IID_IN_SYNC" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="STATUS_IN_WORK" Datatype="Bool" />
+                <Member Name="STATUS_INITIALISATION" Datatype="Bool" />
+                <Member Name="STATUS_LAST_CMD_INIT" Datatype="Bool" />
+                <Member Name="sreset_request" Datatype="Bool" />
+                <Member Name="acyc_active" Datatype="Bool" />
+                <Member Name="reset_request" Datatype="Bool" />
+                <Member Name="AC_H" Datatype="Bool" />
+                <Member Name="AC_L" Datatype="Bool" />
+                <Member Name="CC_H" Datatype="Bool" />
+                <Member Name="CC_L" Datatype="Bool" />
+                <Member Name="old_CC_H" Datatype="Bool" />
+                <Member Name="old_CC_L" Datatype="Bool" />
+                <Member Name="old_AC_H" Datatype="Bool" />
+                <Member Name="old_AC_L" Datatype="Bool" />
+                <Member Name="cyc_control" Datatype="Word" />
+                <Member Name="cyc_status" Datatype="Word" />
+                <Member Name="SRESET_active" Datatype="Bool" />
+                <Member Name="SRESET_cyc" Datatype="Bool" />
+                <Member Name="RPTCMD_cyc" Datatype="Bool" />
+                <Member Name="RPTCMD_active" Datatype="Bool" />
+                <Member Name="INIT_cyc" Datatype="Bool" />
+                <Member Name="init_active" Datatype="Bool" />
+                <Member Name="presence" Datatype="Bool" />
+                <Member Name="buf_header" Datatype="Int" />
+                <Member Name="sequence_number" Datatype="Int" />
+                <Member Name="config_value" Datatype="Byte" />
+                <Member Name="offset" Datatype="Int" />
+                <Member Name="index" Datatype="Int" />
+                <Member Name="buf_max" Datatype="Int" />
+                <Member Name="instruction_set" Datatype="Bool" />
+                <Member Name="index_set" Datatype="Bool" />
+                <Member Name="timeout_repeat" Datatype="Time" />
+                <Member Name="timeout_reset" Datatype="Time" />
+                <Member Name="state" Datatype="Int" />
+                <Member Name="buf_maxdata" Datatype="Int" />
+                <Member Name="buf" Datatype="Array[0..1034] of Byte" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="stDiagnosticData" Datatype="&quot;LTLP_typeDiagnosticIdent&quot;" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Common" Datatype="Struct"><Member Name="dataAreActual" Datatype="Bool" /><Member Name="isOfTypeTOIdent" Datatype="Bool" /><Member Name="isOfTypeHwConnect" Datatype="Bool" /><Member Name="lastCmdWasResetReader" Datatype="Bool" /><Member Name="lastCmdWasReadReader" Datatype="Bool" /><Member Name="lastCmdWasSetReader" Datatype="Bool" /></Member><Member Name="State" Datatype="Struct"><Member Name="isWorking" Datatype="Bool" /><Member Name="isInitialized" Datatype="Bool" /><Member Name="lastCmdIsInit" Datatype="Bool" /><Member Name="presenceBit" Datatype="Bool" /><Member Name="ackCounterHigh" Datatype="Bool" /><Member Name="ackCounterLow" Datatype="Bool" /><Member Name="cmdCounterHigh" Datatype="Bool" /><Member Name="cmdCounterLow" Datatype="Bool" /></Member><Member Name="lastErrors" Datatype="Struct"><Member Name="countOfActual" Datatype="Int" /><Member Name="maxCount" Datatype="Int" /><Member Name="errorsDetected" Datatype="Array[1..5] of Struct"><Member Name="errorState" Datatype="DWord" /><Member Name="errorDate" Datatype="Date" /><Member Name="errorTOD" Datatype="Time_Of_Day" /></Member></Member><Member Name="cmdStateDecode" Datatype="Struct"><Member Name="lastCmdState" Datatype="DWord" /><Member Name="savedCmdState" Datatype="DWord" /><Member Name="notWritable" Datatype="Bool" /><Member Name="notConnected" Datatype="Bool" /><Member Name="adressError" Datatype="Bool" /><Member Name="initialationError" Datatype="Bool" /><Member Name="memoryError" Datatype="Bool" /><Member Name="passwordError" Datatype="Bool" /><Member Name="readWriteProtected" Datatype="Bool" /><Member Name="noAnswer" Datatype="Bool" /><Member Name="accessDenied" Datatype="Bool" /><Member Name="verificationError" Datatype="Bool" /><Member Name="customTransponderError" Datatype="Bool" /><Member Name="commandCantExecuted" Datatype="Bool" /><Member Name="readerError" Datatype="Bool" /><Member Name="toMuchTransponders" Datatype="Bool" /><Member Name="noTransponderFound" Datatype="Bool" /><Member Name="dataNotAvailable" Datatype="Bool" /><Member Name="transponderCRCError" Datatype="Bool" /><Member Name="antennaNotEnabled" Datatype="Bool" /><Member Name="frequencyNotEnabled" Datatype="Bool" /><Member Name="carrierSignalNotActivated" Datatype="Bool" /><Member Name="notOnlyOneTransponder" Datatype="Bool" /><Member Name="generalRadioError" Datatype="Bool" /><Member Name="shortCiruit" Datatype="Bool" /><Member Name="connectionErrorReader" Datatype="Bool" /><Member Name="bufferCommandError" Datatype="Bool" /><Member Name="bufferDataError" Datatype="Bool" /><Member Name="commandNotPermitted" Datatype="Bool" /><Member Name="startupMsgReader" Datatype="Bool" /><Member Name="generalError" Datatype="Bool" /><Member Name="noConfigurationData" Datatype="Bool" /><Member Name="communicationErrorModulReader" Datatype="Bool" /><Member Name="communicationErrorInternal" Datatype="Bool" /><Member Name="commandCanceled" Datatype="Bool" /><Member Name="incorrectSNReader" Datatype="Bool" /><Member Name="incorrectSNIdent" Datatype="Bool" /><Member Name="invalidDBNumberReader" Datatype="Bool" /><Member Name="invalidDBNumberIdent" Datatype="Bool" /><Member Name="invalidDBLengthReader" Datatype="Bool" /><Member Name="invalidDBLengthIdent" Datatype="Bool" /><Member Name="prevCommandActiv" Datatype="Bool" /><Member Name="executeHWReset" Datatype="Bool" /><Member Name="commandCodeNotMatch" Datatype="Bool" /><Member Name="incorrectSequenceFrames" Datatype="Bool" /><Member Name="syncError" Datatype="Bool" /><Member Name="communicationErrorAccess" Datatype="Bool" /><Member Name="communicationErrorResource" Datatype="Bool" /><Member Name="communicationErrorFunctional" Datatype="Bool" /><Member Name="communicationErrorOther" Datatype="Bool" /><Member Name="unknownCommand" Datatype="Bool" /><Member Name="invalidCommand" Datatype="Bool" /><Member Name="badParameter" Datatype="Bool" /><Member Name="presenceError" Datatype="Bool" /><Member Name="resetNecessary" Datatype="Bool" /><Member Name="resetTimerExpired" Datatype="Bool" /><Member Name="parameterMissing" Datatype="Bool" /><Member Name="parameterInvalidFormat" Datatype="Bool" /><Member Name="parameterInvalidType" Datatype="Bool" /><Member Name="parameterUnknown" Datatype="Bool" /><Member Name="commandFrameInvalid" Datatype="Bool" /><Member Name="inventoryFailed" Datatype="Bool" /><Member Name="readFailed" Datatype="Bool" /><Member Name="writeFailed" Datatype="Bool" /><Member Name="writeEPCIDFailed" Datatype="Bool" /><Member Name="enableWriteProtectionFailed" Datatype="Bool" /><Member Name="killFailed" Datatype="Bool" /><Member Name="onlyResetPossible" Datatype="Bool" /><Member Name="cmdCodeNotPermitted" Datatype="Bool" /><Member Name="lenDataToLong" Datatype="Bool" /><Member Name="receiveDataBufferTooSmall" Datatype="Bool" /><Member Name="onlyInitPossible" Datatype="Bool" /><Member Name="wrongIndex" Datatype="Bool" /><Member Name="readerNotResponse" Datatype="Bool" /><Member Name="timeoutInit" Datatype="Bool" /><Member Name="commandRepetition" Datatype="Bool" /><Member Name="transferPDUError" Datatype="Bool" /><Member Name="parameterIncorrect" Datatype="Bool" /></Member></Section></Sections></Member>
+  </Section>
+</Sections></Interface>
+      <Name>LTLP_SLDiagnosticToIdentDB</Name>
+      <Number>592</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="6" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

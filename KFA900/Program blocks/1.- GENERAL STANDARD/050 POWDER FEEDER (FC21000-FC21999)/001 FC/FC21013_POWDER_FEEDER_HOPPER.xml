@@ -1,0 +1,3204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:18:43.6410112Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="AUX_PRESSURE" Datatype="Int" />
+    <Member Name="AUX_DIGITAL1" Datatype="Bool" />
+    <Member Name="AUX_DIGITAL2" Datatype="Bool" />
+    <Member Name="AUX_SCATTER" Datatype="Array[0..15] of Bool" />
+    <Member Name="PRESSURE_NORM" Datatype="Real" />
+    <Member Name="PRESSURE_SCALE" Datatype="Real" />
+    <Member Name="AUX_PRESSURE2" Datatype="Real" />
+    <Member Name="SCALED2" Datatype="Real" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC21013_POWDER_FEEDER_HOPPER</Name>
+      <Number>21013</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>/////_UNIT_01_/////</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="ASPIRATION_UNIT_01_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="U01_PF1_CONDITIONS_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0011</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="FEEDER LINE 1 NOT READY FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="FEEDER PROFINET MODE ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="FEEDER LINE 2 NOT READY FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_01_LINE_1" />
+        <Component Name="HOPPER_ON_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_01_LINE_2" />
+        <Component Name="HOPPER_ON_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_01_LINE_1" />
+        <Component Name="HOPPER_OFF_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_01_LINE_2" />
+        <Component Name="HOPPER_OFF_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Inputs" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="FEEDER PROFINET MODE ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2140_HOPPERS_MPP" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="SWITCH_ON_POWDER_UNIT_01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="SWITCH_OFF_POWDER_UNIT_01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fShutdownToPF_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fShutdownToPF_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOnCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOnCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOnCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOnCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOffCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOffCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOffCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOffCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718030" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718031" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718032" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718033" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718034" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718035" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718036" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718037" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718038" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718039" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="65">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718040" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718041" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="67">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729770" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="68">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729771" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="69">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729772" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="70">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729773" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="71">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729774" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="72">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729775" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="73">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718060" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="74">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718061" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="75">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718062" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="76">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718063" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="77">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718064" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="78">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718065" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="79">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718066" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="80">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718067" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="81">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718068" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="82">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718069" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="83">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718070" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="84">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718071" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="85">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729790" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="86">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729791" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="87">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729792" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="88">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729793" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="89">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729794" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="90">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729795" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="91" />
+    <Part Name="Contact" UId="92" />
+    <Call UId="93">
+      <CallInfo Name="FB21013_POWDER_FEEDER_HOPPER" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="94">
+          <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="iGENERAL_CONDITIONS" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_LINE_1_NOT_READY_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_PROFINET_MODE_ACTIVE_FAULT_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_LINE_2_NOT_READY_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_START_REQ_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_START_REQ_LINE_2" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_STOP_REQ_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_STOP_REQ_LINE_2" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_INTERLOCK_INPUTS" Section="Input" Type="&quot;POWDER FEEDER INTERLOCK INPUT&quot;" />
+        <Parameter Name="iFEEDER_PROFINET_MODE_ACTIVE" Section="Input" Type="Bool" />
+        <Parameter Name="iCONTROL_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iAUTO_START_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iAUTO_STOP_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iHMI_GAS_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_GAS_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_DISK_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_DISK_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_GAS_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_GAS_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_DISK_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_DISK_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iFEEDER_PLC_AUX_VALUES" Section="Input" Type="&quot;POWDER FEEDER PLC AUXILIAR&quot;" />
+        <Parameter Name="oSTATION_IS_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_WARNINGS" Section="Output" Type="Bool" />
+        <Parameter Name="o_fShutdownToPF_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fShutdownToPF_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOnCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOnCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOnCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOnCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOffCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOffCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOffCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOffCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_POWDER_LINE_1_CLOGGED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_COMMUNICATION_RUNNING_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FEEDER_NOT_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_POWDER_LINE_2_CLOGGED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_COMMUNICATION_RUNNING_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FEEDER_NOT_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="97">
+      <Powerrail />
+      <NameCon UId="93" Name="en" />
+      <NameCon UId="91" Name="in" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="21" />
+      <NameCon UId="91" Name="operand" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="91" Name="out" />
+      <NameCon UId="92" Name="in" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="22" />
+      <NameCon UId="92" Name="operand" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="92" Name="out" />
+      <NameCon UId="93" Name="iGENERAL_CONDITIONS" />
+    </Wire>
+    <Wire UId="102">
+      <IdentCon UId="23" />
+      <NameCon UId="93" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="103">
+      <IdentCon UId="24" />
+      <NameCon UId="93" Name="iPF_LINE_1_NOT_READY_FAULT" />
+    </Wire>
+    <Wire UId="104">
+      <IdentCon UId="25" />
+      <NameCon UId="93" Name="iPF_PROFINET_MODE_ACTIVE_FAULT_LINE_1" />
+    </Wire>
+    <Wire UId="105">
+      <IdentCon UId="26" />
+      <NameCon UId="93" Name="iPF_LINE_2_NOT_READY_FAULT" />
+    </Wire>
+    <Wire UId="106">
+      <IdentCon UId="27" />
+      <NameCon UId="93" Name="iMANUAL_START_REQ_LINE_1" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="28" />
+      <NameCon UId="93" Name="iMANUAL_START_REQ_LINE_2" />
+    </Wire>
+    <Wire UId="108">
+      <IdentCon UId="29" />
+      <NameCon UId="93" Name="iMANUAL_STOP_REQ_LINE_1" />
+    </Wire>
+    <Wire UId="109">
+      <IdentCon UId="30" />
+      <NameCon UId="93" Name="iMANUAL_STOP_REQ_LINE_2" />
+    </Wire>
+    <Wire UId="110">
+      <IdentCon UId="31" />
+      <NameCon UId="93" Name="iPF_INTERLOCK_INPUTS" />
+    </Wire>
+    <Wire UId="111">
+      <IdentCon UId="32" />
+      <NameCon UId="93" Name="iFEEDER_PROFINET_MODE_ACTIVE" />
+    </Wire>
+    <Wire UId="112">
+      <IdentCon UId="33" />
+      <NameCon UId="93" Name="iCONTROL_ON_DELAYED" />
+    </Wire>
+    <Wire UId="113">
+      <IdentCon UId="34" />
+      <NameCon UId="93" Name="iAUTO_START_REQUEST" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="35" />
+      <NameCon UId="93" Name="iAUTO_STOP_REQUEST" />
+    </Wire>
+    <Wire UId="115">
+      <IdentCon UId="36" />
+      <NameCon UId="93" Name="iHMI_GAS_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="116">
+      <IdentCon UId="37" />
+      <NameCon UId="93" Name="iHMI_GAS_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="117">
+      <IdentCon UId="38" />
+      <NameCon UId="93" Name="iHMI_DISK_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="118">
+      <IdentCon UId="39" />
+      <NameCon UId="93" Name="iHMI_DISK_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="119">
+      <IdentCon UId="40" />
+      <NameCon UId="93" Name="iCNC_GAS_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="120">
+      <IdentCon UId="41" />
+      <NameCon UId="93" Name="iCNC_GAS_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="121">
+      <IdentCon UId="42" />
+      <NameCon UId="93" Name="iCNC_DISK_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="122">
+      <IdentCon UId="43" />
+      <NameCon UId="93" Name="iCNC_DISK_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="123">
+      <IdentCon UId="44" />
+      <NameCon UId="93" Name="iFEEDER_PLC_AUX_VALUES" />
+    </Wire>
+    <Wire UId="124">
+      <NameCon UId="93" Name="oSTATION_IS_ALARMS" />
+      <OpenCon UId="95" />
+    </Wire>
+    <Wire UId="125">
+      <NameCon UId="93" Name="oSTATION_WARNINGS" />
+      <OpenCon UId="96" />
+    </Wire>
+    <Wire UId="126">
+      <NameCon UId="93" Name="o_fShutdownToPF_Line1" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="127">
+      <NameCon UId="93" Name="o_fShutdownToPF_Line2" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="128">
+      <NameCon UId="93" Name="o_fFeedingAllOnCmd_Line1" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="93" Name="o_fFeedingAllOnCmd_Line2" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="130">
+      <NameCon UId="93" Name="o_fCarriergasOnCmd_Line1" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="131">
+      <NameCon UId="93" Name="o_fCarriergasOnCmd_Line2" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="132">
+      <NameCon UId="93" Name="o_fFeedingAllOffCmd_Line1" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="133">
+      <NameCon UId="93" Name="o_fFeedingAllOffCmd_Line2" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="134">
+      <NameCon UId="93" Name="o_fCarriergasOffCmd_Line1" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="135">
+      <NameCon UId="93" Name="o_fCarriergasOffCmd_Line2" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="136">
+      <NameCon UId="93" Name="oALARM_POWDER_LINE_1_CLOGGED" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="137">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="138">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="139">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="140">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="141">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="142">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="143">
+      <NameCon UId="93" Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_1" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="144">
+      <NameCon UId="93" Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_1" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="145">
+      <NameCon UId="93" Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_1" />
+      <IdentCon UId="64" />
+    </Wire>
+    <Wire UId="146">
+      <NameCon UId="93" Name="oALARM_COMMUNICATION_RUNNING_LN_1" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="147">
+      <NameCon UId="93" Name="oALARM_FEEDER_NOT_READY_LN_1" />
+      <IdentCon UId="66" />
+    </Wire>
+    <Wire UId="148">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="67" />
+    </Wire>
+    <Wire UId="149">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="68" />
+    </Wire>
+    <Wire UId="150">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="69" />
+    </Wire>
+    <Wire UId="151">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_1" />
+      <IdentCon UId="70" />
+    </Wire>
+    <Wire UId="152">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_1" />
+      <IdentCon UId="71" />
+    </Wire>
+    <Wire UId="153">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_1" />
+      <IdentCon UId="72" />
+    </Wire>
+    <Wire UId="154">
+      <NameCon UId="93" Name="oALARM_POWDER_LINE_2_CLOGGED" />
+      <IdentCon UId="73" />
+    </Wire>
+    <Wire UId="155">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="74" />
+    </Wire>
+    <Wire UId="156">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="75" />
+    </Wire>
+    <Wire UId="157">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="76" />
+    </Wire>
+    <Wire UId="158">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="77" />
+    </Wire>
+    <Wire UId="159">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="78" />
+    </Wire>
+    <Wire UId="160">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="79" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="93" Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_2" />
+      <IdentCon UId="80" />
+    </Wire>
+    <Wire UId="162">
+      <NameCon UId="93" Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_2" />
+      <IdentCon UId="81" />
+    </Wire>
+    <Wire UId="163">
+      <NameCon UId="93" Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_2" />
+      <IdentCon UId="82" />
+    </Wire>
+    <Wire UId="164">
+      <NameCon UId="93" Name="oALARM_COMMUNICATION_RUNNING_LN_2" />
+      <IdentCon UId="83" />
+    </Wire>
+    <Wire UId="165">
+      <NameCon UId="93" Name="oALARM_FEEDER_NOT_READY_LN_2" />
+      <IdentCon UId="84" />
+    </Wire>
+    <Wire UId="166">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="85" />
+    </Wire>
+    <Wire UId="167">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="86" />
+    </Wire>
+    <Wire UId="168">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="87" />
+    </Wire>
+    <Wire UId="169">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_2" />
+      <IdentCon UId="88" />
+    </Wire>
+    <Wire UId="170">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_2" />
+      <IdentCon UId="89" />
+    </Wire>
+    <Wire UId="171">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_2" />
+      <IdentCon UId="90" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 LINE 1 ENABLED OPTION
+2#0000_0010 OPTIONS 0 BIT 1 LINE 2 ENABLED OPTION
+2#0000_0100 OPTIONS 0 BIT 2 SPARE
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB21013 POWDER FEEDER 1 HOPPER UNIT 01</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>/////_UNIT_02_/////</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="ASPIRATION_UNIT_02_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="U02_PF1_CONDITIONS_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0011</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="FEEDER LINE 1 NOT READY FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="FEEDER PROFINET MODE ACTIVE FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="FEEDER LINE 2 NOT READY FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_02_LINE_1" />
+        <Component Name="HOPPER_ON_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_02_LINE_2" />
+        <Component Name="HOPPER_ON_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_02_LINE_1" />
+        <Component Name="HOPPER_OFF_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_02_LINE_2" />
+        <Component Name="HOPPER_OFF_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Inputs" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="FEEDER PROFINET MODE ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2140_HOPPERS_MPP" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="SWITCH_ON_POWDER_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="SWITCH_OFF_POWDER_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB441_POWDER_FEEDERS_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_02" />
+        <Component Name="POWDER_FEEDER" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fShutdownToPF_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fShutdownToPF_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOnCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOnCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOnCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOnCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOffCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOffCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOffCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOffCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718230" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718231" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718232" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718233" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718234" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718235" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718236" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718237" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718238" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="65">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718239" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718240" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="67">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718241" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="68">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729810" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="69">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729811" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="70">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729812" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="71">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729813" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="72">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729814" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="73">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729815" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="74">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718260" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="75">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718261" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="76">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718262" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="77">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718263" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="78">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718264" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="79">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718265" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="80">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718266" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="81">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718267" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="82">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718268" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="83">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718269" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="84">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718270" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="85">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718271" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="86">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729830" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="87">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729831" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="88">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729832" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="89">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729833" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="90">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729834" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="91">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729835" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="92" />
+    <Part Name="Contact" UId="93" />
+    <Call UId="94">
+      <CallInfo Name="FB21013_POWDER_FEEDER_HOPPER" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="95">
+          <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="iGENERAL_CONDITIONS" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_LINE_1_NOT_READY_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_PROFINET_MODE_ACTIVE_FAULT_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_LINE_2_NOT_READY_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_START_REQ_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_START_REQ_LINE_2" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_STOP_REQ_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_STOP_REQ_LINE_2" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_INTERLOCK_INPUTS" Section="Input" Type="&quot;POWDER FEEDER INTERLOCK INPUT&quot;" />
+        <Parameter Name="iFEEDER_PROFINET_MODE_ACTIVE" Section="Input" Type="Bool" />
+        <Parameter Name="iCONTROL_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iAUTO_START_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iAUTO_STOP_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iHMI_GAS_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_GAS_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_DISK_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_DISK_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_GAS_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_GAS_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_DISK_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_DISK_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iFEEDER_PLC_AUX_VALUES" Section="Input" Type="&quot;POWDER FEEDER PLC AUXILIAR&quot;" />
+        <Parameter Name="oSTATION_IS_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_WARNINGS" Section="Output" Type="Bool" />
+        <Parameter Name="o_fShutdownToPF_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fShutdownToPF_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOnCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOnCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOnCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOnCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOffCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOffCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOffCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOffCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_POWDER_LINE_1_CLOGGED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_COMMUNICATION_RUNNING_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FEEDER_NOT_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_POWDER_LINE_2_CLOGGED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_COMMUNICATION_RUNNING_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FEEDER_NOT_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="97">
+      <Powerrail />
+      <NameCon UId="94" Name="en" />
+      <NameCon UId="92" Name="in" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="21" />
+      <NameCon UId="92" Name="operand" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="92" Name="out" />
+      <NameCon UId="93" Name="in" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="22" />
+      <NameCon UId="93" Name="operand" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="93" Name="out" />
+      <NameCon UId="94" Name="iGENERAL_CONDITIONS" />
+    </Wire>
+    <Wire UId="102">
+      <IdentCon UId="23" />
+      <NameCon UId="94" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="103">
+      <IdentCon UId="24" />
+      <NameCon UId="94" Name="iPF_LINE_1_NOT_READY_FAULT" />
+    </Wire>
+    <Wire UId="104">
+      <IdentCon UId="25" />
+      <NameCon UId="94" Name="iPF_PROFINET_MODE_ACTIVE_FAULT_LINE_1" />
+    </Wire>
+    <Wire UId="105">
+      <IdentCon UId="26" />
+      <NameCon UId="94" Name="iPF_LINE_2_NOT_READY_FAULT" />
+    </Wire>
+    <Wire UId="106">
+      <IdentCon UId="27" />
+      <NameCon UId="94" Name="iMANUAL_START_REQ_LINE_1" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="28" />
+      <NameCon UId="94" Name="iMANUAL_START_REQ_LINE_2" />
+    </Wire>
+    <Wire UId="108">
+      <IdentCon UId="29" />
+      <NameCon UId="94" Name="iMANUAL_STOP_REQ_LINE_1" />
+    </Wire>
+    <Wire UId="109">
+      <IdentCon UId="30" />
+      <NameCon UId="94" Name="iMANUAL_STOP_REQ_LINE_2" />
+    </Wire>
+    <Wire UId="110">
+      <IdentCon UId="31" />
+      <NameCon UId="94" Name="iPF_INTERLOCK_INPUTS" />
+    </Wire>
+    <Wire UId="111">
+      <IdentCon UId="32" />
+      <NameCon UId="94" Name="iFEEDER_PROFINET_MODE_ACTIVE" />
+    </Wire>
+    <Wire UId="112">
+      <IdentCon UId="33" />
+      <NameCon UId="94" Name="iCONTROL_ON_DELAYED" />
+    </Wire>
+    <Wire UId="113">
+      <IdentCon UId="34" />
+      <NameCon UId="94" Name="iAUTO_START_REQUEST" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="35" />
+      <NameCon UId="94" Name="iAUTO_STOP_REQUEST" />
+    </Wire>
+    <Wire UId="115">
+      <IdentCon UId="36" />
+      <NameCon UId="94" Name="iHMI_GAS_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="116">
+      <IdentCon UId="37" />
+      <NameCon UId="94" Name="iHMI_GAS_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="117">
+      <IdentCon UId="38" />
+      <NameCon UId="94" Name="iHMI_DISK_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="118">
+      <IdentCon UId="39" />
+      <NameCon UId="94" Name="iHMI_DISK_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="119">
+      <IdentCon UId="40" />
+      <NameCon UId="94" Name="iCNC_GAS_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="120">
+      <IdentCon UId="41" />
+      <NameCon UId="94" Name="iCNC_GAS_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="121">
+      <IdentCon UId="42" />
+      <NameCon UId="94" Name="iCNC_DISK_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="122">
+      <IdentCon UId="43" />
+      <NameCon UId="94" Name="iCNC_DISK_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="123">
+      <IdentCon UId="44" />
+      <NameCon UId="94" Name="iFEEDER_PLC_AUX_VALUES" />
+    </Wire>
+    <Wire UId="124">
+      <NameCon UId="94" Name="oSTATION_IS_ALARMS" />
+      <OpenCon UId="96" />
+    </Wire>
+    <Wire UId="125">
+      <NameCon UId="94" Name="oSTATION_WARNINGS" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="126">
+      <NameCon UId="94" Name="o_fShutdownToPF_Line1" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="127">
+      <NameCon UId="94" Name="o_fShutdownToPF_Line2" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="128">
+      <NameCon UId="94" Name="o_fFeedingAllOnCmd_Line1" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="94" Name="o_fFeedingAllOnCmd_Line2" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="130">
+      <NameCon UId="94" Name="o_fCarriergasOnCmd_Line1" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="131">
+      <NameCon UId="94" Name="o_fCarriergasOnCmd_Line2" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="132">
+      <NameCon UId="94" Name="o_fFeedingAllOffCmd_Line1" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="133">
+      <NameCon UId="94" Name="o_fFeedingAllOffCmd_Line2" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="134">
+      <NameCon UId="94" Name="o_fCarriergasOffCmd_Line1" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="135">
+      <NameCon UId="94" Name="o_fCarriergasOffCmd_Line2" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="136">
+      <NameCon UId="94" Name="oALARM_POWDER_LINE_1_CLOGGED" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="137">
+      <NameCon UId="94" Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="138">
+      <NameCon UId="94" Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="139">
+      <NameCon UId="94" Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="140">
+      <NameCon UId="94" Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="141">
+      <NameCon UId="94" Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="142">
+      <NameCon UId="94" Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="143">
+      <NameCon UId="94" Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_1" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="144">
+      <NameCon UId="94" Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_1" />
+      <IdentCon UId="64" />
+    </Wire>
+    <Wire UId="145">
+      <NameCon UId="94" Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_1" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="146">
+      <NameCon UId="94" Name="oALARM_COMMUNICATION_RUNNING_LN_1" />
+      <IdentCon UId="66" />
+    </Wire>
+    <Wire UId="147">
+      <NameCon UId="94" Name="oALARM_FEEDER_NOT_READY_LN_1" />
+      <IdentCon UId="67" />
+    </Wire>
+    <Wire UId="148">
+      <NameCon UId="94" Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="68" />
+    </Wire>
+    <Wire UId="149">
+      <NameCon UId="94" Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="69" />
+    </Wire>
+    <Wire UId="150">
+      <NameCon UId="94" Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="70" />
+    </Wire>
+    <Wire UId="151">
+      <NameCon UId="94" Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_1" />
+      <IdentCon UId="71" />
+    </Wire>
+    <Wire UId="152">
+      <NameCon UId="94" Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_1" />
+      <IdentCon UId="72" />
+    </Wire>
+    <Wire UId="153">
+      <NameCon UId="94" Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_1" />
+      <IdentCon UId="73" />
+    </Wire>
+    <Wire UId="154">
+      <NameCon UId="94" Name="oALARM_POWDER_LINE_2_CLOGGED" />
+      <IdentCon UId="74" />
+    </Wire>
+    <Wire UId="155">
+      <NameCon UId="94" Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="75" />
+    </Wire>
+    <Wire UId="156">
+      <NameCon UId="94" Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="76" />
+    </Wire>
+    <Wire UId="157">
+      <NameCon UId="94" Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="77" />
+    </Wire>
+    <Wire UId="158">
+      <NameCon UId="94" Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="78" />
+    </Wire>
+    <Wire UId="159">
+      <NameCon UId="94" Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="79" />
+    </Wire>
+    <Wire UId="160">
+      <NameCon UId="94" Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="80" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="94" Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_2" />
+      <IdentCon UId="81" />
+    </Wire>
+    <Wire UId="162">
+      <NameCon UId="94" Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_2" />
+      <IdentCon UId="82" />
+    </Wire>
+    <Wire UId="163">
+      <NameCon UId="94" Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_2" />
+      <IdentCon UId="83" />
+    </Wire>
+    <Wire UId="164">
+      <NameCon UId="94" Name="oALARM_COMMUNICATION_RUNNING_LN_2" />
+      <IdentCon UId="84" />
+    </Wire>
+    <Wire UId="165">
+      <NameCon UId="94" Name="oALARM_FEEDER_NOT_READY_LN_2" />
+      <IdentCon UId="85" />
+    </Wire>
+    <Wire UId="166">
+      <NameCon UId="94" Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="86" />
+    </Wire>
+    <Wire UId="167">
+      <NameCon UId="94" Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="87" />
+    </Wire>
+    <Wire UId="168">
+      <NameCon UId="94" Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="88" />
+    </Wire>
+    <Wire UId="169">
+      <NameCon UId="94" Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_2" />
+      <IdentCon UId="89" />
+    </Wire>
+    <Wire UId="170">
+      <NameCon UId="94" Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_2" />
+      <IdentCon UId="90" />
+    </Wire>
+    <Wire UId="171">
+      <NameCon UId="94" Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_2" />
+      <IdentCon UId="91" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 LINE 1 ENABLED OPTION
+2#0000_0010 OPTIONS 0 BIT 1 LINE 2 ENABLED OPTION
+2#0000_0100 OPTIONS 0 BIT 2 SPARE
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB21013 POWDER FEEDER 1 HOPPER UNIT 02</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="ASPIRATION_UNIT_02_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="U02_PF2_CONDITIONS_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0010</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="FEEDER LINE 1 NOT READY FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="FEEDER PROFINET MODE ACTIVE FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="FEEDER LINE 2 NOT READY FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_2_U_02_LINE_2" />
+        <Component Name="HOPPER_ON_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_2_U_02_LINE_2" />
+        <Component Name="HOPPER_OFF_MANUAL_REQUEST" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Inputs" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB21000_POWDER_FEEDER_GENERAL" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="FEEDER PROFINET MODE ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB2140_HOPPERS_MPP" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="SWITCH_ON_POWDER_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="SWITCH_OFF_POWDER_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_2_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB441_POWDER_FEEDERS_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_02" />
+        <Component Name="POWDER_FEEDER" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fShutdownToPF_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fShutdownToPF_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOnCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOnCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOnCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOnCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOffCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fFeedingAllOffCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOffCmd_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21002_POWDER_FEEDER_OERLIKON_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="Outputs" />
+        <Component Name="o_fCarriergasOffCmd_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718330" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718331" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718332" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718333" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718334" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718335" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718336" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718337" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718338" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718339" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="65">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718340" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718341" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="67">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729850" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="68">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729851" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="69">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729852" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="70">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729853" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="71">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729854" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="72">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729855" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="73">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718360" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="74">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718361" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="75">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718362" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="76">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718363" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="77">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718364" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="78">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718365" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="79">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718366" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="80">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718367" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="81">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718368" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="82">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718369" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="83">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718370" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="84">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="CLADDING_POWDER_FEEDER" />
+        <Component Name="718371" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="85">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729868" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="86">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729869" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="87">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729870" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="88">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729871" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="89">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729872" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="90">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="729873" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="91" />
+    <Part Name="Contact" UId="92" />
+    <Call UId="93">
+      <CallInfo Name="FB21013_POWDER_FEEDER_HOPPER" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="94">
+          <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="iGENERAL_CONDITIONS" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_LINE_1_NOT_READY_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_PROFINET_MODE_ACTIVE_FAULT_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_LINE_2_NOT_READY_FAULT" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_START_REQ_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_START_REQ_LINE_2" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_STOP_REQ_LINE_1" Section="Input" Type="Bool" />
+        <Parameter Name="iMANUAL_STOP_REQ_LINE_2" Section="Input" Type="Bool" />
+        <Parameter Name="iPF_INTERLOCK_INPUTS" Section="Input" Type="&quot;POWDER FEEDER INTERLOCK INPUT&quot;" />
+        <Parameter Name="iFEEDER_PROFINET_MODE_ACTIVE" Section="Input" Type="Bool" />
+        <Parameter Name="iCONTROL_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iAUTO_START_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iAUTO_STOP_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iHMI_GAS_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_GAS_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_DISK_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iHMI_DISK_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_GAS_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_GAS_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_DISK_SETPOINT_L1" Section="Input" Type="Real" />
+        <Parameter Name="iCNC_DISK_SETPOINT_L2" Section="Input" Type="Real" />
+        <Parameter Name="iFEEDER_PLC_AUX_VALUES" Section="Input" Type="&quot;POWDER FEEDER PLC AUXILIAR&quot;" />
+        <Parameter Name="oSTATION_IS_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSTATION_WARNINGS" Section="Output" Type="Bool" />
+        <Parameter Name="o_fShutdownToPF_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fShutdownToPF_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOnCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOnCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOnCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOnCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOffCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fFeedingAllOffCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOffCmd_Line1" Section="Output" Type="Bool" />
+        <Parameter Name="o_fCarriergasOffCmd_Line2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_POWDER_LINE_1_CLOGGED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_COMMUNICATION_RUNNING_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FEEDER_NOT_READY_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_1" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_POWDER_LINE_2_CLOGGED" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_COMMUNICATION_RUNNING_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oALARM_FEEDER_NOT_READY_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+        <Parameter Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_2" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="97">
+      <Powerrail />
+      <NameCon UId="93" Name="en" />
+      <NameCon UId="91" Name="in" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="21" />
+      <NameCon UId="91" Name="operand" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="91" Name="out" />
+      <NameCon UId="92" Name="in" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="22" />
+      <NameCon UId="92" Name="operand" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="92" Name="out" />
+      <NameCon UId="93" Name="iGENERAL_CONDITIONS" />
+    </Wire>
+    <Wire UId="102">
+      <IdentCon UId="23" />
+      <NameCon UId="93" Name="OPTIONS_0" />
+    </Wire>
+    <Wire UId="103">
+      <IdentCon UId="24" />
+      <NameCon UId="93" Name="iPF_LINE_1_NOT_READY_FAULT" />
+    </Wire>
+    <Wire UId="104">
+      <IdentCon UId="25" />
+      <NameCon UId="93" Name="iPF_PROFINET_MODE_ACTIVE_FAULT_LINE_1" />
+    </Wire>
+    <Wire UId="105">
+      <IdentCon UId="26" />
+      <NameCon UId="93" Name="iPF_LINE_2_NOT_READY_FAULT" />
+    </Wire>
+    <Wire UId="106">
+      <IdentCon UId="27" />
+      <NameCon UId="93" Name="iMANUAL_START_REQ_LINE_1" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="28" />
+      <NameCon UId="93" Name="iMANUAL_START_REQ_LINE_2" />
+    </Wire>
+    <Wire UId="108">
+      <OpenCon UId="95" />
+      <NameCon UId="93" Name="iMANUAL_STOP_REQ_LINE_1" />
+    </Wire>
+    <Wire UId="109">
+      <IdentCon UId="29" />
+      <NameCon UId="93" Name="iMANUAL_STOP_REQ_LINE_2" />
+    </Wire>
+    <Wire UId="110">
+      <IdentCon UId="30" />
+      <NameCon UId="93" Name="iPF_INTERLOCK_INPUTS" />
+    </Wire>
+    <Wire UId="111">
+      <IdentCon UId="31" />
+      <NameCon UId="93" Name="iFEEDER_PROFINET_MODE_ACTIVE" />
+    </Wire>
+    <Wire UId="112">
+      <IdentCon UId="32" />
+      <NameCon UId="93" Name="iCONTROL_ON_DELAYED" />
+    </Wire>
+    <Wire UId="113">
+      <IdentCon UId="33" />
+      <NameCon UId="93" Name="iAUTO_START_REQUEST" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="34" />
+      <NameCon UId="93" Name="iAUTO_STOP_REQUEST" />
+    </Wire>
+    <Wire UId="115">
+      <IdentCon UId="35" />
+      <NameCon UId="93" Name="iHMI_GAS_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="116">
+      <IdentCon UId="36" />
+      <NameCon UId="93" Name="iHMI_GAS_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="117">
+      <IdentCon UId="37" />
+      <NameCon UId="93" Name="iHMI_DISK_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="118">
+      <IdentCon UId="38" />
+      <NameCon UId="93" Name="iHMI_DISK_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="119">
+      <IdentCon UId="39" />
+      <NameCon UId="93" Name="iCNC_GAS_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="120">
+      <IdentCon UId="40" />
+      <NameCon UId="93" Name="iCNC_GAS_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="121">
+      <IdentCon UId="41" />
+      <NameCon UId="93" Name="iCNC_DISK_SETPOINT_L1" />
+    </Wire>
+    <Wire UId="122">
+      <IdentCon UId="42" />
+      <NameCon UId="93" Name="iCNC_DISK_SETPOINT_L2" />
+    </Wire>
+    <Wire UId="123">
+      <IdentCon UId="43" />
+      <NameCon UId="93" Name="iFEEDER_PLC_AUX_VALUES" />
+    </Wire>
+    <Wire UId="124">
+      <NameCon UId="93" Name="oSTATION_IS_ALARMS" />
+      <OpenCon UId="96" />
+    </Wire>
+    <Wire UId="125">
+      <NameCon UId="93" Name="oSTATION_WARNINGS" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="126">
+      <NameCon UId="93" Name="o_fShutdownToPF_Line1" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="127">
+      <NameCon UId="93" Name="o_fShutdownToPF_Line2" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="128">
+      <NameCon UId="93" Name="o_fFeedingAllOnCmd_Line1" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="93" Name="o_fFeedingAllOnCmd_Line2" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="130">
+      <NameCon UId="93" Name="o_fCarriergasOnCmd_Line1" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="131">
+      <NameCon UId="93" Name="o_fCarriergasOnCmd_Line2" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="132">
+      <NameCon UId="93" Name="o_fFeedingAllOffCmd_Line1" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="133">
+      <NameCon UId="93" Name="o_fFeedingAllOffCmd_Line2" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="134">
+      <NameCon UId="93" Name="o_fCarriergasOffCmd_Line1" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="135">
+      <NameCon UId="93" Name="o_fCarriergasOffCmd_Line2" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="136">
+      <NameCon UId="93" Name="oALARM_POWDER_LINE_1_CLOGGED" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="137">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="138">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="139">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_1" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="140">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="59" />
+    </Wire>
+    <Wire UId="141">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="60" />
+    </Wire>
+    <Wire UId="142">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_1" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="143">
+      <NameCon UId="93" Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_1" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="144">
+      <NameCon UId="93" Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_1" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="145">
+      <NameCon UId="93" Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_1" />
+      <IdentCon UId="64" />
+    </Wire>
+    <Wire UId="146">
+      <NameCon UId="93" Name="oALARM_COMMUNICATION_RUNNING_LN_1" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="147">
+      <NameCon UId="93" Name="oALARM_FEEDER_NOT_READY_LN_1" />
+      <IdentCon UId="66" />
+    </Wire>
+    <Wire UId="148">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="67" />
+    </Wire>
+    <Wire UId="149">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="68" />
+    </Wire>
+    <Wire UId="150">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_1" />
+      <IdentCon UId="69" />
+    </Wire>
+    <Wire UId="151">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_1" />
+      <IdentCon UId="70" />
+    </Wire>
+    <Wire UId="152">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_1" />
+      <IdentCon UId="71" />
+    </Wire>
+    <Wire UId="153">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_1" />
+      <IdentCon UId="72" />
+    </Wire>
+    <Wire UId="154">
+      <NameCon UId="93" Name="oALARM_POWDER_LINE_2_CLOGGED" />
+      <IdentCon UId="73" />
+    </Wire>
+    <Wire UId="155">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="74" />
+    </Wire>
+    <Wire UId="156">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="75" />
+    </Wire>
+    <Wire UId="157">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_BELOW_LOW_LIMIT_LN_2" />
+      <IdentCon UId="76" />
+    </Wire>
+    <Wire UId="158">
+      <NameCon UId="93" Name="oALARM_GAS_FLOW_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="77" />
+    </Wire>
+    <Wire UId="159">
+      <NameCon UId="93" Name="oALARM_DISK_SPEED_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="78" />
+    </Wire>
+    <Wire UId="160">
+      <NameCon UId="93" Name="oALARM_STIRRER_SPEED_ABOVE_HIGH_LIMIT_LN_2" />
+      <IdentCon UId="79" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="93" Name="oALARM_CARRIER_GAS_INLET_PRESSURE_TOO_LOW_LN_2" />
+      <IdentCon UId="80" />
+    </Wire>
+    <Wire UId="162">
+      <NameCon UId="93" Name="oALARM_DISK_MOTOR_PLUGGED_IN_AND_READY_LN_2" />
+      <IdentCon UId="81" />
+    </Wire>
+    <Wire UId="163">
+      <NameCon UId="93" Name="oALARM_STIRRER_PLUGGED_IN_AND_READY_LN_2" />
+      <IdentCon UId="82" />
+    </Wire>
+    <Wire UId="164">
+      <NameCon UId="93" Name="oALARM_COMMUNICATION_RUNNING_LN_2" />
+      <IdentCon UId="83" />
+    </Wire>
+    <Wire UId="165">
+      <NameCon UId="93" Name="oALARM_FEEDER_NOT_READY_LN_2" />
+      <IdentCon UId="84" />
+    </Wire>
+    <Wire UId="166">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="85" />
+    </Wire>
+    <Wire UId="167">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="86" />
+    </Wire>
+    <Wire UId="168">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_UNDER_LIMIT_LN_2" />
+      <IdentCon UId="87" />
+    </Wire>
+    <Wire UId="169">
+      <NameCon UId="93" Name="oWARNING_GAS_FLOW_OVER_LIMIT_LN_2" />
+      <IdentCon UId="88" />
+    </Wire>
+    <Wire UId="170">
+      <NameCon UId="93" Name="oWARNING_DISK_SPEED_OVER_LIMIT_LN_2" />
+      <IdentCon UId="89" />
+    </Wire>
+    <Wire UId="171">
+      <NameCon UId="93" Name="oWARNING_STIRRER_SPEED_OVER_LIMIT_LN_2" />
+      <IdentCon UId="90" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="33" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 LINE 1 ENABLED OPTION
+2#0000_0010 OPTIONS 0 BIT 1 LINE 2 ENABLED OPTION
+2#0000_0100 OPTIONS 0 BIT 2 SPARE
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB21013 POWDER FEEDER 2 HOPPER UNIT 02</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="3D" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="3E" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>FC21011 POWDER FEEDER HOPPER</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3F" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="40" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="41" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

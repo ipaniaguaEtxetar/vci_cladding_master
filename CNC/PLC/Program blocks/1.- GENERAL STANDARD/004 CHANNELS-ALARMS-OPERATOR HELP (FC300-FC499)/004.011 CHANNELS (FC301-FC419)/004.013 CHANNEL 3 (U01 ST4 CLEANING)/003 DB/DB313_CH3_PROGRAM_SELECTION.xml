@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:15:22.2542632Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>false</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <HeaderAuthor>ETXETAR</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>1.0</HeaderVersion>
+      <InstanceOfName>FB311_CHANNEL_PROGRAM_SELECTION</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="REQUEST" Datatype="Bool" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="ALARM" Datatype="Bool" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="channelDB" Datatype="&quot;LBP_typeChanX&quot;" Remanence="Retain" Accessibility="Public">
+      <Sections>
+        <Section Name="None">
+          <Member Name="f0_0" Datatype="Bool" />
+          <Member Name="f0_1" Datatype="Bool" />
+          <Member Name="f0_2" Datatype="Bool" />
+          <Member Name="A_DRF" Datatype="Bool" />
+          <Member Name="A_SBL" Datatype="Bool" />
+          <Member Name="A_M01" Datatype="Bool" />
+          <Member Name="A_DRY" Datatype="Bool" />
+          <Member Name="f0_7" Datatype="Bool" />
+          <Member Name="A_Ref" Datatype="Bool" />
+          <Member Name="A_ProtZone" Datatype="Bool" />
+          <Member Name="A_SynOff" Datatype="Bool" />
+          <Member Name="A_TM_TimOut" Datatype="Bool" />
+          <Member Name="A_CLC_Stop" Datatype="Bool" />
+          <Member Name="A_CLC_OR" Datatype="Bool" />
+          <Member Name="A_PLC_ActCompl" Datatype="Bool" />
+          <Member Name="A_ProgTest" Datatype="Bool" />
+          <Member Name="A_SKP0" Datatype="Bool" />
+          <Member Name="A_SKP1" Datatype="Bool" />
+          <Member Name="A_SKP2" Datatype="Bool" />
+          <Member Name="A_SKP3" Datatype="Bool" />
+          <Member Name="A_SKP4" Datatype="Bool" />
+          <Member Name="A_SKP5" Datatype="Bool" />
+          <Member Name="A_SKP6" Datatype="Bool" />
+          <Member Name="A_SKP7" Datatype="Bool" />
+          <Member Name="A_StrokEnab" Datatype="Bool" />
+          <Member Name="A_ManStrokEnab" Datatype="Bool" />
+          <Member Name="A_StrokSup" Datatype="Bool" />
+          <Member Name="A_StrokDelayed" Datatype="Bool" />
+          <Member Name="A_StrokStop" Datatype="Bool" />
+          <Member Name="A_ManRelStroke2" Datatype="Bool" />
+          <Member Name="A3_6" Datatype="Bool" />
+          <Member Name="A3_7" Datatype="Bool" />
+          <Member Name="A_FD_OR" Datatype="Byte" />
+          <Member Name="A_RT_OR" Datatype="Byte" />
+          <Member Name="A_FDdisable" Datatype="Bool" />
+          <Member Name="A_RIdisable" Datatype="Bool" />
+          <Member Name="A_DeleteDTG" Datatype="Bool" />
+          <Member Name="A_SP_Clear" Datatype="Bool" />
+          <Member Name="A_ProgAbort" Datatype="Bool" />
+          <Member Name="A_F_Limit" Datatype="Bool" />
+          <Member Name="A_RT_ORA" Datatype="Bool" />
+          <Member Name="A_FD_ORA" Datatype="Bool" />
+          <Member Name="A_NCStartDisabl" Datatype="Bool" />
+          <Member Name="A_NCStart" Datatype="Bool" />
+          <Member Name="A_NCStopBlock" Datatype="Bool" />
+          <Member Name="A_NCStop" Datatype="Bool" />
+          <Member Name="A_NCStopASp" Datatype="Bool" />
+          <Member Name="A_SuppStartLock" Datatype="Bool" />
+          <Member Name="A_CfgStopFunc" Datatype="Bool" />
+          <Member Name="A_Reset" Datatype="Bool" />
+          <Member Name="A_MRP" Datatype="Array[1..10] of Bool" />
+          <Member Name="A_CSP" Datatype="Array[1..10] of Bool" />
+          <Member Name="A_Geo" Datatype="Array[1..3] of Struct">
+            <Member Name="HW1" Datatype="Bool" />
+            <Member Name="HW2" Datatype="Bool" />
+            <Member Name="HW3" Datatype="Bool" />
+            <Member Name="FDStop" Datatype="Bool" />
+            <Member Name="Disabl" Datatype="Bool" />
+            <Member Name="RapidTrOR" Datatype="Bool" />
+            <Member Name="Minus" Datatype="Bool" />
+            <Member Name="Plus" Datatype="Bool" />
+            <Member Name="INC1" Datatype="Bool" />
+            <Member Name="INC10" Datatype="Bool" />
+            <Member Name="INC100" Datatype="Bool" />
+            <Member Name="INC1000" Datatype="Bool" />
+            <Member Name="INC10000" Datatype="Bool" />
+            <Member Name="INCVar" Datatype="Bool" />
+            <Member Name="ContManTravel" Datatype="Bool" />
+            <Member Name="f1_7" Datatype="Bool" />
+            <Member Name="OEM" Datatype="Byte" />
+            <Member Name="InvHWDirOfRot" Datatype="Bool" />
+            <Member Name="f3_1" Datatype="Bool" />
+            <Member Name="f3_2" Datatype="Bool" />
+            <Member Name="f3_3" Datatype="Bool" />
+            <Member Name="f3_4" Datatype="Bool" />
+            <Member Name="f3_5" Datatype="Bool" />
+            <Member Name="f3_6" Datatype="Bool" />
+            <Member Name="f3_7" Datatype="Bool" />
+          </Member>
+          <Member Name="f24_0" Datatype="Bool" />
+          <Member Name="E_MMC_CfgStopFunc" Datatype="Bool" />
+          <Member Name="f24_2" Datatype="Bool" />
+          <Member Name="E_MMC_DRF" Datatype="Bool" />
+          <Member Name="E_MMC_M01AssocNC" Datatype="Bool" />
+          <Member Name="E_MMC_M01" Datatype="Bool" />
+          <Member Name="E_MMC_DRY" Datatype="Bool" />
+          <Member Name="f24_7" Datatype="Bool" />
+          <Member Name="E_MMC_REPOSPM_0" Datatype="Bool" />
+          <Member Name="E_MMC_REPOSPM_1" Datatype="Bool" />
+          <Member Name="E_MMC_REPOSPM_2" Datatype="Bool" />
+          <Member Name="E_MMC_FD_OR4RT_OR" Datatype="Bool" />
+          <Member Name="E_MMC_REPOSMode" Datatype="Bool" />
+          <Member Name="f25_5" Datatype="Bool" />
+          <Member Name="f25_6" Datatype="Bool" />
+          <Member Name="E_MMC_ProgTest" Datatype="Bool" />
+          <Member Name="E_MMC_SKP0" Datatype="Bool" />
+          <Member Name="E_MMC_SKP1" Datatype="Bool" />
+          <Member Name="E_MMC_SKP2" Datatype="Bool" />
+          <Member Name="E_MMC_SKP3" Datatype="Bool" />
+          <Member Name="E_MMC_SKP4" Datatype="Bool" />
+          <Member Name="E_MMC_SKP5" Datatype="Bool" />
+          <Member Name="E_MMC_SKP6" Datatype="Bool" />
+          <Member Name="E_MMC_SKP7" Datatype="Bool" />
+          <Member Name="E_MMC_SKP8" Datatype="Bool" />
+          <Member Name="E_MMC_SKP9" Datatype="Bool" />
+          <Member Name="f27_2" Datatype="Bool" />
+          <Member Name="f27_3" Datatype="Bool" />
+          <Member Name="f27_4" Datatype="Bool" />
+          <Member Name="f27_5" Datatype="Bool" />
+          <Member Name="f27_6" Datatype="Bool" />
+          <Member Name="f27_7" Datatype="Bool" />
+          <Member Name="A_OEM" Datatype="Byte" />
+          <Member Name="A_FixedFD1" Datatype="Bool" />
+          <Member Name="A_FixedFD2" Datatype="Bool" />
+          <Member Name="A_FixedFD3" Datatype="Bool" />
+          <Member Name="A_FixedFD4" Datatype="Bool" />
+          <Member Name="A_PTP_Travel" Datatype="Bool" />
+          <Member Name="A_DisablWP_Counter" Datatype="Bool" />
+          <Member Name="A_DisablWearMon" Datatype="Bool" />
+          <Member Name="A_DontDisablTool" Datatype="Bool" />
+          <Member Name="A_ContHW1" Datatype="Bool" />
+          <Member Name="A_ContHW2" Datatype="Bool" />
+          <Member Name="A_ContHW3" Datatype="Bool" />
+          <Member Name="A_ContHWsim" Datatype="Bool" />
+          <Member Name="A_ContHWneg" Datatype="Bool" />
+          <Member Name="A_NCKrelatedM01" Datatype="Bool" />
+          <Member Name="A_JOG_Circles" Datatype="Bool" />
+          <Member Name="A_NoToolChangeCmd" Datatype="Bool" />
+          <Member Name="A_REPOSPM_0" Datatype="Bool" />
+          <Member Name="A_REPOSPM_1" Datatype="Bool" />
+          <Member Name="A_REPOSPM_2" Datatype="Bool" />
+          <Member Name="f31_3" Datatype="Bool" />
+          <Member Name="A_REPOSMode" Datatype="Bool" />
+          <Member Name="A_InvCHWDirOfRot" Datatype="Bool" />
+          <Member Name="A_SKP8" Datatype="Bool" />
+          <Member Name="A_SKP9" Datatype="Bool" />
+          <Member Name="E_ExecExtern" Datatype="Bool" />
+          <Member Name="f32_1" Datatype="Bool" />
+          <Member Name="f32_2" Datatype="Bool" />
+          <Member Name="E_ActBlock" Datatype="Bool" />
+          <Member Name="E_BegBlock" Datatype="Bool" />
+          <Member Name="E_M01" Datatype="Bool" />
+          <Member Name="E_LastActBlock" Datatype="Bool" />
+          <Member Name="f32_7" Datatype="Bool" />
+          <Member Name="E_Ref" Datatype="Bool" />
+          <Member Name="E_OrieToolholder" Datatype="Bool" />
+          <Member Name="E_RevFD" Datatype="Bool" />
+          <Member Name="E_HWOverlay" Datatype="Bool" />
+          <Member Name="E_BlockSearch" Datatype="Bool" />
+          <Member Name="E_M30" Datatype="Bool" />
+          <Member Name="E_Transform" Datatype="Bool" />
+          <Member Name="E_ProgTest" Datatype="Bool" />
+          <Member Name="E_OEMChan" Datatype="Byte" />
+          <Member Name="E_ProgRunning" Datatype="Bool" />
+          <Member Name="E_ProgWait" Datatype="Bool" />
+          <Member Name="E_ProgStop" Datatype="Bool" />
+          <Member Name="E_ProgInterrupt" Datatype="Bool" />
+          <Member Name="E_ProgAborted" Datatype="Bool" />
+          <Member Name="E_ChanActive" Datatype="Bool" />
+          <Member Name="E_ChanInterrupt" Datatype="Bool" />
+          <Member Name="E_ChanReset" Datatype="Bool" />
+          <Member Name="E_StartReq" Datatype="Bool" />
+          <Member Name="E_StopReq" Datatype="Bool" />
+          <Member Name="E_AxesRef" Datatype="Bool" />
+          <Member Name="E_AxesStop" Datatype="Bool" />
+          <Member Name="E_IR_Activ" Datatype="Bool" />
+          <Member Name="E_ChanRO" Datatype="Bool" />
+          <Member Name="E_NCKalarmChan" Datatype="Bool" />
+          <Member Name="E_NCKalarmStop" Datatype="Bool" />
+          <Member Name="E_CHW1" Datatype="Bool" />
+          <Member Name="E_CHW2" Datatype="Bool" />
+          <Member Name="E_CHW3" Datatype="Bool" />
+          <Member Name="E_CLC" Datatype="Bool" />
+          <Member Name="E_CLCStopLL" Datatype="Bool" />
+          <Member Name="E_CLCStopUL" Datatype="Bool" />
+          <Member Name="E_RIEnabIgnored" Datatype="Bool" />
+          <Member Name="E_StopBlkEndSBLsuppr" Datatype="Bool" />
+          <Member Name="E_StrokeEA" Datatype="Bool" />
+          <Member Name="E_AcknManStrokEnab" Datatype="Bool" />
+          <Member Name="f38_2" Datatype="Bool" />
+          <Member Name="f38_3" Datatype="Bool" />
+          <Member Name="f38_4" Datatype="Bool" />
+          <Member Name="f38_5" Datatype="Bool" />
+          <Member Name="f38_6" Datatype="Bool" />
+          <Member Name="f38_7" Datatype="Bool" />
+          <Member Name="E_ProtZoneNOK" Datatype="Bool" />
+          <Member Name="E_NCalarmWithProgStop" Datatype="Bool" />
+          <Member Name="f39_2" Datatype="Bool" />
+          <Member Name="f39_3" Datatype="Bool" />
+          <Member Name="E_SblStopAtBlockEnd" Datatype="Bool" />
+          <Member Name="E_InvCHWDirOfRot" Datatype="Bool" />
+          <Member Name="E_CfgStopFuncActive" Datatype="Bool" />
+          <Member Name="E_CfgStopAtBlockEnd" Datatype="Bool" />
+          <Member Name="E_Geo" Datatype="Array[1..3] of Struct">
+            <Member Name="HW1" Datatype="Bool" />
+            <Member Name="HW2" Datatype="Bool" />
+            <Member Name="HW3" Datatype="Bool" />
+            <Member Name="f0_3" Datatype="Bool" />
+            <Member Name="TReqMinus" Datatype="Bool" />
+            <Member Name="TReqPlus" Datatype="Bool" />
+            <Member Name="TCMinus" Datatype="Bool" />
+            <Member Name="TCPlus" Datatype="Bool" />
+            <Member Name="INC1" Datatype="Bool" />
+            <Member Name="INC10" Datatype="Bool" />
+            <Member Name="INC100" Datatype="Bool" />
+            <Member Name="INC1000" Datatype="Bool" />
+            <Member Name="INC10000" Datatype="Bool" />
+            <Member Name="INCVar" Datatype="Bool" />
+            <Member Name="ContManTravelAct" Datatype="Bool" />
+            <Member Name="f1_7" Datatype="Bool" />
+            <Member Name="OEM" Datatype="Byte" />
+            <Member Name="InvHWDirOfRot" Datatype="Bool" />
+            <Member Name="f3_1" Datatype="Bool" />
+            <Member Name="f3_2" Datatype="Bool" />
+            <Member Name="f3_3" Datatype="Bool" />
+            <Member Name="f3_4" Datatype="Bool" />
+            <Member Name="f3_5" Datatype="Bool" />
+            <Member Name="f3_6" Datatype="Bool" />
+            <Member Name="f3_7" Datatype="Bool" />
+            <Member Name="f4" Datatype="Byte" />
+          </Member>
+          <Member Name="M1Change" Datatype="Bool" />
+          <Member Name="M2Change" Datatype="Bool" />
+          <Member Name="M3Change" Datatype="Bool" />
+          <Member Name="M4Change" Datatype="Bool" />
+          <Member Name="M5Change" Datatype="Bool" />
+          <Member Name="f58_5" Datatype="Bool" />
+          <Member Name="f58_6" Datatype="Bool" />
+          <Member Name="f58_7" Datatype="Bool" />
+          <Member Name="M1NDec" Datatype="Bool" />
+          <Member Name="M2NDec" Datatype="Bool" />
+          <Member Name="M3NDec" Datatype="Bool" />
+          <Member Name="M4NDec" Datatype="Bool" />
+          <Member Name="M5NDec" Datatype="Bool" />
+          <Member Name="f59_5" Datatype="Bool" />
+          <Member Name="f59_6" Datatype="Bool" />
+          <Member Name="f59_7" Datatype="Bool" />
+          <Member Name="S1Change" Datatype="Bool" />
+          <Member Name="S2Change" Datatype="Bool" />
+          <Member Name="S3Change" Datatype="Bool" />
+          <Member Name="f60_3" Datatype="Bool" />
+          <Member Name="S1Quick" Datatype="Bool" />
+          <Member Name="S2Quick" Datatype="Bool" />
+          <Member Name="S3Quick" Datatype="Bool" />
+          <Member Name="f60_7" Datatype="Bool" />
+          <Member Name="T1Change" Datatype="Bool" />
+          <Member Name="T2Change" Datatype="Bool" />
+          <Member Name="T3Change" Datatype="Bool" />
+          <Member Name="f61_3" Datatype="Bool" />
+          <Member Name="T1Quick" Datatype="Bool" />
+          <Member Name="T2Quick" Datatype="Bool" />
+          <Member Name="T3Quick" Datatype="Bool" />
+          <Member Name="f61_7" Datatype="Bool" />
+          <Member Name="D1Change" Datatype="Bool" />
+          <Member Name="D2Change" Datatype="Bool" />
+          <Member Name="D3Change" Datatype="Bool" />
+          <Member Name="f62_3" Datatype="Bool" />
+          <Member Name="D1Quick" Datatype="Bool" />
+          <Member Name="D2Quick" Datatype="Bool" />
+          <Member Name="D3Quick" Datatype="Bool" />
+          <Member Name="f62_7" Datatype="Bool" />
+          <Member Name="EChange" Datatype="Bool" />
+          <Member Name="f63_1" Datatype="Bool" />
+          <Member Name="f63_2" Datatype="Bool" />
+          <Member Name="f63_3" Datatype="Bool" />
+          <Member Name="EQuick" Datatype="Bool" />
+          <Member Name="f63_5" Datatype="Bool" />
+          <Member Name="f63_6" Datatype="Bool" />
+          <Member Name="f63_7" Datatype="Bool" />
+          <Member Name="H1Change" Datatype="Bool" />
+          <Member Name="H2Change" Datatype="Bool" />
+          <Member Name="H3Change" Datatype="Bool" />
+          <Member Name="f64_3" Datatype="Bool" />
+          <Member Name="H1Quick" Datatype="Bool" />
+          <Member Name="H2Quick" Datatype="Bool" />
+          <Member Name="H3Quick" Datatype="Bool" />
+          <Member Name="f64_7" Datatype="Bool" />
+          <Member Name="F1Change" Datatype="Bool" />
+          <Member Name="F2Change" Datatype="Bool" />
+          <Member Name="F3Change" Datatype="Bool" />
+          <Member Name="F4Change" Datatype="Bool" />
+          <Member Name="F5Change" Datatype="Bool" />
+          <Member Name="F6Change" Datatype="Bool" />
+          <Member Name="f65_6" Datatype="Bool" />
+          <Member Name="f65_7" Datatype="Bool" />
+          <Member Name="M1Quick" Datatype="Bool" />
+          <Member Name="M2Quick" Datatype="Bool" />
+          <Member Name="M3Quick" Datatype="Bool" />
+          <Member Name="M4Quick" Datatype="Bool" />
+          <Member Name="M5Quick" Datatype="Bool" />
+          <Member Name="f66_5" Datatype="Bool" />
+          <Member Name="f66_6" Datatype="Bool" />
+          <Member Name="f66_7" Datatype="Bool" />
+          <Member Name="F1Quick" Datatype="Bool" />
+          <Member Name="F2Quick" Datatype="Bool" />
+          <Member Name="F3Quick" Datatype="Bool" />
+          <Member Name="F4Quick" Datatype="Bool" />
+          <Member Name="F5Quick" Datatype="Bool" />
+          <Member Name="F6Quick" Datatype="Bool" />
+          <Member Name="f67_6" Datatype="Bool" />
+          <Member Name="f67_7" Datatype="Bool" />
+          <Member Name="ExtM1" Datatype="Int" />
+          <Member Name="M1" Datatype="DInt" />
+          <Member Name="ExtM2" Datatype="Int" />
+          <Member Name="M2" Datatype="DInt" />
+          <Member Name="ExtM3" Datatype="Int" />
+          <Member Name="M3" Datatype="DInt" />
+          <Member Name="ExtM4" Datatype="Int" />
+          <Member Name="M4" Datatype="DInt" />
+          <Member Name="ExtM5" Datatype="Int" />
+          <Member Name="M5" Datatype="DInt" />
+          <Member Name="ExtS1" Datatype="Int" />
+          <Member Name="S1" Datatype="Real" />
+          <Member Name="ExtS2" Datatype="Int" />
+          <Member Name="S2" Datatype="Real" />
+          <Member Name="ExtS3" Datatype="Int" />
+          <Member Name="S3" Datatype="Real" />
+          <Member Name="ExtT1" Datatype="Int" />
+          <Member Name="T1" Datatype="Int" />
+          <Member Name="ExtT2" Datatype="Int" />
+          <Member Name="T2" Datatype="Int" />
+          <Member Name="ExtT3" Datatype="Int" />
+          <Member Name="T3" Datatype="Int" />
+          <Member Name="ExtD1" Datatype="Byte" />
+          <Member Name="D1" Datatype="Byte" />
+          <Member Name="ExtD2" Datatype="Byte" />
+          <Member Name="D2" Datatype="Byte" />
+          <Member Name="ExtD3" Datatype="Byte" />
+          <Member Name="D3" Datatype="Byte" />
+          <Member Name="ExtE" Datatype="Int" />
+          <Member Name="E" Datatype="Real" />
+          <Member Name="ExtH1" Datatype="Int" />
+          <Member Name="H1" Datatype="Real" />
+          <Member Name="ExtH2" Datatype="Int" />
+          <Member Name="H2" Datatype="Real" />
+          <Member Name="ExtH3" Datatype="Int" />
+          <Member Name="H3" Datatype="Real" />
+          <Member Name="ExtF1" Datatype="Int" />
+          <Member Name="F1" Datatype="Real" />
+          <Member Name="ExtF2" Datatype="Int" />
+          <Member Name="F2" Datatype="Real" />
+          <Member Name="ExtF3" Datatype="Int" />
+          <Member Name="F3" Datatype="Real" />
+          <Member Name="ExtF4" Datatype="Int" />
+          <Member Name="F4" Datatype="Real" />
+          <Member Name="ExtF5" Datatype="Int" />
+          <Member Name="F5" Datatype="Real" />
+          <Member Name="ExtF6" Datatype="Int" />
+          <Member Name="F6" Datatype="Real" />
+          <Member Name="MDyn" Datatype="Array[0..99] of Bool" />
+          <Member Name="GAct" Datatype="Array[1..64] of Byte" />
+          <Member Name="E_MRPactivated" Datatype="Array[1..10] of Bool" />
+          <Member Name="E_CSPactivated" Datatype="Array[1..10] of Bool" />
+          <Member Name="E_MRPViolated" Datatype="Array[1..10] of Bool" />
+          <Member Name="E_CSPViolated" Datatype="Array[1..10] of Bool" />
+          <Member Name="f_280_0" Datatype="Bool" />
+          <Member Name="A_Str_Synon" Datatype="Bool" />
+          <Member Name="f_280_2" Datatype="Bool" />
+          <Member Name="f_280_3" Datatype="Bool" />
+          <Member Name="f_280_4" Datatype="Bool" />
+          <Member Name="f_280_5" Datatype="Bool" />
+          <Member Name="f_280_6" Datatype="Bool" />
+          <Member Name="f_280_7" Datatype="Bool" />
+          <Member Name="f_281_0" Datatype="Bool" />
+          <Member Name="A_Str_Synfrom" Datatype="Bool" />
+          <Member Name="f_281_2" Datatype="Bool" />
+          <Member Name="f_281_3" Datatype="Bool" />
+          <Member Name="f_281_4" Datatype="Bool" />
+          <Member Name="f_281_5" Datatype="Bool" />
+          <Member Name="f_281_6" Datatype="Bool" />
+          <Member Name="f_281_7" Datatype="Bool" />
+          <Member Name="f_282" Datatype="Int" />
+          <Member Name="f_284" Datatype="Int" />
+          <Member Name="f_286" Datatype="Int" />
+          <Member Name="f_288" Datatype="Int" />
+          <Member Name="f_290" Datatype="Int" />
+          <Member Name="f_292" Datatype="Int" />
+          <Member Name="f_294" Datatype="Int" />
+          <Member Name="f_296" Datatype="Int" />
+          <Member Name="f_298" Datatype="Int" />
+          <Member Name="A_SynDisabl" Datatype="Array[1..64] of Bool" />
+          <Member Name="E_SynDisabled" Datatype="Array[1..64] of Bool" />
+          <Member Name="E_G00" Datatype="Bool" />
+          <Member Name="f316_1" Datatype="Bool" />
+          <Member Name="f316_2" Datatype="Bool" />
+          <Member Name="f316_3" Datatype="Bool" />
+          <Member Name="f316_4" Datatype="Bool" />
+          <Member Name="f316_5" Datatype="Bool" />
+          <Member Name="f316_6" Datatype="Bool" />
+          <Member Name="f316_7" Datatype="Bool" />
+          <Member Name="E_ExtLang" Datatype="Bool" />
+          <Member Name="E_WS_Setp" Datatype="Bool" />
+          <Member Name="f317_2" Datatype="Bool" />
+          <Member Name="f317_3" Datatype="Bool" />
+          <Member Name="f317_4" Datatype="Bool" />
+          <Member Name="E_DriveTest" Datatype="Bool" />
+          <Member Name="E_PTP_Travel" Datatype="Bool" />
+          <Member Name="E_ToolMissing" Datatype="Bool" />
+          <Member Name="E_ASUP_Stop" Datatype="Bool" />
+          <Member Name="E_SearchAct" Datatype="Bool" />
+          <Member Name="E_TOFF" Datatype="Bool" />
+          <Member Name="E_TOFFmovem" Datatype="Bool" />
+          <Member Name="E_StopDelayed" Datatype="Bool" />
+          <Member Name="E_AssM01" Datatype="Bool" />
+          <Member Name="E_DRY" Datatype="Bool" />
+          <Member Name="E_Overstore" Datatype="Bool" />
+          <Member Name="E_REPOS_EdgeAckn" Datatype="Bool" />
+          <Member Name="E_REPOS_PMode0" Datatype="Bool" />
+          <Member Name="E_REPOS_PMode1" Datatype="Bool" />
+          <Member Name="E_REPOS_PMode2" Datatype="Bool" />
+          <Member Name="E_DelayFTS" Datatype="Bool" />
+          <Member Name="E_REPOS_DEFERRA" Datatype="Bool" />
+          <Member Name="E_Stop_NoDelayR" Datatype="Bool" />
+          <Member Name="E_NoToolChangeCmd" Datatype="Bool" />
+          <Member Name="A_Ori" Datatype="Array[1..3] of Struct">
+            <Member Name="HW1" Datatype="Bool" />
+            <Member Name="HW2" Datatype="Bool" />
+            <Member Name="HW3" Datatype="Bool" />
+            <Member Name="FDStop" Datatype="Bool" />
+            <Member Name="Disabl" Datatype="Bool" />
+            <Member Name="RapidTrOR" Datatype="Bool" />
+            <Member Name="Minus" Datatype="Bool" />
+            <Member Name="Plus" Datatype="Bool" />
+            <Member Name="INC1" Datatype="Bool" />
+            <Member Name="INC10" Datatype="Bool" />
+            <Member Name="INC100" Datatype="Bool" />
+            <Member Name="INC1000" Datatype="Bool" />
+            <Member Name="INC10000" Datatype="Bool" />
+            <Member Name="INCVar" Datatype="Bool" />
+            <Member Name="OEM" Datatype="Byte" />
+            <Member Name="InvHWDirOfRot" Datatype="Bool" />
+            <Member Name="f3_1" Datatype="Bool" />
+            <Member Name="f3_2" Datatype="Bool" />
+            <Member Name="f3_3" Datatype="Bool" />
+            <Member Name="f3_4" Datatype="Bool" />
+            <Member Name="f3_5" Datatype="Bool" />
+            <Member Name="f3_6" Datatype="Bool" />
+            <Member Name="f3_7" Datatype="Bool" />
+          </Member>
+          <Member Name="E_Ori" Datatype="Array[1..3] of Struct">
+            <Member Name="HW1" Datatype="Bool" />
+            <Member Name="HW2" Datatype="Bool" />
+            <Member Name="HW3" Datatype="Bool" />
+            <Member Name="f0_3" Datatype="Bool" />
+            <Member Name="TReqMinus" Datatype="Bool" />
+            <Member Name="TReqPlus" Datatype="Bool" />
+            <Member Name="TCMinus" Datatype="Bool" />
+            <Member Name="TCPlus" Datatype="Bool" />
+            <Member Name="INC1" Datatype="Bool" />
+            <Member Name="INC10" Datatype="Bool" />
+            <Member Name="INC100" Datatype="Bool" />
+            <Member Name="INC1000" Datatype="Bool" />
+            <Member Name="INC10000" Datatype="Bool" />
+            <Member Name="INCVar" Datatype="Bool" />
+            <Member Name="OEM" Datatype="Byte" />
+            <Member Name="InvHWDirOfRot" Datatype="Bool" />
+            <Member Name="f3_1" Datatype="Bool" />
+            <Member Name="f3_2" Datatype="Bool" />
+            <Member Name="f3_3" Datatype="Bool" />
+            <Member Name="f3_4" Datatype="Bool" />
+            <Member Name="f3_5" Datatype="Bool" />
+            <Member Name="f3_6" Datatype="Bool" />
+            <Member Name="f3_7" Datatype="Bool" />
+          </Member>
+          <Member Name="E_TPrewarnLimit" Datatype="Bool" />
+          <Member Name="E_TLimit" Datatype="Bool" />
+          <Member Name="E_TNewRepl" Datatype="Bool" />
+          <Member Name="E_TLastRepl" Datatype="Bool" />
+          <Member Name="f344_4" Datatype="Bool" />
+          <Member Name="f344_5" Datatype="Bool" />
+          <Member Name="f344_6" Datatype="Bool" />
+          <Member Name="f344_7" Datatype="Bool" />
+          <Member Name="f345" Datatype="Byte" />
+          <Member Name="f346" Datatype="Byte" />
+          <Member Name="f347" Datatype="Byte" />
+          <Member Name="E_TNoPrewarnLimit" Datatype="DInt" />
+          <Member Name="E_TNoLimit" Datatype="DInt" />
+          <Member Name="E_TNoNewRepl" Datatype="DInt" />
+          <Member Name="E_TNoLastRepl" Datatype="DInt" />
+          <Member Name="E_Cycle_Sig" Datatype="Array[0..15] of Bool" />
+          <Member Name="A_Cycle_Sig" Datatype="Array[0..15] of Bool" />
+          <Member Name="E_OEM_TechnoSig" Datatype="Array[0..31] of Bool" />
+          <Member Name="A_OEM_TechnoSig" Datatype="Array[0..31] of Bool" />
+          <Member Name="E_ProgEvent_Start" Datatype="Bool" />
+          <Member Name="E_ProgEvent_M30" Datatype="Bool" />
+          <Member Name="E_ProgEvent_Reset" Datatype="Bool" />
+          <Member Name="E_ProgEvent_PowerOn" Datatype="Bool" />
+          <Member Name="E_ProgEvent_SearchRun" Datatype="Bool" />
+          <Member Name="f376_5" Datatype="Bool" />
+          <Member Name="f376_6" Datatype="Bool" />
+          <Member Name="f376_7" Datatype="Bool" />
+          <Member Name="E_CollCheckStop" Datatype="Bool" />
+          <Member Name="E_StopCondition" Datatype="Bool" />
+          <Member Name="f377_2" Datatype="Bool" />
+          <Member Name="f377_3" Datatype="Bool" />
+          <Member Name="E_JogRetract" Datatype="Bool" />
+          <Member Name="E_RetractData" Datatype="Bool" />
+          <Member Name="E_JOG_Circles" Datatype="Bool" />
+          <Member Name="f377_7" Datatype="Bool" />
+          <Member Name="E_AnyAsup" Datatype="Bool" />
+          <Member Name="E_SilentAsup" Datatype="Bool" />
+          <Member Name="f378_2" Datatype="Bool" />
+          <Member Name="f378_3" Datatype="Bool" />
+          <Member Name="f378_4" Datatype="Bool" />
+          <Member Name="f378_5" Datatype="Bool" />
+          <Member Name="f378_6" Datatype="Bool" />
+          <Member Name="f378_7" Datatype="Bool" />
+          <Member Name="f379" Datatype="Byte" />
+          <Member Name="f380" Datatype="Array[0..31] of Bool" />
+          <Member Name="A_ProgJump" Datatype="Bool" />
+          <Member Name="f384_1" Datatype="Bool" />
+          <Member Name="f384_2" Datatype="Bool" />
+          <Member Name="f384_3" Datatype="Bool" />
+          <Member Name="f384_4" Datatype="Bool" />
+          <Member Name="f384_5" Datatype="Bool" />
+          <Member Name="f384_6" Datatype="Bool" />
+          <Member Name="f384_7" Datatype="Bool" />
+          <Member Name="A_InKeyG1" Datatype="Bool" />
+          <Member Name="A_InKeyG2" Datatype="Bool" />
+          <Member Name="A_InKeyG3" Datatype="Bool" />
+          <Member Name="A_InKeyG4" Datatype="Bool" />
+          <Member Name="A_InKeyG5" Datatype="Bool" />
+          <Member Name="A_InKeyG6" Datatype="Bool" />
+          <Member Name="A_InKeyG7" Datatype="Bool" />
+          <Member Name="A_InKeyG8" Datatype="Bool" />
+          <Member Name="A_InKeyGEn1" Datatype="Bool" />
+          <Member Name="A_InKeyGEn2" Datatype="Bool" />
+          <Member Name="A_InKeyGEn3" Datatype="Bool" />
+          <Member Name="A_InKeyGEn4" Datatype="Bool" />
+          <Member Name="A_InKeyGEn5" Datatype="Bool" />
+          <Member Name="A_InKeyGEn6" Datatype="Bool" />
+          <Member Name="A_InKeyGEn7" Datatype="Bool" />
+          <Member Name="A_InKeyGEn8" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn1" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn2" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn3" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn4" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn5" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn6" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn7" Datatype="Bool" />
+          <Member Name="A_InKeyGRunIn8" Datatype="Bool" />
+          <Member Name="E_TransformNo" Datatype="Byte" />
+          <Member Name="f389" Datatype="Byte" />
+          <Member Name="E_InKeyGIsEn1" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn2" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn3" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn4" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn5" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn6" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn7" Datatype="Bool" />
+          <Member Name="E_InKeyGIsEn8" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut1" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut2" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut3" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut4" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut5" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut6" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut7" Datatype="Bool" />
+          <Member Name="E_InKeyGRunOut8" Datatype="Bool" />
+          <Member Name="E_CART_JOG_MODE" Datatype="Byte" />
+          <Member Name="f393" Datatype="Byte" />
+          <Member Name="f394" Datatype="Byte" />
+          <Member Name="f395" Datatype="Byte" />
+          <Member Name="H1_DInt" Datatype="DInt" />
+          <Member Name="H2_DInt" Datatype="DInt" />
+          <Member Name="H3_DInt" Datatype="DInt" />
+          <Member Name="E_AxisSelType" Datatype="Byte" />
+          <Member Name="E_AxisSelAxis" Datatype="Byte" />
+          <Member Name="E_AxisSelRequest" Datatype="Bool" />
+          <Member Name="f410_1" Datatype="Bool" />
+          <Member Name="f410_2" Datatype="Bool" />
+          <Member Name="f410_3" Datatype="Bool" />
+          <Member Name="f410_4" Datatype="Bool" />
+          <Member Name="f410_5" Datatype="Bool" />
+          <Member Name="f410_6" Datatype="Bool" />
+          <Member Name="f410_7" Datatype="Bool" />
+          <Member Name="f411" Datatype="Byte" />
+          <Member Name="A_AxisSelTypeActive" Datatype="Byte" />
+          <Member Name="A_AxisSelAxisActive" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="interlocksDB" Datatype="&quot;CNC_PLC_INT_CH&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="SELECTING_PROG_FAULT_FB" Datatype="Bool" /><Member Name="SELECTING_PROG_DONE" Datatype="Bool" /><Member Name="REQUEST" Datatype="Bool" /><Member Name="GENERAL_CONDITIONS" Datatype="Bool" /><Member Name="PULSE" Datatype="Bool" /><Member Name="RESET_SELECTION" Datatype="Bool" /><Member Name="SELECTED" Datatype="Bool" /><Member Name="PROGRAM_SELCT_ALARM" Datatype="Bool" /><Member Name="IS" Datatype="Bool" /><Member Name="IS_SEOC" Datatype="Bool" /><Member Name="RHP" Datatype="Bool" /><Member Name="RHP_SEOC" Datatype="Bool" /><Member Name="SEOC" Datatype="Bool" /><Member Name="IS_WARNING" Datatype="Bool" /><Member Name="RHP_WARNING" Datatype="Bool" /><Member Name="SEOC_WARNING" Datatype="Bool" /><Member Name="WARNINGS" Datatype="Bool" /><Member Name="HELP" Datatype="Bool" /><Member Name="Aux" Datatype="Bool" /><Member Name="Aux1" Datatype="Bool" /><Member Name="Aux2" Datatype="Bool" /><Member Name="Aux3" Datatype="Bool" /><Member Name="Aux4" Datatype="Bool" /><Member Name="Aux5" Datatype="Bool" /><Member Name="Aux6" Datatype="Bool" /><Member Name="Aux7" Datatype="Bool" /><Member Name="SELECTING_STATUS" Datatype="Word" /><Member Name="PName" Datatype="String[32]"><StartValue>'_N_CH3_CLEANING_MPF'</StartValue></Member><Member Name="Path" Datatype="String[32]"><StartValue>'/_N_WKS_DIR/_N_CH_3_WPD'</StartValue></Member></Section></Sections></Member>
+    <Member Name="FB7_INSTANCE" Datatype="&quot;LBP_ReqPIService&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="Req" Datatype="Bool" /><Member Name="PIService" Datatype="Variant" /><Member Name="Unit" Datatype="Int" /><Member Name="Addr1" Datatype="Variant" /><Member Name="Addr2" Datatype="Variant" /><Member Name="Addr3" Datatype="Variant" /><Member Name="Addr4" Datatype="Variant" /><Member Name="WVar1" Datatype="Word" /><Member Name="WVar2" Datatype="Word" /><Member Name="WVar3" Datatype="Word" /><Member Name="WVar4" Datatype="Word" /><Member Name="WVar5" Datatype="Word" /><Member Name="WVar6" Datatype="Word" /><Member Name="WVar7" Datatype="Word" /><Member Name="WVar8" Datatype="Word" /><Member Name="WVar9" Datatype="Word" /><Member Name="WVar10" Datatype="Word" /><Member Name="WVar11" Datatype="Word" /><Member Name="WVar12" Datatype="Word" /><Member Name="WVar13" Datatype="Word" /><Member Name="WVar14" Datatype="Word" /><Member Name="WVar15" Datatype="Word" /><Member Name="WVar16" Datatype="Word" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Done" Datatype="Bool" /><Member Name="State" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="ident" Datatype="Byte" /><Member Name="regist" Datatype="Bool" /><Member Name="flanke" Datatype="Bool" /><Member Name="run" Datatype="Bool" /><Member Name="progtest" Datatype="Bool" /><Member Name="err_cls_cod" Datatype="Word" /><Member Name="err_stat" Datatype="Word" /><Member Name="s_fifoRef" Datatype="UInt" /><Member Name="s_Reserved1" Datatype="Word" /><Member Name="s_Reserved2" Datatype="DWord" /><Member Name="s_Reserved3" Datatype="DWord" /></Section></Sections></Member>
+  </Section>
+</Sections></Interface>
+      <Name>DB313_CH3_PROGRAM_SELECTION</Name>
+      <Number>313</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="6" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

@@ -1,0 +1,1305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:14:37.967556Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.OB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>ETXETAR</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Temp">
+    <Member Name="OB100_EV_CLASS" Datatype="Byte" />
+    <Member Name="OB100_STRTUP" Datatype="Byte" />
+    <Member Name="OB100_PRIORITY" Datatype="Byte" />
+    <Member Name="OB100_OB_NUMBR" Datatype="Byte" />
+    <Member Name="OB100_RESERVED_1" Datatype="Byte" />
+    <Member Name="OB100_RESERVED_2" Datatype="Byte" />
+    <Member Name="OB100_STOP" Datatype="Word" />
+    <Member Name="OB100_RESERVED_3" Datatype="Word" />
+    <Member Name="OB100_RESERVED_4" Datatype="Word" />
+    <Member Name="OB100_DATE_TIME" Datatype="Date_And_Time" />
+    <Member Name="__PlcmigTempFillBits_20B0" Datatype="Array[0..7] of Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>OB100_RESTART</Name>
+      <Number>100</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SecondaryType>Startup</SecondaryType>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="SCoil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>M_ONE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>ESTABLISH "LOGIC 1" BIT</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Part Name="RCoil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>M_ZERO</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>ESTABLISH "LOGIC 0" BIT</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_NEW_START" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Part Name="SCoil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>his statement logic will set the "m_Restart" signal.
+The Bit is reset at the end of OB1 after the first scan cycle.
+
+"m_Restart" will be only "high" during the first scan of the PLC after the PLC 
+has been restarted.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>M_NEW_START</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>SIEMENS SIGNALl "m_Restart"</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="21">
+    <StlToken Text="CALL" />
+    <Access Scope="Call">
+      <CallInfo Name="LBP_ConfigBP" BlockType="FC">
+        <Parameter Name="MCPNum" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1In" Section="Input" Type="Pointer">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="MPP_INS" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1Out" Section="Input" Type="Pointer">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="MPP_OUT" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1BusAdr" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>192</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1Timeout" Section="Input" Type="S5Time">
+          <Access Scope="TypedConstant">
+            <Constant>
+              <ConstantValue>S5T#700MS</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2In" Section="Input" Type="Pointer">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="HT10_INS" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2Out" Section="Input" Type="Pointer">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="HT10_OUTS" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2BusAdr" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>14</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2Timeout" Section="Input" Type="S5Time">
+          <Access Scope="TypedConstant">
+            <Constant>
+              <ConstantValue>S5T#700MS</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1Stop" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2Stop" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1NotSend" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2NotSend" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCPBusType" Section="Input" Type="Byte">
+          <Access Scope="TypedConstant">
+            <Constant>
+              <ConstantValue>B#16#55</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTIf" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTIn" Section="Input" Type="Pointer">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTOut" Section="Input" Type="Pointer">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTAdr" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTStop" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTNotSend" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="NCCyclTimeout" Section="Input" Type="S5Time">
+          <Access Scope="TypedConstant">
+            <Constant>
+              <ConstantValue>S5T#200MS</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="NCRunupTimeout" Section="Input" Type="S5Time">
+          <Access Scope="TypedConstant">
+            <Constant>
+              <ConstantValue>S5T#50S</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="ListMDecGrp" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MMCToIF" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>TRUE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HWheelMMC" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP_IF_TCS" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="ExtendChanAxMsg" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HMIAxisSel" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MsgUser" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>10</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="IRAuxfuT" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="IRAuxfuH" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="IRAuxfuE" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="UserVersion" Section="Input" Type="Pointer">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="UserVersionInfo" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="OpKeyNum" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyIn" Section="Input" Type="Pointer">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyOut" Section="Input" Type="Pointer">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyBusAdr" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyIn" Section="Input" Type="Pointer">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyOut" Section="Input" Type="Pointer">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyBusAdr" Section="Input" Type="Int">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Int</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyStop" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyStop" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyNotSend" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyNotSend" Section="Input" Type="Bool">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Bool</ConstantType>
+              <ConstantValue>FALSE</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="OpUnitCommId" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="OpUnitInterfaceId" Section="Input" Type="HW_ANY">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>HW_ANY</ConstantType>
+              <ConstantValue>262</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1ConnectionId" Section="Input" Type="CONN_OUC">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>CONN_OUC</ConstantType>
+              <ConstantValue>1001</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2ConnectionId" Section="Input" Type="CONN_OUC">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>CONN_OUC</ConstantType>
+              <ConstantValue>1002</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTConnectionId" Section="Input" Type="CONN_OUC">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>CONN_OUC</ConstantType>
+              <ConstantValue>1003</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyConnectionId" Section="Input" Type="CONN_OUC">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>CONN_OUC</ConstantType>
+              <ConstantValue>1004</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyConnectionId" Section="Input" Type="CONN_OUC">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>CONN_OUC</ConstantType>
+              <ConstantValue>1005</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="IdentConnectionId" Section="Input" Type="CONN_OUC">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>CONN_OUC</ConstantType>
+              <ConstantValue>1006</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP1LocalUdpPort" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>16001</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MCP2LocalUdpPort" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>16002</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="HTLocalUdpPort" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>16003</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op1KeyLocalUdpPort" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>16004</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="Op2KeyLocalUdpPort" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>16005</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="IdentLocalUdpPort" Section="Input" Type="UInt">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>UInt</ConstantType>
+              <ConstantValue>16006</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="MaxModeGroup" Section="Output" Type="Int">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="MaxModeGroup" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MaxChan" Section="Output" Type="Int">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="MaxChan" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MaxAxis" Section="Output" Type="Int">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="MaxAxis" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="ActiveChan" Section="Output" Type="Array[1..10] of Bool">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="ActiveChan" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="ActiveAxis" Section="Output" Type="Array[1..31] of Bool">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="ActiveAxis" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MaxNumUserDataInt" Section="Output" Type="Int">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="MaxNumUserDataInt" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MaxNumUserDataHex" Section="Output" Type="Int">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="MaxNumUserDataHex" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="MaxNumUserDataReal" Section="Output" Type="Int">
+          <Access Scope="GlobalVariable">
+            <Symbol>
+              <Component Name="LBP_ConfigData" />
+              <Component Name="MaxNumUserDataReal" />
+            </Symbol>
+          </Access>
+        </Parameter>
+        <Parameter Name="UserDataIntArray" Section="Output" Type="Variant">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="UserDataHexArray" Section="Output" Type="Variant">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="UserDataRealArray" Section="Output" Type="Variant">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+        <Parameter Name="TMMagazines" Section="Output" Type="Variant">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>Void</ConstantType>
+              <ConstantValue>NULL</ConstantValue>
+            </Constant>
+          </Access>
+        </Parameter>
+      </CallInfo>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="94">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="95">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="96">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="97">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="98">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="99">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FC1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="LBP_NC" />
+        <Component Name="A_Keyswitch0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="M_FIRST_SCAN" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB1030_TEST_STOP" />
+        <Component Name="TST_STP_FIRST_SCAN_REQUEST" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="25" />
+    <Part Name="SCoil" UId="26" />
+    <Part Name="SCoil" UId="27" />
+    <Part Name="SCoil" UId="28" />
+  </Parts>
+  <Wires>
+    <Wire UId="29">
+      <Powerrail />
+      <NameCon UId="25" Name="in" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="31">
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="in" />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="23" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="24" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="33" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>If no Keyswitch available set keyswitch to position 0
+
+The Network title and the sample code in this Network are provided for the OEM 
+as example only. The OEM needs to adapt to his own logic and or application.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Keyswitch position 0</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>KEYSWITCH</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="LBP_NC" />
+        <Component Name="A_PCshutdown" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Part Name="Coil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>The Network title and the sample code in this Network are provided for the OEM 
+as example only. The OEM needs to adapt to his own logic and or application.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="43" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>PC SHUTDOWN</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>RESET PCU50 SHUTDOWN PLC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="48" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="49" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4A" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text> "Complete Restart"</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.OB>
+</Document>

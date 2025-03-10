@@ -1,0 +1,42 @@
+﻿FUNCTION "FC2401_DTL_TO_UNIX_TIME_1" : Word
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      SYSTEM_TIME_DTL {InstructionName := 'DTL'; LibVersion := '1.0'} : DTL;
+   END_VAR
+
+   VAR_OUTPUT 
+      UNIX_TIME_SEC : UDInt;
+      UNIX_TIME_MSEC : UDInt;
+   END_VAR
+
+   VAR_TEMP 
+      UNIX_TIME_UDINT : UDInt;
+      NANOSEC_REAL : Real;
+      MILISEC_REAL : Real;
+   END_VAR
+
+   VAR CONSTANT 
+      DELTA_1970_1990 : UDInt := 631_152_000;
+      SEC_PER_DAY : UDInt := 86400;
+   END_VAR
+
+
+BEGIN
+	#FC2401_DTL_TO_UNIX_TIME_1 := 1;
+	
+	// Convert the system time value to Dint
+	#UNIX_TIME_UDINT := (DATE_TO_UDINT(DTL_TO_DATE(#SYSTEM_TIME_DTL)) * #SEC_PER_DAY) + (TOD_TO_UDINT(DTL_TO_TOD(#SYSTEM_TIME_DTL)) / 1000) + #DELTA_1970_1990;
+	
+	// System nanoseconds converted to miliseconds
+	#NANOSEC_REAL := UDINT_TO_REAL(#SYSTEM_TIME_DTL.NANOSECOND);
+	#MILISEC_REAL := #NANOSEC_REAL / 1000000.0;
+	
+	// Conversion to  Output
+	#UNIX_TIME_SEC := #UNIX_TIME_UDINT;
+	#UNIX_TIME_MSEC := REAL_TO_UDINT(#MILISEC_REAL);
+	
+	// Done convertion
+	#FC2401_DTL_TO_UNIX_TIME_1 := 0;
+END_FUNCTION
+

@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:17:03.4826011Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC20300_TARGET_LIGHT_COORDINATOR</Name>
+      <Number>20300</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB20230_TRUMPF_LASER_UNIT_01_ACTIVE" />
+        <Component Name="DATA" />
+        <Component Name="LASER ACTIVE LASER ACTIVE ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="PILOT_LASER_IS_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="STOP_SERVICES_GLOBAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_01" />
+        <Component Name="ST3_CLADDING" />
+        <Component Name="SEOC_ALARMS" />
+      </Symbol>
+    </Access>
+    <Call UId="26">
+      <CallInfo Name="FB20300_LASER_GUIDE" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="27">
+          <Component Name="DB20300_LASER_GUIDE_UNIT_01" />
+        </Instance>
+        <Parameter Name="iCONTROL_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ACTIVE_LASER_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSTART_MANUAL_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iSTART_AUTO_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iGUIDE_LASER_IS_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSTOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iSTOP_AUTO_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iHOME_SEQUENCE_RUNNING" Section="Input" Type="Bool" />
+        <Parameter Name="iCONTROL_OFF" Section="Input" Type="Bool" />
+        <Parameter Name="TEMP" Section="Input" Type="Timer" />
+        <Parameter Name="oLASER_NOT_READY_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="oSEOC_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSwitchoncondition_on" Section="Output" Type="Bool" />
+        <Parameter Name="oSwitchoncondition_off" Section="Output" Type="Bool" />
+        <Parameter Name="oMotion_Active_Right" Section="Output" Type="Bool" />
+        <Parameter Name="oMotion_Active_Left" Section="Output" Type="Bool" />
+        <Parameter Name="oLimit_right" Section="Output" Type="Bool" />
+        <Parameter Name="oLimit_left" Section="Output" Type="Bool" />
+        <Parameter Name="oGUIDE_LASER_ON" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="42">
+      <Powerrail />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="iCONTROL_ON_DELAYED" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="iLASER_ACTIVE_LASER_ON" />
+    </Wire>
+    <Wire UId="45">
+      <OpenCon UId="28" />
+      <NameCon UId="26" Name="iSTART_MANUAL_REQUEST" />
+    </Wire>
+    <Wire UId="46">
+      <OpenCon UId="29" />
+      <NameCon UId="26" Name="iSTART_AUTO_REQUEST" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="iGUIDE_LASER_IS_ON" />
+    </Wire>
+    <Wire UId="48">
+      <OpenCon UId="30" />
+      <NameCon UId="26" Name="iSTOP_MANUAL_REQUEST" />
+    </Wire>
+    <Wire UId="49">
+      <OpenCon UId="31" />
+      <NameCon UId="26" Name="iSTOP_AUTO_REQUEST" />
+    </Wire>
+    <Wire UId="50">
+      <OpenCon UId="32" />
+      <NameCon UId="26" Name="iHOME_SEQUENCE_RUNNING" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="iCONTROL_OFF" />
+    </Wire>
+    <Wire UId="52">
+      <OpenCon UId="33" />
+      <NameCon UId="26" Name="TEMP" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="26" Name="oLASER_NOT_READY_ALARM" />
+      <OpenCon UId="34" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="26" Name="oSEOC_ALARMS" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="26" Name="oSwitchoncondition_on" />
+      <OpenCon UId="35" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="26" Name="oSwitchoncondition_off" />
+      <OpenCon UId="36" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="26" Name="oMotion_Active_Right" />
+      <OpenCon UId="37" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="26" Name="oMotion_Active_Left" />
+      <OpenCon UId="38" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="26" Name="oLimit_right" />
+      <OpenCon UId="39" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="26" Name="oLimit_left" />
+      <OpenCon UId="40" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="26" Name="oGUIDE_LASER_ON" />
+      <OpenCon UId="41" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB20300 LASER GUIDE UNIT 1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB20231_TRUMPF_LASER_UNIT_02_ACTIVE" />
+        <Component Name="DATA" />
+        <Component Name="LASER ACTIVE LASER ACTIVE ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="PILOT_LASER_IS_ON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="STOP_SERVICES_GLOBAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_01" />
+        <Component Name="ST3_CLADDING" />
+        <Component Name="SEOC_ALARMS" />
+      </Symbol>
+    </Access>
+    <Call UId="26">
+      <CallInfo Name="FB20300_LASER_GUIDE" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="27">
+          <Component Name="DB20301_LASER_GUIDE_UNIT_02" />
+        </Instance>
+        <Parameter Name="iCONTROL_ON_DELAYED" Section="Input" Type="Bool" />
+        <Parameter Name="iLASER_ACTIVE_LASER_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSTART_MANUAL_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iSTART_AUTO_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iGUIDE_LASER_IS_ON" Section="Input" Type="Bool" />
+        <Parameter Name="iSTOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iSTOP_AUTO_REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="iHOME_SEQUENCE_RUNNING" Section="Input" Type="Bool" />
+        <Parameter Name="iCONTROL_OFF" Section="Input" Type="Bool" />
+        <Parameter Name="TEMP" Section="Input" Type="Timer" />
+        <Parameter Name="oLASER_NOT_READY_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="oSEOC_ALARMS" Section="Output" Type="Bool" />
+        <Parameter Name="oSwitchoncondition_on" Section="Output" Type="Bool" />
+        <Parameter Name="oSwitchoncondition_off" Section="Output" Type="Bool" />
+        <Parameter Name="oMotion_Active_Right" Section="Output" Type="Bool" />
+        <Parameter Name="oMotion_Active_Left" Section="Output" Type="Bool" />
+        <Parameter Name="oLimit_right" Section="Output" Type="Bool" />
+        <Parameter Name="oLimit_left" Section="Output" Type="Bool" />
+        <Parameter Name="oGUIDE_LASER_ON" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="42">
+      <Powerrail />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="iCONTROL_ON_DELAYED" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="iLASER_ACTIVE_LASER_ON" />
+    </Wire>
+    <Wire UId="45">
+      <OpenCon UId="28" />
+      <NameCon UId="26" Name="iSTART_MANUAL_REQUEST" />
+    </Wire>
+    <Wire UId="46">
+      <OpenCon UId="29" />
+      <NameCon UId="26" Name="iSTART_AUTO_REQUEST" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="iGUIDE_LASER_IS_ON" />
+    </Wire>
+    <Wire UId="48">
+      <OpenCon UId="30" />
+      <NameCon UId="26" Name="iSTOP_MANUAL_REQUEST" />
+    </Wire>
+    <Wire UId="49">
+      <OpenCon UId="31" />
+      <NameCon UId="26" Name="iSTOP_AUTO_REQUEST" />
+    </Wire>
+    <Wire UId="50">
+      <OpenCon UId="32" />
+      <NameCon UId="26" Name="iHOME_SEQUENCE_RUNNING" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="iCONTROL_OFF" />
+    </Wire>
+    <Wire UId="52">
+      <OpenCon UId="33" />
+      <NameCon UId="26" Name="TEMP" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="26" Name="oLASER_NOT_READY_ALARM" />
+      <OpenCon UId="34" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="26" Name="oSEOC_ALARMS" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="26" Name="oSwitchoncondition_on" />
+      <OpenCon UId="35" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="26" Name="oSwitchoncondition_off" />
+      <OpenCon UId="36" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="26" Name="oMotion_Active_Right" />
+      <OpenCon UId="37" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="26" Name="oMotion_Active_Left" />
+      <OpenCon UId="38" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="26" Name="oLimit_right" />
+      <OpenCon UId="39" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="26" Name="oLimit_left" />
+      <OpenCon UId="40" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="26" Name="oGUIDE_LASER_ON" />
+      <OpenCon UId="41" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB20300 LASER GUIDE UNIT 2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="1C" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="1D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>FC20300 TARGET LIGHT COORDINATOR</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="1E" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="1F" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="20" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

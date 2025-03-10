@@ -1,0 +1,4587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-03-10T12:18:34.2028625Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="AUX" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC7238_VARIABLES_PLC_CONNECTION</Name>
+      <Number>7238</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB2001_MODES_FEEDERS" />
+        <Component Name="GENERAL" />
+        <Component Name="MANUAL_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="DATA" />
+        <Component Name="FEEDBACK_ON_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="DATA" />
+        <Component Name="FEEDBACK_ON_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U01_CHANGE_GAS_COND" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="DATA" />
+        <Component Name="FEEDBACK_ON_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="DATA" />
+        <Component Name="FEEDBACK_ON_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U02_CHANGE_GAS_COND" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="DATA" />
+        <Component Name="FEEDBACK_ON_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_2_U02_CHANGE_GAS_COND" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Contact" UId="32" />
+    <Part Name="Contact" UId="33">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="34">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="35" />
+    <Part Name="Contact" UId="36">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="37">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="38" />
+    <Part Name="Contact" UId="39">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="40" />
+  </Parts>
+  <Wires>
+    <Wire UId="41">
+      <Powerrail />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="21" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="22" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="23" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="34" Name="out" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="29" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="30" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDERS GAS CHANGE CONDITIONS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rCarriergasActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rDiskActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rStirrerActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="StirrerSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rHopperTempActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HopperTempNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB21011_PF_1_HEATER_JKL_UNIT_01" />
+        <Component Name="HEATER_STATUS_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="HOPPER_STATUS_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U01_SELECTED_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_01_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2040_WINCC_HMI_LINES" />
+        <Component Name="SERVICES" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>5</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WINCC_LINE_REQUEST_RIGHT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="HopperTempNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="HopperTempNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="StirrerSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_1" />
+        <Component Name="GAS_WAIT_STEP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_NITROGEN_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_HELIUM_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON30_GAS" />
+      </Symbol>
+    </Access>
+    <Call UId="60">
+      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="61">
+          <Component Name="DB7240_FEEDER_1_UNIT_01_LINE_1" />
+        </Instance>
+        <Parameter Name="GAS_FLOW_RATE_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HEATER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="HOPPER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="SELECTED_GAS" Section="Input" Type="Int" />
+        <Parameter Name="HEATER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="DISC_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="TEMP_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="START_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="START_SEQUENCE_DISK_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_DISK_STEP" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_PAUSE_STEP" Section="Output" Type="Int" />
+        <Parameter Name="SELECTED_ARGON_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_NITROGEN_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_HELIUM_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_ARGON30_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="FEEDER_LINE_OUT" Section="InOut" Type="&quot;UDT_Feeder Line&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="67">
+      <Powerrail />
+      <NameCon UId="60" Name="en" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="21" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ACTUAL" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="22" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_AUTO" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="23" />
+      <NameCon UId="60" Name="DISC_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="24" />
+      <NameCon UId="60" Name="DISC_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="25" />
+      <NameCon UId="60" Name="STIRRER_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="26" />
+      <NameCon UId="60" Name="STIRRER_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="27" />
+      <NameCon UId="60" Name="HOPPER_TEMP_ACTUAL" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="28" />
+      <NameCon UId="60" Name="HOPPER_TEMP_AUTO" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="29" />
+      <NameCon UId="60" Name="HEATER_STATUS" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="30" />
+      <NameCon UId="60" Name="HOPPER_STATUS" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="31" />
+      <NameCon UId="60" Name="SELECTED_GAS" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="32" />
+      <NameCon UId="60" Name="FEEDER_LINE_OUT" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="60" Name="HEATER_ON" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="60" Name="HOPPER_ON" />
+      <OpenCon UId="62" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_UP_LIMIT" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="60" Name="TEMP_ALRM_UP_LIMIT" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="60" Name="HOPPER_TEMP_MANUAL" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="60" Name="STIRRER_SPEED_MANUAL" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="60" Name="DISC_SPEED_MANUAL" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_MANUAL" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="60" Name="HOPPER_ON_REQ" />
+      <OpenCon UId="63" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="60" Name="HOPPER_OFF_REQ" />
+      <OpenCon UId="64" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="60" Name="HEATER_ON_REQ" />
+      <OpenCon UId="65" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="60" Name="HEATER_OFF_REQ" />
+      <OpenCon UId="66" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="60" Name="START_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="60" Name="START_SEQUENCE_DISK_STEPS" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="60" Name="STOP_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="60" Name="STOP_SEQUENCE_DISK_STEP" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="60" Name="STOP_SEQUENCE_PAUSE_STEP" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="60" Name="SELECTED_ARGON_GAS" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="60" Name="SELECTED_NITROGEN_GAS" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="60" Name="SELECTED_HELIUM_GAS" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="60" Name="SELECTED_ARGON30_GAS" />
+      <IdentCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDER 1 UNIT 01 LINE 1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rCarriergasActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rDiskActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rStirrerActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="StirrerSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rHopperTempActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_01" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HopperTempNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB21011_PF_1_HEATER_JKL_UNIT_01" />
+        <Component Name="HEATER_STATUS_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="HOPPER_STATUS_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U01_SELECTED_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_01_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2040_WINCC_HMI_LINES" />
+        <Component Name="SERVICES" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>6</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WINCC_LINE_REQUEST_RIGHT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="HopperTempNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="HopperTempNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="StirrerSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB21013_PF_1_HOPPERS_UNIT_01" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="GAS_WAIT_STEP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_NITROGEN_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_HELIUM_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_01" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON30_GAS" />
+      </Symbol>
+    </Access>
+    <Call UId="60">
+      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="61">
+          <Component Name="DB7241_FEEDER_1_UNIT_01_LINE_2" />
+        </Instance>
+        <Parameter Name="GAS_FLOW_RATE_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HEATER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="HOPPER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="SELECTED_GAS" Section="Input" Type="Int" />
+        <Parameter Name="HEATER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="DISC_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="TEMP_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="START_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="START_SEQUENCE_DISK_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_DISK_STEP" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_PAUSE_STEP" Section="Output" Type="Int" />
+        <Parameter Name="SELECTED_ARGON_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_NITROGEN_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_HELIUM_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_ARGON30_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="FEEDER_LINE_OUT" Section="InOut" Type="&quot;UDT_Feeder Line&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="67">
+      <Powerrail />
+      <NameCon UId="60" Name="en" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="21" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ACTUAL" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="22" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_AUTO" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="23" />
+      <NameCon UId="60" Name="DISC_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="24" />
+      <NameCon UId="60" Name="DISC_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="25" />
+      <NameCon UId="60" Name="STIRRER_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="26" />
+      <NameCon UId="60" Name="STIRRER_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="27" />
+      <NameCon UId="60" Name="HOPPER_TEMP_ACTUAL" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="28" />
+      <NameCon UId="60" Name="HOPPER_TEMP_AUTO" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="29" />
+      <NameCon UId="60" Name="HEATER_STATUS" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="30" />
+      <NameCon UId="60" Name="HOPPER_STATUS" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="31" />
+      <NameCon UId="60" Name="SELECTED_GAS" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="32" />
+      <NameCon UId="60" Name="FEEDER_LINE_OUT" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="60" Name="HEATER_ON" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="60" Name="HOPPER_ON" />
+      <OpenCon UId="62" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_UP_LIMIT" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="60" Name="TEMP_ALRM_UP_LIMIT" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="60" Name="HOPPER_TEMP_MANUAL" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="60" Name="STIRRER_SPEED_MANUAL" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="60" Name="DISC_SPEED_MANUAL" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_MANUAL" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="60" Name="HOPPER_ON_REQ" />
+      <OpenCon UId="63" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="60" Name="HOPPER_OFF_REQ" />
+      <OpenCon UId="64" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="60" Name="HEATER_ON_REQ" />
+      <OpenCon UId="65" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="60" Name="HEATER_OFF_REQ" />
+      <OpenCon UId="66" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="60" Name="START_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="60" Name="START_SEQUENCE_DISK_STEPS" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="60" Name="STOP_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="60" Name="STOP_SEQUENCE_DISK_STEP" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="60" Name="STOP_SEQUENCE_PAUSE_STEP" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="60" Name="SELECTED_ARGON_GAS" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="60" Name="SELECTED_NITROGEN_GAS" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="60" Name="SELECTED_HELIUM_GAS" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="60" Name="SELECTED_ARGON30_GAS" />
+      <IdentCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDER 1 UNIT 01 LINE 2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rCarriergasActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rDiskActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rStirrerActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="StirrerSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rHopperTempActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HopperTempNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB21021_PF_1_HEATER_JKL_UNIT_02" />
+        <Component Name="HEATER_STATUS_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="HOPPER_STATUS_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U02_SELECTED_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_02_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2040_WINCC_HMI_LINES" />
+        <Component Name="SERVICES" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>7</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WINCC_LINE_REQUEST_RIGHT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine1_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine1_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine1_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="HopperTempNominalLine1_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="HopperTempNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="StirrerSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_1" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_1" />
+        <Component Name="GAS_WAIT_STEP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_NITROGEN_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_HELIUM_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON30_GAS" />
+      </Symbol>
+    </Access>
+    <Call UId="60">
+      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="61">
+          <Component Name="DB7250_FEEDER_1_UNIT_02_LINE_1" />
+        </Instance>
+        <Parameter Name="GAS_FLOW_RATE_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HEATER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="HOPPER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="SELECTED_GAS" Section="Input" Type="Int" />
+        <Parameter Name="HEATER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="DISC_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="TEMP_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="START_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="START_SEQUENCE_DISK_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_DISK_STEP" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_PAUSE_STEP" Section="Output" Type="Int" />
+        <Parameter Name="SELECTED_ARGON_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_NITROGEN_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_HELIUM_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_ARGON30_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="FEEDER_LINE_OUT" Section="InOut" Type="&quot;UDT_Feeder Line&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="67">
+      <Powerrail />
+      <NameCon UId="60" Name="en" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="21" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ACTUAL" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="22" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_AUTO" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="23" />
+      <NameCon UId="60" Name="DISC_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="24" />
+      <NameCon UId="60" Name="DISC_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="25" />
+      <NameCon UId="60" Name="STIRRER_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="26" />
+      <NameCon UId="60" Name="STIRRER_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="27" />
+      <NameCon UId="60" Name="HOPPER_TEMP_ACTUAL" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="28" />
+      <NameCon UId="60" Name="HOPPER_TEMP_AUTO" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="29" />
+      <NameCon UId="60" Name="HEATER_STATUS" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="30" />
+      <NameCon UId="60" Name="HOPPER_STATUS" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="31" />
+      <NameCon UId="60" Name="SELECTED_GAS" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="32" />
+      <NameCon UId="60" Name="FEEDER_LINE_OUT" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="60" Name="HEATER_ON" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="60" Name="HOPPER_ON" />
+      <OpenCon UId="62" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_UP_LIMIT" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="60" Name="TEMP_ALRM_UP_LIMIT" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="60" Name="HOPPER_TEMP_MANUAL" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="60" Name="STIRRER_SPEED_MANUAL" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="60" Name="DISC_SPEED_MANUAL" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_MANUAL" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="60" Name="HOPPER_ON_REQ" />
+      <OpenCon UId="63" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="60" Name="HOPPER_OFF_REQ" />
+      <OpenCon UId="64" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="60" Name="HEATER_ON_REQ" />
+      <OpenCon UId="65" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="60" Name="HEATER_OFF_REQ" />
+      <OpenCon UId="66" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="60" Name="START_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="60" Name="START_SEQUENCE_DISK_STEPS" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="60" Name="STOP_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="60" Name="STOP_SEQUENCE_DISK_STEP" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="60" Name="STOP_SEQUENCE_PAUSE_STEP" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="60" Name="SELECTED_ARGON_GAS" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="60" Name="SELECTED_NITROGEN_GAS" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="60" Name="SELECTED_HELIUM_GAS" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="60" Name="SELECTED_ARGON30_GAS" />
+      <IdentCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDER 1 UNIT 02 LINE 1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rCarriergasActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rDiskActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rStirrerActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="StirrerSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_02" />
+        <Component Name="i_rHopperTempActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HopperTempNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB21021_PF_1_HEATER_JKL_UNIT_02" />
+        <Component Name="HEATER_STATUS_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="HOPPER_STATUS_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U02_SELECTED_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_1_U_02_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2040_WINCC_HMI_LINES" />
+        <Component Name="SERVICES" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>8</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WINCC_LINE_REQUEST_RIGHT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="HopperTempNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="HopperTempNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="StirrerSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB21023_PF_1_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="GAS_WAIT_STEP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_NITROGEN_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_HELIUM_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_1_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON30_GAS" />
+      </Symbol>
+    </Access>
+    <Call UId="60">
+      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="61">
+          <Component Name="DB7251_FEEDER_1_UNIT_02_LINE_2" />
+        </Instance>
+        <Parameter Name="GAS_FLOW_RATE_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HEATER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="HOPPER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="SELECTED_GAS" Section="Input" Type="Int" />
+        <Parameter Name="HEATER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="DISC_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="TEMP_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="START_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="START_SEQUENCE_DISK_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_DISK_STEP" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_PAUSE_STEP" Section="Output" Type="Int" />
+        <Parameter Name="SELECTED_ARGON_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_NITROGEN_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_HELIUM_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_ARGON30_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="FEEDER_LINE_OUT" Section="InOut" Type="&quot;UDT_Feeder Line&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="67">
+      <Powerrail />
+      <NameCon UId="60" Name="en" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="21" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ACTUAL" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="22" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_AUTO" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="23" />
+      <NameCon UId="60" Name="DISC_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="24" />
+      <NameCon UId="60" Name="DISC_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="25" />
+      <NameCon UId="60" Name="STIRRER_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="26" />
+      <NameCon UId="60" Name="STIRRER_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="27" />
+      <NameCon UId="60" Name="HOPPER_TEMP_ACTUAL" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="28" />
+      <NameCon UId="60" Name="HOPPER_TEMP_AUTO" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="29" />
+      <NameCon UId="60" Name="HEATER_STATUS" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="30" />
+      <NameCon UId="60" Name="HOPPER_STATUS" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="31" />
+      <NameCon UId="60" Name="SELECTED_GAS" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="32" />
+      <NameCon UId="60" Name="FEEDER_LINE_OUT" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="60" Name="HEATER_ON" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="60" Name="HOPPER_ON" />
+      <OpenCon UId="62" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_UP_LIMIT" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="60" Name="TEMP_ALRM_UP_LIMIT" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="60" Name="HOPPER_TEMP_MANUAL" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="60" Name="STIRRER_SPEED_MANUAL" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="60" Name="DISC_SPEED_MANUAL" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_MANUAL" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="60" Name="HOPPER_ON_REQ" />
+      <OpenCon UId="63" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="60" Name="HOPPER_OFF_REQ" />
+      <OpenCon UId="64" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="60" Name="HEATER_ON_REQ" />
+      <OpenCon UId="65" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="60" Name="HEATER_OFF_REQ" />
+      <OpenCon UId="66" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="60" Name="START_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="60" Name="START_SEQUENCE_DISK_STEPS" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="60" Name="STOP_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="60" Name="STOP_SEQUENCE_DISK_STEP" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="60" Name="STOP_SEQUENCE_PAUSE_STEP" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="60" Name="SELECTED_ARGON_GAS" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="60" Name="SELECTED_NITROGEN_GAS" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="60" Name="SELECTED_HELIUM_GAS" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="60" Name="SELECTED_ARGON30_GAS" />
+      <IdentCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="33" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDER 1 UNIT 02 LINE 2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_2_UNIT_02" />
+        <Component Name="i_rCarriergasActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_2_UNIT_02" />
+        <Component Name="i_rDiskActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_2_UNIT_02" />
+        <Component Name="i_rStirrerActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="StirrerSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_2_UNIT_02" />
+        <Component Name="i_rHopperTempActual_Line2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="POWDER_FEEDERS" />
+        <Component Name="UNIT_02" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HopperTempNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB21031_PF_2_HEATER_JKL_UNIT_02" />
+        <Component Name="HEATER_STATUS_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="HOPPER_STATUS_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_2_U02_SELECTED_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="FEEDER_2_U_02_LINE_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB2040_WINCC_HMI_LINES" />
+        <Component Name="SERVICES" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>9</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="WINCC_LINE_REQUEST_RIGHT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="DiskSpeedNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="CarrierGasNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Max_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Min_Warning" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="StirrerSpeedNominalLine2_Min_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Offsets Alarms and Warnings" />
+        <Component Name="HopperTempNominalLine2_Max_Alarm" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="HopperTempNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="StirrerSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="DiskSpeedNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_Values Setpoints" />
+        <Component Name="CarrierGasNominalLine2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_ON_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="53">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="MAX_STEPS_DISK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB21033_PF_2_HOPPERS_UNIT_02" />
+        <Component Name="SWITCH_OFF_SEQUENCE_LINE_2" />
+        <Component Name="GAS_WAIT_STEP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_NITROGEN_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_HELIUM_GAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="DB21003_POWDER_FEEDER_HMI_INTERLOCK" />
+        <Component Name="POWDER_FEEDER_2_UNIT_02" />
+        <Component Name="HMI_ACTIONS_STATUS" />
+        <Component Name="SELECTED_ARGON30_GAS" />
+      </Symbol>
+    </Access>
+    <Call UId="60">
+      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="61">
+          <Component Name="DB7252_FEEDER_2_UNIT_02_LINE_2" />
+        </Instance>
+        <Parameter Name="GAS_FLOW_RATE_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="DISC_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_AUTO" Section="Input" Type="Real" />
+        <Parameter Name="HEATER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="HOPPER_STATUS" Section="Input" Type="Byte" />
+        <Parameter Name="SELECTED_GAS" Section="Input" Type="Int" />
+        <Parameter Name="HEATER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_ON" Section="Output" Type="Bool" />
+        <Parameter Name="DISC_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_WARN_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_ALRM_LOW_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="TEMP_ALRM_UP_LIMIT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_TEMP_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="DISC_SPEED_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="GAS_FLOW_RATE_MANUAL" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HOPPER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_ON_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="HEATER_OFF_REQ" Section="Output" Type="Bool" />
+        <Parameter Name="START_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="START_SEQUENCE_DISK_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_GAS_STEPS" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_DISK_STEP" Section="Output" Type="Int" />
+        <Parameter Name="STOP_SEQUENCE_PAUSE_STEP" Section="Output" Type="Int" />
+        <Parameter Name="SELECTED_ARGON_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_NITROGEN_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_HELIUM_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="SELECTED_ARGON30_GAS" Section="Output" Type="Bool" />
+        <Parameter Name="FEEDER_LINE_OUT" Section="InOut" Type="&quot;UDT_Feeder Line&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="67">
+      <Powerrail />
+      <NameCon UId="60" Name="en" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="21" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ACTUAL" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="22" />
+      <NameCon UId="60" Name="GAS_FLOW_RATE_AUTO" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="23" />
+      <NameCon UId="60" Name="DISC_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="24" />
+      <NameCon UId="60" Name="DISC_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="25" />
+      <NameCon UId="60" Name="STIRRER_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="26" />
+      <NameCon UId="60" Name="STIRRER_SPEED_AUTO" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="27" />
+      <NameCon UId="60" Name="HOPPER_TEMP_ACTUAL" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="28" />
+      <NameCon UId="60" Name="HOPPER_TEMP_AUTO" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="29" />
+      <NameCon UId="60" Name="HEATER_STATUS" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="30" />
+      <NameCon UId="60" Name="HOPPER_STATUS" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="31" />
+      <NameCon UId="60" Name="SELECTED_GAS" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="32" />
+      <NameCon UId="60" Name="FEEDER_LINE_OUT" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="60" Name="HEATER_ON" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="60" Name="HOPPER_ON" />
+      <OpenCon UId="62" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="60" Name="DISC_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="60" Name="DISC_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_UP_LIMIT" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_UP_LIMIT" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_WARN_LOW_LIMIT" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_ALRM_LOW_LIMIT" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_UP_LIMIT" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_UP_LIMIT" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="60" Name="STIRRER_SPEED_WARN_LOW_LIMIT" />
+      <IdentCon UId="44" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="60" Name="STIRRER_SPEED_ALRM_LOW_LIMIT" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="60" Name="TEMP_ALRM_UP_LIMIT" />
+      <IdentCon UId="46" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="60" Name="HOPPER_TEMP_MANUAL" />
+      <IdentCon UId="47" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="60" Name="STIRRER_SPEED_MANUAL" />
+      <IdentCon UId="48" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="60" Name="DISC_SPEED_MANUAL" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="60" Name="GAS_FLOW_RATE_MANUAL" />
+      <IdentCon UId="50" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="60" Name="HOPPER_ON_REQ" />
+      <OpenCon UId="63" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="60" Name="HOPPER_OFF_REQ" />
+      <OpenCon UId="64" />
+    </Wire>
+    <Wire UId="101">
+      <NameCon UId="60" Name="HEATER_ON_REQ" />
+      <OpenCon UId="65" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="60" Name="HEATER_OFF_REQ" />
+      <OpenCon UId="66" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="60" Name="START_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="60" Name="START_SEQUENCE_DISK_STEPS" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="60" Name="STOP_SEQUENCE_GAS_STEPS" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="60" Name="STOP_SEQUENCE_DISK_STEP" />
+      <IdentCon UId="54" />
+    </Wire>
+    <Wire UId="107">
+      <NameCon UId="60" Name="STOP_SEQUENCE_PAUSE_STEP" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="60" Name="SELECTED_ARGON_GAS" />
+      <IdentCon UId="56" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="60" Name="SELECTED_NITROGEN_GAS" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="60" Name="SELECTED_HELIUM_GAS" />
+      <IdentCon UId="58" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="60" Name="SELECTED_ARGON30_GAS" />
+      <IdentCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="43" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDER 2 UNIT 02 LINE 2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="48" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB22502_STIRRER_CONTROL_HOPPER_1_UNIT_01" />
+        <Component Name="HMI _ACTUAL _VELOCITY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB22502_STIRRER_CONTROL_HOPPER_1_UNIT_01" />
+        <Component Name="SETPOINT _VELOCITY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB22501_TEMPERATURE_JKT_UPPER_HOPPER_1_UNIT_01" />
+        <Component Name="DATA" />
+        <Component Name="HMI Feedback Value" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB22501_TEMPERATURE_JKT_UPPER_HOPPER_1_UNIT_01" />
+        <Component Name="DATA" />
+        <Component Name="Consignment" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB22505_TEMPERATURE_JKT_LOWER_HOPPER_1" />
+        <Component Name="DATA" />
+        <Component Name="HMI Feedback Value" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB22505_TEMPERATURE_JKT_LOWER_HOPPER_1" />
+        <Component Name="DATA" />
+        <Component Name="Consignment" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB22102_PRESSURE_HOPPER_1_UNIT_01" />
+        <Component Name="OUTPUT" />
+        <Component Name="VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB22503_PRESSURE_CONTROL_HOPPER_1_UNIT_01" />
+        <Component Name="SETPOINT_PRESSURE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB22101_PRESSURE_FEEDER_1_HOPPER_1_UNIT_01" />
+        <Component Name="OUTPUT" />
+        <Component Name="VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB21005_POWDER_FEEDER_PLC_AUX" />
+        <Component Name="INTERLOCKS_PLC_I/O_PF_1_UNIT_01" />
+        <Component Name="i_rHopperPressureActual_Line1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB22107_MASS_SENSOR_HOPPER_1_UNIT_01" />
+        <Component Name="OUTPUT" />
+        <Component Name="POWDER_WEIGHT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HOPPER_U_01_LINE_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB22502_STIRRER_CONTROL_HOPPER_1_UNIT_01" />
+        <Component Name="HMI _SETPOINT _VELOCITY" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB22501_TEMPERATURE_JKT_UPPER_HOPPER_1_UNIT_01" />
+        <Component Name="DATA" />
+        <Component Name="HMI Manual Cons." />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB22505_TEMPERATURE_JKT_LOWER_HOPPER_1" />
+        <Component Name="DATA" />
+        <Component Name="HMI Manual Cons." />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB22503_PRESSURE_CONTROL_HOPPER_1_UNIT_01" />
+        <Component Name="DATA_HMI" />
+        <Component Name="PRESSURE_SETPOINT_VALUE" />
+      </Symbol>
+    </Access>
+    <Call UId="37">
+      <CallInfo Name="FB7240_VARIABLES_PLC_HMI_HOPPERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="38">
+          <Component Name="DB7270_HOPPER_1_UNIT_01" />
+        </Instance>
+        <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="DInt" />
+        <Parameter Name="STIRRER_SPEED_CONS" Section="Input" Type="DInt" />
+        <Parameter Name="UPPER_JACKET_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="UPPER_JACKET_CONS" Section="Input" Type="Real" />
+        <Parameter Name="LOWER_JACKET_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="LOWER_JACKET_CONS" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_COVER_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_COVER_CONS" Section="Input" Type="Real" />
+        <Parameter Name="FEEDING_COVER_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="FEEDER_DISK_PRESS_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="MAX_WEIGHT_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="TOTAL_WEIGHT_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_WEIGHT_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="POWDER_WEIGHT_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="STIRRER_SPEED_SETPOINT" Section="Output" Type="DInt" />
+        <Parameter Name="UPPER_JACKET_SETPOINT" Section="Output" Type="Real" />
+        <Parameter Name="LOWER_JACKET_SETPOINT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_COVER_SETPOINT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_WEIGHT_INPUT" Section="Output" Type="Real" />
+        <Parameter Name="MAX_WEIGHT_INPUT" Section="Output" Type="Real" />
+        <Parameter Name="HOPPER_LINE_IN_OUT" Section="InOut" Type="&quot;UDT_Hopper Line&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="44">
+      <Powerrail />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="21" />
+      <NameCon UId="37" Name="STIRRER_SPEED_ACTUAL" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="STIRRER_SPEED_CONS" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="UPPER_JACKET_ACTUAL" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="UPPER_JACKET_CONS" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="LOWER_JACKET_ACTUAL" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="LOWER_JACKET_CONS" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="HOPPER_COVER_ACTUAL" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="28" />
+      <NameCon UId="37" Name="HOPPER_COVER_CONS" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="29" />
+      <NameCon UId="37" Name="FEEDING_COVER_ACTUAL" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="30" />
+      <NameCon UId="37" Name="FEEDER_DISK_PRESS_ACTUAL" />
+    </Wire>
+    <Wire UId="55">
+      <OpenCon UId="39" />
+      <NameCon UId="37" Name="MAX_WEIGHT_ACTUAL" />
+    </Wire>
+    <Wire UId="56">
+      <OpenCon UId="40" />
+      <NameCon UId="37" Name="TOTAL_WEIGHT_ACTUAL" />
+    </Wire>
+    <Wire UId="57">
+      <OpenCon UId="41" />
+      <NameCon UId="37" Name="HOPPER_WEIGHT_ACTUAL" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="31" />
+      <NameCon UId="37" Name="POWDER_WEIGHT_ACTUAL" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="HOPPER_LINE_IN_OUT" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="37" Name="STIRRER_SPEED_SETPOINT" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="37" Name="UPPER_JACKET_SETPOINT" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="37" Name="LOWER_JACKET_SETPOINT" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="37" Name="HOPPER_COVER_SETPOINT" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="37" Name="HOPPER_WEIGHT_INPUT" />
+      <OpenCon UId="42" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="37" Name="MAX_WEIGHT_INPUT" />
+      <OpenCon UId="43" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="49" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>HOPPER 1 UNIT 01</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="51" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="53" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="EKS_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="EKS_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="EKS_OPERATOR_IDENTIFICATION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="EKS_OPERATOR_IDENTIFICATION" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="30">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'Engineering'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="32">
+      <Constant>
+        <ConstantValue>WSTRING#'Engineering'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="35">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="36">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'OfficialIC'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="38">
+      <Constant>
+        <ConstantValue>WSTRING#'OfficialIC'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="41">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="42">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'Service'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="44">
+      <Constant>
+        <ConstantValue>WSTRING#'Service'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="47">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>4</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="48">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'Operator'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="50">
+      <Constant>
+        <ConstantValue>WSTRING#'Operator'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="53">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>5</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="54">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'WorkerPlus'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="55">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="56">
+      <Constant>
+        <ConstantValue>WSTRING#'WorkerPlus'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="59">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>6</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="60">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'Worker'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="61">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="62">
+      <Constant>
+        <ConstantValue>WSTRING#'Worker'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK" />
+        <Component Name="GENERAL" />
+        <Component Name="CURRENT_PROTECTION_LEVEL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="65">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>7</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="66">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>''</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="67">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_USER" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="68">
+      <Constant>
+        <ConstantValue>WSTRING#''</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="69">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="HMI_PASSWORD" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="70" />
+    <Part Name="Move" UId="71" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="72" DisabledENO="true" />
+    <Part Name="Move" UId="73" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="74">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="75" DisabledENO="true" />
+    <Part Name="S_Move" UId="76" DisabledENO="true" />
+    <Part Name="Eq" UId="77">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="78" DisabledENO="true" />
+    <Part Name="S_Move" UId="79" DisabledENO="true" />
+    <Part Name="Eq" UId="80">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="81" DisabledENO="true" />
+    <Part Name="S_Move" UId="82" DisabledENO="true" />
+    <Part Name="Eq" UId="83">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="84" DisabledENO="true" />
+    <Part Name="S_Move" UId="85" DisabledENO="true" />
+    <Part Name="Eq" UId="86">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="87" DisabledENO="true" />
+    <Part Name="S_Move" UId="88" DisabledENO="true" />
+    <Part Name="Eq" UId="89">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="90" DisabledENO="true" />
+    <Part Name="S_Move" UId="91" DisabledENO="true" />
+    <Part Name="Eq" UId="92">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
+    </Part>
+    <Part Name="S_Move" UId="93" DisabledENO="true" />
+    <Part Name="S_Move" UId="94" DisabledENO="true" />
+  </Parts>
+  <Wires>
+    <Wire UId="95">
+      <Powerrail />
+      <NameCon UId="70" Name="in" />
+    </Wire>
+    <Wire UId="96">
+      <IdentCon UId="21" />
+      <NameCon UId="70" Name="operand" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="70" Name="out" />
+      <NameCon UId="71" Name="en" />
+      <NameCon UId="74" Name="pre" />
+      <NameCon UId="77" Name="pre" />
+      <NameCon UId="80" Name="pre" />
+      <NameCon UId="83" Name="pre" />
+      <NameCon UId="86" Name="pre" />
+      <NameCon UId="89" Name="pre" />
+      <NameCon UId="92" Name="pre" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="22" />
+      <NameCon UId="71" Name="in" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="71" Name="eno" />
+      <NameCon UId="72" Name="en" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="71" Name="out1" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="101">
+      <IdentCon UId="24" />
+      <NameCon UId="72" Name="in" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="72" Name="eno" />
+      <NameCon UId="73" Name="en" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="72" Name="out" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="104">
+      <IdentCon UId="26" />
+      <NameCon UId="73" Name="in" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="73" Name="out1" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="106">
+      <IdentCon UId="28" />
+      <NameCon UId="74" Name="in1" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="29" />
+      <NameCon UId="74" Name="in2" />
+    </Wire>
+    <Wire UId="108">
+      <NameCon UId="74" Name="out" />
+      <NameCon UId="75" Name="en" />
+    </Wire>
+    <Wire UId="109">
+      <IdentCon UId="30" />
+      <NameCon UId="75" Name="in" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="75" Name="eno" />
+      <NameCon UId="76" Name="en" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="75" Name="out" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="112">
+      <IdentCon UId="32" />
+      <NameCon UId="76" Name="in" />
+    </Wire>
+    <Wire UId="113">
+      <NameCon UId="76" Name="out" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="34" />
+      <NameCon UId="77" Name="in1" />
+    </Wire>
+    <Wire UId="115">
+      <IdentCon UId="35" />
+      <NameCon UId="77" Name="in2" />
+    </Wire>
+    <Wire UId="116">
+      <NameCon UId="77" Name="out" />
+      <NameCon UId="78" Name="en" />
+    </Wire>
+    <Wire UId="117">
+      <IdentCon UId="36" />
+      <NameCon UId="78" Name="in" />
+    </Wire>
+    <Wire UId="118">
+      <NameCon UId="78" Name="eno" />
+      <NameCon UId="79" Name="en" />
+    </Wire>
+    <Wire UId="119">
+      <NameCon UId="78" Name="out" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="120">
+      <IdentCon UId="38" />
+      <NameCon UId="79" Name="in" />
+    </Wire>
+    <Wire UId="121">
+      <NameCon UId="79" Name="out" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="122">
+      <IdentCon UId="40" />
+      <NameCon UId="80" Name="in1" />
+    </Wire>
+    <Wire UId="123">
+      <IdentCon UId="41" />
+      <NameCon UId="80" Name="in2" />
+    </Wire>
+    <Wire UId="124">
+      <NameCon UId="80" Name="out" />
+      <NameCon UId="81" Name="en" />
+    </Wire>
+    <Wire UId="125">
+      <IdentCon UId="42" />
+      <NameCon UId="81" Name="in" />
+    </Wire>
+    <Wire UId="126">
+      <NameCon UId="81" Name="eno" />
+      <NameCon UId="82" Name="en" />
+    </Wire>
+    <Wire UId="127">
+      <NameCon UId="81" Name="out" />
+      <IdentCon UId="43" />
+    </Wire>
+    <Wire UId="128">
+      <IdentCon UId="44" />
+      <NameCon UId="82" Name="in" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="82" Name="out" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="130">
+      <IdentCon UId="46" />
+      <NameCon UId="83" Name="in1" />
+    </Wire>
+    <Wire UId="131">
+      <IdentCon UId="47" />
+      <NameCon UId="83" Name="in2" />
+    </Wire>
+    <Wire UId="132">
+      <NameCon UId="83" Name="out" />
+      <NameCon UId="84" Name="en" />
+    </Wire>
+    <Wire UId="133">
+      <IdentCon UId="48" />
+      <NameCon UId="84" Name="in" />
+    </Wire>
+    <Wire UId="134">
+      <NameCon UId="84" Name="eno" />
+      <NameCon UId="85" Name="en" />
+    </Wire>
+    <Wire UId="135">
+      <NameCon UId="84" Name="out" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="136">
+      <IdentCon UId="50" />
+      <NameCon UId="85" Name="in" />
+    </Wire>
+    <Wire UId="137">
+      <NameCon UId="85" Name="out" />
+      <IdentCon UId="51" />
+    </Wire>
+    <Wire UId="138">
+      <IdentCon UId="52" />
+      <NameCon UId="86" Name="in1" />
+    </Wire>
+    <Wire UId="139">
+      <IdentCon UId="53" />
+      <NameCon UId="86" Name="in2" />
+    </Wire>
+    <Wire UId="140">
+      <NameCon UId="86" Name="out" />
+      <NameCon UId="87" Name="en" />
+    </Wire>
+    <Wire UId="141">
+      <IdentCon UId="54" />
+      <NameCon UId="87" Name="in" />
+    </Wire>
+    <Wire UId="142">
+      <NameCon UId="87" Name="eno" />
+      <NameCon UId="88" Name="en" />
+    </Wire>
+    <Wire UId="143">
+      <NameCon UId="87" Name="out" />
+      <IdentCon UId="55" />
+    </Wire>
+    <Wire UId="144">
+      <IdentCon UId="56" />
+      <NameCon UId="88" Name="in" />
+    </Wire>
+    <Wire UId="145">
+      <NameCon UId="88" Name="out" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="146">
+      <IdentCon UId="58" />
+      <NameCon UId="89" Name="in1" />
+    </Wire>
+    <Wire UId="147">
+      <IdentCon UId="59" />
+      <NameCon UId="89" Name="in2" />
+    </Wire>
+    <Wire UId="148">
+      <NameCon UId="89" Name="out" />
+      <NameCon UId="90" Name="en" />
+    </Wire>
+    <Wire UId="149">
+      <IdentCon UId="60" />
+      <NameCon UId="90" Name="in" />
+    </Wire>
+    <Wire UId="150">
+      <NameCon UId="90" Name="eno" />
+      <NameCon UId="91" Name="en" />
+    </Wire>
+    <Wire UId="151">
+      <NameCon UId="90" Name="out" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="152">
+      <IdentCon UId="62" />
+      <NameCon UId="91" Name="in" />
+    </Wire>
+    <Wire UId="153">
+      <NameCon UId="91" Name="out" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="154">
+      <IdentCon UId="64" />
+      <NameCon UId="92" Name="in1" />
+    </Wire>
+    <Wire UId="155">
+      <IdentCon UId="65" />
+      <NameCon UId="92" Name="in2" />
+    </Wire>
+    <Wire UId="156">
+      <NameCon UId="92" Name="out" />
+      <NameCon UId="93" Name="en" />
+    </Wire>
+    <Wire UId="157">
+      <IdentCon UId="66" />
+      <NameCon UId="93" Name="in" />
+    </Wire>
+    <Wire UId="158">
+      <NameCon UId="93" Name="eno" />
+      <NameCon UId="94" Name="en" />
+    </Wire>
+    <Wire UId="159">
+      <NameCon UId="93" Name="out" />
+      <IdentCon UId="67" />
+    </Wire>
+    <Wire UId="160">
+      <IdentCon UId="68" />
+      <NameCon UId="94" Name="in" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="94" Name="out" />
+      <IdentCon UId="69" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="54" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="55" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="56" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="58" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="59" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>EKS VALUES TO HMI</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="5E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB2001_MODES_FEEDERS" />
+        <Component Name="GENERAL" />
+        <Component Name="MANUAL_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB2001_MODES_FEEDERS" />
+        <Component Name="GENERAL" />
+        <Component Name="AUTOMATIC_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2002_MODES_HOPPERS" />
+        <Component Name="GENERAL" />
+        <Component Name="MANUAL_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2002_MODES_HOPPERS" />
+        <Component Name="GENERAL" />
+        <Component Name="AUTOMATIC_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="GENERAL" />
+        <Component Name="PLC_TO_HMI" />
+        <Component Name="FEEDERS_MODE_STATE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7238_VARIABLES_PLC_CONNECTION" />
+        <Component Name="GENERAL" />
+        <Component Name="PLC_TO_HMI" />
+        <Component Name="HOPPERS_MODE_STATE" />
+      </Symbol>
+    </Access>
+    <Call UId="27">
+      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_GENERAL" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="28">
+          <Component Name="DB7260_PLC_HMI_GENERAL" />
+        </Instance>
+        <Parameter Name="FEEDERS_MANUAL_MODE" Section="Input" Type="Bool" />
+        <Parameter Name="FEEDERS_AUTO_MODE" Section="Input" Type="Bool" />
+        <Parameter Name="HOPPERS_MANUAL_MODE" Section="Input" Type="Bool" />
+        <Parameter Name="HOPPERS_AUTO_MODE" Section="Input" Type="Bool" />
+        <Parameter Name="FEEDERS_MODE_STATE" Section="Output" Type="Int" />
+        <Parameter Name="HOPPERS_MODE_STATE" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="29">
+      <Powerrail />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="FEEDERS_MANUAL_MODE" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="FEEDERS_AUTO_MODE" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="23" />
+      <NameCon UId="27" Name="HOPPERS_MANUAL_MODE" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="HOPPERS_AUTO_MODE" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="FEEDERS_MODE_STATE" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="HOPPERS_MODE_STATE" />
+      <IdentCon UId="26" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="60" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="61" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="62" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="63" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="64" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="65" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>GENERAL HMI PLC CONNECTION</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="66" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="67" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="68" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="69" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="70" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="71" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="72" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="73" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="74" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="75" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="76" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="77" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="78" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

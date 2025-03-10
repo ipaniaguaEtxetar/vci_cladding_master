@@ -1,0 +1,20 @@
+﻿FUNCTION "LBP_InternalProc4" : Void
+TITLE = Internal FC for basic program
+{ S7_Optimized_Access := 'FALSE' }
+AUTHOR : SINUMERIK
+FAMILY : SINUMERIK_ONE
+VERSION : 6.15
+//FC only for internal use in the basic program
+   VAR_INPUT 
+      Chan : SInt;   // Index of channel
+   END_VAR
+
+
+BEGIN
+	// Wrapper for call of "LBP_CallBackAuxFunc [FC12]" in "LBP_MainBP [FC2]" or "LBP_NCKProcessIRT [FC3]"
+	// Input "Chan": Channel number
+	// ====================================================================================================
+	
+	"LBP_CallBackAuxFunc"(SINT_TO_BYTE(#Chan));
+END_FUNCTION
+

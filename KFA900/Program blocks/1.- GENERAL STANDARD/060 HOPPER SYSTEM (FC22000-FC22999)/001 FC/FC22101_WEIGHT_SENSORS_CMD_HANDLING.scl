@@ -1,0 +1,33 @@
+﻿FUNCTION "FC22101_WEIGHT_SENSORS_CMD_HANDLING" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      CMD_A : Int;
+      CMD_B : Int;
+      CMD3_In_Progress : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      CMD3_TRIGGER : Bool;
+   END_VAR
+
+   VAR_IN_OUT 
+      CMD3_CODE : Int;
+   END_VAR
+
+
+BEGIN
+	IF (#CMD3_In_Progress=FALSE) THEN
+	  IF (#CMD_A<>0) THEN
+	    IF (#CMD_B<>0) THEN
+	      IF (#CMD3_CODE=#CMD_A) THEN #CMD3_CODE:=#CMD_B;
+	      ELSE #CMD3_CODE:=#CMD_A;
+	      END_IF;
+	    ELSE #CMD3_CODE:=#CMD_A;
+	    END_IF;
+	    #CMD3_TRIGGER:=TRUE;
+	  ELSIF (#CMD_B<>0) THEN #CMD3_CODE:=#CMD_B; #CMD3_TRIGGER:=TRUE;
+	  END_IF;
+	 END_IF; 
+END_FUNCTION
+
