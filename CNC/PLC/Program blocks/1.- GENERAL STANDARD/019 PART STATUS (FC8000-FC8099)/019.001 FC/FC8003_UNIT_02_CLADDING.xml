@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-10T13:09:50.6069708Z</Created>
+    <Created>2025-03-12T15:33:32.0956032Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -6659,27 +6659,27 @@
         <Component Name="UNIT_02_REJECT_PART" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="HMI" />
-        <Component Name="PART_STATUS_FIXTURES_LIST" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="26">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>2</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalConstant" UId="27">
+    <Access Scope="LocalConstant" UId="25">
       <Constant Name="FC_NUMBER" />
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="GLOBAL_ALARMS_MACHINE" />
         <Component Name="HELP_DECODING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="GENERAL" />
+        <Component Name="MANUAL_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB428_OPERATOR_HELP" />
+        <Component Name="HELP_OPERATOR_200" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -6691,154 +6691,126 @@
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB428_OPERATOR_HELP" />
-        <Component Name="HELP_OPERATOR_200" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2001_MODES_GENERAL" />
-        <Component Name="GENERAL" />
-        <Component Name="MANUAL_SELECTED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="32">
-      <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
         <Component Name="DRY_CYCLE" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB428_OPERATOR_HELP" />
         <Component Name="HELP_OPERATOR_220" />
       </Symbol>
     </Access>
+    <Part Name="Contact" UId="32">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="33">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Contact" UId="34">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="35">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="36">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="37">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Not" UId="38" />
-    <Part Name="Eq" UId="39">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="40" DisabledENO="false">
+    <Part Name="Not" UId="36" />
+    <Part Name="Move" UId="37" DisabledENO="false">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="41">
+    <Part Name="Contact" UId="38">
       <Negated Name="operand" />
     </Part>
+    <Part Name="SCoil" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41" />
     <Part Name="SCoil" UId="42" />
-    <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="SCoil" UId="45" />
   </Parts>
   <Wires>
-    <Wire UId="46">
+    <Wire UId="43">
       <Powerrail />
-      <NameCon UId="34" Name="in" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="21" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="48">
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="49">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="49">
-      <IdentCon UId="22" />
+    <Wire UId="50">
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="50">
+    <Wire UId="51">
       <NameCon UId="35" Name="out" />
       <NameCon UId="36" Name="in" />
     </Wire>
-    <Wire UId="51">
-      <IdentCon UId="23" />
-      <NameCon UId="36" Name="operand" />
-    </Wire>
     <Wire UId="52">
       <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
+      <NameCon UId="37" Name="en" />
     </Wire>
     <Wire UId="53">
-      <IdentCon UId="24" />
-      <NameCon UId="37" Name="operand" />
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="54">
-      <NameCon UId="37" Name="out" />
+      <NameCon UId="37" Name="eno" />
       <NameCon UId="38" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <NameCon UId="38" Name="out" />
-      <NameCon UId="39" Name="pre" />
-    </Wire>
-    <Wire UId="56">
-      <IdentCon UId="25" />
-      <NameCon UId="39" Name="in1" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="26" />
-      <NameCon UId="39" Name="in2" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="en" />
-    </Wire>
-    <Wire UId="59">
-      <IdentCon UId="27" />
       <NameCon UId="40" Name="in" />
     </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="out1" />
+      <IdentCon UId="26" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
     <Wire UId="60">
-      <NameCon UId="40" Name="eno" />
+      <NameCon UId="40" Name="out" />
       <NameCon UId="41" Name="in" />
-      <NameCon UId="43" Name="in" />
     </Wire>
     <Wire UId="61">
-      <NameCon UId="40" Name="out1" />
-      <IdentCon UId="28" />
-    </Wire>
-    <Wire UId="62">
-      <IdentCon UId="29" />
+      <IdentCon UId="30" />
       <NameCon UId="41" Name="operand" />
     </Wire>
-    <Wire UId="63">
+    <Wire UId="62">
       <NameCon UId="41" Name="out" />
       <NameCon UId="42" Name="in" />
     </Wire>
-    <Wire UId="64">
-      <IdentCon UId="30" />
-      <NameCon UId="42" Name="operand" />
-    </Wire>
-    <Wire UId="65">
+    <Wire UId="63">
       <IdentCon UId="31" />
-      <NameCon UId="43" Name="operand" />
-    </Wire>
-    <Wire UId="66">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in" />
-    </Wire>
-    <Wire UId="67">
-      <IdentCon UId="32" />
-      <NameCon UId="44" Name="operand" />
-    </Wire>
-    <Wire UId="68">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-    </Wire>
-    <Wire UId="69">
-      <IdentCon UId="33" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="42" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -8844,57 +8816,46 @@
         <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
         <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_LOADED_P" />
+        <Component Name="PART_LOADED_P" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="PART_A" />
         <Component Name="UNIT_02" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
         <Component Name="STATUS_BLKMOV" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
+        <Component Name="FROM_ROBOT_CELL" />
+        <Component Name="PART_UNLOADED_P" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="STATUS_FILL" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -8903,284 +8864,80 @@
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="CALIBRATION_CYCLE" />
-        <Component Name="CYCLE_SELECTED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="32">
-      <Symbol>
-        <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="IN_LOAD_UNLOAD_STATION_1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="33">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="MASTER_PART" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="34">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="LOAD_UNLOAD" />
-        <Component Name="UNIT_02" />
-        <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_UNLOADED_P" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="35">
-      <Symbol>
-        <Component Name="ZERO" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="36">
-      <Symbol>
-        <Component Name="STATUS_FILL" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="PART_ID" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="38">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="39">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="40">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
-        <Component Name="PROCESSED_IN_F1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="41">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="42">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="Contact" UId="45" />
-    <Part Name="Move" UId="46" DisabledENO="false">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="BLKMOV" Version="1.1" UId="47">
+    <Part Name="Contact" UId="31" />
+    <Part Name="Contact" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="BLKMOV" Version="1.1" UId="34">
       <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="SCoil" UId="48" />
-    <Part Name="SCoil" UId="49" />
-    <Part Name="Contact" UId="50" />
-    <Part Name="Contact" UId="51" />
-    <Part Name="SCoil" UId="52" />
-    <Part Name="Contact" UId="53" />
-    <Part Name="FILL" Version="1.1" UId="54">
+    <Part Name="Contact" UId="35" />
+    <Part Name="FILL" Version="1.1" UId="36">
       <TemplateValue Name="ptr_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="RCoil" UId="55" />
-    <Part Name="RCoil" UId="56" />
-    <Part Name="RCoil" UId="57" />
-    <Part Name="RCoil" UId="58" />
-    <Part Name="RCoil" UId="59" />
   </Parts>
   <Wires>
-    <Wire UId="60">
+    <Wire UId="37">
       <Powerrail />
-      <NameCon UId="43" Name="in" />
+      <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="38">
       <IdentCon UId="21" />
-      <NameCon UId="43" Name="operand" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="62">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in" />
+    <Wire UId="39">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
     </Wire>
-    <Wire UId="63">
+    <Wire UId="40">
       <IdentCon UId="22" />
-      <NameCon UId="44" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="64">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="53" Name="in" />
+    <Wire UId="41">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="65">
+    <Wire UId="42">
       <IdentCon UId="23" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="66">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="en" />
+    <Wire UId="43">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="en" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="44">
       <IdentCon UId="24" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="34" Name="SRCBLK" />
     </Wire>
-    <Wire UId="68">
-      <NameCon UId="46" Name="eno" />
-      <NameCon UId="47" Name="en" />
-    </Wire>
-    <Wire UId="69">
-      <NameCon UId="46" Name="out1" />
+    <Wire UId="45">
+      <NameCon UId="34" Name="RET_VAL" />
       <IdentCon UId="25" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="46">
+      <NameCon UId="34" Name="DSTBLK" />
       <IdentCon UId="26" />
-      <NameCon UId="47" Name="SRCBLK" />
     </Wire>
-    <Wire UId="71">
-      <NameCon UId="47" Name="eno" />
-      <NameCon UId="48" Name="in" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="72">
-      <NameCon UId="47" Name="RET_VAL" />
+    <Wire UId="47">
       <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="47" Name="DSTBLK" />
+    <Wire UId="48">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="49">
       <IdentCon UId="28" />
+      <NameCon UId="36" Name="BVAL" />
     </Wire>
-    <Wire UId="74">
+    <Wire UId="50">
+      <NameCon UId="36" Name="RET_VAL" />
       <IdentCon UId="29" />
-      <NameCon UId="48" Name="operand" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in" />
-    </Wire>
-    <Wire UId="76">
+    <Wire UId="51">
+      <NameCon UId="36" Name="BLK" />
       <IdentCon UId="30" />
-      <NameCon UId="49" Name="operand" />
-    </Wire>
-    <Wire UId="77">
-      <IdentCon UId="31" />
-      <NameCon UId="50" Name="operand" />
-    </Wire>
-    <Wire UId="78">
-      <NameCon UId="50" Name="out" />
-      <NameCon UId="51" Name="in" />
-    </Wire>
-    <Wire UId="79">
-      <IdentCon UId="32" />
-      <NameCon UId="51" Name="operand" />
-    </Wire>
-    <Wire UId="80">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="in" />
-    </Wire>
-    <Wire UId="81">
-      <IdentCon UId="33" />
-      <NameCon UId="52" Name="operand" />
-    </Wire>
-    <Wire UId="82">
-      <IdentCon UId="34" />
-      <NameCon UId="53" Name="operand" />
-    </Wire>
-    <Wire UId="83">
-      <NameCon UId="53" Name="out" />
-      <NameCon UId="54" Name="en" />
-    </Wire>
-    <Wire UId="84">
-      <IdentCon UId="35" />
-      <NameCon UId="54" Name="BVAL" />
-    </Wire>
-    <Wire UId="85">
-      <NameCon UId="54" Name="eno" />
-      <NameCon UId="55" Name="in" />
-      <NameCon UId="56" Name="in" />
-      <NameCon UId="57" Name="in" />
-    </Wire>
-    <Wire UId="86">
-      <NameCon UId="54" Name="RET_VAL" />
-      <IdentCon UId="36" />
-    </Wire>
-    <Wire UId="87">
-      <NameCon UId="54" Name="BLK" />
-      <IdentCon UId="37" />
-    </Wire>
-    <Wire UId="88">
-      <IdentCon UId="38" />
-      <NameCon UId="55" Name="operand" />
-    </Wire>
-    <Wire UId="89">
-      <IdentCon UId="39" />
-      <NameCon UId="56" Name="operand" />
-    </Wire>
-    <Wire UId="90">
-      <IdentCon UId="40" />
-      <NameCon UId="57" Name="operand" />
-    </Wire>
-    <Wire UId="91">
-      <NameCon UId="57" Name="out" />
-      <NameCon UId="58" Name="in" />
-    </Wire>
-    <Wire UId="92">
-      <IdentCon UId="41" />
-      <NameCon UId="58" Name="operand" />
-    </Wire>
-    <Wire UId="93">
-      <NameCon UId="58" Name="out" />
-      <NameCon UId="59" Name="in" />
-    </Wire>
-    <Wire UId="94">
-      <IdentCon UId="42" />
-      <NameCon UId="59" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -9270,57 +9027,46 @@
         <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
         <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_LOADED_P" />
+        <Component Name="PART_LOADED_P" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="PART_A" />
         <Component Name="UNIT_02" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
         <Component Name="STATUS_BLKMOV" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
+        <Component Name="FROM_ROBOT_CELL" />
+        <Component Name="PART_UNLOADED_P" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="STATUS_FILL" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -9329,284 +9075,80 @@
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="CALIBRATION_CYCLE" />
-        <Component Name="CYCLE_SELECTED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="32">
-      <Symbol>
-        <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="IN_LOAD_UNLOAD_STATION_1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="33">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="MASTER_PART" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="34">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="LOAD_UNLOAD" />
-        <Component Name="UNIT_02" />
-        <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_UNLOADED_P" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="35">
-      <Symbol>
-        <Component Name="ZERO" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="36">
-      <Symbol>
-        <Component Name="STATUS_FILL" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="PART_ID" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="38">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="39">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="40">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
-        <Component Name="PROCESSED_IN_F2" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="41">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="42">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="Contact" UId="45" />
-    <Part Name="Move" UId="46" DisabledENO="false">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="BLKMOV" Version="1.1" UId="47">
+    <Part Name="Contact" UId="31" />
+    <Part Name="Contact" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="BLKMOV" Version="1.1" UId="34">
       <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="SCoil" UId="48" />
-    <Part Name="SCoil" UId="49" />
-    <Part Name="Contact" UId="50" />
-    <Part Name="Contact" UId="51" />
-    <Part Name="SCoil" UId="52" />
-    <Part Name="Contact" UId="53" />
-    <Part Name="FILL" Version="1.1" UId="54">
+    <Part Name="Contact" UId="35" />
+    <Part Name="FILL" Version="1.1" UId="36">
       <TemplateValue Name="ptr_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="RCoil" UId="55" />
-    <Part Name="RCoil" UId="56" />
-    <Part Name="RCoil" UId="57" />
-    <Part Name="RCoil" UId="58" />
-    <Part Name="RCoil" UId="59" />
   </Parts>
   <Wires>
-    <Wire UId="60">
+    <Wire UId="37">
       <Powerrail />
-      <NameCon UId="43" Name="in" />
+      <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="38">
       <IdentCon UId="21" />
-      <NameCon UId="43" Name="operand" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="62">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in" />
+    <Wire UId="39">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
     </Wire>
-    <Wire UId="63">
+    <Wire UId="40">
       <IdentCon UId="22" />
-      <NameCon UId="44" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="64">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="53" Name="in" />
+    <Wire UId="41">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="65">
+    <Wire UId="42">
       <IdentCon UId="23" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="66">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="en" />
+    <Wire UId="43">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="en" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="44">
       <IdentCon UId="24" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="34" Name="SRCBLK" />
     </Wire>
-    <Wire UId="68">
-      <NameCon UId="46" Name="eno" />
-      <NameCon UId="47" Name="en" />
-    </Wire>
-    <Wire UId="69">
-      <NameCon UId="46" Name="out1" />
+    <Wire UId="45">
+      <NameCon UId="34" Name="RET_VAL" />
       <IdentCon UId="25" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="46">
+      <NameCon UId="34" Name="DSTBLK" />
       <IdentCon UId="26" />
-      <NameCon UId="47" Name="SRCBLK" />
     </Wire>
-    <Wire UId="71">
-      <NameCon UId="47" Name="eno" />
-      <NameCon UId="48" Name="in" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="72">
-      <NameCon UId="47" Name="RET_VAL" />
+    <Wire UId="47">
       <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="47" Name="DSTBLK" />
+    <Wire UId="48">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="49">
       <IdentCon UId="28" />
+      <NameCon UId="36" Name="BVAL" />
     </Wire>
-    <Wire UId="74">
+    <Wire UId="50">
+      <NameCon UId="36" Name="RET_VAL" />
       <IdentCon UId="29" />
-      <NameCon UId="48" Name="operand" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in" />
-    </Wire>
-    <Wire UId="76">
+    <Wire UId="51">
+      <NameCon UId="36" Name="BLK" />
       <IdentCon UId="30" />
-      <NameCon UId="49" Name="operand" />
-    </Wire>
-    <Wire UId="77">
-      <IdentCon UId="31" />
-      <NameCon UId="50" Name="operand" />
-    </Wire>
-    <Wire UId="78">
-      <NameCon UId="50" Name="out" />
-      <NameCon UId="51" Name="in" />
-    </Wire>
-    <Wire UId="79">
-      <IdentCon UId="32" />
-      <NameCon UId="51" Name="operand" />
-    </Wire>
-    <Wire UId="80">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="in" />
-    </Wire>
-    <Wire UId="81">
-      <IdentCon UId="33" />
-      <NameCon UId="52" Name="operand" />
-    </Wire>
-    <Wire UId="82">
-      <IdentCon UId="34" />
-      <NameCon UId="53" Name="operand" />
-    </Wire>
-    <Wire UId="83">
-      <NameCon UId="53" Name="out" />
-      <NameCon UId="54" Name="en" />
-    </Wire>
-    <Wire UId="84">
-      <IdentCon UId="35" />
-      <NameCon UId="54" Name="BVAL" />
-    </Wire>
-    <Wire UId="85">
-      <NameCon UId="54" Name="eno" />
-      <NameCon UId="55" Name="in" />
-      <NameCon UId="56" Name="in" />
-      <NameCon UId="57" Name="in" />
-    </Wire>
-    <Wire UId="86">
-      <NameCon UId="54" Name="RET_VAL" />
-      <IdentCon UId="36" />
-    </Wire>
-    <Wire UId="87">
-      <NameCon UId="54" Name="BLK" />
-      <IdentCon UId="37" />
-    </Wire>
-    <Wire UId="88">
-      <IdentCon UId="38" />
-      <NameCon UId="55" Name="operand" />
-    </Wire>
-    <Wire UId="89">
-      <IdentCon UId="39" />
-      <NameCon UId="56" Name="operand" />
-    </Wire>
-    <Wire UId="90">
-      <IdentCon UId="40" />
-      <NameCon UId="57" Name="operand" />
-    </Wire>
-    <Wire UId="91">
-      <NameCon UId="57" Name="out" />
-      <NameCon UId="58" Name="in" />
-    </Wire>
-    <Wire UId="92">
-      <IdentCon UId="41" />
-      <NameCon UId="58" Name="operand" />
-    </Wire>
-    <Wire UId="93">
-      <NameCon UId="58" Name="out" />
-      <NameCon UId="59" Name="in" />
-    </Wire>
-    <Wire UId="94">
-      <IdentCon UId="42" />
-      <NameCon UId="59" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -9696,57 +9238,46 @@
         <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
         <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_LOADED_P" />
+        <Component Name="PART_LOADED_P" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="PART_A" />
         <Component Name="UNIT_02" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
         <Component Name="STATUS_BLKMOV" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
+        <Component Name="FROM_ROBOT_CELL" />
+        <Component Name="PART_UNLOADED_P" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="STATUS_FILL" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -9755,284 +9286,80 @@
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="CALIBRATION_CYCLE" />
-        <Component Name="CYCLE_SELECTED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="32">
-      <Symbol>
-        <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="IN_LOAD_UNLOAD_STATION_1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="33">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="MASTER_PART" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="34">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="LOAD_UNLOAD" />
-        <Component Name="UNIT_02" />
-        <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_UNLOADED_P" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="35">
-      <Symbol>
-        <Component Name="ZERO" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="36">
-      <Symbol>
-        <Component Name="STATUS_FILL" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="PART_ID" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="38">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="39">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="40">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
-        <Component Name="PROCESSED_IN_F3" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="41">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="42">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="Contact" UId="45" />
-    <Part Name="Move" UId="46" DisabledENO="false">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="BLKMOV" Version="1.1" UId="47">
+    <Part Name="Contact" UId="31" />
+    <Part Name="Contact" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="BLKMOV" Version="1.1" UId="34">
       <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="SCoil" UId="48" />
-    <Part Name="SCoil" UId="49" />
-    <Part Name="Contact" UId="50" />
-    <Part Name="Contact" UId="51" />
-    <Part Name="SCoil" UId="52" />
-    <Part Name="Contact" UId="53" />
-    <Part Name="FILL" Version="1.1" UId="54">
+    <Part Name="Contact" UId="35" />
+    <Part Name="FILL" Version="1.1" UId="36">
       <TemplateValue Name="ptr_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="RCoil" UId="55" />
-    <Part Name="RCoil" UId="56" />
-    <Part Name="RCoil" UId="57" />
-    <Part Name="RCoil" UId="58" />
-    <Part Name="RCoil" UId="59" />
   </Parts>
   <Wires>
-    <Wire UId="60">
+    <Wire UId="37">
       <Powerrail />
-      <NameCon UId="43" Name="in" />
+      <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="38">
       <IdentCon UId="21" />
-      <NameCon UId="43" Name="operand" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="62">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in" />
+    <Wire UId="39">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
     </Wire>
-    <Wire UId="63">
+    <Wire UId="40">
       <IdentCon UId="22" />
-      <NameCon UId="44" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="64">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="53" Name="in" />
+    <Wire UId="41">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="65">
+    <Wire UId="42">
       <IdentCon UId="23" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="66">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="en" />
+    <Wire UId="43">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="en" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="44">
       <IdentCon UId="24" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="34" Name="SRCBLK" />
     </Wire>
-    <Wire UId="68">
-      <NameCon UId="46" Name="eno" />
-      <NameCon UId="47" Name="en" />
-    </Wire>
-    <Wire UId="69">
-      <NameCon UId="46" Name="out1" />
+    <Wire UId="45">
+      <NameCon UId="34" Name="RET_VAL" />
       <IdentCon UId="25" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="46">
+      <NameCon UId="34" Name="DSTBLK" />
       <IdentCon UId="26" />
-      <NameCon UId="47" Name="SRCBLK" />
     </Wire>
-    <Wire UId="71">
-      <NameCon UId="47" Name="eno" />
-      <NameCon UId="48" Name="in" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="72">
-      <NameCon UId="47" Name="RET_VAL" />
+    <Wire UId="47">
       <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="47" Name="DSTBLK" />
+    <Wire UId="48">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="49">
       <IdentCon UId="28" />
+      <NameCon UId="36" Name="BVAL" />
     </Wire>
-    <Wire UId="74">
+    <Wire UId="50">
+      <NameCon UId="36" Name="RET_VAL" />
       <IdentCon UId="29" />
-      <NameCon UId="48" Name="operand" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in" />
-    </Wire>
-    <Wire UId="76">
+    <Wire UId="51">
+      <NameCon UId="36" Name="BLK" />
       <IdentCon UId="30" />
-      <NameCon UId="49" Name="operand" />
-    </Wire>
-    <Wire UId="77">
-      <IdentCon UId="31" />
-      <NameCon UId="50" Name="operand" />
-    </Wire>
-    <Wire UId="78">
-      <NameCon UId="50" Name="out" />
-      <NameCon UId="51" Name="in" />
-    </Wire>
-    <Wire UId="79">
-      <IdentCon UId="32" />
-      <NameCon UId="51" Name="operand" />
-    </Wire>
-    <Wire UId="80">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="in" />
-    </Wire>
-    <Wire UId="81">
-      <IdentCon UId="33" />
-      <NameCon UId="52" Name="operand" />
-    </Wire>
-    <Wire UId="82">
-      <IdentCon UId="34" />
-      <NameCon UId="53" Name="operand" />
-    </Wire>
-    <Wire UId="83">
-      <NameCon UId="53" Name="out" />
-      <NameCon UId="54" Name="en" />
-    </Wire>
-    <Wire UId="84">
-      <IdentCon UId="35" />
-      <NameCon UId="54" Name="BVAL" />
-    </Wire>
-    <Wire UId="85">
-      <NameCon UId="54" Name="eno" />
-      <NameCon UId="55" Name="in" />
-      <NameCon UId="56" Name="in" />
-      <NameCon UId="57" Name="in" />
-    </Wire>
-    <Wire UId="86">
-      <NameCon UId="54" Name="RET_VAL" />
-      <IdentCon UId="36" />
-    </Wire>
-    <Wire UId="87">
-      <NameCon UId="54" Name="BLK" />
-      <IdentCon UId="37" />
-    </Wire>
-    <Wire UId="88">
-      <IdentCon UId="38" />
-      <NameCon UId="55" Name="operand" />
-    </Wire>
-    <Wire UId="89">
-      <IdentCon UId="39" />
-      <NameCon UId="56" Name="operand" />
-    </Wire>
-    <Wire UId="90">
-      <IdentCon UId="40" />
-      <NameCon UId="57" Name="operand" />
-    </Wire>
-    <Wire UId="91">
-      <NameCon UId="57" Name="out" />
-      <NameCon UId="58" Name="in" />
-    </Wire>
-    <Wire UId="92">
-      <IdentCon UId="41" />
-      <NameCon UId="58" Name="operand" />
-    </Wire>
-    <Wire UId="93">
-      <NameCon UId="58" Name="out" />
-      <NameCon UId="59" Name="in" />
-    </Wire>
-    <Wire UId="94">
-      <IdentCon UId="42" />
-      <NameCon UId="59" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -10122,57 +9449,46 @@
         <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
         <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_LOADED_P" />
+        <Component Name="PART_LOADED_P" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PART_TYPE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="PART_A" />
         <Component Name="UNIT_02" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
         <Component Name="STATUS_BLKMOV" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
-        <Component Name="PART_ID" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="LOAD_UNLOAD" />
         <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
+        <Component Name="FROM_ROBOT_CELL" />
+        <Component Name="PART_UNLOADED_P" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="STATUS_FILL" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -10181,284 +9497,80 @@
         <Component Name="UNIT_02" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="CALIBRATION_CYCLE" />
-        <Component Name="CYCLE_SELECTED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="32">
-      <Symbol>
-        <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="IN_LOAD_UNLOAD_STATION_1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="33">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="MASTER_PART" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="34">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="LOAD_UNLOAD" />
-        <Component Name="UNIT_02" />
-        <Component Name="FROM_ROBOT_CELL" />
-        <Component Name="PART_A_UNLOADED_P" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="35">
-      <Symbol>
-        <Component Name="ZERO" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="36">
-      <Symbol>
-        <Component Name="STATUS_FILL" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="PART_ID" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="38">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="PRESENT" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="39">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="40">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
-        <Component Name="PROCESSED_IN_F4" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="41">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="42">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="Contact" UId="45" />
-    <Part Name="Move" UId="46" DisabledENO="false">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="BLKMOV" Version="1.1" UId="47">
+    <Part Name="Contact" UId="31" />
+    <Part Name="Contact" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="BLKMOV" Version="1.1" UId="34">
       <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="SCoil" UId="48" />
-    <Part Name="SCoil" UId="49" />
-    <Part Name="Contact" UId="50" />
-    <Part Name="Contact" UId="51" />
-    <Part Name="SCoil" UId="52" />
-    <Part Name="Contact" UId="53" />
-    <Part Name="FILL" Version="1.1" UId="54">
+    <Part Name="Contact" UId="35" />
+    <Part Name="FILL" Version="1.1" UId="36">
       <TemplateValue Name="ptr_type" Type="Type">Variant</TemplateValue>
     </Part>
-    <Part Name="RCoil" UId="55" />
-    <Part Name="RCoil" UId="56" />
-    <Part Name="RCoil" UId="57" />
-    <Part Name="RCoil" UId="58" />
-    <Part Name="RCoil" UId="59" />
   </Parts>
   <Wires>
-    <Wire UId="60">
+    <Wire UId="37">
       <Powerrail />
-      <NameCon UId="43" Name="in" />
+      <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="38">
       <IdentCon UId="21" />
-      <NameCon UId="43" Name="operand" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="62">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in" />
+    <Wire UId="39">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
     </Wire>
-    <Wire UId="63">
+    <Wire UId="40">
       <IdentCon UId="22" />
-      <NameCon UId="44" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="64">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="53" Name="in" />
+    <Wire UId="41">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="65">
+    <Wire UId="42">
       <IdentCon UId="23" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="66">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="en" />
+    <Wire UId="43">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="en" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="44">
       <IdentCon UId="24" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="34" Name="SRCBLK" />
     </Wire>
-    <Wire UId="68">
-      <NameCon UId="46" Name="eno" />
-      <NameCon UId="47" Name="en" />
-    </Wire>
-    <Wire UId="69">
-      <NameCon UId="46" Name="out1" />
+    <Wire UId="45">
+      <NameCon UId="34" Name="RET_VAL" />
       <IdentCon UId="25" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="46">
+      <NameCon UId="34" Name="DSTBLK" />
       <IdentCon UId="26" />
-      <NameCon UId="47" Name="SRCBLK" />
     </Wire>
-    <Wire UId="71">
-      <NameCon UId="47" Name="eno" />
-      <NameCon UId="48" Name="in" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="72">
-      <NameCon UId="47" Name="RET_VAL" />
+    <Wire UId="47">
       <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="47" Name="DSTBLK" />
+    <Wire UId="48">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="49">
       <IdentCon UId="28" />
+      <NameCon UId="36" Name="BVAL" />
     </Wire>
-    <Wire UId="74">
+    <Wire UId="50">
+      <NameCon UId="36" Name="RET_VAL" />
       <IdentCon UId="29" />
-      <NameCon UId="48" Name="operand" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in" />
-    </Wire>
-    <Wire UId="76">
+    <Wire UId="51">
+      <NameCon UId="36" Name="BLK" />
       <IdentCon UId="30" />
-      <NameCon UId="49" Name="operand" />
-    </Wire>
-    <Wire UId="77">
-      <IdentCon UId="31" />
-      <NameCon UId="50" Name="operand" />
-    </Wire>
-    <Wire UId="78">
-      <NameCon UId="50" Name="out" />
-      <NameCon UId="51" Name="in" />
-    </Wire>
-    <Wire UId="79">
-      <IdentCon UId="32" />
-      <NameCon UId="51" Name="operand" />
-    </Wire>
-    <Wire UId="80">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="in" />
-    </Wire>
-    <Wire UId="81">
-      <IdentCon UId="33" />
-      <NameCon UId="52" Name="operand" />
-    </Wire>
-    <Wire UId="82">
-      <IdentCon UId="34" />
-      <NameCon UId="53" Name="operand" />
-    </Wire>
-    <Wire UId="83">
-      <NameCon UId="53" Name="out" />
-      <NameCon UId="54" Name="en" />
-    </Wire>
-    <Wire UId="84">
-      <IdentCon UId="35" />
-      <NameCon UId="54" Name="BVAL" />
-    </Wire>
-    <Wire UId="85">
-      <NameCon UId="54" Name="eno" />
-      <NameCon UId="55" Name="in" />
-      <NameCon UId="56" Name="in" />
-      <NameCon UId="57" Name="in" />
-    </Wire>
-    <Wire UId="86">
-      <NameCon UId="54" Name="RET_VAL" />
-      <IdentCon UId="36" />
-    </Wire>
-    <Wire UId="87">
-      <NameCon UId="54" Name="BLK" />
-      <IdentCon UId="37" />
-    </Wire>
-    <Wire UId="88">
-      <IdentCon UId="38" />
-      <NameCon UId="55" Name="operand" />
-    </Wire>
-    <Wire UId="89">
-      <IdentCon UId="39" />
-      <NameCon UId="56" Name="operand" />
-    </Wire>
-    <Wire UId="90">
-      <IdentCon UId="40" />
-      <NameCon UId="57" Name="operand" />
-    </Wire>
-    <Wire UId="91">
-      <NameCon UId="57" Name="out" />
-      <NameCon UId="58" Name="in" />
-    </Wire>
-    <Wire UId="92">
-      <IdentCon UId="41" />
-      <NameCon UId="58" Name="operand" />
-    </Wire>
-    <Wire UId="93">
-      <NameCon UId="58" Name="out" />
-      <NameCon UId="59" Name="in" />
-    </Wire>
-    <Wire UId="94">
-      <IdentCon UId="42" />
-      <NameCon UId="59" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-10T13:10:02.3111713Z</Created>
+    <Created>2025-03-12T15:33:35.3782106Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -805,7 +805,7 @@
         <Instance Scope="GlobalVariable" UId="61">
           <Component Name="DB324_CHANNEL_4" />
         </Instance>
-        <Parameter Name="CHANNEL_MODE_GROUP" Section="Input" Type="Int" />
+        <Parameter Name="CH_MODE_GROUP" Section="Input" Type="Int" />
         <Parameter Name="JERK_PARAMETERS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="ENABLE_M01" Section="Input" Type="Bool" />
         <Parameter Name="ENABLE_DRY_RUN_TEST_PRGM" Section="Input" Type="Bool" />
@@ -819,7 +819,7 @@
         <Parameter Name="MACHINE_IS_WARNINGS" Section="Input" Type="Bool" />
         <Parameter Name="UNIT_IS_SEOC" Section="Input" Type="Bool" />
         <Parameter Name="CHANNEL_M201" Section="Input" Type="Bool" />
-        <Parameter Name="CHANNEL_MCH_RESET" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET" Section="Input" Type="Bool" />
         <Parameter Name="NC_START_DUMMY_FOR_OPT" Section="Input" Type="Bool" />
         <Parameter Name="MPP_PUSH_BUTTON_START" Section="Input" Type="Bool" />
         <Parameter Name="MPP_PUSH_BUTTON_NC_START" Section="Input" Type="Bool" />
@@ -923,7 +923,7 @@
     </Wire>
     <Wire UId="83">
       <IdentCon UId="29" />
-      <NameCon UId="60" Name="CHANNEL_MODE_GROUP" />
+      <NameCon UId="60" Name="CH_MODE_GROUP" />
     </Wire>
     <Wire UId="84">
       <IdentCon UId="30" />
@@ -975,7 +975,7 @@
     </Wire>
     <Wire UId="96">
       <IdentCon UId="42" />
-      <NameCon UId="60" Name="CHANNEL_MCH_RESET" />
+      <NameCon UId="60" Name="MCH_RESET" />
     </Wire>
     <Wire UId="97">
       <IdentCon UId="43" />
@@ -1309,51 +1309,84 @@
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="GlobalVariable" UId="21">
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB314_CH4_PROGRAM_SELECTION" />
         <Component Name="REQUEST" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="22">
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="LBP_Chan4" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="23">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="GENERAL" />
         <Component Name="700449" />
       </Symbol>
     </Access>
-    <Call UId="24">
+    <Call UId="27">
       <CallInfo Name="FB311_CHANNEL_PROGRAM_SELECTION" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="25">
+        <Instance Scope="GlobalVariable" UId="28">
           <Component Name="DB314_CH4_PROGRAM_SELECTION" />
         </Instance>
+        <Parameter Name="CH_MODE_GROUP" Section="Input" Type="Int" />
         <Parameter Name="REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="SEQ_RUNNING" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET" Section="Input" Type="Bool" />
         <Parameter Name="ALARM" Section="Output" Type="Bool" />
         <Parameter Name="channelDB" Section="InOut" Type="&quot;LBP_typeChanX&quot;" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="26">
-      <Powerrail />
-      <NameCon UId="24" Name="en" />
-    </Wire>
-    <Wire UId="27">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="REQUEST" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="channelDB" />
-    </Wire>
     <Wire UId="29">
-      <NameCon UId="24" Name="ALARM" />
+      <Powerrail />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="CH_MODE_GROUP" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="REQUEST" />
+    </Wire>
+    <Wire UId="32">
       <IdentCon UId="23" />
+      <NameCon UId="27" Name="SEQ_RUNNING" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="MCH_RESET" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="channelDB" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="ALARM" />
+      <IdentCon UId="26" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

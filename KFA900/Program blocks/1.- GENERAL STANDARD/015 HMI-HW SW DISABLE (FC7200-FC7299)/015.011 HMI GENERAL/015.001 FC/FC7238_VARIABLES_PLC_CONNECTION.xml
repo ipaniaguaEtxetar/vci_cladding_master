@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-10T13:12:39.4645451Z</Created>
+    <Created>2025-03-12T15:34:30.864992Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -646,7 +646,7 @@
       </Symbol>
     </Access>
     <Call UId="60">
-      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="61">
           <Component Name="DB7240_FEEDER_1_UNIT_01_LINE_1" />
         </Instance>
@@ -1251,7 +1251,7 @@
       </Symbol>
     </Access>
     <Call UId="60">
-      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="61">
           <Component Name="DB7241_FEEDER_1_UNIT_01_LINE_2" />
         </Instance>
@@ -1856,7 +1856,7 @@
       </Symbol>
     </Access>
     <Call UId="60">
-      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="61">
           <Component Name="DB7250_FEEDER_1_UNIT_02_LINE_1" />
         </Instance>
@@ -2461,7 +2461,7 @@
       </Symbol>
     </Access>
     <Call UId="60">
-      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="61">
           <Component Name="DB7251_FEEDER_1_UNIT_02_LINE_2" />
         </Instance>
@@ -3066,7 +3066,7 @@
       </Symbol>
     </Access>
     <Call UId="60">
-      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
+      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_FEEDERS" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="61">
           <Component Name="DB7252_FEEDER_2_UNIT_02_LINE_2" />
         </Instance>
@@ -3479,116 +3479,171 @@
         </Instance>
         <Parameter Name="STIRRER_SPEED_ACTUAL" Section="Input" Type="DInt" />
         <Parameter Name="STIRRER_SPEED_CONS" Section="Input" Type="DInt" />
+        <Parameter Name="STIRRER_STARTED" Section="Input" Type="Bool" />
         <Parameter Name="UPPER_JACKET_ACTUAL" Section="Input" Type="Real" />
         <Parameter Name="UPPER_JACKET_CONS" Section="Input" Type="Real" />
+        <Parameter Name="UPPER_JACKET_STARTED" Section="Input" Type="Bool" />
         <Parameter Name="LOWER_JACKET_ACTUAL" Section="Input" Type="Real" />
         <Parameter Name="LOWER_JACKET_CONS" Section="Input" Type="Real" />
+        <Parameter Name="LOWER_JACKET_STARTED" Section="Input" Type="Bool" />
         <Parameter Name="HOPPER_COVER_ACTUAL" Section="Input" Type="Real" />
         <Parameter Name="HOPPER_COVER_CONS" Section="Input" Type="Real" />
+        <Parameter Name="HOPPER_COVER_STARTED" Section="Input" Type="Bool" />
         <Parameter Name="FEEDING_COVER_ACTUAL" Section="Input" Type="Real" />
         <Parameter Name="FEEDER_DISK_PRESS_ACTUAL" Section="Input" Type="Real" />
-        <Parameter Name="MAX_WEIGHT_ACTUAL" Section="Input" Type="Real" />
-        <Parameter Name="TOTAL_WEIGHT_ACTUAL" Section="Input" Type="Real" />
-        <Parameter Name="HOPPER_WEIGHT_ACTUAL" Section="Input" Type="Real" />
         <Parameter Name="POWDER_WEIGHT_ACTUAL" Section="Input" Type="Real" />
+        <Parameter Name="PRESSURIZE_VALVE_OPEN" Section="Input" Type="Bool" />
+        <Parameter Name="PRESSURIZE_VALVE_CLOSED" Section="Input" Type="Bool" />
+        <Parameter Name="RELIEF_VALVE_OPEN" Section="Input" Type="Bool" />
+        <Parameter Name="RELIEF_VALVE_CLOSED" Section="Input" Type="Bool" />
+        <Parameter Name="TRANSFER_VALVE_OPEN" Section="Input" Type="Bool" />
+        <Parameter Name="TRANSFER_VALVE_CLOSED" Section="Input" Type="Bool" />
         <Parameter Name="STIRRER_SPEED_SETPOINT" Section="Output" Type="DInt" />
         <Parameter Name="UPPER_JACKET_SETPOINT" Section="Output" Type="Real" />
         <Parameter Name="LOWER_JACKET_SETPOINT" Section="Output" Type="Real" />
         <Parameter Name="HOPPER_COVER_SETPOINT" Section="Output" Type="Real" />
-        <Parameter Name="HOPPER_WEIGHT_INPUT" Section="Output" Type="Real" />
-        <Parameter Name="MAX_WEIGHT_INPUT" Section="Output" Type="Real" />
+        <Parameter Name="LOAD_FEED_SEQ_HIGH_LIMIT_CURRENT" Section="Output" Type="Real" />
+        <Parameter Name="LOAD_FEED_SEQ_LOW_LIMIT_CURRENT" Section="Output" Type="Real" />
+        <Parameter Name="LOAD_FEED_TIME_SEQ_INCREMENT_PRESS_VALUE" Section="Output" Type="Real" />
+        <Parameter Name="LOAD_FEED_TIME_SEQ_SET_TIME_VALUE" Section="Output" Type="UDInt" />
+        <Parameter Name="LOAD_FEED_WEIGHT_SEQ_INCREMENT_PRESS_VALUE" Section="Output" Type="Real" />
+        <Parameter Name="LOAD_FEED_WEIGHT_SEQ_SET_WEIGHT_VALUE" Section="Output" Type="Real" />
         <Parameter Name="HOPPER_LINE_IN_OUT" Section="InOut" Type="&quot;UDT_Hopper Line&quot;" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="44">
+    <Wire UId="55">
       <Powerrail />
       <NameCon UId="37" Name="en" />
     </Wire>
-    <Wire UId="45">
+    <Wire UId="56">
       <IdentCon UId="21" />
       <NameCon UId="37" Name="STIRRER_SPEED_ACTUAL" />
     </Wire>
-    <Wire UId="46">
+    <Wire UId="57">
       <IdentCon UId="22" />
       <NameCon UId="37" Name="STIRRER_SPEED_CONS" />
     </Wire>
-    <Wire UId="47">
+    <Wire UId="58">
       <IdentCon UId="23" />
       <NameCon UId="37" Name="UPPER_JACKET_ACTUAL" />
     </Wire>
-    <Wire UId="48">
+    <Wire UId="59">
       <IdentCon UId="24" />
       <NameCon UId="37" Name="UPPER_JACKET_CONS" />
     </Wire>
-    <Wire UId="49">
+    <Wire UId="60">
       <IdentCon UId="25" />
       <NameCon UId="37" Name="LOWER_JACKET_ACTUAL" />
     </Wire>
-    <Wire UId="50">
+    <Wire UId="61">
       <IdentCon UId="26" />
       <NameCon UId="37" Name="LOWER_JACKET_CONS" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="62">
       <IdentCon UId="27" />
       <NameCon UId="37" Name="HOPPER_COVER_ACTUAL" />
     </Wire>
-    <Wire UId="52">
+    <Wire UId="63">
       <IdentCon UId="28" />
       <NameCon UId="37" Name="HOPPER_COVER_CONS" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="64">
       <IdentCon UId="29" />
       <NameCon UId="37" Name="FEEDING_COVER_ACTUAL" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="65">
       <IdentCon UId="30" />
       <NameCon UId="37" Name="FEEDER_DISK_PRESS_ACTUAL" />
     </Wire>
-    <Wire UId="55">
-      <OpenCon UId="39" />
-      <NameCon UId="37" Name="MAX_WEIGHT_ACTUAL" />
-    </Wire>
-    <Wire UId="56">
-      <OpenCon UId="40" />
-      <NameCon UId="37" Name="TOTAL_WEIGHT_ACTUAL" />
-    </Wire>
-    <Wire UId="57">
-      <OpenCon UId="41" />
-      <NameCon UId="37" Name="HOPPER_WEIGHT_ACTUAL" />
-    </Wire>
-    <Wire UId="58">
+    <Wire UId="66">
       <IdentCon UId="31" />
       <NameCon UId="37" Name="POWDER_WEIGHT_ACTUAL" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="67">
       <IdentCon UId="32" />
       <NameCon UId="37" Name="HOPPER_LINE_IN_OUT" />
     </Wire>
-    <Wire UId="60">
+    <Wire UId="68">
       <NameCon UId="37" Name="STIRRER_SPEED_SETPOINT" />
       <IdentCon UId="33" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="69">
       <NameCon UId="37" Name="UPPER_JACKET_SETPOINT" />
       <IdentCon UId="34" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="70">
       <NameCon UId="37" Name="LOWER_JACKET_SETPOINT" />
       <IdentCon UId="35" />
     </Wire>
-    <Wire UId="63">
+    <Wire UId="71">
       <NameCon UId="37" Name="HOPPER_COVER_SETPOINT" />
       <IdentCon UId="36" />
     </Wire>
-    <Wire UId="64">
-      <NameCon UId="37" Name="HOPPER_WEIGHT_INPUT" />
-      <OpenCon UId="42" />
+    <Wire UId="72">
+      <OpenCon UId="39" />
+      <NameCon UId="37" Name="STIRRER_STARTED" />
     </Wire>
-    <Wire UId="65">
-      <NameCon UId="37" Name="MAX_WEIGHT_INPUT" />
+    <Wire UId="73">
+      <OpenCon UId="40" />
+      <NameCon UId="37" Name="UPPER_JACKET_STARTED" />
+    </Wire>
+    <Wire UId="74">
+      <OpenCon UId="41" />
+      <NameCon UId="37" Name="LOWER_JACKET_STARTED" />
+    </Wire>
+    <Wire UId="75">
+      <OpenCon UId="42" />
+      <NameCon UId="37" Name="HOPPER_COVER_STARTED" />
+    </Wire>
+    <Wire UId="76">
       <OpenCon UId="43" />
+      <NameCon UId="37" Name="PRESSURIZE_VALVE_OPEN" />
+    </Wire>
+    <Wire UId="77">
+      <OpenCon UId="44" />
+      <NameCon UId="37" Name="PRESSURIZE_VALVE_CLOSED" />
+    </Wire>
+    <Wire UId="78">
+      <OpenCon UId="45" />
+      <NameCon UId="37" Name="RELIEF_VALVE_OPEN" />
+    </Wire>
+    <Wire UId="79">
+      <OpenCon UId="46" />
+      <NameCon UId="37" Name="RELIEF_VALVE_CLOSED" />
+    </Wire>
+    <Wire UId="80">
+      <OpenCon UId="47" />
+      <NameCon UId="37" Name="TRANSFER_VALVE_OPEN" />
+    </Wire>
+    <Wire UId="81">
+      <OpenCon UId="48" />
+      <NameCon UId="37" Name="TRANSFER_VALVE_CLOSED" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="37" Name="LOAD_FEED_SEQ_HIGH_LIMIT_CURRENT" />
+      <OpenCon UId="49" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="37" Name="LOAD_FEED_SEQ_LOW_LIMIT_CURRENT" />
+      <OpenCon UId="50" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="37" Name="LOAD_FEED_TIME_SEQ_INCREMENT_PRESS_VALUE" />
+      <OpenCon UId="51" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="37" Name="LOAD_FEED_TIME_SEQ_SET_TIME_VALUE" />
+      <OpenCon UId="52" />
+    </Wire>
+    <Wire UId="86">
+      <NameCon UId="37" Name="LOAD_FEED_WEIGHT_SEQ_INCREMENT_PRESS_VALUE" />
+      <OpenCon UId="53" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="37" Name="LOAD_FEED_WEIGHT_SEQ_SET_WEIGHT_VALUE" />
+      <OpenCon UId="54" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -4385,7 +4440,7 @@
       </Symbol>
     </Access>
     <Call UId="27">
-      <CallInfo Name="FB7239_VARIABLES_PLC_HMI_GENERAL" BlockType="FB">
+      <CallInfo Name="FB7238_VARIABLES_PLC_HMI_GENERAL" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="28">
           <Component Name="DB7260_PLC_HMI_GENERAL" />
         </Instance>

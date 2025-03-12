@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-10T13:10:12.2633308Z</Created>
+    <Created>2025-03-12T15:33:36.4934235Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -65,6 +65,45 @@
   <Section Name="Temp">
     <Member Name="NC_RESET_CH4" Datatype="Bool" />
     <Member Name="NC_START_CH4" Datatype="Bool" />
+    <Member Name="MODE_GROUP_1" Datatype="Struct">
+      <Member Name="CHAN_MODE_GROUP" Datatype="Int" />
+      <Member Name="ENABLE_OVERRIDE_MP_HT10" Datatype="Bool" />
+      <Member Name="CHAN_OVERRIDE_VALUE" Datatype="Byte" />
+      <Member Name="BA3_SOFT_KEY_STOP" Datatype="Bool" />
+      <Member Name="MACHINE_IS_ALARM" Datatype="Bool" />
+      <Member Name="MACHINE_IS_WARNING" Datatype="Bool" />
+      <Member Name="CH_MACHINE_RESET" Datatype="Bool" />
+      <Member Name="MPP_PUSH_BUTTON_START" Datatype="Bool" />
+      <Member Name="MPP_PUSH_BUTTON_NC_START" Datatype="Bool" />
+      <Member Name="MPP_BUTTON_HOME_POS" Datatype="Bool" />
+      <Member Name="SEQ_RUNNING" Datatype="Bool" />
+    </Member>
+    <Member Name="MODE_GROUP_2" Datatype="Struct">
+      <Member Name="CHAN_MODE_GROUP" Datatype="Int" />
+      <Member Name="ENABLE_OVERRIDE_MP_HT10" Datatype="Bool" />
+      <Member Name="CHAN_OVERRIDE_VALUE" Datatype="Byte" />
+      <Member Name="BA3_SOFT_KEY_STOP" Datatype="Bool" />
+      <Member Name="MACHINE_IS_ALARM" Datatype="Bool" />
+      <Member Name="MACHINE_IS_WARNING" Datatype="Bool" />
+      <Member Name="CH_MACHINE_RESET" Datatype="Bool" />
+      <Member Name="MPP_PUSH_BUTTON_START" Datatype="Bool" />
+      <Member Name="MPP_PUSH_BUTTON_NC_START" Datatype="Bool" />
+      <Member Name="MPP_BUTTON_HOME_POS" Datatype="Bool" />
+      <Member Name="SEQ_RUNNING" Datatype="Bool" />
+    </Member>
+    <Member Name="MODE_GROUP_SELECTED" Datatype="Struct">
+      <Member Name="CHAN_MODE_GROUP" Datatype="Int" />
+      <Member Name="ENABLE_OVERRIDE_MP_HT10" Datatype="Bool" />
+      <Member Name="CHAN_OVERRIDE_VALUE" Datatype="Byte" />
+      <Member Name="BA3_SOFT_KEY_STOP" Datatype="Bool" />
+      <Member Name="MACHINE_IS_ALARM" Datatype="Bool" />
+      <Member Name="MACHINE_IS_WARNING" Datatype="Bool" />
+      <Member Name="CH_MACHINE_RESET" Datatype="Bool" />
+      <Member Name="MPP_PUSH_BUTTON_START" Datatype="Bool" />
+      <Member Name="MPP_PUSH_BUTTON_NC_START" Datatype="Bool" />
+      <Member Name="MPP_BUTTON_HOME_POS" Datatype="Bool" />
+      <Member Name="SEQ_RUNNING" Datatype="Bool" />
+    </Member>
   </Section>
   <Section Name="Constant" />
   <Section Name="Return">
@@ -465,308 +504,332 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_CENTRAL" />
-        <Component Name="IS_ALARMS" />
+        <Component Name="M_ONE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
-        <Component Name="IS_ALARMS" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
     </Access>
-    <Access Scope="GlobalVariable" UId="23">
+    <Access Scope="LocalVariable" UId="23">
       <Symbol>
-        <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_CENTRAL" />
-        <Component Name="IS_WARNING" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="CHAN_MODE_GROUP" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
-        <Component Name="IS_WARNING" />
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="AXES_OVERRIDE" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="25">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>2</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
-        <Component Name="M_ONE" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="CHAN_OVERRIDE_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="ENABLE_OVERRIDE_MP_HT10" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="DB7224_HMI_AXES" />
+        <Component Name="BA3" />
+        <Component Name="SOFTKEYS" />
+        <Component Name="STOP" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="LocalVariable" UId="28">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="BA3_SOFT_KEY_STOP" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="GLOBAL_ALARMS_MACHINE" />
+        <Component Name="IS_ALARMS" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="LocalVariable" UId="30">
       <Symbol>
-        <Component Name="M_ONE" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="MACHINE_IS_ALARM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="GLOBAL_ALARMS_MACHINE" />
+        <Component Name="IS_WARNING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="32">
+    <Access Scope="LocalVariable" UId="32">
       <Symbol>
-        <Component Name="DB7224_HMI_AXES" />
-        <Component Name="NC_AXES_MG2" />
-        <Component Name="OVERRIDE_FINAL" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="MACHINE_IS_WARNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB318_CH8_PROGRAM_SELECTION" />
-        <Component Name="interlocksDB" />
-        <Component Name="PROGRAM_SELCT_ALARM" />
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="LocalVariable" UId="34">
       <Symbol>
-        <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
-        <Component Name="IS_SEOC_ALARMS" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="CH_MACHINE_RESET" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="DB2121_MPP" />
+        <Component Name="INPUTS" />
+        <Component Name="I_S2" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="36">
+    <Access Scope="LocalVariable" UId="36">
       <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_CELL_TO_MACHINE_GENERAL" />
-        <Component Name="CELL_MEAS_STA_RESET" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="MPP_PUSH_BUTTON_START" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="DB2121_MPP" />
+        <Component Name="INPUTS" />
+        <Component Name="I_F5" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="DB1312_HOME_UNIT_03_STATION" />
-        <Component Name="SEQUENCE" />
-        <Component Name="STEP_3_RUN_CNC_PROGRAM" />
+        <Component Name="DB2122_HT10" />
+        <Component Name="INPUTS" />
+        <Component Name="NC_START_I" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="39">
+    <Access Scope="LocalVariable" UId="39">
       <Symbol>
-        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
-        <Component Name="SEQUENCE" />
-        <Component Name="STEP_3_RUN_CNC_PROGRAM" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="MPP_PUSH_BUTTON_NC_START" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
-        <Component Name="LBP_Chan8" />
+        <Component Name="DB2121_MPP" />
+        <Component Name="INPUTS" />
+        <Component Name="I_S3" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="41">
+    <Access Scope="LocalVariable" UId="41">
       <Symbol>
-        <Component Name="DB426_ALARMS_WARNINGS" />
-        <Component Name="GENERAL" />
-        <Component Name="700512" />
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="MPP_BUTTON_HOME_POS" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="42">
-      <Negated Name="operand" />
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="43">
+      <Symbol>
+        <Component Name="MODE_GROUP_1" />
+        <Component Name="SEQ_RUNNING" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Move" UId="45" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="43">
-      <Negated Name="operand" />
+    <Part Name="Move" UId="46" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Not" UId="44" />
-    <Part Name="Contact" UId="45">
-      <Negated Name="operand" />
+    <Part Name="Coil" UId="47" />
+    <Part Name="Contact" UId="48" />
+    <Part Name="Coil" UId="49" />
+    <Part Name="Contact" UId="50" />
+    <Part Name="Coil" UId="51" />
+    <Part Name="Contact" UId="52" />
+    <Part Name="Coil" UId="53" />
+    <Part Name="Contact" UId="54" />
+    <Part Name="Coil" UId="55" />
+    <Part Name="Contact" UId="56" />
+    <Part Name="Coil" UId="57" />
+    <Part Name="Contact" UId="58" />
+    <Part Name="Contact" UId="59" />
+    <Part Name="O" UId="60">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="46">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Not" UId="47" />
-    <Call UId="48">
-      <CallInfo Name="FB321_CHANNEL" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="49">
-          <Component Name="DB328_CHANNEL_8" />
-        </Instance>
-        <Parameter Name="CHANNEL_MODE_GROUP" Section="Input" Type="Int" />
-        <Parameter Name="JERK_PARAMETERS_ENABLE" Section="Input" Type="Bool" />
-        <Parameter Name="ENABLE_M01" Section="Input" Type="Bool" />
-        <Parameter Name="ENABLE_DRY_RUN_TEST_PRGM" Section="Input" Type="Bool" />
-        <Parameter Name="FEED_DISABLE" Section="Input" Type="Bool" />
-        <Parameter Name="ENABLE_OVERRIDE" Section="Input" Type="Bool" />
-        <Parameter Name="ENABLE_OVERRIDE_FROM_MP_OR_HT10" Section="Input" Type="Bool" />
-        <Parameter Name="OVERRIDE_VALUE" Section="Input" Type="Byte" />
-        <Parameter Name="BA3_SOFTKEYS_STOP" Section="Input" Type="Bool" />
-        <Parameter Name="PROG_SLECT_FAULT_CH" Section="Input" Type="Bool" />
-        <Parameter Name="MACHINE_IS_ALARMS" Section="Input" Type="Bool" />
-        <Parameter Name="MACHINE_IS_WARNINGS" Section="Input" Type="Bool" />
-        <Parameter Name="UNIT_IS_SEOC" Section="Input" Type="Bool" />
-        <Parameter Name="CHANNEL_M201" Section="Input" Type="Bool" />
-        <Parameter Name="CHANNEL_MCH_RESET" Section="Input" Type="Bool" />
-        <Parameter Name="NC_START_DUMMY_FOR_OPT" Section="Input" Type="Bool" />
-        <Parameter Name="MPP_PUSH_BUTTON_START" Section="Input" Type="Bool" />
-        <Parameter Name="MPP_PUSH_BUTTON_NC_START" Section="Input" Type="Bool" />
-        <Parameter Name="MPP_BUTTON_HOME_POS" Section="Input" Type="Bool" />
-        <Parameter Name="UNIT_HOME_STEP_3" Section="Input" Type="Bool" />
-        <Parameter Name="UNIT_CYCLE_STEP_3" Section="Input" Type="Bool" />
-        <Parameter Name="CH_NOT_IN SOFT_MODE_ALARM" Section="Output" Type="Bool" />
-        <Parameter Name="ChannelDB" Section="InOut" Type="&quot;LBP_typeChanX&quot;" />
-      </CallInfo>
-    </Call>
+    <Part Name="Coil" UId="61" />
+    <Part Name="Contact" UId="62" />
+    <Part Name="Coil" UId="63" />
+    <Part Name="Contact" UId="64" />
+    <Part Name="Coil" UId="65" />
   </Parts>
   <Wires>
-    <Wire UId="54">
+    <Wire UId="66">
       <Powerrail />
-      <NameCon UId="48" Name="en" />
-      <NameCon UId="42" Name="in" />
-      <NameCon UId="45" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="21" />
-      <NameCon UId="42" Name="operand" />
-    </Wire>
-    <Wire UId="56">
-      <NameCon UId="42" Name="out" />
-      <NameCon UId="43" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="22" />
-      <NameCon UId="43" Name="operand" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="43" Name="out" />
       <NameCon UId="44" Name="in" />
     </Wire>
-    <Wire UId="59">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="48" Name="MACHINE_IS_ALARMS" />
-    </Wire>
-    <Wire UId="60">
-      <IdentCon UId="23" />
-      <NameCon UId="45" Name="operand" />
-    </Wire>
-    <Wire UId="61">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="in" />
-    </Wire>
-    <Wire UId="62">
-      <IdentCon UId="24" />
-      <NameCon UId="46" Name="operand" />
-    </Wire>
-    <Wire UId="63">
-      <NameCon UId="46" Name="out" />
-      <NameCon UId="47" Name="in" />
-    </Wire>
-    <Wire UId="64">
-      <NameCon UId="47" Name="out" />
-      <NameCon UId="48" Name="MACHINE_IS_WARNINGS" />
-    </Wire>
-    <Wire UId="65">
-      <IdentCon UId="25" />
-      <NameCon UId="48" Name="CHANNEL_MODE_GROUP" />
-    </Wire>
-    <Wire UId="66">
-      <IdentCon UId="26" />
-      <NameCon UId="48" Name="JERK_PARAMETERS_ENABLE" />
-    </Wire>
     <Wire UId="67">
-      <IdentCon UId="27" />
-      <NameCon UId="48" Name="ENABLE_M01" />
+      <IdentCon UId="21" />
+      <NameCon UId="44" Name="operand" />
     </Wire>
     <Wire UId="68">
-      <IdentCon UId="28" />
-      <NameCon UId="48" Name="ENABLE_DRY_RUN_TEST_PRGM" />
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="en" />
+      <NameCon UId="47" Name="in" />
+      <NameCon UId="48" Name="in" />
+      <NameCon UId="50" Name="in" />
+      <NameCon UId="52" Name="in" />
+      <NameCon UId="54" Name="in" />
+      <NameCon UId="56" Name="in" />
+      <NameCon UId="58" Name="in" />
+      <NameCon UId="59" Name="in" />
+      <NameCon UId="62" Name="in" />
+      <NameCon UId="64" Name="in" />
     </Wire>
     <Wire UId="69">
-      <IdentCon UId="29" />
-      <NameCon UId="48" Name="FEED_DISABLE" />
+      <IdentCon UId="22" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="70">
-      <IdentCon UId="30" />
-      <NameCon UId="48" Name="ENABLE_OVERRIDE" />
+      <NameCon UId="45" Name="eno" />
+      <NameCon UId="46" Name="en" />
     </Wire>
     <Wire UId="71">
-      <IdentCon UId="31" />
-      <NameCon UId="48" Name="ENABLE_OVERRIDE_FROM_MP_OR_HT10" />
+      <NameCon UId="45" Name="out1" />
+      <IdentCon UId="23" />
     </Wire>
     <Wire UId="72">
-      <IdentCon UId="32" />
-      <NameCon UId="48" Name="OVERRIDE_VALUE" />
+      <IdentCon UId="24" />
+      <NameCon UId="46" Name="in" />
     </Wire>
     <Wire UId="73">
-      <OpenCon UId="50" />
-      <NameCon UId="48" Name="BA3_SOFTKEYS_STOP" />
+      <NameCon UId="46" Name="out1" />
+      <IdentCon UId="25" />
     </Wire>
     <Wire UId="74">
-      <IdentCon UId="33" />
-      <NameCon UId="48" Name="PROG_SLECT_FAULT_CH" />
+      <IdentCon UId="26" />
+      <NameCon UId="47" Name="operand" />
     </Wire>
     <Wire UId="75">
-      <IdentCon UId="34" />
-      <NameCon UId="48" Name="UNIT_IS_SEOC" />
+      <IdentCon UId="27" />
+      <NameCon UId="48" Name="operand" />
     </Wire>
     <Wire UId="76">
-      <IdentCon UId="35" />
-      <NameCon UId="48" Name="CHANNEL_M201" />
+      <NameCon UId="48" Name="out" />
+      <NameCon UId="49" Name="in" />
     </Wire>
     <Wire UId="77">
-      <IdentCon UId="36" />
-      <NameCon UId="48" Name="CHANNEL_MCH_RESET" />
+      <IdentCon UId="28" />
+      <NameCon UId="49" Name="operand" />
     </Wire>
     <Wire UId="78">
-      <IdentCon UId="37" />
-      <NameCon UId="48" Name="NC_START_DUMMY_FOR_OPT" />
+      <IdentCon UId="29" />
+      <NameCon UId="50" Name="operand" />
     </Wire>
     <Wire UId="79">
-      <OpenCon UId="51" />
-      <NameCon UId="48" Name="MPP_PUSH_BUTTON_START" />
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
     </Wire>
     <Wire UId="80">
-      <OpenCon UId="52" />
-      <NameCon UId="48" Name="MPP_PUSH_BUTTON_NC_START" />
+      <IdentCon UId="30" />
+      <NameCon UId="51" Name="operand" />
     </Wire>
     <Wire UId="81">
-      <OpenCon UId="53" />
-      <NameCon UId="48" Name="MPP_BUTTON_HOME_POS" />
+      <IdentCon UId="31" />
+      <NameCon UId="52" Name="operand" />
     </Wire>
     <Wire UId="82">
-      <IdentCon UId="38" />
-      <NameCon UId="48" Name="UNIT_HOME_STEP_3" />
+      <NameCon UId="52" Name="out" />
+      <NameCon UId="53" Name="in" />
     </Wire>
     <Wire UId="83">
-      <IdentCon UId="39" />
-      <NameCon UId="48" Name="UNIT_CYCLE_STEP_3" />
+      <IdentCon UId="32" />
+      <NameCon UId="53" Name="operand" />
     </Wire>
     <Wire UId="84">
-      <IdentCon UId="40" />
-      <NameCon UId="48" Name="ChannelDB" />
+      <IdentCon UId="33" />
+      <NameCon UId="54" Name="operand" />
     </Wire>
     <Wire UId="85">
-      <NameCon UId="48" Name="CH_NOT_IN SOFT_MODE_ALARM" />
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="34" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <IdentCon UId="35" />
+      <NameCon UId="56" Name="operand" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="56" Name="out" />
+      <NameCon UId="57" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <IdentCon UId="36" />
+      <NameCon UId="57" Name="operand" />
+    </Wire>
+    <Wire UId="90">
+      <IdentCon UId="37" />
+      <NameCon UId="58" Name="operand" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="58" Name="out" />
+      <NameCon UId="60" Name="in1" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="38" />
+      <NameCon UId="59" Name="operand" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="59" Name="out" />
+      <NameCon UId="60" Name="in2" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="60" Name="out" />
+      <NameCon UId="61" Name="in" />
+    </Wire>
+    <Wire UId="95">
+      <IdentCon UId="39" />
+      <NameCon UId="61" Name="operand" />
+    </Wire>
+    <Wire UId="96">
+      <IdentCon UId="40" />
+      <NameCon UId="62" Name="operand" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="62" Name="out" />
+      <NameCon UId="63" Name="in" />
+    </Wire>
+    <Wire UId="98">
       <IdentCon UId="41" />
+      <NameCon UId="63" Name="operand" />
+    </Wire>
+    <Wire UId="99">
+      <IdentCon UId="42" />
+      <NameCon UId="64" Name="operand" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="64" Name="out" />
+      <NameCon UId="65" Name="in" />
+    </Wire>
+    <Wire UId="101">
+      <IdentCon UId="43" />
+      <NameCon UId="65" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -806,7 +869,7 @@
               <MultilingualTextItem ID="23" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>CALL FB321 CHANNEL 8</Text>
+                  <Text>MODE GROUP 1 CHANNEL OPTIONS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="24" CompositionName="Items">
@@ -824,7 +887,7 @@
               <MultilingualTextItem ID="26" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>CHANNEL 4 XFLEX-DUO</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -832,6 +895,948 @@
         </ObjectList>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="CHAN_MODE_GROUP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7224_HMI_AXES" />
+        <Component Name="NC_AXES_MG2" />
+        <Component Name="OVERRIDE_FINAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="CHAN_OVERRIDE_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="ENABLE_OVERRIDE_MP_HT10" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="BA3_SOFT_KEY_STOP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_CENTRAL" />
+        <Component Name="IS_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="IS_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="MACHINE_IS_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_CENTRAL" />
+        <Component Name="IS_WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="IS_WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="MACHINE_IS_WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="GENERAL_MACHINE" />
+        <Component Name="FROM_CELL_TO_MACHINE_GENERAL" />
+        <Component Name="MEAS_STA_RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="CH_MACHINE_RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="39">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="MPP_PUSH_BUTTON_START" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="41">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="MPP_PUSH_BUTTON_NC_START" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="43">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="MPP_BUTTON_HOME_POS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="DB1313_UNIT_03_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="DB1314_UNIT_03_MASTER_MEASUREMENT" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="47">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+        <Component Name="SEQ_RUNNING" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="48" />
+    <Part Name="Move" UId="49" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="50" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Coil" UId="52" />
+    <Part Name="Contact" UId="53" />
+    <Part Name="Coil" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="56">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="57" />
+    <Part Name="Coil" UId="58" />
+    <Part Name="Contact" UId="59">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="60">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="61" />
+    <Part Name="Coil" UId="62" />
+    <Part Name="Contact" UId="63" />
+    <Part Name="Coil" UId="64" />
+    <Part Name="Contact" UId="65" />
+    <Part Name="Coil" UId="66" />
+    <Part Name="Contact" UId="67" />
+    <Part Name="Coil" UId="68" />
+    <Part Name="Contact" UId="69" />
+    <Part Name="Coil" UId="70" />
+    <Part Name="Contact" UId="71">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="72">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="73">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="74" />
+    <Part Name="Coil" UId="75" />
+  </Parts>
+  <Wires>
+    <Wire UId="76">
+      <Powerrail />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="21" />
+      <NameCon UId="48" Name="operand" />
+    </Wire>
+    <Wire UId="78">
+      <NameCon UId="48" Name="out" />
+      <NameCon UId="49" Name="en" />
+      <NameCon UId="51" Name="in" />
+      <NameCon UId="53" Name="in" />
+      <NameCon UId="55" Name="in" />
+      <NameCon UId="59" Name="in" />
+      <NameCon UId="63" Name="in" />
+      <NameCon UId="65" Name="in" />
+      <NameCon UId="67" Name="in" />
+      <NameCon UId="69" Name="in" />
+      <NameCon UId="71" Name="in" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="22" />
+      <NameCon UId="49" Name="in" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="49" Name="eno" />
+      <NameCon UId="50" Name="en" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="49" Name="out1" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="24" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="50" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="26" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="27" />
+      <NameCon UId="52" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <IdentCon UId="28" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <IdentCon UId="29" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="90">
+      <IdentCon UId="30" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="31" />
+      <NameCon UId="56" Name="operand" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="56" Name="out" />
+      <NameCon UId="57" Name="in" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="57" Name="out" />
+      <NameCon UId="58" Name="in" />
+    </Wire>
+    <Wire UId="95">
+      <IdentCon UId="32" />
+      <NameCon UId="58" Name="operand" />
+    </Wire>
+    <Wire UId="96">
+      <IdentCon UId="33" />
+      <NameCon UId="59" Name="operand" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="59" Name="out" />
+      <NameCon UId="60" Name="in" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="34" />
+      <NameCon UId="60" Name="operand" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="60" Name="out" />
+      <NameCon UId="61" Name="in" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="61" Name="out" />
+      <NameCon UId="62" Name="in" />
+    </Wire>
+    <Wire UId="101">
+      <IdentCon UId="35" />
+      <NameCon UId="62" Name="operand" />
+    </Wire>
+    <Wire UId="102">
+      <IdentCon UId="36" />
+      <NameCon UId="63" Name="operand" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="63" Name="out" />
+      <NameCon UId="64" Name="in" />
+    </Wire>
+    <Wire UId="104">
+      <IdentCon UId="37" />
+      <NameCon UId="64" Name="operand" />
+    </Wire>
+    <Wire UId="105">
+      <IdentCon UId="38" />
+      <NameCon UId="65" Name="operand" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="65" Name="out" />
+      <NameCon UId="66" Name="in" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="39" />
+      <NameCon UId="66" Name="operand" />
+    </Wire>
+    <Wire UId="108">
+      <IdentCon UId="40" />
+      <NameCon UId="67" Name="operand" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="67" Name="out" />
+      <NameCon UId="68" Name="in" />
+    </Wire>
+    <Wire UId="110">
+      <IdentCon UId="41" />
+      <NameCon UId="68" Name="operand" />
+    </Wire>
+    <Wire UId="111">
+      <IdentCon UId="42" />
+      <NameCon UId="69" Name="operand" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="69" Name="out" />
+      <NameCon UId="70" Name="in" />
+    </Wire>
+    <Wire UId="113">
+      <IdentCon UId="43" />
+      <NameCon UId="70" Name="operand" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="44" />
+      <NameCon UId="71" Name="operand" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="71" Name="out" />
+      <NameCon UId="72" Name="in" />
+    </Wire>
+    <Wire UId="116">
+      <IdentCon UId="45" />
+      <NameCon UId="72" Name="operand" />
+    </Wire>
+    <Wire UId="117">
+      <NameCon UId="72" Name="out" />
+      <NameCon UId="73" Name="in" />
+    </Wire>
+    <Wire UId="118">
+      <IdentCon UId="46" />
+      <NameCon UId="73" Name="operand" />
+    </Wire>
+    <Wire UId="119">
+      <NameCon UId="73" Name="out" />
+      <NameCon UId="74" Name="in" />
+    </Wire>
+    <Wire UId="120">
+      <NameCon UId="74" Name="out" />
+      <NameCon UId="75" Name="in" />
+    </Wire>
+    <Wire UId="121">
+      <IdentCon UId="47" />
+      <NameCon UId="75" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>MODE GROUP 2 CHANNEL OPTIONS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB2100_GENERAL" />
+        <Component Name="MODE_GROUP_2_ENABLED" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="MODE_GROUP_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="MODE_GROUP_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="26">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="27" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Not" UId="28" />
+    <Part Name="Move" UId="29" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <Powerrail />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="en" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="out1" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="29" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="33" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>This channel is prepared to belong to mode group 1 or mode group 2 using the enable option. Override and buttons can be changed according to the machine configuration and it's needs.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>MODE GROUP SELECTED</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="CHAN_MODE_GROUP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="ENABLE_OVERRIDE_MP_HT10" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="CHAN_OVERRIDE_VALUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="BA3_SOFT_KEY_STOP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB318_CH8_PROGRAM_SELECTION" />
+        <Component Name="interlocksDB" />
+        <Component Name="PROGRAM_SELCT_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="MACHINE_IS_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="MACHINE_IS_WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="IS_SEOC_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="CH_MACHINE_RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="MPP_PUSH_BUTTON_START" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="38">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="MPP_PUSH_BUTTON_NC_START" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="39">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="MPP_BUTTON_HOME_POS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB1312_HOME_UNIT_03_STATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="STEP_3_RUN_CNC_PROGRAM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="SEQUENCE" />
+        <Component Name="STEP_3_RUN_CNC_PROGRAM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="LBP_Chan8" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="GENERAL" />
+        <Component Name="700512" />
+      </Symbol>
+    </Access>
+    <Call UId="44">
+      <CallInfo Name="FB321_CHANNEL" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="45">
+          <Component Name="DB328_CHANNEL_8" />
+        </Instance>
+        <Parameter Name="CH_MODE_GROUP" Section="Input" Type="Int" />
+        <Parameter Name="JERK_PARAMETERS_ENABLE" Section="Input" Type="Bool" />
+        <Parameter Name="ENABLE_M01" Section="Input" Type="Bool" />
+        <Parameter Name="ENABLE_DRY_RUN_TEST_PRGM" Section="Input" Type="Bool" />
+        <Parameter Name="FEED_DISABLE" Section="Input" Type="Bool" />
+        <Parameter Name="ENABLE_OVERRIDE" Section="Input" Type="Bool" />
+        <Parameter Name="ENABLE_OVERRIDE_FROM_MP_OR_HT10" Section="Input" Type="Bool" />
+        <Parameter Name="OVERRIDE_VALUE" Section="Input" Type="Byte" />
+        <Parameter Name="BA3_SOFTKEYS_STOP" Section="Input" Type="Bool" />
+        <Parameter Name="PROG_SLECT_FAULT_CH" Section="Input" Type="Bool" />
+        <Parameter Name="MACHINE_IS_ALARMS" Section="Input" Type="Bool" />
+        <Parameter Name="MACHINE_IS_WARNINGS" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_IS_SEOC" Section="Input" Type="Bool" />
+        <Parameter Name="CHANNEL_M201" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET" Section="Input" Type="Bool" />
+        <Parameter Name="NC_START_DUMMY_FOR_OPT" Section="Input" Type="Bool" />
+        <Parameter Name="MPP_PUSH_BUTTON_START" Section="Input" Type="Bool" />
+        <Parameter Name="MPP_PUSH_BUTTON_NC_START" Section="Input" Type="Bool" />
+        <Parameter Name="MPP_BUTTON_HOME_POS" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_HOME_STEP_3" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_CYCLE_STEP_3" Section="Input" Type="Bool" />
+        <Parameter Name="CH_NOT_IN SOFT_MODE_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="ChannelDB" Section="InOut" Type="&quot;LBP_typeChanX&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="46">
+      <Powerrail />
+      <NameCon UId="44" Name="en" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="21" />
+      <NameCon UId="44" Name="CH_MODE_GROUP" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="22" />
+      <NameCon UId="44" Name="JERK_PARAMETERS_ENABLE" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="23" />
+      <NameCon UId="44" Name="ENABLE_M01" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="24" />
+      <NameCon UId="44" Name="ENABLE_DRY_RUN_TEST_PRGM" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="FEED_DISABLE" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="26" />
+      <NameCon UId="44" Name="ENABLE_OVERRIDE" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="27" />
+      <NameCon UId="44" Name="ENABLE_OVERRIDE_FROM_MP_OR_HT10" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="28" />
+      <NameCon UId="44" Name="OVERRIDE_VALUE" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="29" />
+      <NameCon UId="44" Name="BA3_SOFTKEYS_STOP" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="30" />
+      <NameCon UId="44" Name="PROG_SLECT_FAULT_CH" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="31" />
+      <NameCon UId="44" Name="MACHINE_IS_ALARMS" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="32" />
+      <NameCon UId="44" Name="MACHINE_IS_WARNINGS" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="33" />
+      <NameCon UId="44" Name="UNIT_IS_SEOC" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="34" />
+      <NameCon UId="44" Name="CHANNEL_M201" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="35" />
+      <NameCon UId="44" Name="MCH_RESET" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="36" />
+      <NameCon UId="44" Name="NC_START_DUMMY_FOR_OPT" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="37" />
+      <NameCon UId="44" Name="MPP_PUSH_BUTTON_START" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="38" />
+      <NameCon UId="44" Name="MPP_PUSH_BUTTON_NC_START" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="39" />
+      <NameCon UId="44" Name="MPP_BUTTON_HOME_POS" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="40" />
+      <NameCon UId="44" Name="UNIT_HOME_STEP_3" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="41" />
+      <NameCon UId="44" Name="UNIT_CYCLE_STEP_3" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="42" />
+      <NameCon UId="44" Name="ChannelDB" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="44" Name="CH_NOT_IN SOFT_MODE_ALARM" />
+      <IdentCon UId="43" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="43" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FB321 CHANNEL 8</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>CHANNEL 4 XFLEX-DUO</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="48" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -948,27 +1953,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="28" CompositionName="Comment">
+          <MultilingualText ID="49" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="29" CompositionName="Items">
+              <MultilingualTextItem ID="4A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="2A" CompositionName="Items">
+              <MultilingualTextItem ID="4B" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="2B" CompositionName="Items">
+              <MultilingualTextItem ID="4C" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="2C" CompositionName="Items">
+              <MultilingualTextItem ID="4D" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -976,27 +1981,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="2D" CompositionName="Title">
+          <MultilingualText ID="4E" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="2E" CompositionName="Items">
+              <MultilingualTextItem ID="4F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>REQUEST CHANNEL</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="2F" CompositionName="Items">
+              <MultilingualTextItem ID="50" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="30" CompositionName="Items">
+              <MultilingualTextItem ID="51" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="31" CompositionName="Items">
+              <MultilingualTextItem ID="52" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -1006,82 +2011,115 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="53" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="GlobalVariable" UId="21">
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="CHAN_MODE_GROUP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB318_CH8_PROGRAM_SELECTION" />
         <Component Name="REQUEST" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="22">
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="SEQ_RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="MODE_GROUP_SELECTED" />
+        <Component Name="CH_MACHINE_RESET" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="LBP_Chan8" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="23">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="GENERAL" />
         <Component Name="700513" />
       </Symbol>
     </Access>
-    <Call UId="24">
+    <Call UId="27">
       <CallInfo Name="FB311_CHANNEL_PROGRAM_SELECTION" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="25">
+        <Instance Scope="GlobalVariable" UId="28">
           <Component Name="DB318_CH8_PROGRAM_SELECTION" />
         </Instance>
+        <Parameter Name="CH_MODE_GROUP" Section="Input" Type="Int" />
         <Parameter Name="REQUEST" Section="Input" Type="Bool" />
+        <Parameter Name="SEQ_RUNNING" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET" Section="Input" Type="Bool" />
         <Parameter Name="ALARM" Section="Output" Type="Bool" />
         <Parameter Name="channelDB" Section="InOut" Type="&quot;LBP_typeChanX&quot;" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="26">
-      <Powerrail />
-      <NameCon UId="24" Name="en" />
-    </Wire>
-    <Wire UId="27">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="REQUEST" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="channelDB" />
-    </Wire>
     <Wire UId="29">
-      <NameCon UId="24" Name="ALARM" />
+      <Powerrail />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="CH_MODE_GROUP" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="REQUEST" />
+    </Wire>
+    <Wire UId="32">
       <IdentCon UId="23" />
+      <NameCon UId="27" Name="SEQ_RUNNING" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="MCH_RESET" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="channelDB" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="ALARM" />
+      <IdentCon UId="26" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="33" CompositionName="Comment">
+          <MultilingualText ID="54" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="34" CompositionName="Items">
+              <MultilingualTextItem ID="55" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="35" CompositionName="Items">
+              <MultilingualTextItem ID="56" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="36" CompositionName="Items">
+              <MultilingualTextItem ID="57" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="37" CompositionName="Items">
+              <MultilingualTextItem ID="58" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -1089,27 +2127,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="38" CompositionName="Title">
+          <MultilingualText ID="59" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="39" CompositionName="Items">
+              <MultilingualTextItem ID="5A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>CALL FB311 CHANNEL PROGRAM SELECTION</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="3A" CompositionName="Items">
+              <MultilingualTextItem ID="5B" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="3B" CompositionName="Items">
+              <MultilingualTextItem ID="5C" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="3C" CompositionName="Items">
+              <MultilingualTextItem ID="5D" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text>CHANNEL 4 X-FLEX DUO</Text>
@@ -1119,7 +2157,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="3D" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="5E" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -1426,234 +2464,6 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="3E" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="3F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="40" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="41" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="42" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="43" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="44" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FB301 CHANNEL READ AXES POSITIONS</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="45" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="46" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="47" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="48" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Call UId="21">
-      <CallInfo Name="FC368_NCK_M_CH8_UNIT_03" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="22">
-      <Powerrail />
-      <NameCon UId="21" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="49" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="4A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="4B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="4C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="4D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="4E" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="4F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FC353 NCK M UNIT 03</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="50" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="51" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="52" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text>CALL FC1182</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="53" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Call UId="21">
-      <CallInfo Name="FC369_NCK_M_CH8_UNIT_03" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="22">
-      <Powerrail />
-      <NameCon UId="21" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="54" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="55" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="56" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="57" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="58" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="59" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="5A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FC354 NCK M UNIT 03</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="5B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="5C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="5D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text>CALL FC1182</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="5E" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Call UId="21">
-      <CallInfo Name="FC370_NCK_M_CH8_UNIT_03" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="22">
-      <Powerrail />
-      <NameCon UId="21" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
           <MultilingualText ID="5F" CompositionName="Comment">
             <ObjectList>
               <MultilingualTextItem ID="60" CompositionName="Items">
@@ -1687,7 +2497,7 @@
               <MultilingualTextItem ID="65" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>CALL FC355 NCK M UNIT 03</Text>
+                  <Text>CALL FB301 CHANNEL READ AXES POSITIONS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="66" CompositionName="Items">
@@ -1705,7 +2515,7 @@
               <MultilingualTextItem ID="68" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>CALL FC1182</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1713,6 +2523,234 @@
         </ObjectList>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="69" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="FC368_NCK_M_CH8_UNIT_03" BlockType="FC" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="22">
+      <Powerrail />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="70" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FC353 NCK M UNIT 03</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="71" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="72" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="73" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>CALL FC1182</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="74" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="FC369_NCK_M_CH8_UNIT_03" BlockType="FC" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="22">
+      <Powerrail />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="75" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="76" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="77" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="78" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="79" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="7A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FC354 NCK M UNIT 03</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>CALL FC1182</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="7F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="FC370_NCK_M_CH8_UNIT_03" BlockType="FC" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="22">
+      <Powerrail />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="80" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="81" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="82" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="83" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="84" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="85" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="86" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CALL FC355 NCK M UNIT 03</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="87" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="88" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="89" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>CALL FC1182</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8A" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -1797,27 +2835,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="6A" CompositionName="Comment">
+          <MultilingualText ID="8B" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="6B" CompositionName="Items">
+              <MultilingualTextItem ID="8C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="6C" CompositionName="Items">
+              <MultilingualTextItem ID="8D" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="6D" CompositionName="Items">
+              <MultilingualTextItem ID="8E" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="6E" CompositionName="Items">
+              <MultilingualTextItem ID="8F" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -1825,27 +2863,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="6F" CompositionName="Title">
+          <MultilingualText ID="90" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="70" CompositionName="Items">
+              <MultilingualTextItem ID="91" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>READ-IN DISABLE FIXTURE</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="71" CompositionName="Items">
+              <MultilingualTextItem ID="92" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="72" CompositionName="Items">
+              <MultilingualTextItem ID="93" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="73" CompositionName="Items">
+              <MultilingualTextItem ID="94" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -1855,27 +2893,27 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="74" CompositionName="Title">
+      <MultilingualText ID="95" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="75" CompositionName="Items">
+          <MultilingualTextItem ID="96" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="76" CompositionName="Items">
+          <MultilingualTextItem ID="97" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="77" CompositionName="Items">
+          <MultilingualTextItem ID="98" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="78" CompositionName="Items">
+          <MultilingualTextItem ID="99" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />
