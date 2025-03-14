@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-13T10:29:41.1070985Z</Created>
+    <Created>2025-03-14T13:05:35.1253746Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -438,7 +442,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="26" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -584,7 +588,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="31" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -779,7 +783,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="3C" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1008,7 +1012,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="47" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1251,7 +1255,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="52" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1414,7 +1418,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="5D" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1657,7 +1661,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="68" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1854,7 +1858,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="73" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1891,16 +1895,19 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_1" />
-        <Component Name="FULL_DEPTH_STA_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="QUALITY_PART" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7215_PART_TYPE" />
-        <Component Name="PART_TYPE_U02_FIXTURES" />
+        <Component Name="DB7400_QUALITY" />
+        <Component Name="PART_CONTROL" />
+        <Component Name="HALF_QUALITY_PART_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -1908,15 +1915,13 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_1" />
-        <Component Name="FULL_DEPTH" />
+        <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="FD_PULSE" />
+        <Component Name="DB7215_PART_TYPE" />
+        <Component Name="PART_TYPE_U02_FIXTURES" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -1927,78 +1932,120 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Contact" UId="30" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="FULL_DEPTH" />
+      </Symbol>
+    </Access>
     <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
-    <Part Name="Contact" UId="34">
+    <Part Name="Contact" UId="34" />
+    <Part Name="Contact" UId="35" />
+    <Part Name="O" UId="36">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="35" />
-    <Part Name="Coil" UId="36" />
+    <Part Name="Coil" UId="40" />
+    <Part Name="Coil" UId="41" />
   </Parts>
   <Wires>
-    <Wire UId="37">
+    <Wire UId="42">
       <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="23" />
+    <Wire UId="43">
+      <IdentCon UId="21" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
+    <Wire UId="44">
       <NameCon UId="31" Name="out" />
       <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
+      <IdentCon UId="22" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="25" />
+    <Wire UId="47">
+      <IdentCon UId="23" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="in" />
-      <NameCon UId="36" Name="in" />
-    </Wire>
     <Wire UId="48">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="36" Name="in1" />
     </Wire>
     <Wire UId="49">
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="50">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="50">
-      <IdentCon UId="27" />
+    <Wire UId="51">
+      <IdentCon UId="25" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="52">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in2" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
       <IdentCon UId="28" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -2056,7 +2103,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="7E" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -2450,7 +2497,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="94" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>PART HAS BEEN REJECTED</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -2724,7 +2771,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="AA" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -2870,7 +2917,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="B5" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -3065,7 +3112,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="C0" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -3294,7 +3341,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="CB" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -3537,7 +3584,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="D6" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -3700,7 +3747,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="E1" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -3943,7 +3990,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="EC" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -4140,7 +4187,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="F7" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -4177,16 +4224,19 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_2" />
-        <Component Name="FULL_DEPTH_STA_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="QUALITY_PART" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7215_PART_TYPE" />
-        <Component Name="PART_TYPE_U02_FIXTURES" />
+        <Component Name="DB7400_QUALITY" />
+        <Component Name="PART_CONTROL" />
+        <Component Name="HALF_QUALITY_PART_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -4194,15 +4244,13 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_2" />
-        <Component Name="FULL_DEPTH" />
+        <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="FD_PULSE" />
+        <Component Name="DB7215_PART_TYPE" />
+        <Component Name="PART_TYPE_U02_FIXTURES" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -4213,78 +4261,120 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Contact" UId="30" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_2" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_2" />
+        <Component Name="FULL_DEPTH" />
+      </Symbol>
+    </Access>
     <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
-    <Part Name="Contact" UId="34">
+    <Part Name="Contact" UId="34" />
+    <Part Name="Contact" UId="35" />
+    <Part Name="O" UId="36">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="35" />
-    <Part Name="Coil" UId="36" />
+    <Part Name="Coil" UId="40" />
+    <Part Name="Coil" UId="41" />
   </Parts>
   <Wires>
-    <Wire UId="37">
+    <Wire UId="42">
       <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="23" />
+    <Wire UId="43">
+      <IdentCon UId="21" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
+    <Wire UId="44">
       <NameCon UId="31" Name="out" />
       <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
+      <IdentCon UId="22" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="25" />
+    <Wire UId="47">
+      <IdentCon UId="23" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="in" />
-      <NameCon UId="36" Name="in" />
-    </Wire>
     <Wire UId="48">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="36" Name="in1" />
     </Wire>
     <Wire UId="49">
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="50">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="50">
-      <IdentCon UId="27" />
+    <Wire UId="51">
+      <IdentCon UId="25" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="52">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in2" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
       <IdentCon UId="28" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -4342,7 +4432,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="102" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -4736,7 +4826,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="118" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>PART HAS BEEN REJECTED</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -5010,7 +5100,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="12E" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -5156,7 +5246,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="139" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -5351,7 +5441,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="144" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -5580,7 +5670,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="14F" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -5823,7 +5913,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="15A" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -5986,7 +6076,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="165" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -6229,7 +6319,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="170" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -6426,7 +6516,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="17B" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -6463,16 +6553,19 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_3" />
-        <Component Name="FULL_DEPTH_STA_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="QUALITY_PART" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7215_PART_TYPE" />
-        <Component Name="PART_TYPE_U02_FIXTURES" />
+        <Component Name="DB7400_QUALITY" />
+        <Component Name="PART_CONTROL" />
+        <Component Name="HALF_QUALITY_PART_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -6480,15 +6573,13 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_3" />
-        <Component Name="FULL_DEPTH" />
+        <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="FD_PULSE" />
+        <Component Name="DB7215_PART_TYPE" />
+        <Component Name="PART_TYPE_U02_FIXTURES" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -6499,78 +6590,120 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Contact" UId="30" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_3" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_3" />
+        <Component Name="FULL_DEPTH" />
+      </Symbol>
+    </Access>
     <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
-    <Part Name="Contact" UId="34">
+    <Part Name="Contact" UId="34" />
+    <Part Name="Contact" UId="35" />
+    <Part Name="O" UId="36">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="35" />
-    <Part Name="Coil" UId="36" />
+    <Part Name="Coil" UId="40" />
+    <Part Name="Coil" UId="41" />
   </Parts>
   <Wires>
-    <Wire UId="37">
+    <Wire UId="42">
       <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="23" />
+    <Wire UId="43">
+      <IdentCon UId="21" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
+    <Wire UId="44">
       <NameCon UId="31" Name="out" />
       <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
+      <IdentCon UId="22" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="25" />
+    <Wire UId="47">
+      <IdentCon UId="23" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="in" />
-      <NameCon UId="36" Name="in" />
-    </Wire>
     <Wire UId="48">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="36" Name="in1" />
     </Wire>
     <Wire UId="49">
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="50">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="50">
-      <IdentCon UId="27" />
+    <Wire UId="51">
+      <IdentCon UId="25" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="52">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in2" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
       <IdentCon UId="28" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -6628,7 +6761,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="186" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -7022,7 +7155,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="19C" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>PART HAS BEEN REJECTED</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -7296,7 +7429,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1B2" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -7442,7 +7575,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1BD" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -7637,7 +7770,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1C8" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -7866,7 +7999,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1D3" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -8109,7 +8242,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1DE" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -8272,7 +8405,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1E9" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -8515,7 +8648,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1F4" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH 1 PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -8712,7 +8845,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="1FF" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH FIXTURE 1</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -8749,16 +8882,19 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_4" />
-        <Component Name="FULL_DEPTH_STA_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="QUALITY_PART" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7215_PART_TYPE" />
-        <Component Name="PART_TYPE_U02_FIXTURES" />
+        <Component Name="DB7400_QUALITY" />
+        <Component Name="PART_CONTROL" />
+        <Component Name="HALF_QUALITY_PART_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -8766,15 +8902,13 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_4" />
-        <Component Name="FULL_DEPTH" />
+        <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="FD_PULSE" />
+        <Component Name="DB7215_PART_TYPE" />
+        <Component Name="PART_TYPE_U02_FIXTURES" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -8785,78 +8919,120 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Contact" UId="30" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_4" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_4" />
+        <Component Name="FULL_DEPTH" />
+      </Symbol>
+    </Access>
     <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
-    <Part Name="Contact" UId="34">
+    <Part Name="Contact" UId="34" />
+    <Part Name="Contact" UId="35" />
+    <Part Name="O" UId="36">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="35" />
-    <Part Name="Coil" UId="36" />
+    <Part Name="Coil" UId="40" />
+    <Part Name="Coil" UId="41" />
   </Parts>
   <Wires>
-    <Wire UId="37">
+    <Wire UId="42">
       <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="23" />
+    <Wire UId="43">
+      <IdentCon UId="21" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
+    <Wire UId="44">
       <NameCon UId="31" Name="out" />
       <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
+      <IdentCon UId="22" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="25" />
+    <Wire UId="47">
+      <IdentCon UId="23" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="in" />
-      <NameCon UId="36" Name="in" />
-    </Wire>
     <Wire UId="48">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="36" Name="in1" />
     </Wire>
     <Wire UId="49">
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="50">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="50">
-      <IdentCon UId="27" />
+    <Wire UId="51">
+      <IdentCon UId="25" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="52">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in2" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
       <IdentCon UId="28" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -8914,7 +9090,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="20A" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>FULL DEPTH PULSE</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -9308,7 +9484,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
               <MultilingualTextItem ID="220" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
-                  <Text>PART HAS BEEN REJECTED</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
