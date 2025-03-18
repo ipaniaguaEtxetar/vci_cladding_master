@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-13T10:29:51.1410363Z</Created>
+    <Created>2025-03-18T12:31:01.6632812Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -3259,70 +3259,225 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="AUX_SIGNALS_INTERFACE" />
         <Component Name="POWDER_PLC" />
         <Component Name="LIFE_BIT_FAULT" />
       </Symbol>
     </Access>
-    <Access Scope="LocalConstant" UId="22">
+    <Access Scope="LocalConstant" UId="23">
       <Constant Name="FC_NUMBER" />
     </Access>
-    <Access Scope="GlobalVariable" UId="23">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="GLOBAL_ALARMS_MACHINE" />
         <Component Name="ALARM_DECODING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="24">
+    <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_CENTRAL" />
+        <Component Name="ALARMS_UNIT_01" />
+        <Component Name="GLOBAL" />
         <Component Name="IS_ALARMS" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="25">
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_02" />
+        <Component Name="GLOBAL" />
+        <Component Name="IS_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_01" />
+        <Component Name="POWDER_UNIT_01_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="28">
+      <Constant Name="FC_NUMBER" />
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="GLOBAL_ALARMS_MACHINE" />
+        <Component Name="ALARM_DECODING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_01" />
+        <Component Name="GLOBAL" />
+        <Component Name="IS_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_02" />
+        <Component Name="POWDER_UNIT_02_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="32">
+      <Constant Name="FC_NUMBER" />
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="GLOBAL_ALARMS_MACHINE" />
+        <Component Name="ALARM_DECODING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_02" />
+        <Component Name="GLOBAL" />
+        <Component Name="IS_ALARMS" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Part Name="Contact" UId="36">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Not" UId="26" />
-    <Part Name="Move" UId="27" DisabledENO="true">
+    <Part Name="Not" UId="37" />
+    <Part Name="Move" UId="38" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="SCoil" UId="28" />
+    <Part Name="SCoil" UId="39" />
+    <Part Name="SCoil" UId="40" />
+    <Part Name="Contact" UId="41">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="42" />
+    <Part Name="Move" UId="43" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="44" />
+    <Part Name="Contact" UId="45">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="46" />
+    <Part Name="Move" UId="47" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="48" />
   </Parts>
   <Wires>
-    <Wire UId="29">
+    <Wire UId="49">
       <Powerrail />
-      <NameCon UId="25" Name="in" />
+      <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="30">
+    <Wire UId="50">
       <IdentCon UId="21" />
-      <NameCon UId="25" Name="operand" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="31">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in" />
+    <Wire UId="51">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="45" Name="in" />
     </Wire>
-    <Wire UId="32">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="en" />
-    </Wire>
-    <Wire UId="33">
+    <Wire UId="52">
       <IdentCon UId="22" />
-      <NameCon UId="27" Name="in" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
-    <Wire UId="34">
-      <NameCon UId="27" Name="eno" />
-      <NameCon UId="28" Name="in" />
+    <Wire UId="53">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
     </Wire>
-    <Wire UId="35">
-      <NameCon UId="27" Name="out1" />
+    <Wire UId="54">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="55">
       <IdentCon UId="23" />
+      <NameCon UId="38" Name="in" />
     </Wire>
-    <Wire UId="36">
+    <Wire UId="56">
+      <NameCon UId="38" Name="eno" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out1" />
       <IdentCon UId="24" />
-      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="25" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="26" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="27" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="28" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="43" Name="eno" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="30" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="31" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="68">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="en" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="32" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="eno" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <NameCon UId="47" Name="out1" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="34" />
+      <NameCon UId="48" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
