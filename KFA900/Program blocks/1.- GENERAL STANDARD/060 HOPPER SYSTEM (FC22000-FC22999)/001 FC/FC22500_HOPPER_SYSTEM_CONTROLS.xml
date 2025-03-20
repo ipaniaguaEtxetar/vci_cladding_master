@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-12T15:34:31.6490387Z</Created>
+    <Created>2025-03-20T13:42:39.9999121Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -383,7 +383,7 @@
     <Call UId="26">
       <CallInfo Name="FB22501_TEMPERATURE_JKT_CONTROL" BlockType="FB">
         <Instance Scope="GlobalVariable" UId="27">
-          <Component Name="DB22505_TEMPERATURE_JKT_LOWER_HOPPER_1" />
+          <Component Name="DB22505_TEMPERATURE_JKT_LOWER_HOPPER_1_UNIT_01" />
         </Instance>
         <Parameter Name="iFEEDBACK_TEMP" Section="Input" Type="Real" />
         <Parameter Name="iCONTROL_ON_DELAYED" Section="Input" Type="Bool" />
@@ -643,11 +643,9 @@
         <Parameter Name="MOTOR_STATUS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_STATUS_REACHED" Section="Input" Type="Bool" />
         <Parameter Name="START_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="START_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="STOP_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_ACTUAL_POSITION" Section="Input" Type="DInt" />
@@ -656,138 +654,130 @@
         <Parameter Name="MOTOR_ACTUAL_CURRENT_FILTERED" Section="Input" Type="DInt" />
         <Parameter Name="MOTOR_ACTUAL_TEMPERATURE" Section="Input" Type="Real" />
         <Parameter Name="MOTOR_STATUS_REGISTER" Section="Input" Type="UDInt" />
-        <Parameter Name="MOTOR _VELOCITY _TARGET _SOURCE" Section="Output" Type="DInt" />
-        <Parameter Name="MOTOR _MODE _OF _OPERATION" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _ENABLE _POWER _STAGE" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _OUT1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT2" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT3" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _2" Section="Output" Type="Bool" />
-        <Parameter Name="CURRENT _LIMIT _ALARM" Section="Output" Type="Bool" />
-        <Parameter Name="TEMPRETATURE _LIMIT _ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_VELOCITY_TARGET_SOURCE" Section="Output" Type="DInt" />
+        <Parameter Name="MOTOR_MODE_OF_OPERATION" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_ENABLE_POWER_STAGE" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_OUT1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT2" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT3" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_2" Section="Output" Type="Bool" />
+        <Parameter Name="CURRENT_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="TEMPERATURE_LIMIT_ALARM" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
+    <Wire UId="50">
       <Powerrail />
       <NameCon UId="44" Name="en" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="51">
       <IdentCon UId="21" />
       <NameCon UId="44" Name="CONTROL_ON_DELAYED" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="52">
       <IdentCon UId="22" />
       <NameCon UId="44" Name="MOTOR_CONDITIONS" />
     </Wire>
-    <Wire UId="55">
+    <Wire UId="53">
       <IdentCon UId="23" />
       <NameCon UId="44" Name="MOTOR_STATUS_ERROR" />
     </Wire>
-    <Wire UId="56">
+    <Wire UId="54">
       <IdentCon UId="24" />
       <NameCon UId="44" Name="MOTOR_STATUS_ENABLE" />
     </Wire>
-    <Wire UId="57">
+    <Wire UId="55">
       <IdentCon UId="25" />
       <NameCon UId="44" Name="MOTOR_STATUS_REACHED" />
     </Wire>
-    <Wire UId="58">
+    <Wire UId="56">
       <IdentCon UId="26" />
       <NameCon UId="44" Name="START_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="57">
       <OpenCon UId="46" />
-      <NameCon UId="44" Name="START_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="60">
-      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="61">
-      <OpenCon UId="48" />
+    <Wire UId="58">
+      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="59">
       <IdentCon UId="27" />
       <NameCon UId="44" Name="STOP_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="63">
-      <OpenCon UId="49" />
-      <NameCon UId="44" Name="STOP_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="64">
-      <OpenCon UId="50" />
+    <Wire UId="60">
+      <OpenCon UId="48" />
       <NameCon UId="44" Name="STOP_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="65">
-      <OpenCon UId="51" />
+    <Wire UId="61">
+      <OpenCon UId="49" />
       <NameCon UId="44" Name="STOP_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="66">
+    <Wire UId="62">
       <IdentCon UId="28" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_POSITION" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="63">
       <IdentCon UId="29" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_VELOCITY" />
     </Wire>
-    <Wire UId="68">
+    <Wire UId="64">
       <IdentCon UId="30" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT" />
     </Wire>
-    <Wire UId="69">
+    <Wire UId="65">
       <IdentCon UId="31" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT_FILTERED" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="66">
       <IdentCon UId="32" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_TEMPERATURE" />
     </Wire>
-    <Wire UId="71">
+    <Wire UId="67">
       <IdentCon UId="33" />
       <NameCon UId="44" Name="MOTOR_STATUS_REGISTER" />
     </Wire>
-    <Wire UId="72">
-      <NameCon UId="44" Name="MOTOR _VELOCITY _TARGET _SOURCE" />
+    <Wire UId="68">
+      <NameCon UId="44" Name="MOTOR_VELOCITY_TARGET_SOURCE" />
       <IdentCon UId="34" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="44" Name="MOTOR _MODE _OF _OPERATION" />
+    <Wire UId="69">
+      <NameCon UId="44" Name="MOTOR_MODE_OF_OPERATION" />
       <IdentCon UId="35" />
     </Wire>
-    <Wire UId="74">
-      <NameCon UId="44" Name="MOTOR _ENABLE _POWER _STAGE" />
+    <Wire UId="70">
+      <NameCon UId="44" Name="MOTOR_ENABLE_POWER_STAGE" />
       <IdentCon UId="36" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="44" Name="MOTOR _OUT1" />
+    <Wire UId="71">
+      <NameCon UId="44" Name="MOTOR_OUT1" />
       <IdentCon UId="37" />
     </Wire>
-    <Wire UId="76">
-      <NameCon UId="44" Name="MOTOR _OUT2" />
+    <Wire UId="72">
+      <NameCon UId="44" Name="MOTOR_OUT2" />
       <IdentCon UId="38" />
     </Wire>
-    <Wire UId="77">
-      <NameCon UId="44" Name="MOTOR _OUT3" />
+    <Wire UId="73">
+      <NameCon UId="44" Name="MOTOR_OUT3" />
       <IdentCon UId="39" />
     </Wire>
-    <Wire UId="78">
-      <NameCon UId="44" Name="MOTOR _ENABLE _1" />
+    <Wire UId="74">
+      <NameCon UId="44" Name="MOTOR_ENABLE_1" />
       <IdentCon UId="40" />
     </Wire>
-    <Wire UId="79">
-      <NameCon UId="44" Name="MOTOR _ENABLE _2" />
+    <Wire UId="75">
+      <NameCon UId="44" Name="MOTOR_ENABLE_2" />
       <IdentCon UId="41" />
     </Wire>
-    <Wire UId="80">
-      <NameCon UId="44" Name="CURRENT _LIMIT _ALARM" />
+    <Wire UId="76">
+      <NameCon UId="44" Name="CURRENT_LIMIT_ALARM" />
       <IdentCon UId="42" />
     </Wire>
-    <Wire UId="81">
-      <NameCon UId="44" Name="TEMPRETATURE _LIMIT _ALARM" />
+    <Wire UId="77">
+      <NameCon UId="44" Name="TEMPERATURE_LIMIT_ALARM" />
       <IdentCon UId="43" />
     </Wire>
   </Wires>
@@ -1597,11 +1587,9 @@
         <Parameter Name="MOTOR_STATUS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_STATUS_REACHED" Section="Input" Type="Bool" />
         <Parameter Name="START_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="START_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="STOP_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_ACTUAL_POSITION" Section="Input" Type="DInt" />
@@ -1610,138 +1598,130 @@
         <Parameter Name="MOTOR_ACTUAL_CURRENT_FILTERED" Section="Input" Type="DInt" />
         <Parameter Name="MOTOR_ACTUAL_TEMPERATURE" Section="Input" Type="Real" />
         <Parameter Name="MOTOR_STATUS_REGISTER" Section="Input" Type="UDInt" />
-        <Parameter Name="MOTOR _VELOCITY _TARGET _SOURCE" Section="Output" Type="DInt" />
-        <Parameter Name="MOTOR _MODE _OF _OPERATION" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _ENABLE _POWER _STAGE" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _OUT1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT2" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT3" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _2" Section="Output" Type="Bool" />
-        <Parameter Name="CURRENT _LIMIT _ALARM" Section="Output" Type="Bool" />
-        <Parameter Name="TEMPRETATURE _LIMIT _ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_VELOCITY_TARGET_SOURCE" Section="Output" Type="DInt" />
+        <Parameter Name="MOTOR_MODE_OF_OPERATION" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_ENABLE_POWER_STAGE" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_OUT1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT2" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT3" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_2" Section="Output" Type="Bool" />
+        <Parameter Name="CURRENT_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="TEMPERATURE_LIMIT_ALARM" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
+    <Wire UId="50">
       <Powerrail />
       <NameCon UId="44" Name="en" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="51">
       <IdentCon UId="21" />
       <NameCon UId="44" Name="CONTROL_ON_DELAYED" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="52">
       <IdentCon UId="22" />
       <NameCon UId="44" Name="MOTOR_CONDITIONS" />
     </Wire>
-    <Wire UId="55">
+    <Wire UId="53">
       <IdentCon UId="23" />
       <NameCon UId="44" Name="MOTOR_STATUS_ERROR" />
     </Wire>
-    <Wire UId="56">
+    <Wire UId="54">
       <IdentCon UId="24" />
       <NameCon UId="44" Name="MOTOR_STATUS_ENABLE" />
     </Wire>
-    <Wire UId="57">
+    <Wire UId="55">
       <IdentCon UId="25" />
       <NameCon UId="44" Name="MOTOR_STATUS_REACHED" />
     </Wire>
-    <Wire UId="58">
+    <Wire UId="56">
       <IdentCon UId="26" />
       <NameCon UId="44" Name="START_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="57">
       <OpenCon UId="46" />
-      <NameCon UId="44" Name="START_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="60">
-      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="61">
-      <OpenCon UId="48" />
+    <Wire UId="58">
+      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="59">
       <IdentCon UId="27" />
       <NameCon UId="44" Name="STOP_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="63">
-      <OpenCon UId="49" />
-      <NameCon UId="44" Name="STOP_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="64">
-      <OpenCon UId="50" />
+    <Wire UId="60">
+      <OpenCon UId="48" />
       <NameCon UId="44" Name="STOP_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="65">
-      <OpenCon UId="51" />
+    <Wire UId="61">
+      <OpenCon UId="49" />
       <NameCon UId="44" Name="STOP_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="66">
+    <Wire UId="62">
       <IdentCon UId="28" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_POSITION" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="63">
       <IdentCon UId="29" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_VELOCITY" />
     </Wire>
-    <Wire UId="68">
+    <Wire UId="64">
       <IdentCon UId="30" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT" />
     </Wire>
-    <Wire UId="69">
+    <Wire UId="65">
       <IdentCon UId="31" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT_FILTERED" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="66">
       <IdentCon UId="32" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_TEMPERATURE" />
     </Wire>
-    <Wire UId="71">
+    <Wire UId="67">
       <IdentCon UId="33" />
       <NameCon UId="44" Name="MOTOR_STATUS_REGISTER" />
     </Wire>
-    <Wire UId="72">
-      <NameCon UId="44" Name="MOTOR _VELOCITY _TARGET _SOURCE" />
+    <Wire UId="68">
+      <NameCon UId="44" Name="MOTOR_VELOCITY_TARGET_SOURCE" />
       <IdentCon UId="34" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="44" Name="MOTOR _MODE _OF _OPERATION" />
+    <Wire UId="69">
+      <NameCon UId="44" Name="MOTOR_MODE_OF_OPERATION" />
       <IdentCon UId="35" />
     </Wire>
-    <Wire UId="74">
-      <NameCon UId="44" Name="MOTOR _ENABLE _POWER _STAGE" />
+    <Wire UId="70">
+      <NameCon UId="44" Name="MOTOR_ENABLE_POWER_STAGE" />
       <IdentCon UId="36" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="44" Name="MOTOR _OUT1" />
+    <Wire UId="71">
+      <NameCon UId="44" Name="MOTOR_OUT1" />
       <IdentCon UId="37" />
     </Wire>
-    <Wire UId="76">
-      <NameCon UId="44" Name="MOTOR _OUT2" />
+    <Wire UId="72">
+      <NameCon UId="44" Name="MOTOR_OUT2" />
       <IdentCon UId="38" />
     </Wire>
-    <Wire UId="77">
-      <NameCon UId="44" Name="MOTOR _OUT3" />
+    <Wire UId="73">
+      <NameCon UId="44" Name="MOTOR_OUT3" />
       <IdentCon UId="39" />
     </Wire>
-    <Wire UId="78">
-      <NameCon UId="44" Name="MOTOR _ENABLE _1" />
+    <Wire UId="74">
+      <NameCon UId="44" Name="MOTOR_ENABLE_1" />
       <IdentCon UId="40" />
     </Wire>
-    <Wire UId="79">
-      <NameCon UId="44" Name="MOTOR _ENABLE _2" />
+    <Wire UId="75">
+      <NameCon UId="44" Name="MOTOR_ENABLE_2" />
       <IdentCon UId="41" />
     </Wire>
-    <Wire UId="80">
-      <NameCon UId="44" Name="CURRENT _LIMIT _ALARM" />
+    <Wire UId="76">
+      <NameCon UId="44" Name="CURRENT_LIMIT_ALARM" />
       <IdentCon UId="42" />
     </Wire>
-    <Wire UId="81">
-      <NameCon UId="44" Name="TEMPRETATURE _LIMIT _ALARM" />
+    <Wire UId="77">
+      <NameCon UId="44" Name="TEMPERATURE_LIMIT_ALARM" />
       <IdentCon UId="43" />
     </Wire>
   </Wires>
@@ -2615,11 +2595,9 @@
         <Parameter Name="MOTOR_STATUS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_STATUS_REACHED" Section="Input" Type="Bool" />
         <Parameter Name="START_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="START_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="STOP_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_ACTUAL_POSITION" Section="Input" Type="DInt" />
@@ -2628,138 +2606,130 @@
         <Parameter Name="MOTOR_ACTUAL_CURRENT_FILTERED" Section="Input" Type="DInt" />
         <Parameter Name="MOTOR_ACTUAL_TEMPERATURE" Section="Input" Type="Real" />
         <Parameter Name="MOTOR_STATUS_REGISTER" Section="Input" Type="UDInt" />
-        <Parameter Name="MOTOR _VELOCITY _TARGET _SOURCE" Section="Output" Type="DInt" />
-        <Parameter Name="MOTOR _MODE _OF _OPERATION" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _ENABLE _POWER _STAGE" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _OUT1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT2" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT3" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _2" Section="Output" Type="Bool" />
-        <Parameter Name="CURRENT _LIMIT _ALARM" Section="Output" Type="Bool" />
-        <Parameter Name="TEMPRETATURE _LIMIT _ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_VELOCITY_TARGET_SOURCE" Section="Output" Type="DInt" />
+        <Parameter Name="MOTOR_MODE_OF_OPERATION" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_ENABLE_POWER_STAGE" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_OUT1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT2" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT3" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_2" Section="Output" Type="Bool" />
+        <Parameter Name="CURRENT_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="TEMPERATURE_LIMIT_ALARM" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
+    <Wire UId="50">
       <Powerrail />
       <NameCon UId="44" Name="en" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="51">
       <IdentCon UId="21" />
       <NameCon UId="44" Name="CONTROL_ON_DELAYED" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="52">
       <IdentCon UId="22" />
       <NameCon UId="44" Name="MOTOR_CONDITIONS" />
     </Wire>
-    <Wire UId="55">
+    <Wire UId="53">
       <IdentCon UId="23" />
       <NameCon UId="44" Name="MOTOR_STATUS_ERROR" />
     </Wire>
-    <Wire UId="56">
+    <Wire UId="54">
       <IdentCon UId="24" />
       <NameCon UId="44" Name="MOTOR_STATUS_ENABLE" />
     </Wire>
-    <Wire UId="57">
+    <Wire UId="55">
       <IdentCon UId="25" />
       <NameCon UId="44" Name="MOTOR_STATUS_REACHED" />
     </Wire>
-    <Wire UId="58">
+    <Wire UId="56">
       <IdentCon UId="26" />
       <NameCon UId="44" Name="START_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="57">
       <OpenCon UId="46" />
-      <NameCon UId="44" Name="START_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="60">
-      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="61">
-      <OpenCon UId="48" />
+    <Wire UId="58">
+      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="59">
       <IdentCon UId="27" />
       <NameCon UId="44" Name="STOP_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="63">
-      <OpenCon UId="49" />
-      <NameCon UId="44" Name="STOP_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="64">
-      <OpenCon UId="50" />
+    <Wire UId="60">
+      <OpenCon UId="48" />
       <NameCon UId="44" Name="STOP_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="65">
-      <OpenCon UId="51" />
+    <Wire UId="61">
+      <OpenCon UId="49" />
       <NameCon UId="44" Name="STOP_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="66">
+    <Wire UId="62">
       <IdentCon UId="28" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_POSITION" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="63">
       <IdentCon UId="29" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_VELOCITY" />
     </Wire>
-    <Wire UId="68">
+    <Wire UId="64">
       <IdentCon UId="30" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT" />
     </Wire>
-    <Wire UId="69">
+    <Wire UId="65">
       <IdentCon UId="31" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT_FILTERED" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="66">
       <IdentCon UId="32" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_TEMPERATURE" />
     </Wire>
-    <Wire UId="71">
+    <Wire UId="67">
       <IdentCon UId="33" />
       <NameCon UId="44" Name="MOTOR_STATUS_REGISTER" />
     </Wire>
-    <Wire UId="72">
-      <NameCon UId="44" Name="MOTOR _VELOCITY _TARGET _SOURCE" />
+    <Wire UId="68">
+      <NameCon UId="44" Name="MOTOR_VELOCITY_TARGET_SOURCE" />
       <IdentCon UId="34" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="44" Name="MOTOR _MODE _OF _OPERATION" />
+    <Wire UId="69">
+      <NameCon UId="44" Name="MOTOR_MODE_OF_OPERATION" />
       <IdentCon UId="35" />
     </Wire>
-    <Wire UId="74">
-      <NameCon UId="44" Name="MOTOR _ENABLE _POWER _STAGE" />
+    <Wire UId="70">
+      <NameCon UId="44" Name="MOTOR_ENABLE_POWER_STAGE" />
       <IdentCon UId="36" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="44" Name="MOTOR _OUT1" />
+    <Wire UId="71">
+      <NameCon UId="44" Name="MOTOR_OUT1" />
       <IdentCon UId="37" />
     </Wire>
-    <Wire UId="76">
-      <NameCon UId="44" Name="MOTOR _OUT2" />
+    <Wire UId="72">
+      <NameCon UId="44" Name="MOTOR_OUT2" />
       <IdentCon UId="38" />
     </Wire>
-    <Wire UId="77">
-      <NameCon UId="44" Name="MOTOR _OUT3" />
+    <Wire UId="73">
+      <NameCon UId="44" Name="MOTOR_OUT3" />
       <IdentCon UId="39" />
     </Wire>
-    <Wire UId="78">
-      <NameCon UId="44" Name="MOTOR _ENABLE _1" />
+    <Wire UId="74">
+      <NameCon UId="44" Name="MOTOR_ENABLE_1" />
       <IdentCon UId="40" />
     </Wire>
-    <Wire UId="79">
-      <NameCon UId="44" Name="MOTOR _ENABLE _2" />
+    <Wire UId="75">
+      <NameCon UId="44" Name="MOTOR_ENABLE_2" />
       <IdentCon UId="41" />
     </Wire>
-    <Wire UId="80">
-      <NameCon UId="44" Name="CURRENT _LIMIT _ALARM" />
+    <Wire UId="76">
+      <NameCon UId="44" Name="CURRENT_LIMIT_ALARM" />
       <IdentCon UId="42" />
     </Wire>
-    <Wire UId="81">
-      <NameCon UId="44" Name="TEMPRETATURE _LIMIT _ALARM" />
+    <Wire UId="77">
+      <NameCon UId="44" Name="TEMPERATURE_LIMIT_ALARM" />
       <IdentCon UId="43" />
     </Wire>
   </Wires>
@@ -3569,11 +3539,9 @@
         <Parameter Name="MOTOR_STATUS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_STATUS_REACHED" Section="Input" Type="Bool" />
         <Parameter Name="START_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="START_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="STOP_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_ACTUAL_POSITION" Section="Input" Type="DInt" />
@@ -3582,138 +3550,130 @@
         <Parameter Name="MOTOR_ACTUAL_CURRENT_FILTERED" Section="Input" Type="DInt" />
         <Parameter Name="MOTOR_ACTUAL_TEMPERATURE" Section="Input" Type="Real" />
         <Parameter Name="MOTOR_STATUS_REGISTER" Section="Input" Type="UDInt" />
-        <Parameter Name="MOTOR _VELOCITY _TARGET _SOURCE" Section="Output" Type="DInt" />
-        <Parameter Name="MOTOR _MODE _OF _OPERATION" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _ENABLE _POWER _STAGE" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _OUT1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT2" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT3" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _2" Section="Output" Type="Bool" />
-        <Parameter Name="CURRENT _LIMIT _ALARM" Section="Output" Type="Bool" />
-        <Parameter Name="TEMPRETATURE _LIMIT _ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_VELOCITY_TARGET_SOURCE" Section="Output" Type="DInt" />
+        <Parameter Name="MOTOR_MODE_OF_OPERATION" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_ENABLE_POWER_STAGE" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_OUT1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT2" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT3" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_2" Section="Output" Type="Bool" />
+        <Parameter Name="CURRENT_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="TEMPERATURE_LIMIT_ALARM" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
+    <Wire UId="50">
       <Powerrail />
       <NameCon UId="44" Name="en" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="51">
       <IdentCon UId="21" />
       <NameCon UId="44" Name="CONTROL_ON_DELAYED" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="52">
       <IdentCon UId="22" />
       <NameCon UId="44" Name="MOTOR_CONDITIONS" />
     </Wire>
-    <Wire UId="55">
+    <Wire UId="53">
       <IdentCon UId="23" />
       <NameCon UId="44" Name="MOTOR_STATUS_ERROR" />
     </Wire>
-    <Wire UId="56">
+    <Wire UId="54">
       <IdentCon UId="24" />
       <NameCon UId="44" Name="MOTOR_STATUS_ENABLE" />
     </Wire>
-    <Wire UId="57">
+    <Wire UId="55">
       <IdentCon UId="25" />
       <NameCon UId="44" Name="MOTOR_STATUS_REACHED" />
     </Wire>
-    <Wire UId="58">
+    <Wire UId="56">
       <IdentCon UId="26" />
       <NameCon UId="44" Name="START_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="57">
       <OpenCon UId="46" />
-      <NameCon UId="44" Name="START_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="60">
-      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="61">
-      <OpenCon UId="48" />
+    <Wire UId="58">
+      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="59">
       <IdentCon UId="27" />
       <NameCon UId="44" Name="STOP_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="63">
-      <OpenCon UId="49" />
-      <NameCon UId="44" Name="STOP_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="64">
-      <OpenCon UId="50" />
+    <Wire UId="60">
+      <OpenCon UId="48" />
       <NameCon UId="44" Name="STOP_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="65">
-      <OpenCon UId="51" />
+    <Wire UId="61">
+      <OpenCon UId="49" />
       <NameCon UId="44" Name="STOP_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="66">
+    <Wire UId="62">
       <IdentCon UId="28" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_POSITION" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="63">
       <IdentCon UId="29" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_VELOCITY" />
     </Wire>
-    <Wire UId="68">
+    <Wire UId="64">
       <IdentCon UId="30" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT" />
     </Wire>
-    <Wire UId="69">
+    <Wire UId="65">
       <IdentCon UId="31" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT_FILTERED" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="66">
       <IdentCon UId="32" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_TEMPERATURE" />
     </Wire>
-    <Wire UId="71">
+    <Wire UId="67">
       <IdentCon UId="33" />
       <NameCon UId="44" Name="MOTOR_STATUS_REGISTER" />
     </Wire>
-    <Wire UId="72">
-      <NameCon UId="44" Name="MOTOR _VELOCITY _TARGET _SOURCE" />
+    <Wire UId="68">
+      <NameCon UId="44" Name="MOTOR_VELOCITY_TARGET_SOURCE" />
       <IdentCon UId="34" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="44" Name="MOTOR _MODE _OF _OPERATION" />
+    <Wire UId="69">
+      <NameCon UId="44" Name="MOTOR_MODE_OF_OPERATION" />
       <IdentCon UId="35" />
     </Wire>
-    <Wire UId="74">
-      <NameCon UId="44" Name="MOTOR _ENABLE _POWER _STAGE" />
+    <Wire UId="70">
+      <NameCon UId="44" Name="MOTOR_ENABLE_POWER_STAGE" />
       <IdentCon UId="36" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="44" Name="MOTOR _OUT1" />
+    <Wire UId="71">
+      <NameCon UId="44" Name="MOTOR_OUT1" />
       <IdentCon UId="37" />
     </Wire>
-    <Wire UId="76">
-      <NameCon UId="44" Name="MOTOR _OUT2" />
+    <Wire UId="72">
+      <NameCon UId="44" Name="MOTOR_OUT2" />
       <IdentCon UId="38" />
     </Wire>
-    <Wire UId="77">
-      <NameCon UId="44" Name="MOTOR _OUT3" />
+    <Wire UId="73">
+      <NameCon UId="44" Name="MOTOR_OUT3" />
       <IdentCon UId="39" />
     </Wire>
-    <Wire UId="78">
-      <NameCon UId="44" Name="MOTOR _ENABLE _1" />
+    <Wire UId="74">
+      <NameCon UId="44" Name="MOTOR_ENABLE_1" />
       <IdentCon UId="40" />
     </Wire>
-    <Wire UId="79">
-      <NameCon UId="44" Name="MOTOR _ENABLE _2" />
+    <Wire UId="75">
+      <NameCon UId="44" Name="MOTOR_ENABLE_2" />
       <IdentCon UId="41" />
     </Wire>
-    <Wire UId="80">
-      <NameCon UId="44" Name="CURRENT _LIMIT _ALARM" />
+    <Wire UId="76">
+      <NameCon UId="44" Name="CURRENT_LIMIT_ALARM" />
       <IdentCon UId="42" />
     </Wire>
-    <Wire UId="81">
-      <NameCon UId="44" Name="TEMPRETATURE _LIMIT _ALARM" />
+    <Wire UId="77">
+      <NameCon UId="44" Name="TEMPERATURE_LIMIT_ALARM" />
       <IdentCon UId="43" />
     </Wire>
   </Wires>
@@ -4523,11 +4483,9 @@
         <Parameter Name="MOTOR_STATUS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_STATUS_REACHED" Section="Input" Type="Bool" />
         <Parameter Name="START_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="START_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="START_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_MANUAL_REQUEST" Section="Input" Type="Bool" />
-        <Parameter Name="STOP_SEMI_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_AUTO_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="STOP_PROGRAM_REQUEST" Section="Input" Type="Bool" />
         <Parameter Name="MOTOR_ACTUAL_POSITION" Section="Input" Type="DInt" />
@@ -4536,138 +4494,130 @@
         <Parameter Name="MOTOR_ACTUAL_CURRENT_FILTERED" Section="Input" Type="DInt" />
         <Parameter Name="MOTOR_ACTUAL_TEMPERATURE" Section="Input" Type="Real" />
         <Parameter Name="MOTOR_STATUS_REGISTER" Section="Input" Type="UDInt" />
-        <Parameter Name="MOTOR _VELOCITY _TARGET _SOURCE" Section="Output" Type="DInt" />
-        <Parameter Name="MOTOR _MODE _OF _OPERATION" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _ENABLE _POWER _STAGE" Section="Output" Type="Int" />
-        <Parameter Name="MOTOR _OUT1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT2" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _OUT3" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _1" Section="Output" Type="Bool" />
-        <Parameter Name="MOTOR _ENABLE _2" Section="Output" Type="Bool" />
-        <Parameter Name="CURRENT _LIMIT _ALARM" Section="Output" Type="Bool" />
-        <Parameter Name="TEMPRETATURE _LIMIT _ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_VELOCITY_TARGET_SOURCE" Section="Output" Type="DInt" />
+        <Parameter Name="MOTOR_MODE_OF_OPERATION" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_ENABLE_POWER_STAGE" Section="Output" Type="Int" />
+        <Parameter Name="MOTOR_OUT1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT2" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_OUT3" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_1" Section="Output" Type="Bool" />
+        <Parameter Name="MOTOR_ENABLE_2" Section="Output" Type="Bool" />
+        <Parameter Name="CURRENT_LIMIT_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="TEMPERATURE_LIMIT_ALARM" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
+    <Wire UId="50">
       <Powerrail />
       <NameCon UId="44" Name="en" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="51">
       <IdentCon UId="21" />
       <NameCon UId="44" Name="CONTROL_ON_DELAYED" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="52">
       <IdentCon UId="22" />
       <NameCon UId="44" Name="MOTOR_CONDITIONS" />
     </Wire>
-    <Wire UId="55">
+    <Wire UId="53">
       <IdentCon UId="23" />
       <NameCon UId="44" Name="MOTOR_STATUS_ERROR" />
     </Wire>
-    <Wire UId="56">
+    <Wire UId="54">
       <IdentCon UId="24" />
       <NameCon UId="44" Name="MOTOR_STATUS_ENABLE" />
     </Wire>
-    <Wire UId="57">
+    <Wire UId="55">
       <IdentCon UId="25" />
       <NameCon UId="44" Name="MOTOR_STATUS_REACHED" />
     </Wire>
-    <Wire UId="58">
+    <Wire UId="56">
       <IdentCon UId="26" />
       <NameCon UId="44" Name="START_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="57">
       <OpenCon UId="46" />
-      <NameCon UId="44" Name="START_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="60">
-      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="61">
-      <OpenCon UId="48" />
+    <Wire UId="58">
+      <OpenCon UId="47" />
       <NameCon UId="44" Name="START_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="59">
       <IdentCon UId="27" />
       <NameCon UId="44" Name="STOP_MANUAL_REQUEST" />
     </Wire>
-    <Wire UId="63">
-      <OpenCon UId="49" />
-      <NameCon UId="44" Name="STOP_SEMI_REQUEST" />
-    </Wire>
-    <Wire UId="64">
-      <OpenCon UId="50" />
+    <Wire UId="60">
+      <OpenCon UId="48" />
       <NameCon UId="44" Name="STOP_AUTO_REQUEST" />
     </Wire>
-    <Wire UId="65">
-      <OpenCon UId="51" />
+    <Wire UId="61">
+      <OpenCon UId="49" />
       <NameCon UId="44" Name="STOP_PROGRAM_REQUEST" />
     </Wire>
-    <Wire UId="66">
+    <Wire UId="62">
       <IdentCon UId="28" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_POSITION" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="63">
       <IdentCon UId="29" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_VELOCITY" />
     </Wire>
-    <Wire UId="68">
+    <Wire UId="64">
       <IdentCon UId="30" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT" />
     </Wire>
-    <Wire UId="69">
+    <Wire UId="65">
       <IdentCon UId="31" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_CURRENT_FILTERED" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="66">
       <IdentCon UId="32" />
       <NameCon UId="44" Name="MOTOR_ACTUAL_TEMPERATURE" />
     </Wire>
-    <Wire UId="71">
+    <Wire UId="67">
       <IdentCon UId="33" />
       <NameCon UId="44" Name="MOTOR_STATUS_REGISTER" />
     </Wire>
-    <Wire UId="72">
-      <NameCon UId="44" Name="MOTOR _VELOCITY _TARGET _SOURCE" />
+    <Wire UId="68">
+      <NameCon UId="44" Name="MOTOR_VELOCITY_TARGET_SOURCE" />
       <IdentCon UId="34" />
     </Wire>
-    <Wire UId="73">
-      <NameCon UId="44" Name="MOTOR _MODE _OF _OPERATION" />
+    <Wire UId="69">
+      <NameCon UId="44" Name="MOTOR_MODE_OF_OPERATION" />
       <IdentCon UId="35" />
     </Wire>
-    <Wire UId="74">
-      <NameCon UId="44" Name="MOTOR _ENABLE _POWER _STAGE" />
+    <Wire UId="70">
+      <NameCon UId="44" Name="MOTOR_ENABLE_POWER_STAGE" />
       <IdentCon UId="36" />
     </Wire>
-    <Wire UId="75">
-      <NameCon UId="44" Name="MOTOR _OUT1" />
+    <Wire UId="71">
+      <NameCon UId="44" Name="MOTOR_OUT1" />
       <IdentCon UId="37" />
     </Wire>
-    <Wire UId="76">
-      <NameCon UId="44" Name="MOTOR _OUT2" />
+    <Wire UId="72">
+      <NameCon UId="44" Name="MOTOR_OUT2" />
       <IdentCon UId="38" />
     </Wire>
-    <Wire UId="77">
-      <NameCon UId="44" Name="MOTOR _OUT3" />
+    <Wire UId="73">
+      <NameCon UId="44" Name="MOTOR_OUT3" />
       <IdentCon UId="39" />
     </Wire>
-    <Wire UId="78">
-      <NameCon UId="44" Name="MOTOR _ENABLE _1" />
+    <Wire UId="74">
+      <NameCon UId="44" Name="MOTOR_ENABLE_1" />
       <IdentCon UId="40" />
     </Wire>
-    <Wire UId="79">
-      <NameCon UId="44" Name="MOTOR _ENABLE _2" />
+    <Wire UId="75">
+      <NameCon UId="44" Name="MOTOR_ENABLE_2" />
       <IdentCon UId="41" />
     </Wire>
-    <Wire UId="80">
-      <NameCon UId="44" Name="CURRENT _LIMIT _ALARM" />
+    <Wire UId="76">
+      <NameCon UId="44" Name="CURRENT_LIMIT_ALARM" />
       <IdentCon UId="42" />
     </Wire>
-    <Wire UId="81">
-      <NameCon UId="44" Name="TEMPRETATURE _LIMIT _ALARM" />
+    <Wire UId="77">
+      <NameCon UId="44" Name="TEMPERATURE_LIMIT_ALARM" />
       <IdentCon UId="43" />
     </Wire>
   </Wires>
