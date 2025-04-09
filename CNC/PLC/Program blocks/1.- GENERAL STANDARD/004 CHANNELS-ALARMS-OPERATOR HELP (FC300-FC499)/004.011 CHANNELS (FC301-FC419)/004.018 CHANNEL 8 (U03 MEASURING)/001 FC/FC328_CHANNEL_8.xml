@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-18T12:31:04.8419822Z</Created>
+    <Created>2025-04-09T08:03:05.0523037Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -159,28 +163,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB1312_HOME_UNIT_03_STATION" />
+        <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="RESET_PLC_AND_CNC" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="DB1302_UNIT_3_STATION_CYCLE" />
         <Component Name="SEQUENCE" />
         <Component Name="RESET_PLC_AND_CNC" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB1313_UNIT_03_CALIBRATION" />
+        <Component Name="DB1313_UNIT_3_MEAS_CALIBRATION" />
         <Component Name="SEQUENCE" />
         <Component Name="RESET_PLC_AND_CNC" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB1314_UNIT_03_MASTER_MEASUREMENT" />
+        <Component Name="DB1314_UNIT_3_MASTER_MEASUREMENT" />
         <Component Name="SEQUENCE" />
         <Component Name="RESET_PLC_AND_CNC" />
       </Symbol>
@@ -334,28 +338,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="DB1302_UNIT_3_STATION_CYCLE" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB1312_HOME_UNIT_03_STATION" />
+        <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB1313_UNIT_03_CALIBRATION" />
+        <Component Name="DB1313_UNIT_3_MEAS_CALIBRATION" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB1314_UNIT_03_MASTER_MEASUREMENT" />
+        <Component Name="DB1314_UNIT_3_MASTER_MEASUREMENT" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
@@ -1089,21 +1093,21 @@
     </Access>
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
-        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="DB1302_UNIT_3_STATION_CYCLE" />
         <Component Name="SEQUENCE" />
         <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="45">
       <Symbol>
-        <Component Name="DB1313_UNIT_03_CALIBRATION" />
+        <Component Name="DB1313_UNIT_3_MEAS_CALIBRATION" />
         <Component Name="SEQUENCE" />
         <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="46">
       <Symbol>
-        <Component Name="DB1314_UNIT_03_MASTER_MEASUREMENT" />
+        <Component Name="DB1314_UNIT_3_MASTER_MEASUREMENT" />
         <Component Name="SEQUENCE" />
         <Component Name="RUNNING" />
       </Symbol>
@@ -1671,36 +1675,63 @@
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
-        <Component Name="DB1312_HOME_UNIT_03_STATION" />
+        <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
-        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="DB1302_UNIT_3_STATION_CYCLE" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="42">
       <Symbol>
-        <Component Name="LBP_Chan8" />
+        <Component Name="DB2011_MODES_GENERAL_MG2" />
+        <Component Name="STEP_BY_STEP" />
+        <Component Name="MODE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="LBP_ModeGroup" />
+        <Component Name="MG" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+        <Component Name="E_MDA" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB2011_MODES_GENERAL_MG2" />
+        <Component Name="GENERAL" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="LBP_Chan8" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="GENERAL" />
         <Component Name="700512" />
       </Symbol>
     </Access>
-    <Call UId="44">
+    <Call UId="47">
       <CallInfo Name="FB321_CHANNEL" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="45">
+        <Instance Scope="GlobalVariable" UId="48">
           <Component Name="DB328_CHANNEL_8" />
         </Instance>
-        <Parameter Name="CH_MODE_GROUP" Section="Input" Type="Int" />
+        <Parameter Name="CH_MODE_GROUP_NUM" Section="Input" Type="Int" />
         <Parameter Name="JERK_PARAMETERS_ENABLE" Section="Input" Type="Bool" />
         <Parameter Name="ENABLE_M01" Section="Input" Type="Bool" />
         <Parameter Name="ENABLE_DRY_RUN_TEST_PRGM" Section="Input" Type="Bool" />
@@ -1710,118 +1741,133 @@
         <Parameter Name="OVERRIDE_VALUE" Section="Input" Type="Byte" />
         <Parameter Name="BA3_SOFTKEYS_STOP" Section="Input" Type="Bool" />
         <Parameter Name="PROG_SLECT_FAULT_CH" Section="Input" Type="Bool" />
-        <Parameter Name="MACHINE_IS_ALARMS" Section="Input" Type="Bool" />
-        <Parameter Name="MACHINE_IS_WARNINGS" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_IS_ALARMS" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_IS_WARNINGS" Section="Input" Type="Bool" />
         <Parameter Name="UNIT_IS_SEOC" Section="Input" Type="Bool" />
         <Parameter Name="CHANNEL_M201" Section="Input" Type="Bool" />
-        <Parameter Name="MCH_RESET" Section="Input" Type="Bool" />
+        <Parameter Name="MCH_RESET_FAULTS" Section="Input" Type="Bool" />
         <Parameter Name="NC_START_DUMMY_FOR_OPT" Section="Input" Type="Bool" />
         <Parameter Name="MPP_PUSH_BUTTON_START" Section="Input" Type="Bool" />
         <Parameter Name="MPP_PUSH_BUTTON_NC_START" Section="Input" Type="Bool" />
         <Parameter Name="MPP_BUTTON_HOME_POS" Section="Input" Type="Bool" />
-        <Parameter Name="UNIT_HOME_STEP_3" Section="Input" Type="Bool" />
-        <Parameter Name="UNIT_CYCLE_STEP_3" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_HOME_STP_3" Section="Input" Type="Bool" />
+        <Parameter Name="UNIT_CYCLE_STP_3" Section="Input" Type="Bool" />
+        <Parameter Name="ADDITIONAL_MG_STP_BY_STP_SLCTD" Section="Input" Type="Bool" />
+        <Parameter Name="ADDITIONAL_MG_MDA" Section="Input" Type="Bool" />
+        <Parameter Name="ADDITIONAL_MG_GENERAL_DB" Section="Input" Type="&quot;AUTO_SINGLE_SEMI_MANUAL&quot;" />
         <Parameter Name="CH_NOT_IN SOFT_MODE_ALARM" Section="Output" Type="Bool" />
         <Parameter Name="ChannelDB" Section="InOut" Type="&quot;LBP_typeChanX&quot;" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="46">
-      <Powerrail />
-      <NameCon UId="44" Name="en" />
-    </Wire>
-    <Wire UId="47">
-      <IdentCon UId="21" />
-      <NameCon UId="44" Name="CH_MODE_GROUP" />
-    </Wire>
-    <Wire UId="48">
-      <IdentCon UId="22" />
-      <NameCon UId="44" Name="JERK_PARAMETERS_ENABLE" />
-    </Wire>
     <Wire UId="49">
-      <IdentCon UId="23" />
-      <NameCon UId="44" Name="ENABLE_M01" />
+      <Powerrail />
+      <NameCon UId="47" Name="en" />
     </Wire>
     <Wire UId="50">
-      <IdentCon UId="24" />
-      <NameCon UId="44" Name="ENABLE_DRY_RUN_TEST_PRGM" />
+      <IdentCon UId="21" />
+      <NameCon UId="47" Name="CH_MODE_GROUP_NUM" />
     </Wire>
     <Wire UId="51">
-      <IdentCon UId="25" />
-      <NameCon UId="44" Name="FEED_DISABLE" />
+      <IdentCon UId="22" />
+      <NameCon UId="47" Name="JERK_PARAMETERS_ENABLE" />
     </Wire>
     <Wire UId="52">
-      <IdentCon UId="26" />
-      <NameCon UId="44" Name="ENABLE_OVERRIDE" />
+      <IdentCon UId="23" />
+      <NameCon UId="47" Name="ENABLE_M01" />
     </Wire>
     <Wire UId="53">
-      <IdentCon UId="27" />
-      <NameCon UId="44" Name="ENABLE_OVERRIDE_FROM_MP_OR_HT10" />
+      <IdentCon UId="24" />
+      <NameCon UId="47" Name="ENABLE_DRY_RUN_TEST_PRGM" />
     </Wire>
     <Wire UId="54">
-      <IdentCon UId="28" />
-      <NameCon UId="44" Name="OVERRIDE_VALUE" />
+      <IdentCon UId="25" />
+      <NameCon UId="47" Name="FEED_DISABLE" />
     </Wire>
     <Wire UId="55">
-      <IdentCon UId="29" />
-      <NameCon UId="44" Name="BA3_SOFTKEYS_STOP" />
+      <IdentCon UId="26" />
+      <NameCon UId="47" Name="ENABLE_OVERRIDE" />
     </Wire>
     <Wire UId="56">
-      <IdentCon UId="30" />
-      <NameCon UId="44" Name="PROG_SLECT_FAULT_CH" />
+      <IdentCon UId="27" />
+      <NameCon UId="47" Name="ENABLE_OVERRIDE_FROM_MP_OR_HT10" />
     </Wire>
     <Wire UId="57">
-      <IdentCon UId="31" />
-      <NameCon UId="44" Name="MACHINE_IS_ALARMS" />
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="OVERRIDE_VALUE" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="32" />
-      <NameCon UId="44" Name="MACHINE_IS_WARNINGS" />
+      <IdentCon UId="29" />
+      <NameCon UId="47" Name="BA3_SOFTKEYS_STOP" />
     </Wire>
     <Wire UId="59">
-      <IdentCon UId="33" />
-      <NameCon UId="44" Name="UNIT_IS_SEOC" />
+      <IdentCon UId="30" />
+      <NameCon UId="47" Name="PROG_SLECT_FAULT_CH" />
     </Wire>
     <Wire UId="60">
-      <IdentCon UId="34" />
-      <NameCon UId="44" Name="CHANNEL_M201" />
+      <IdentCon UId="31" />
+      <NameCon UId="47" Name="MCH_IS_ALARMS" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="35" />
-      <NameCon UId="44" Name="MCH_RESET" />
+      <IdentCon UId="32" />
+      <NameCon UId="47" Name="MCH_IS_WARNINGS" />
     </Wire>
     <Wire UId="62">
-      <IdentCon UId="36" />
-      <NameCon UId="44" Name="NC_START_DUMMY_FOR_OPT" />
+      <IdentCon UId="33" />
+      <NameCon UId="47" Name="UNIT_IS_SEOC" />
     </Wire>
     <Wire UId="63">
-      <IdentCon UId="37" />
-      <NameCon UId="44" Name="MPP_PUSH_BUTTON_START" />
+      <IdentCon UId="34" />
+      <NameCon UId="47" Name="CHANNEL_M201" />
     </Wire>
     <Wire UId="64">
-      <IdentCon UId="38" />
-      <NameCon UId="44" Name="MPP_PUSH_BUTTON_NC_START" />
+      <IdentCon UId="35" />
+      <NameCon UId="47" Name="MCH_RESET_FAULTS" />
     </Wire>
     <Wire UId="65">
-      <IdentCon UId="39" />
-      <NameCon UId="44" Name="MPP_BUTTON_HOME_POS" />
+      <IdentCon UId="36" />
+      <NameCon UId="47" Name="NC_START_DUMMY_FOR_OPT" />
     </Wire>
     <Wire UId="66">
-      <IdentCon UId="40" />
-      <NameCon UId="44" Name="UNIT_HOME_STEP_3" />
+      <IdentCon UId="37" />
+      <NameCon UId="47" Name="MPP_PUSH_BUTTON_START" />
     </Wire>
     <Wire UId="67">
-      <IdentCon UId="41" />
-      <NameCon UId="44" Name="UNIT_CYCLE_STEP_3" />
+      <IdentCon UId="38" />
+      <NameCon UId="47" Name="MPP_PUSH_BUTTON_NC_START" />
     </Wire>
     <Wire UId="68">
-      <IdentCon UId="42" />
-      <NameCon UId="44" Name="ChannelDB" />
+      <IdentCon UId="39" />
+      <NameCon UId="47" Name="MPP_BUTTON_HOME_POS" />
     </Wire>
     <Wire UId="69">
-      <NameCon UId="44" Name="CH_NOT_IN SOFT_MODE_ALARM" />
+      <IdentCon UId="40" />
+      <NameCon UId="47" Name="UNIT_HOME_STP_3" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="41" />
+      <NameCon UId="47" Name="UNIT_CYCLE_STP_3" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="42" />
+      <NameCon UId="47" Name="ADDITIONAL_MG_STP_BY_STP_SLCTD" />
+    </Wire>
+    <Wire UId="72">
       <IdentCon UId="43" />
+      <NameCon UId="47" Name="ADDITIONAL_MG_MDA" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="44" />
+      <NameCon UId="47" Name="ADDITIONAL_MG_GENERAL_DB" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="45" />
+      <NameCon UId="47" Name="ChannelDB" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="47" Name="CH_NOT_IN SOFT_MODE_ALARM" />
+      <IdentCon UId="46" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1897,28 +1943,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB1302_UNIT_03_STATION_CYCLE" />
+        <Component Name="DB1302_UNIT_3_STATION_CYCLE" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_1_SELECT_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB1312_HOME_UNIT_03_STATION" />
+        <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_1_SELECT_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB1313_UNIT_03_CALIBRATION" />
+        <Component Name="DB1313_UNIT_3_MEAS_CALIBRATION" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_1_SELECT_PROGRAM" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB1314_UNIT_03_MASTER_MEASUREMENT" />
+        <Component Name="DB1314_UNIT_3_MASTER_MEASUREMENT" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_1_SELECT_PROGRAM" />
       </Symbol>

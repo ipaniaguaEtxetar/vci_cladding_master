@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-13T10:29:33.5725406Z</Created>
+    <Created>2025-04-09T08:02:48.1816965Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -1848,71 +1852,95 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB1018_SAFETY_TAGS" />
-        <Component Name="MACHINE_E_STOP_OK" />
+        <Component Name="SAFE_INPUT_UNIT_01_STATION_02_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB1018_SAFETY_TAGS" />
-        <Component Name="SAFE_DOORS_U01_CLOSED_AND_LOCKED" />
+        <Component Name="SAFE_INPUT_UNIT_01_MAIN_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB1018_SAFETY_TAGS" />
-        <Component Name="SAFE_DOORS_U02_CLOSED_AND_LOCKED" />
+        <Component Name="SAFE_INPUT_UNIT_01_STATION_04_CLOSED" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="24">
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SAFE_INPUT_UNIT_02_STATION_02_CLOSED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SAFE_INPUT_UNIT_02_MAIN_CLOSED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SAFE_INPUT_UNIT_02_STATION_04_CLOSED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB1018_SAFETY_TAGS" />
+        <Component Name="MACHINE_E_STOP_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="28">
       <Constant>
         <ConstantType>Int</ConstantType>
         <ConstantValue>4</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="TypedConstant" UId="25">
+    <Access Scope="TypedConstant" UId="29">
       <Constant>
         <ConstantValue>T#500MS</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="GlobalConstant" UId="26">
+    <Access Scope="GlobalConstant" UId="30">
       <Constant Name="kfa1300_profinet_interface_1~01_F-CD_CLADDING_TO_CELL" />
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB1023_ETXETAR_CELL_DATA_SAFE" />
         <Component Name="SEND_ERROR" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB1023_ETXETAR_CELL_DATA_SAFE" />
         <Component Name="SEND_SUBS_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB1090_IDEVICE_COM" />
         <Component Name="SENDDP_2" />
         <Component Name="RET_DPRD" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB1090_IDEVICE_COM" />
         <Component Name="SENDDP_2" />
         <Component Name="RET_DPWR" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB1090_IDEVICE_COM" />
         <Component Name="SENDDP_2" />
         <Component Name="DIAG" />
       </Symbol>
     </Access>
-    <Part Name="SENDDP" Version="3.0" UId="32">
-      <Instance Scope="GlobalVariable" UId="33">
+    <Part Name="Contact" UId="36" />
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41" />
+    <Part Name="SENDDP" Version="3.0" UId="42">
+      <Instance Scope="GlobalVariable" UId="43">
         <Component Name="SENDDP_DB_2" />
       </Instance>
       <TemplateValue Name="dint_card" Type="Cardinality">1</TemplateValue>
@@ -1920,121 +1948,163 @@
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="51">
-      <Powerrail />
-      <NameCon UId="32" Name="en" />
-    </Wire>
-    <Wire UId="52">
-      <IdentCon UId="21" />
-      <NameCon UId="32" Name="SD_BO_00" />
-    </Wire>
-    <Wire UId="53">
-      <IdentCon UId="22" />
-      <NameCon UId="32" Name="SD_BO_01" />
-    </Wire>
-    <Wire UId="54">
-      <IdentCon UId="23" />
-      <NameCon UId="32" Name="SD_BO_02" />
-    </Wire>
-    <Wire UId="55">
-      <OpenCon UId="34" />
-      <NameCon UId="32" Name="SD_BO_03" />
-    </Wire>
-    <Wire UId="56">
-      <OpenCon UId="35" />
-      <NameCon UId="32" Name="SD_BO_04" />
-    </Wire>
-    <Wire UId="57">
-      <OpenCon UId="36" />
-      <NameCon UId="32" Name="SD_BO_05" />
-    </Wire>
-    <Wire UId="58">
-      <OpenCon UId="37" />
-      <NameCon UId="32" Name="SD_BO_06" />
-    </Wire>
-    <Wire UId="59">
-      <OpenCon UId="38" />
-      <NameCon UId="32" Name="SD_BO_07" />
-    </Wire>
-    <Wire UId="60">
-      <OpenCon UId="39" />
-      <NameCon UId="32" Name="SD_BO_08" />
-    </Wire>
     <Wire UId="61">
-      <OpenCon UId="40" />
-      <NameCon UId="32" Name="SD_BO_09" />
+      <Powerrail />
+      <NameCon UId="42" Name="en" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="39" Name="in" />
     </Wire>
     <Wire UId="62">
-      <OpenCon UId="41" />
-      <NameCon UId="32" Name="SD_BO_10" />
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="63">
-      <OpenCon UId="42" />
-      <NameCon UId="32" Name="SD_BO_11" />
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="64">
-      <OpenCon UId="43" />
-      <NameCon UId="32" Name="SD_BO_12" />
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="operand" />
     </Wire>
     <Wire UId="65">
-      <OpenCon UId="44" />
-      <NameCon UId="32" Name="SD_BO_13" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
     </Wire>
     <Wire UId="66">
-      <OpenCon UId="45" />
-      <NameCon UId="32" Name="SD_BO_14" />
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="operand" />
     </Wire>
     <Wire UId="67">
-      <OpenCon UId="46" />
-      <NameCon UId="32" Name="SD_BO_15" />
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="42" Name="SD_BO_01" />
     </Wire>
     <Wire UId="68">
-      <OpenCon UId="47" />
-      <NameCon UId="32" Name="SD_I_00" />
+      <IdentCon UId="24" />
+      <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="69">
-      <OpenCon UId="48" />
-      <NameCon UId="32" Name="SD_I_01" />
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="70">
-      <OpenCon UId="49" />
-      <NameCon UId="32" Name="SD_DI_00" />
+      <IdentCon UId="25" />
+      <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="71">
-      <OpenCon UId="50" />
-      <NameCon UId="32" Name="DINTMODE" />
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="72">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="DP_DP_ID" />
+      <IdentCon UId="26" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
     <Wire UId="73">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="TIMEOUT" />
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="SD_BO_02" />
     </Wire>
     <Wire UId="74">
-      <IdentCon UId="26" />
-      <NameCon UId="32" Name="LADDR" />
+      <IdentCon UId="27" />
+      <NameCon UId="42" Name="SD_BO_00" />
     </Wire>
     <Wire UId="75">
-      <NameCon UId="32" Name="ERROR" />
-      <IdentCon UId="27" />
+      <OpenCon UId="44" />
+      <NameCon UId="42" Name="SD_BO_03" />
     </Wire>
     <Wire UId="76">
-      <NameCon UId="32" Name="SUBS_ON" />
-      <IdentCon UId="28" />
+      <OpenCon UId="45" />
+      <NameCon UId="42" Name="SD_BO_04" />
     </Wire>
     <Wire UId="77">
-      <NameCon UId="32" Name="RET_DPRD" />
-      <IdentCon UId="29" />
+      <OpenCon UId="46" />
+      <NameCon UId="42" Name="SD_BO_05" />
     </Wire>
     <Wire UId="78">
-      <NameCon UId="32" Name="RET_DPWR" />
-      <IdentCon UId="30" />
+      <OpenCon UId="47" />
+      <NameCon UId="42" Name="SD_BO_06" />
     </Wire>
     <Wire UId="79">
-      <NameCon UId="32" Name="DIAG" />
+      <OpenCon UId="48" />
+      <NameCon UId="42" Name="SD_BO_07" />
+    </Wire>
+    <Wire UId="80">
+      <OpenCon UId="49" />
+      <NameCon UId="42" Name="SD_BO_08" />
+    </Wire>
+    <Wire UId="81">
+      <OpenCon UId="50" />
+      <NameCon UId="42" Name="SD_BO_09" />
+    </Wire>
+    <Wire UId="82">
+      <OpenCon UId="51" />
+      <NameCon UId="42" Name="SD_BO_10" />
+    </Wire>
+    <Wire UId="83">
+      <OpenCon UId="52" />
+      <NameCon UId="42" Name="SD_BO_11" />
+    </Wire>
+    <Wire UId="84">
+      <OpenCon UId="53" />
+      <NameCon UId="42" Name="SD_BO_12" />
+    </Wire>
+    <Wire UId="85">
+      <OpenCon UId="54" />
+      <NameCon UId="42" Name="SD_BO_13" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="55" />
+      <NameCon UId="42" Name="SD_BO_14" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="56" />
+      <NameCon UId="42" Name="SD_BO_15" />
+    </Wire>
+    <Wire UId="88">
+      <OpenCon UId="57" />
+      <NameCon UId="42" Name="SD_I_00" />
+    </Wire>
+    <Wire UId="89">
+      <OpenCon UId="58" />
+      <NameCon UId="42" Name="SD_I_01" />
+    </Wire>
+    <Wire UId="90">
+      <OpenCon UId="59" />
+      <NameCon UId="42" Name="SD_DI_00" />
+    </Wire>
+    <Wire UId="91">
+      <OpenCon UId="60" />
+      <NameCon UId="42" Name="DINTMODE" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="28" />
+      <NameCon UId="42" Name="DP_DP_ID" />
+    </Wire>
+    <Wire UId="93">
+      <IdentCon UId="29" />
+      <NameCon UId="42" Name="TIMEOUT" />
+    </Wire>
+    <Wire UId="94">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="LADDR" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="42" Name="ERROR" />
       <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="42" Name="SUBS_ON" />
+      <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="42" Name="RET_DPRD" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="98">
+      <NameCon UId="42" Name="RET_DPWR" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="42" Name="DIAG" />
+      <IdentCon UId="35" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

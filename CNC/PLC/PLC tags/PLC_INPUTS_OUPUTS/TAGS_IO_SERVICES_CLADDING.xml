@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-10T13:11:51.6978679Z</Created>
+    <Created>2025-04-09T08:04:30.0943488Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -2182,8 +2186,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I45.1</LogicalAddress>
-          <Name>MIST_EXTRACTION_FAULT</Name>
+          <LogicalAddress>%Q41.0</LogicalAddress>
+          <Name>MIST_EXTRACTION_SWITCH_ON</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="140" CompositionName="Comment">
@@ -2191,7 +2195,7 @@
               <MultilingualTextItem ID="141" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>MIST EXTRACTION FAULT</Text>
+                  <Text>MIST EXTRACTION SWITCH ON</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="142" CompositionName="Items">
@@ -2222,8 +2226,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%M8312.3</LogicalAddress>
-          <Name>MIST_EXTRACTION_REQ_FILTER_CLEAN</Name>
+          <LogicalAddress>%Q41.1</LogicalAddress>
+          <Name>MIST_EXTRACTION_MACHINE_OK</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="146" CompositionName="Comment">
@@ -2231,7 +2235,7 @@
               <MultilingualTextItem ID="147" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>MIST EXTRACTION REQUIRE FILTER CLEANING</Text>
+                  <Text>MIST EXTRACTION MACHINE OK</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="148" CompositionName="Items">
@@ -2262,8 +2266,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q41.0</LogicalAddress>
-          <Name>MIST_EXTRACTION_SWITCH_ON</Name>
+          <LogicalAddress>%M8350.0</LogicalAddress>
+          <Name>/////_PROTECTION_GAS_/////</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="14C" CompositionName="Comment">
@@ -2271,7 +2275,7 @@
               <MultilingualTextItem ID="14D" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>MIST EXTRACTION SWITCH ON</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="14E" CompositionName="Items">
@@ -2298,12 +2302,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="151" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>Real</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q41.1</LogicalAddress>
-          <Name>MIST_EXTRACTION_MACHINE_OK</Name>
+          <LogicalAddress>%ID672</LogicalAddress>
+          <Name>U01_GAS_FLOW_VALUE</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="152" CompositionName="Comment">
@@ -2311,7 +2315,7 @@
               <MultilingualTextItem ID="153" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>MIST EXTRACTION MACHINE OK</Text>
+                  <Text>UNIT 01 GAS FLOW VALUE</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="154" CompositionName="Items">
@@ -2338,12 +2342,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="157" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>Real</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%M8312.6</LogicalAddress>
-          <Name>MIST_EXTRACTION_ALLOW_CLEANING</Name>
+          <LogicalAddress>%QD670</LogicalAddress>
+          <Name>U01_GAS_FLOW_SET_POINT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="158" CompositionName="Comment">
@@ -2351,7 +2355,7 @@
               <MultilingualTextItem ID="159" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>MIST EXTRACTION ALLOW CLEANING</Text>
+                  <Text>UNIT 01 GAS FLOW SET POINT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="15A" CompositionName="Items">
@@ -2378,12 +2382,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="15D" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>UInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%M8350.0</LogicalAddress>
-          <Name>/////_PROTECTION_GAS_/////</Name>
+          <LogicalAddress>%IW676</LogicalAddress>
+          <Name>U01_GAS_TEMPERATURE_VALUE</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="15E" CompositionName="Comment">
@@ -2391,7 +2395,7 @@
               <MultilingualTextItem ID="15F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>UNIT 01 GAS TEMPERATURE VALUE</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="160" CompositionName="Items">
@@ -2422,8 +2426,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID672</LogicalAddress>
-          <Name>U01_GAS_FLOW_VALUE</Name>
+          <LogicalAddress>%ID1672</LogicalAddress>
+          <Name>U02_GAS_FLOW_VALUE</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="164" CompositionName="Comment">
@@ -2431,7 +2435,7 @@
               <MultilingualTextItem ID="165" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 GAS FLOW VALUE</Text>
+                  <Text>UNIT 02 GAS FLOW VALUE</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="166" CompositionName="Items">
@@ -2462,8 +2466,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%QD670</LogicalAddress>
-          <Name>U01_GAS_FLOW_SET_POINT</Name>
+          <LogicalAddress>%QD1670</LogicalAddress>
+          <Name>U02_GAS_FLOW_SET_POINT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="16A" CompositionName="Comment">
@@ -2471,7 +2475,7 @@
               <MultilingualTextItem ID="16B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 GAS FLOW SET POINT</Text>
+                  <Text>UNIT 02 GAS FLOW SET POINT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="16C" CompositionName="Items">
@@ -2502,8 +2506,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%IW676</LogicalAddress>
-          <Name>U01_GAS_TEMPERATURE_VALUE</Name>
+          <LogicalAddress>%IW1676</LogicalAddress>
+          <Name>U02_GAS_TEMPERATURE_VALUE</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="170" CompositionName="Comment">
@@ -2511,7 +2515,7 @@
               <MultilingualTextItem ID="171" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 GAS TEMPERATURE VALUE</Text>
+                  <Text>UNIT 02 GAS TEMPERATURE VALUE</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="172" CompositionName="Items">
@@ -2538,12 +2542,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="175" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Real</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID1672</LogicalAddress>
-          <Name>U02_GAS_FLOW_VALUE</Name>
+          <LogicalAddress>%I1500.4</LogicalAddress>
+          <Name>U02_TURN_CONTROL_1</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="176" CompositionName="Comment">
@@ -2551,7 +2555,7 @@
               <MultilingualTextItem ID="177" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 GAS FLOW VALUE</Text>
+                  <Text>UNIT 02 TURN CONTROL 1</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="178" CompositionName="Items">
@@ -2578,12 +2582,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="17B" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Real</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%QD1670</LogicalAddress>
-          <Name>U02_GAS_FLOW_SET_POINT</Name>
+          <LogicalAddress>%I1500.5</LogicalAddress>
+          <Name>U02_TURN_CONTROL_2</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="17C" CompositionName="Comment">
@@ -2591,7 +2595,7 @@
               <MultilingualTextItem ID="17D" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 GAS FLOW SET POINT</Text>
+                  <Text>UNIT 02 TURN CONTROL 2</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="17E" CompositionName="Items">
@@ -2618,12 +2622,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="181" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>UInt</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%IW1676</LogicalAddress>
-          <Name>U02_GAS_TEMPERATURE_VALUE</Name>
+          <LogicalAddress>%Q1072.0</LogicalAddress>
+          <Name>U02_KF1076_SAFE_VALVE_Q</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="182" CompositionName="Comment">
@@ -2631,7 +2635,7 @@
               <MultilingualTextItem ID="183" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 GAS TEMPERATURE VALUE</Text>
+                  <Text>UNIT 02 KF1076 SAFETY VALVE OUTPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="184" CompositionName="Items">
@@ -2662,8 +2666,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I1500.4</LogicalAddress>
-          <Name>U02_TURN_CONTROL_1</Name>
+          <LogicalAddress>%Q70.4</LogicalAddress>
+          <Name>UNIT_01_PROTEC_GAS_SW_ON_Q</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="188" CompositionName="Comment">
@@ -2671,7 +2675,7 @@
               <MultilingualTextItem ID="189" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 TURN CONTROL 1</Text>
+                  <Text>UNIT 01 PROTECTION GAS 1 SWITCH ON OUTPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="18A" CompositionName="Items">
@@ -2702,8 +2706,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I1500.5</LogicalAddress>
-          <Name>U02_TURN_CONTROL_2</Name>
+          <LogicalAddress>%I56.0</LogicalAddress>
+          <Name>AUXILIARY_COOLING_TEMP_ALARM</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="18E" CompositionName="Comment">
@@ -2711,7 +2715,7 @@
               <MultilingualTextItem ID="18F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 TURN CONTROL 2</Text>
+                  <Text>AUXILIARY COOLING TEMPERATURE ALARM</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="190" CompositionName="Items">
@@ -2742,8 +2746,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q1072.0</LogicalAddress>
-          <Name>U02_KF1076_SAFE_VALVE_Q</Name>
+          <LogicalAddress>%I51.3</LogicalAddress>
+          <Name>GENERAL_GAS_PRESS_PRSNT_I</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="194" CompositionName="Comment">
@@ -2751,7 +2755,7 @@
               <MultilingualTextItem ID="195" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 KF1076 SAFETY VALVE OUTPUT</Text>
+                  <Text>GENERAL GAS SYSTEM PRESSURE PRESENT INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="196" CompositionName="Items">
@@ -2782,8 +2786,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q70.4</LogicalAddress>
-          <Name>UNIT_01_PROTEC_GAS_SW_ON_Q</Name>
+          <LogicalAddress>%Q1070.4</LogicalAddress>
+          <Name>UNIT_02_PROTEC_GAS_SW_ON_Q</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="19A" CompositionName="Comment">
@@ -2791,7 +2795,7 @@
               <MultilingualTextItem ID="19B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 PROTECTION GAS 1 SWITCH ON OUTPUT</Text>
+                  <Text>UNIT 02 PROTECTION GAS 1 SWITCH ON OUTPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="19C" CompositionName="Items">
@@ -2822,8 +2826,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I56.0</LogicalAddress>
-          <Name>AUXILIARY_COOLING_TEMP_ALARM</Name>
+          <LogicalAddress>%Q1071.4</LogicalAddress>
+          <Name>UNIT_02_PROTEC_GAS_SW_OFF_Q</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1A0" CompositionName="Comment">
@@ -2831,7 +2835,7 @@
               <MultilingualTextItem ID="1A1" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>AUXILIARY COOLING TEMPERATURE ALARM</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1A2" CompositionName="Items">
@@ -2862,8 +2866,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I51.3</LogicalAddress>
-          <Name>GENERAL_GAS_PRESS_PRSNT_I</Name>
+          <LogicalAddress>%M8020.7</LogicalAddress>
+          <Name>PNM_S_PR_U01_ST3_MEAS</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1A6" CompositionName="Comment">
@@ -2871,7 +2875,7 @@
               <MultilingualTextItem ID="1A7" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>GENERAL GAS SYSTEM PRESSURE PRESENT INPUT</Text>
+                  <Text>PNEUMATIC SYSTEM UNIT 01 STATION 3 MEASUREMENT PRESSURIZED INPUT NO</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1A8" CompositionName="Items">
@@ -2898,12 +2902,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1AB" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>DInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q1070.4</LogicalAddress>
-          <Name>UNIT_02_PROTEC_GAS_SW_ON_Q</Name>
+          <LogicalAddress>%MD8412</LogicalAddress>
+          <Name>COOLING_U02_LASER_INPUT_FLOW_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1AC" CompositionName="Comment">
@@ -2911,7 +2915,7 @@
               <MultilingualTextItem ID="1AD" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 02 PROTECTION GAS 1 SWITCH ON OUTPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER INPUT FLOW VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1AE" CompositionName="Items">
@@ -2938,12 +2942,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1B1" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>DInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q1071.4</LogicalAddress>
-          <Name>UNIT_02_PROTEC_GAS_SW_OFF_Q</Name>
+          <LogicalAddress>%MD8416</LogicalAddress>
+          <Name>COOLING_U01_LASER_INPUT_TEMP_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1B2" CompositionName="Comment">
@@ -2951,7 +2955,7 @@
               <MultilingualTextItem ID="1B3" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>COOLING SYSTEM UNIT 01 LASER INPUT TEMP VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1B4" CompositionName="Items">
@@ -2978,12 +2982,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1B7" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>DInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%M8020.7</LogicalAddress>
-          <Name>PNM_S_PR_U01_ST3_MEAS</Name>
+          <LogicalAddress>%MD8420</LogicalAddress>
+          <Name>COOLING_U02_LASER_INPUT_TEMP_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1B8" CompositionName="Comment">
@@ -2991,7 +2995,7 @@
               <MultilingualTextItem ID="1B9" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>PNEUMATIC SYSTEM UNIT 01 STATION 3 MEASUREMENT PRESSURIZED INPUT NO</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER INPUT TEMPVALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1BA" CompositionName="Items">
@@ -3018,12 +3022,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1BD" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>DInt</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%MD8412</LogicalAddress>
-          <Name>COOLING_U02_LASER_INPUT_FLOW_VALUE_INPUT</Name>
+          <LogicalAddress>%I55.1</LogicalAddress>
+          <Name>COOLING_U01_LASER_INPUT_FLOW_CONTROL_ALM_I</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1BE" CompositionName="Comment">
@@ -3031,7 +3035,7 @@
               <MultilingualTextItem ID="1BF" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER INPUT FLOW VALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 01 LASER INPUT FLOW CONTROL ALARM INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1C0" CompositionName="Items">
@@ -3058,12 +3062,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1C3" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>DInt</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%MD8416</LogicalAddress>
-          <Name>COOLING_U01_LASER_INPUT_TEMP_VALUE_INPUT</Name>
+          <LogicalAddress>%I55.7</LogicalAddress>
+          <Name>COOLING_U02_LASER_INPUT_TEMP_CONTROL_ALM_I</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1C4" CompositionName="Comment">
@@ -3071,7 +3075,7 @@
               <MultilingualTextItem ID="1C5" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER INPUT TEMP VALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER TEMPERATURE CONTROL ALARM INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1C6" CompositionName="Items">
@@ -3098,12 +3102,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1C9" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>DInt</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%MD8420</LogicalAddress>
-          <Name>COOLING_U02_LASER_INPUT_TEMP_VALUE_INPUT</Name>
+          <LogicalAddress>%I55.5</LogicalAddress>
+          <Name>COOLING_U01_LASER_INPUT_TEMP_CONTROL_ALM_I</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1CA" CompositionName="Comment">
@@ -3111,7 +3115,7 @@
               <MultilingualTextItem ID="1CB" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER INPUT TEMPVALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 01 LASER TEMPERATURE CONTROL ALARM INPUT </Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1CC" CompositionName="Items">
@@ -3142,8 +3146,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I55.1</LogicalAddress>
-          <Name>COOLING_U01_LASER_INPUT_FLOW_CONTROL_ALM_I</Name>
+          <LogicalAddress>%I55.3</LogicalAddress>
+          <Name>COOLING_U02_LASER_INPUT_FLOW_CONTROL_ALM_I</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1D0" CompositionName="Comment">
@@ -3151,7 +3155,7 @@
               <MultilingualTextItem ID="1D1" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER INPUT FLOW CONTROL ALARM INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER INPUT FLOW CONTROL ALARM INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1D2" CompositionName="Items">
@@ -3178,12 +3182,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1D5" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>Real</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I55.7</LogicalAddress>
-          <Name>COOLING_U02_LASER_INPUT_TEMP_CONTROL_ALM_I</Name>
+          <LogicalAddress>%ID832</LogicalAddress>
+          <Name>COOLING_U01_LASER_TOT_OUTPUT_FLOW_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1D6" CompositionName="Comment">
@@ -3191,7 +3195,7 @@
               <MultilingualTextItem ID="1D7" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER TEMPERATURE CONTROL ALARM INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 01 LASER TOTAL OUTPUT FLOW VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1D8" CompositionName="Items">
@@ -3218,12 +3222,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1DB" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>DInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I55.5</LogicalAddress>
-          <Name>COOLING_U01_LASER_INPUT_TEMP_CONTROL_ALM_I</Name>
+          <LogicalAddress>%MD818</LogicalAddress>
+          <Name>COOLING_U01_LASER_INPUT_FLOW_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1DC" CompositionName="Comment">
@@ -3231,7 +3235,7 @@
               <MultilingualTextItem ID="1DD" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER TEMPERATURE CONTROL ALARM INPUT </Text>
+                  <Text>COOLING SYSTEM UNIT 01 LASER INPUT FLOW VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1DE" CompositionName="Items">
@@ -3258,12 +3262,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1E1" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>DInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I55.3</LogicalAddress>
-          <Name>COOLING_U02_LASER_INPUT_FLOW_CONTROL_ALM_I</Name>
+          <LogicalAddress>%ID836</LogicalAddress>
+          <Name>COOLING_U01_LASER_OUTPUT_FLOW_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1E2" CompositionName="Comment">
@@ -3271,7 +3275,7 @@
               <MultilingualTextItem ID="1E3" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER INPUT FLOW CONTROL ALARM INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 01 LASER OUTPUT FLOW VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1E4" CompositionName="Items">
@@ -3298,12 +3302,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1E7" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Real</DataTypeName>
+          <DataTypeName>DInt</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID832</LogicalAddress>
-          <Name>COOLING_U01_LASER_TOT_OUTPUT_FLOW_VALUE_INPUT</Name>
+          <LogicalAddress>%ID842</LogicalAddress>
+          <Name>COOLING_U01_LASER_OUTPUT_TEMP_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1E8" CompositionName="Comment">
@@ -3311,7 +3315,7 @@
               <MultilingualTextItem ID="1E9" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER TOTAL OUTPUT FLOW VALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 01 LASER OUTPUT TEMP VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1EA" CompositionName="Items">
@@ -3338,12 +3342,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1ED" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>DInt</DataTypeName>
+          <DataTypeName>Real</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%MD818</LogicalAddress>
-          <Name>COOLING_U01_LASER_INPUT_FLOW_VALUE_INPUT</Name>
+          <LogicalAddress>%ID848</LogicalAddress>
+          <Name>COOLING_U02_LASER_TOT_OUTPUT_FLOW_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1EE" CompositionName="Comment">
@@ -3351,7 +3355,7 @@
               <MultilingualTextItem ID="1EF" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER INPUT FLOW VALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER TOTAL OUTPUT FLOW VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1F0" CompositionName="Items">
@@ -3382,8 +3386,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID836</LogicalAddress>
-          <Name>COOLING_U01_LASER_OUTPUT_FLOW_VALUE_INPUT</Name>
+          <LogicalAddress>%ID852</LogicalAddress>
+          <Name>COOLING_U02_LASER_OUTPUT_FLOW_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1F4" CompositionName="Comment">
@@ -3391,7 +3395,7 @@
               <MultilingualTextItem ID="1F5" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER OUTPUT FLOW VALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER OUTPUT FLOW VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1F6" CompositionName="Items">
@@ -3422,8 +3426,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID842</LogicalAddress>
-          <Name>COOLING_U01_LASER_OUTPUT_TEMP_VALUE_INPUT</Name>
+          <LogicalAddress>%ID858</LogicalAddress>
+          <Name>COOLING_U02_LASER_OUTPUT_TEMP_VALUE_INPUT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="1FA" CompositionName="Comment">
@@ -3431,7 +3435,7 @@
               <MultilingualTextItem ID="1FB" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 01 LASER OUTPUT TEMP VALUE INPUT</Text>
+                  <Text>COOLING SYSTEM UNIT 02 LASER OUTPUT TEMP VALUE INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="1FC" CompositionName="Items">
@@ -3458,12 +3462,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="1FF" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Real</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID848</LogicalAddress>
-          <Name>COOLING_U02_LASER_TOT_OUTPUT_FLOW_VALUE_INPUT</Name>
+          <LogicalAddress>%I56.4</LogicalAddress>
+          <Name>AUXILIARY_COOLING_LOW_LVL_ALARM</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="200" CompositionName="Comment">
@@ -3471,7 +3475,7 @@
               <MultilingualTextItem ID="201" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER TOTAL OUTPUT FLOW VALUE INPUT</Text>
+                  <Text>AUXILIARY COOLING LOW LEVEL ALARM</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="202" CompositionName="Items">
@@ -3498,12 +3502,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="205" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>DInt</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID852</LogicalAddress>
-          <Name>COOLING_U02_LASER_OUTPUT_FLOW_VALUE_INPUT</Name>
+          <LogicalAddress>%Q42.1</LogicalAddress>
+          <Name>COOLING_SECONDARY_SHIELD_SWITCH_ON</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="206" CompositionName="Comment">
@@ -3511,7 +3515,7 @@
               <MultilingualTextItem ID="207" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER OUTPUT FLOW VALUE INPUT</Text>
+                  <Text>UNIT 01 COOLING UNIT SWITCH ON</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="208" CompositionName="Items">
@@ -3538,12 +3542,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="20B" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>DInt</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%ID858</LogicalAddress>
-          <Name>COOLING_U02_LASER_OUTPUT_TEMP_VALUE_INPUT</Name>
+          <LogicalAddress>%Q42.2</LogicalAddress>
+          <Name>COOLING_SECONDARY_BUFFER_SWITCH_ON</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="20C" CompositionName="Comment">
@@ -3551,7 +3555,7 @@
               <MultilingualTextItem ID="20D" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM UNIT 02 LASER OUTPUT TEMP VALUE INPUT</Text>
+                  <Text>COOLING UNIT 02 SWITCH ON</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="20E" CompositionName="Items">
@@ -3582,8 +3586,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I56.4</LogicalAddress>
-          <Name>AUXILIARY_COOLING_LOW_LVL_ALARM</Name>
+          <LogicalAddress>%I56.5</LogicalAddress>
+          <Name>SECUNDARY_COOLING_BUFFER_LOW_LVL_ALARM</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="212" CompositionName="Comment">
@@ -3591,7 +3595,7 @@
               <MultilingualTextItem ID="213" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>AUXILIARY COOLING LOW LEVEL ALARM</Text>
+                  <Text>SECUNDARY COOLING LOW LEVEL ALARM</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="214" CompositionName="Items">
@@ -3622,8 +3626,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q42.1</LogicalAddress>
-          <Name>COOLING_SECONDARY_SHIELD_SWITCH_ON</Name>
+          <LogicalAddress>%I56.1</LogicalAddress>
+          <Name>SECUNDARY_COOLING_BUFFER_TEMP_ALARM</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="218" CompositionName="Comment">
@@ -3631,7 +3635,7 @@
               <MultilingualTextItem ID="219" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 COOLING UNIT SWITCH ON</Text>
+                  <Text>SECUNDARY COOLING TEMPERATURE ALARM</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="21A" CompositionName="Items">
@@ -3662,8 +3666,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%Q42.2</LogicalAddress>
-          <Name>COOLING_SECONDARY_BUFFER_SWITCH_ON</Name>
+          <LogicalAddress>%I38.7</LogicalAddress>
+          <Name>COOLING_BUFFER_FEEDBACK_ON</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="21E" CompositionName="Comment">
@@ -3671,7 +3675,7 @@
               <MultilingualTextItem ID="21F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING UNIT 02 SWITCH ON</Text>
+                  <Text>COOLING UNIT 02 FEEDBACK ON</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="220" CompositionName="Items">
@@ -3702,8 +3706,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I56.5</LogicalAddress>
-          <Name>SECUNDARY_COOLING_BUFFER_LOW_LVL_ALARM</Name>
+          <LogicalAddress>%I38.6</LogicalAddress>
+          <Name>COOLING_UNIT_01_02_FEEDBACK_ON</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="224" CompositionName="Comment">
@@ -3711,7 +3715,7 @@
               <MultilingualTextItem ID="225" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SECUNDARY COOLING LOW LEVEL ALARM</Text>
+                  <Text>COOLING UNIT 01 FEEDBACK ON</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="226" CompositionName="Items">
@@ -3738,12 +3742,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="229" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>Int</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I56.1</LogicalAddress>
-          <Name>SECUNDARY_COOLING_BUFFER_TEMP_ALARM</Name>
+          <LogicalAddress>%IW802</LogicalAddress>
+          <Name>MAIN_COOLING_TEMP_CONTROL_INPUTS</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="22A" CompositionName="Comment">
@@ -3751,7 +3755,7 @@
               <MultilingualTextItem ID="22B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SECUNDARY COOLING TEMPERATURE ALARM</Text>
+                  <Text>COOLING SYSTEM MAIN TEMPERATURE CONTROL INPUTS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="22C" CompositionName="Items">
@@ -3778,12 +3782,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="22F" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>Int</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I38.7</LogicalAddress>
-          <Name>COOLING_BUFFER_FEEDBACK_ON</Name>
+          <LogicalAddress>%IW800</LogicalAddress>
+          <Name>MAIN_COOLING_FLOW_CONTROL_INPUTS</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="230" CompositionName="Comment">
@@ -3791,7 +3795,7 @@
               <MultilingualTextItem ID="231" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING UNIT 02 FEEDBACK ON</Text>
+                  <Text>COOLING SYSTEM MAIN FLOW CONTROL INPUTS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="232" CompositionName="Items">
@@ -3818,12 +3822,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="235" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
+          <DataTypeName>Int</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I38.6</LogicalAddress>
-          <Name>COOLING_UNIT_01_02_FEEDBACK_ON</Name>
+          <LogicalAddress>%IW810</LogicalAddress>
+          <Name>MAIN_COOLING_TEMP_CONTROL_OUTPUTS</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="236" CompositionName="Comment">
@@ -3831,7 +3835,7 @@
               <MultilingualTextItem ID="237" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING UNIT 01 FEEDBACK ON</Text>
+                  <Text>COOLING SYSTEM MAIN TEMPERATURECONTROL OUTPUTS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="238" CompositionName="Items">
@@ -3862,8 +3866,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%IW802</LogicalAddress>
-          <Name>MAIN_COOLING_TEMP_CONTROL_INPUTS</Name>
+          <LogicalAddress>%IW808</LogicalAddress>
+          <Name>MAIN_COOLING_FLOW_CONTROL_OUTPUTS</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="23C" CompositionName="Comment">
@@ -3871,7 +3875,7 @@
               <MultilingualTextItem ID="23D" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN TEMPERATURE CONTROL INPUTS</Text>
+                  <Text>COOLING SYSTEM MAIN FLOW CONTROL OUTPUTS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="23E" CompositionName="Items">
@@ -3898,12 +3902,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="241" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Int</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%IW800</LogicalAddress>
-          <Name>MAIN_COOLING_FLOW_CONTROL_INPUTS</Name>
+          <LogicalAddress>%I811.0</LogicalAddress>
+          <Name>MAIN_COOLING_OUTPUT_FLOW_SP</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="242" CompositionName="Comment">
@@ -3911,7 +3915,7 @@
               <MultilingualTextItem ID="243" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN FLOW CONTROL INPUTS</Text>
+                  <Text>COOLING SYSTEM MAIN OUTPUT FLOW SETPOINT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="244" CompositionName="Items">
@@ -3938,12 +3942,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="247" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Int</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%IW810</LogicalAddress>
-          <Name>MAIN_COOLING_TEMP_CONTROL_OUTPUTS</Name>
+          <LogicalAddress>%I803.1</LogicalAddress>
+          <Name>MAIN_COOLING_INPUT_TEMP_SP</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="248" CompositionName="Comment">
@@ -3951,7 +3955,7 @@
               <MultilingualTextItem ID="249" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN TEMPERATURECONTROL OUTPUTS</Text>
+                  <Text>COOLING SYSTEM MAIN INPUT TEMP SETPOINT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="24A" CompositionName="Items">
@@ -3978,12 +3982,12 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="24D" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Int</DataTypeName>
+          <DataTypeName>Bool</DataTypeName>
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%IW808</LogicalAddress>
-          <Name>MAIN_COOLING_FLOW_CONTROL_OUTPUTS</Name>
+          <LogicalAddress>%I803.0</LogicalAddress>
+          <Name>MAIN_COOLING_INPUT_FLOW_SP</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="24E" CompositionName="Comment">
@@ -3991,7 +3995,7 @@
               <MultilingualTextItem ID="24F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN FLOW CONTROL OUTPUTS</Text>
+                  <Text>COOLING SYSTEM MAIN INPUT FLOW SETPOINT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="250" CompositionName="Items">
@@ -4022,8 +4026,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I811.0</LogicalAddress>
-          <Name>MAIN_COOLING_OUTPUT_FLOW_SP</Name>
+          <LogicalAddress>%I811.1</LogicalAddress>
+          <Name>MAIN_COOLING_OUTPUT_TEMP_SP</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="254" CompositionName="Comment">
@@ -4031,7 +4035,7 @@
               <MultilingualTextItem ID="255" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN OUTPUT FLOW SETPOINT</Text>
+                  <Text>COOLING SYSTEM MAIN OUTPUT TEMP SETPOINT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="256" CompositionName="Items">
@@ -4062,8 +4066,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I803.1</LogicalAddress>
-          <Name>MAIN_COOLING_INPUT_TEMP_SP</Name>
+          <LogicalAddress>%Q41.2</LogicalAddress>
+          <Name>MIST_EXTRACTION_ALLOW_CLEANING</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="25A" CompositionName="Comment">
@@ -4071,7 +4075,7 @@
               <MultilingualTextItem ID="25B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN INPUT TEMP SETPOINT</Text>
+                  <Text>MIST EXTRACTION ALLOW CLEANING</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="25C" CompositionName="Items">
@@ -4102,8 +4106,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I803.0</LogicalAddress>
-          <Name>MAIN_COOLING_INPUT_FLOW_SP</Name>
+          <LogicalAddress>%I45.1</LogicalAddress>
+          <Name>MIST_EXTRACTION_NOT_FAULT</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="260" CompositionName="Comment">
@@ -4111,7 +4115,7 @@
               <MultilingualTextItem ID="261" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN INPUT FLOW SETPOINT</Text>
+                  <Text>MIST EXTRACTION NOT FAULT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="262" CompositionName="Items">
@@ -4142,8 +4146,8 @@
           <ExternalAccessible>true</ExternalAccessible>
           <ExternalVisible>true</ExternalVisible>
           <ExternalWritable>true</ExternalWritable>
-          <LogicalAddress>%I811.1</LogicalAddress>
-          <Name>MAIN_COOLING_OUTPUT_TEMP_SP</Name>
+          <LogicalAddress>%I45.4</LogicalAddress>
+          <Name>MIST_EXTRACTION_REQ_FILTER_CLEAN</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="266" CompositionName="Comment">
@@ -4151,7 +4155,7 @@
               <MultilingualTextItem ID="267" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>COOLING SYSTEM MAIN OUTPUT TEMP SETPOINT</Text>
+                  <Text>MIST EXTRACTION REQUIRE FILTER CLEANING</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="268" CompositionName="Items">

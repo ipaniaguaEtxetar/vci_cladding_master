@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-18T12:31:05.1587129Z</Created>
+    <Created>2025-04-09T08:03:05.5267155Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -623,7 +627,7 @@
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC2003_CNC_MODES_G1" BlockType="FC" />
+      <CallInfo Name="FC2003_CNC_MODES" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -1079,7 +1083,7 @@
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC2023_CNC_MODES_G2" BlockType="FC" />
+      <CallInfo Name="FC2025_MDA_MODE_MG2" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -1125,7 +1129,7 @@
               <MultilingualTextItem ID="7B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>CALL FC2023 CNC MODES G2</Text>
+                  <Text>CALL FC2025 MDA MODE MG2</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="7C" CompositionName="Items">
@@ -1155,7 +1159,7 @@
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC2025_MDA_MODE_MG2" BlockType="FC" />
+      <CallInfo Name="FC2026_REFERENCE_MODE_MG2" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -1201,7 +1205,7 @@
               <MultilingualTextItem ID="86" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>CALL FC2025 MDA MODE MG2</Text>
+                  <Text>CALL FC2026 REFERENCE MODE MG2</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="87" CompositionName="Items">
@@ -1231,7 +1235,7 @@
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC2026_REFERENCE_MODE_MG2" BlockType="FC" />
+      <CallInfo Name="FC2027_INCREMENTAL_MODE_MG2" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -1277,7 +1281,7 @@
               <MultilingualTextItem ID="91" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>CALL FC2026 REFERENCE MODE MG2</Text>
+                  <Text>CALL FC2027 INCREMENTAL MODE MG2</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="92" CompositionName="Items">
@@ -1302,103 +1306,27 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="95" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Call UId="21">
-      <CallInfo Name="FC2027_INCREMENTAL_MODE_MG2" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="22">
-      <Powerrail />
-      <NameCon UId="21" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
+      <MultilingualText ID="95" CompositionName="Title">
         <ObjectList>
-          <MultilingualText ID="96" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="97" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="98" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="99" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="9B" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="9C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FC2027 INCREMENTAL MODE MG2</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <MultilingualText ID="A0" CompositionName="Title">
-        <ObjectList>
-          <MultilingualTextItem ID="A1" CompositionName="Items">
+          <MultilingualTextItem ID="96" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="A2" CompositionName="Items">
+          <MultilingualTextItem ID="97" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="A3" CompositionName="Items">
+          <MultilingualTextItem ID="98" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="A4" CompositionName="Items">
+          <MultilingualTextItem ID="99" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />

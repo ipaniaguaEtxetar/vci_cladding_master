@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-10T13:11:42.057142Z</Created>
+    <Created>2025-04-09T08:03:38.1379614Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -1888,25 +1892,30 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="M_DUMMY_OFF" />
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="GENERAL_MACHINE" />
+        <Component Name="FROM_CELL_TO_MACHINE_GENERAL" />
+        <Component Name="MEAS_STA_FAULT" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="23">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>2</ConstantValue>
-      </Constant>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARM" />
+      </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
-        <Component Name="MEASURING_STA_ALARMS_LED_STATUS" />
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="WARNING" />
       </Symbol>
     </Access>
     <Access Scope="LiteralConstant" UId="25">
       <Constant>
         <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
+        <ConstantValue>2</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -1915,76 +1924,206 @@
         <Component Name="MEASURING_STA_ALARMS_LED_STATUS" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="27">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
-      </Constant>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="GENERAL_MACHINE" />
+        <Component Name="FROM_CELL_TO_MACHINE_GENERAL" />
+        <Component Name="MEAS_STA_FAULT" />
+      </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="WARNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="30">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
         <Component Name="MEASURING_STA_ALARMS_LED_STATUS" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Contact" UId="30" />
-    <Part Name="Move" UId="31" DisabledENO="false">
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="GENERAL_MACHINE" />
+        <Component Name="FROM_CELL_TO_MACHINE_GENERAL" />
+        <Component Name="MEAS_STA_FAULT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="MEASURING_STA_ALARMS_LED_STATUS" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="36" />
+    <Part Name="Contact" UId="37">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="38">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="39">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="40" DisabledENO="false">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Move" UId="32" DisabledENO="false">
+    <Part Name="Contact" UId="41">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="43" />
+    <Part Name="Move" UId="44" DisabledENO="false">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Move" UId="33" DisabledENO="false">
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46" />
+    <Part Name="O" UId="47">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="34">
+    <Wire UId="49">
       <Powerrail />
-      <NameCon UId="29" Name="in" />
+      <NameCon UId="36" Name="in" />
     </Wire>
-    <Wire UId="35">
+    <Wire UId="50">
       <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
-    <Wire UId="36">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
+    <Wire UId="51">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="46" Name="in" />
     </Wire>
-    <Wire UId="37">
+    <Wire UId="52">
       <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
+      <NameCon UId="37" Name="operand" />
     </Wire>
-    <Wire UId="38">
-      <NameCon UId="30" Name="out" />
-      <NameCon UId="31" Name="en" />
-      <NameCon UId="32" Name="en" />
-      <NameCon UId="33" Name="en" />
+    <Wire UId="53">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
     </Wire>
-    <Wire UId="39">
+    <Wire UId="54">
       <IdentCon UId="23" />
-      <NameCon UId="31" Name="in" />
+      <NameCon UId="38" Name="operand" />
     </Wire>
-    <Wire UId="40">
-      <NameCon UId="31" Name="out1" />
+    <Wire UId="55">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="56">
       <IdentCon UId="24" />
+      <NameCon UId="39" Name="operand" />
     </Wire>
-    <Wire UId="41">
+    <Wire UId="57">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="en" />
+    </Wire>
+    <Wire UId="58">
       <IdentCon UId="25" />
-      <NameCon UId="32" Name="in" />
+      <NameCon UId="40" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <NameCon UId="32" Name="out1" />
+    <Wire UId="59">
+      <NameCon UId="40" Name="out1" />
       <IdentCon UId="26" />
     </Wire>
-    <Wire UId="43">
+    <Wire UId="60">
       <IdentCon UId="27" />
-      <NameCon UId="33" Name="in" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
-    <Wire UId="44">
-      <NameCon UId="33" Name="out1" />
+    <Wire UId="61">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="62">
       <IdentCon UId="28" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="29" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="en" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="30" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="44" Name="out1" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="32" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="47" Name="in1" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="33" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in2" />
+    </Wire>
+    <Wire UId="72">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="34" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="74">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="35" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -11004,7 +11143,7 @@
               <MultilingualTextItem ID="28B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;INTERLOCK &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</Text>
+                  <Text>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; PART STATUS &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="28C" CompositionName="Items">
@@ -11030,6 +11169,5252 @@
         </ObjectList>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="28F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_1_INFEED_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_1" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="290" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="291" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="292" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="293" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="294" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="295" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="296" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 1 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="297" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="298" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="299" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="29A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_2_OUTFEED_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_2" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="29B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="29D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="29E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="29F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2A0" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 2 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2A5" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_1" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2A6" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2A7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2AA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2AB" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2AC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 5 COOLING 1 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2AD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2AE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2AF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B0" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_2" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2B1" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2B2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2B6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2B7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 5 COOLING 2 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2B9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2BA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2BB" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_3_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_3" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2BC" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2BD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2BE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2BF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2C1" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2C2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 5 COOLING 3 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2C6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_5_COOLING_4_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_5_4" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2C8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2CA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2CB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2CC" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2CD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 5 COOLING 4 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2CE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2CF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2D1" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_6_INSPECTION_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_6" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2D2" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2D7" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2D8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 6 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2DA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2DB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2DC" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_7_MASTER_PART_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_7" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2DD" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2DE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2DF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E2" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2E3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 7 PART MAIN STATS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2E7" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_8" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_8" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_8" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_8_QUALITY_AND_REJECT_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_8" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2E8" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2E9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2EA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2EB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2EC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2ED" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2EE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 8 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2EF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2F2" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_9" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_9" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_9" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_9_PART_ROTATION_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_9" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2F3" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2F4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2F8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 9 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2FA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2FB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2FC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2FD" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_10" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_10" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_10" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_10_PART_ROTATION_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_10" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2FE" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2FF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="300" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="301" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="302" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="303" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="304" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 10 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="305" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="306" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="307" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="308" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_11" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_11" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_11" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_11_PART_ROTATION_3_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_11" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="309" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="30A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="30E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="30F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 11 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="310" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="311" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="312" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="313" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_21" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_21" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_21" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_21_ROBOT_1_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_21" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="314" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="315" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="316" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="317" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="318" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="319" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="31A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 21 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="31E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_22" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_PRESENT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_22" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_22" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB7231_MAX_OUTPUT_INTERLOCK_GENERAL" />
+        <Component Name="STATION_PART_STATUS" />
+        <Component Name="STATION_22_ROBOT_2_QUALITY_PART" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB7238_HMI_WINCC_OVERVIEW" />
+        <Component Name="PART_MAIN_STATUS_STATION_22" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="41" />
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="43" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="48" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51" />
+    <Part Name="Move" UId="52" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Move" UId="56" DisabledENO="false">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="57">
+      <Powerrail />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="21" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="out1" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="31" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="32" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="en" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="out1" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="37" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="en" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="56" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="31F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="320" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="321" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="322" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="323" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="324" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="325" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATION 22 PART MAIN STATUS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="326" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="327" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="328" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="329" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="32A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="32B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="32C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="32D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="32E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="32F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="330" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;INTERLOCK &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="331" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="332" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="333" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="334" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -11089,27 +16474,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="290" CompositionName="Comment">
+          <MultilingualText ID="335" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="291" CompositionName="Items">
+              <MultilingualTextItem ID="336" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="292" CompositionName="Items">
+              <MultilingualTextItem ID="337" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="293" CompositionName="Items">
+              <MultilingualTextItem ID="338" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="294" CompositionName="Items">
+              <MultilingualTextItem ID="339" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -11117,27 +16502,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="295" CompositionName="Title">
+          <MultilingualText ID="33A" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="296" CompositionName="Items">
+              <MultilingualTextItem ID="33B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>INPUT</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="297" CompositionName="Items">
+              <MultilingualTextItem ID="33C" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="298" CompositionName="Items">
+              <MultilingualTextItem ID="33D" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="299" CompositionName="Items">
+              <MultilingualTextItem ID="33E" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -11147,27 +16532,27 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="29A" CompositionName="Title">
+      <MultilingualText ID="33F" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="29B" CompositionName="Items">
+          <MultilingualTextItem ID="340" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="29C" CompositionName="Items">
+          <MultilingualTextItem ID="341" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="29D" CompositionName="Items">
+          <MultilingualTextItem ID="342" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="29E" CompositionName="Items">
+          <MultilingualTextItem ID="343" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />

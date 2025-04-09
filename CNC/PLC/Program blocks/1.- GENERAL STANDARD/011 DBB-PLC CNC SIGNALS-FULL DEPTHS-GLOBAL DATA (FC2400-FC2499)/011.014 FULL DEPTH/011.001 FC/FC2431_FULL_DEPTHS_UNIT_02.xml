@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-20T13:42:26.7751445Z</Created>
+    <Created>2025-04-09T08:02:52.1072716Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -484,7 +488,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -873,7 +877,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -884,7 +888,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -903,7 +907,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U01_DONE_IN_TRANSIT" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -921,7 +925,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="30" />
@@ -1345,7 +1349,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -1356,7 +1360,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -1683,7 +1687,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_4_DONE" />
       </Symbol>
     </Access>
@@ -1694,7 +1698,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -1705,7 +1709,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -1716,7 +1720,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -1724,7 +1728,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
-        <Component Name="U02_NR_CYCLE_PART_TYPE" />
+        <Component Name="U02_RN_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
@@ -1745,70 +1749,122 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="SCoil" UId="30" />
-    <Part Name="RCoil" UId="31" />
-    <Part Name="RCoil" UId="32" />
-    <Part Name="RCoil" UId="33" />
-    <Part Name="Contact" UId="34" />
-    <Part Name="Contact" UId="35" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="U02_NR_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="32" />
+    <Part Name="SCoil" UId="33" />
+    <Part Name="RCoil" UId="34" />
+    <Part Name="RCoil" UId="35" />
     <Part Name="RCoil" UId="36" />
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="RCoil" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41" />
+    <Part Name="RCoil" UId="42" />
   </Parts>
   <Wires>
-    <Wire UId="37">
-      <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="33" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
     <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="operand" />
+      <Powerrail />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="44">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="45">
-      <NameCon UId="34" Name="out" />
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="34" Name="in" />
       <NameCon UId="35" Name="in" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="35" Name="operand" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="47">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="28" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="25" />
       <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1920,24 +1976,26 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_1" />
         <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB7215_PART_TYPE" />
         <Component Name="PART_TYPE_U02_FIXTURES" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -1945,7 +2003,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_1" />
-        <Component Name="FD_PULSE" />
+        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -1953,94 +2011,95 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_1" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_1" />
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
     <Part Name="Contact" UId="34" />
     <Part Name="Contact" UId="35" />
-    <Part Name="O" UId="36">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="36" />
     <Part Name="Contact" UId="37" />
-    <Part Name="Contact" UId="38" />
-    <Part Name="Contact" UId="39">
+    <Part Name="O" UId="38">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="40" />
-    <Part Name="Coil" UId="41" />
+    <Part Name="Coil" UId="42" />
+    <Part Name="Coil" UId="43" />
   </Parts>
   <Wires>
-    <Wire UId="42">
-      <Powerrail />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
     <Wire UId="44">
-      <NameCon UId="31" Name="out" />
+      <Powerrail />
       <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="33" Name="out" />
-      <NameCon UId="36" Name="in1" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="50">
       <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
+      <NameCon UId="38" Name="in1" />
     </Wire>
     <Wire UId="51">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="52">
       <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in2" />
+      <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="53">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="54">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="38" Name="in2" />
+    </Wire>
+    <Wire UId="55">
       <IdentCon UId="26" />
       <NameCon UId="37" Name="operand" />
     </Wire>
-    <Wire UId="55">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
     <Wire UId="56">
-      <IdentCon UId="27" />
-      <NameCon UId="38" Name="operand" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in3" />
     </Wire>
     <Wire UId="57">
       <NameCon UId="38" Name="out" />
       <NameCon UId="39" Name="in" />
-      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="28" />
+      <IdentCon UId="27" />
       <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="59">
@@ -2048,12 +2107,29 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="60">
-      <IdentCon UId="29" />
+      <IdentCon UId="28" />
       <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="30" />
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="29" />
       <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="31" />
+      <NameCon UId="43" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -2132,22 +2208,12 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_RN_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="24">
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
@@ -2155,14 +2221,25 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
+        <Component Name="U2_ONE_FACE_DONE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_NR_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_DONE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -2172,36 +2249,34 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="PROCESSED_IN_F1" />
       </Symbol>
     </Access>
+    <Part Name="Contact" UId="27" />
     <Part Name="Contact" UId="28" />
-    <Part Name="Contact" UId="29" />
+    <Part Name="SCoil" UId="29" />
     <Part Name="Contact" UId="30" />
     <Part Name="SCoil" UId="31" />
-    <Part Name="Contact" UId="32" />
-    <Part Name="SCoil" UId="33" />
-    <Part Name="SCoil" UId="34" />
+    <Part Name="SCoil" UId="32" />
   </Parts>
   <Wires>
-    <Wire UId="35">
+    <Wire UId="33">
       <Powerrail />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="out" />
       <NameCon UId="28" Name="in" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="36">
-      <IdentCon UId="21" />
+      <IdentCon UId="22" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="37">
@@ -2209,42 +2284,24 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="29" Name="in" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="22" />
+      <IdentCon UId="23" />
       <NameCon UId="29" Name="operand" />
     </Wire>
     <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="23" />
+      <IdentCon UId="24" />
       <NameCon UId="30" Name="operand" />
     </Wire>
-    <Wire UId="41">
+    <Wire UId="40">
       <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
+    <Wire UId="41">
+      <IdentCon UId="25" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="45">
+    <Wire UId="42">
       <IdentCon UId="26" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -2825,7 +2882,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -3214,7 +3271,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -3225,7 +3282,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -3244,7 +3301,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U01_DONE_IN_TRANSIT" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -3262,7 +3319,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="30" />
@@ -3686,7 +3743,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -3697,7 +3754,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -4024,7 +4081,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_4_DONE" />
       </Symbol>
     </Access>
@@ -4035,7 +4092,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -4046,7 +4103,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -4057,7 +4114,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -4065,7 +4122,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
-        <Component Name="U02_RN_CYCLE_PART_TYPE" />
+        <Component Name="U02_NR_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
@@ -4086,70 +4143,122 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U2_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="SCoil" UId="30" />
-    <Part Name="RCoil" UId="31" />
-    <Part Name="RCoil" UId="32" />
-    <Part Name="RCoil" UId="33" />
-    <Part Name="Contact" UId="34" />
-    <Part Name="Contact" UId="35" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="U02_RN_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_2" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_2" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="32" />
+    <Part Name="SCoil" UId="33" />
+    <Part Name="RCoil" UId="34" />
+    <Part Name="RCoil" UId="35" />
     <Part Name="RCoil" UId="36" />
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="RCoil" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41" />
+    <Part Name="RCoil" UId="42" />
   </Parts>
   <Wires>
-    <Wire UId="37">
-      <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="33" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
     <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="operand" />
+      <Powerrail />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="44">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="45">
-      <NameCon UId="34" Name="out" />
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="34" Name="in" />
       <NameCon UId="35" Name="in" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="35" Name="operand" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="47">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="28" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="25" />
       <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -4261,24 +4370,26 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_2" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_2" />
         <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB7215_PART_TYPE" />
         <Component Name="PART_TYPE_U02_FIXTURES" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -4286,7 +4397,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_2" />
-        <Component Name="FD_PULSE" />
+        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -4294,94 +4405,95 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_2" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_2" />
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
     <Part Name="Contact" UId="34" />
     <Part Name="Contact" UId="35" />
-    <Part Name="O" UId="36">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="36" />
     <Part Name="Contact" UId="37" />
-    <Part Name="Contact" UId="38" />
-    <Part Name="Contact" UId="39">
+    <Part Name="O" UId="38">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="40" />
-    <Part Name="Coil" UId="41" />
+    <Part Name="Coil" UId="42" />
+    <Part Name="Coil" UId="43" />
   </Parts>
   <Wires>
-    <Wire UId="42">
-      <Powerrail />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
     <Wire UId="44">
-      <NameCon UId="31" Name="out" />
+      <Powerrail />
       <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="33" Name="out" />
-      <NameCon UId="36" Name="in1" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="50">
       <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
+      <NameCon UId="38" Name="in1" />
     </Wire>
     <Wire UId="51">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="52">
       <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in2" />
+      <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="53">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="54">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="38" Name="in2" />
+    </Wire>
+    <Wire UId="55">
       <IdentCon UId="26" />
       <NameCon UId="37" Name="operand" />
     </Wire>
-    <Wire UId="55">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
     <Wire UId="56">
-      <IdentCon UId="27" />
-      <NameCon UId="38" Name="operand" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in3" />
     </Wire>
     <Wire UId="57">
       <NameCon UId="38" Name="out" />
       <NameCon UId="39" Name="in" />
-      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="28" />
+      <IdentCon UId="27" />
       <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="59">
@@ -4389,12 +4501,29 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="60">
-      <IdentCon UId="29" />
+      <IdentCon UId="28" />
       <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="30" />
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="29" />
       <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="31" />
+      <NameCon UId="43" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -4473,22 +4602,12 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_RN_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="24">
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
@@ -4496,14 +4615,25 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
+        <Component Name="U2_DONE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_NR_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_2" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_ONE_FACE_DONE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -4513,36 +4643,34 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="PROCESSED_IN_F2" />
       </Symbol>
     </Access>
+    <Part Name="Contact" UId="27" />
     <Part Name="Contact" UId="28" />
-    <Part Name="Contact" UId="29" />
+    <Part Name="SCoil" UId="29" />
     <Part Name="Contact" UId="30" />
     <Part Name="SCoil" UId="31" />
-    <Part Name="Contact" UId="32" />
-    <Part Name="SCoil" UId="33" />
-    <Part Name="SCoil" UId="34" />
+    <Part Name="SCoil" UId="32" />
   </Parts>
   <Wires>
-    <Wire UId="35">
+    <Wire UId="33">
       <Powerrail />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="out" />
       <NameCon UId="28" Name="in" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="36">
-      <IdentCon UId="21" />
+      <IdentCon UId="22" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="37">
@@ -4550,42 +4678,24 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="29" Name="in" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="22" />
+      <IdentCon UId="23" />
       <NameCon UId="29" Name="operand" />
     </Wire>
     <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="23" />
+      <IdentCon UId="24" />
       <NameCon UId="30" Name="operand" />
     </Wire>
-    <Wire UId="41">
+    <Wire UId="40">
       <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
+    <Wire UId="41">
+      <IdentCon UId="25" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="45">
+    <Wire UId="42">
       <IdentCon UId="26" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -5166,7 +5276,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -5555,7 +5665,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -5566,7 +5676,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -5585,7 +5695,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U01_DONE_IN_TRANSIT" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -5603,7 +5713,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="30" />
@@ -5752,7 +5862,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5769,7 +5879,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6027,7 +6137,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -6038,7 +6148,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -6365,7 +6475,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_4_DONE" />
       </Symbol>
     </Access>
@@ -6376,7 +6486,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -6387,7 +6497,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -6398,7 +6508,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_R_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -6406,7 +6516,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
-        <Component Name="U02_NR_CYCLE_PART_TYPE" />
+        <Component Name="U02_RN_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
@@ -6427,70 +6537,122 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="SCoil" UId="30" />
-    <Part Name="RCoil" UId="31" />
-    <Part Name="RCoil" UId="32" />
-    <Part Name="RCoil" UId="33" />
-    <Part Name="Contact" UId="34" />
-    <Part Name="Contact" UId="35" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="U02_NR_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_3" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_3" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="32" />
+    <Part Name="SCoil" UId="33" />
+    <Part Name="RCoil" UId="34" />
+    <Part Name="RCoil" UId="35" />
     <Part Name="RCoil" UId="36" />
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="RCoil" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41" />
+    <Part Name="RCoil" UId="42" />
   </Parts>
   <Wires>
-    <Wire UId="37">
-      <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="33" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
     <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="operand" />
+      <Powerrail />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="44">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="45">
-      <NameCon UId="34" Name="out" />
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="34" Name="in" />
       <NameCon UId="35" Name="in" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="35" Name="operand" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="47">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="28" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="25" />
       <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -6602,24 +6764,26 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_3" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_3" />
         <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB7215_PART_TYPE" />
         <Component Name="PART_TYPE_U02_FIXTURES" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -6627,7 +6791,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_3" />
-        <Component Name="FD_PULSE" />
+        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -6635,94 +6799,95 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_3" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_3" />
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
     <Part Name="Contact" UId="34" />
     <Part Name="Contact" UId="35" />
-    <Part Name="O" UId="36">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="36" />
     <Part Name="Contact" UId="37" />
-    <Part Name="Contact" UId="38" />
-    <Part Name="Contact" UId="39">
+    <Part Name="O" UId="38">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="40" />
-    <Part Name="Coil" UId="41" />
+    <Part Name="Coil" UId="42" />
+    <Part Name="Coil" UId="43" />
   </Parts>
   <Wires>
-    <Wire UId="42">
-      <Powerrail />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
     <Wire UId="44">
-      <NameCon UId="31" Name="out" />
+      <Powerrail />
       <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="33" Name="out" />
-      <NameCon UId="36" Name="in1" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="50">
       <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
+      <NameCon UId="38" Name="in1" />
     </Wire>
     <Wire UId="51">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="52">
       <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in2" />
+      <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="53">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="54">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="38" Name="in2" />
+    </Wire>
+    <Wire UId="55">
       <IdentCon UId="26" />
       <NameCon UId="37" Name="operand" />
     </Wire>
-    <Wire UId="55">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
     <Wire UId="56">
-      <IdentCon UId="27" />
-      <NameCon UId="38" Name="operand" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in3" />
     </Wire>
     <Wire UId="57">
       <NameCon UId="38" Name="out" />
       <NameCon UId="39" Name="in" />
-      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="28" />
+      <IdentCon UId="27" />
       <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="59">
@@ -6730,12 +6895,29 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="60">
-      <IdentCon UId="29" />
+      <IdentCon UId="28" />
       <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="30" />
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="29" />
       <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="31" />
+      <NameCon UId="43" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -6814,22 +6996,12 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_RN_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="24">
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_02" />
@@ -6837,14 +7009,25 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
+        <Component Name="U2_ONE_FACE_DONE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_NR_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_3" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_DONE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -6854,36 +7037,34 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="PROCESSED_IN_F3" />
       </Symbol>
     </Access>
+    <Part Name="Contact" UId="27" />
     <Part Name="Contact" UId="28" />
-    <Part Name="Contact" UId="29" />
+    <Part Name="SCoil" UId="29" />
     <Part Name="Contact" UId="30" />
     <Part Name="SCoil" UId="31" />
-    <Part Name="Contact" UId="32" />
-    <Part Name="SCoil" UId="33" />
-    <Part Name="SCoil" UId="34" />
+    <Part Name="SCoil" UId="32" />
   </Parts>
   <Wires>
-    <Wire UId="35">
+    <Wire UId="33">
       <Powerrail />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="out" />
       <NameCon UId="28" Name="in" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="36">
-      <IdentCon UId="21" />
+      <IdentCon UId="22" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="37">
@@ -6891,42 +7072,24 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="29" Name="in" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="22" />
+      <IdentCon UId="23" />
       <NameCon UId="29" Name="operand" />
     </Wire>
     <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="23" />
+      <IdentCon UId="24" />
       <NameCon UId="30" Name="operand" />
     </Wire>
-    <Wire UId="41">
+    <Wire UId="40">
       <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
+    <Wire UId="41">
+      <IdentCon UId="25" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="45">
+    <Wire UId="42">
       <IdentCon UId="26" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -7507,7 +7670,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -7896,7 +8059,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -7907,7 +8070,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -7926,7 +8089,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U01_DONE_IN_TRANSIT" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -7944,7 +8107,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="30" />
@@ -8368,7 +8531,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -8379,7 +8542,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -8706,7 +8869,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_4_DONE" />
       </Symbol>
     </Access>
@@ -8717,7 +8880,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_1_DONE" />
       </Symbol>
     </Access>
@@ -8728,7 +8891,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_2_DONE" />
       </Symbol>
     </Access>
@@ -8739,7 +8902,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="FACE_N_STATION_3_DONE" />
       </Symbol>
     </Access>
@@ -8747,7 +8910,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
-        <Component Name="U02_RN_CYCLE_PART_TYPE" />
+        <Component Name="U02_NR_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
@@ -8768,70 +8931,122 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE_ROTATED" />
+        <Component Name="U1_DONE_IN_TRANSIT" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="SCoil" UId="30" />
-    <Part Name="RCoil" UId="31" />
-    <Part Name="RCoil" UId="32" />
-    <Part Name="RCoil" UId="33" />
-    <Part Name="Contact" UId="34" />
-    <Part Name="Contact" UId="35" />
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="U02_RN_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_ONE_FACE_DONE_ROTATED" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="32" />
+    <Part Name="SCoil" UId="33" />
+    <Part Name="RCoil" UId="34" />
+    <Part Name="RCoil" UId="35" />
     <Part Name="RCoil" UId="36" />
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="RCoil" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41" />
+    <Part Name="RCoil" UId="42" />
   </Parts>
   <Wires>
-    <Wire UId="37">
-      <Powerrail />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="33" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
     <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="operand" />
+      <Powerrail />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="44">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="45">
-      <NameCon UId="34" Name="out" />
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="34" Name="in" />
       <NameCon UId="35" Name="in" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="35" Name="operand" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="47">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="28" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="25" />
       <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -8943,24 +9158,26 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="PART_REJECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_4" />
         <Component Name="FULL_DEPTH_STA_4" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB7215_PART_TYPE" />
         <Component Name="PART_TYPE_U02_FIXTURES" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -8968,7 +9185,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_4" />
-        <Component Name="FD_PULSE" />
+        <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -8976,94 +9193,95 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="DB2430_FULL_DEPTH" />
         <Component Name="FD_UNIT_02" />
         <Component Name="FIXTURE_4" />
+        <Component Name="FD_PULSE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB2430_FULL_DEPTH" />
+        <Component Name="FD_UNIT_02" />
+        <Component Name="FIXTURE_4" />
         <Component Name="FULL_DEPTH" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="31" />
     <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33" />
     <Part Name="Contact" UId="34" />
     <Part Name="Contact" UId="35" />
-    <Part Name="O" UId="36">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="36" />
     <Part Name="Contact" UId="37" />
-    <Part Name="Contact" UId="38" />
-    <Part Name="Contact" UId="39">
+    <Part Name="O" UId="38">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="40" />
-    <Part Name="Coil" UId="41" />
+    <Part Name="Coil" UId="42" />
+    <Part Name="Coil" UId="43" />
   </Parts>
   <Wires>
-    <Wire UId="42">
-      <Powerrail />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
     <Wire UId="44">
-      <NameCon UId="31" Name="out" />
+      <Powerrail />
       <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="33" Name="out" />
-      <NameCon UId="36" Name="in1" />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="50">
       <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
+      <NameCon UId="38" Name="in1" />
     </Wire>
     <Wire UId="51">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="52">
       <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in2" />
+      <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="53">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="54">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="38" Name="in2" />
+    </Wire>
+    <Wire UId="55">
       <IdentCon UId="26" />
       <NameCon UId="37" Name="operand" />
     </Wire>
-    <Wire UId="55">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
     <Wire UId="56">
-      <IdentCon UId="27" />
-      <NameCon UId="38" Name="operand" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in3" />
     </Wire>
     <Wire UId="57">
       <NameCon UId="38" Name="out" />
       <NameCon UId="39" Name="in" />
-      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="28" />
+      <IdentCon UId="27" />
       <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="59">
@@ -9071,12 +9289,29 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="60">
-      <IdentCon UId="29" />
+      <IdentCon UId="28" />
       <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="30" />
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="29" />
       <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="31" />
+      <NameCon UId="43" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -9155,37 +9390,38 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="OK" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_RN_CYCLE_PART_TYPE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="24">
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_02" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
         <Component Name="CELL_STATUS" />
-        <Component Name="U02_DONE" />
+        <Component Name="U2_DONE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="U02_NR_CYCLE_PART_TYPE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_02" />
+        <Component Name="FIXTURE_4" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="CELL_STATUS" />
+        <Component Name="U2_ONE_FACE_DONE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -9195,36 +9431,34 @@ Fixture 2 and Fixture 4 will do Face B</Text>
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
-        <Component Name="CELL_STATUS" />
-        <Component Name="U02_ONE_FACE_DONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
-        <Component Name="PART_A" />
-        <Component Name="STATUS" />
-        <Component Name="UNIT_02_STATUS" />
+        <Component Name="UNIT_2_STATUS" />
         <Component Name="PROCESSED_IN_F4" />
       </Symbol>
     </Access>
+    <Part Name="Contact" UId="27" />
     <Part Name="Contact" UId="28" />
-    <Part Name="Contact" UId="29" />
+    <Part Name="SCoil" UId="29" />
     <Part Name="Contact" UId="30" />
     <Part Name="SCoil" UId="31" />
-    <Part Name="Contact" UId="32" />
-    <Part Name="SCoil" UId="33" />
-    <Part Name="SCoil" UId="34" />
+    <Part Name="SCoil" UId="32" />
   </Parts>
   <Wires>
-    <Wire UId="35">
+    <Wire UId="33">
       <Powerrail />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="out" />
       <NameCon UId="28" Name="in" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="36">
-      <IdentCon UId="21" />
+      <IdentCon UId="22" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="37">
@@ -9232,42 +9466,24 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <NameCon UId="29" Name="in" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="22" />
+      <IdentCon UId="23" />
       <NameCon UId="29" Name="operand" />
     </Wire>
     <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="23" />
+      <IdentCon UId="24" />
       <NameCon UId="30" Name="operand" />
     </Wire>
-    <Wire UId="41">
+    <Wire UId="40">
       <NameCon UId="30" Name="out" />
       <NameCon UId="31" Name="in" />
     </Wire>
-    <Wire UId="42">
-      <IdentCon UId="24" />
+    <Wire UId="41">
+      <IdentCon UId="25" />
       <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="45">
+    <Wire UId="42">
       <IdentCon UId="26" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="27" />
-      <NameCon UId="34" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

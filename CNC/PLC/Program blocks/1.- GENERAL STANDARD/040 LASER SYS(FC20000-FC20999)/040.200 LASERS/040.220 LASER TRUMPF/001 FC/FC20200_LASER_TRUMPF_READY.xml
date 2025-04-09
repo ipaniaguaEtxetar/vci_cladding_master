@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-13T10:30:24.284711Z</Created>
+    <Created>2025-04-09T08:03:28.2649458Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -326,7 +330,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB7262_UNIT_01_LASER_ENABLE_DISABLE" />
+        <Component Name="DB7263_UNIT_01_LASER_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -362,11 +366,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_01" />
-        <Component Name="INPUTS" />
-        <Component Name="STATUS" />
-        <Component Name="LASER_READY" />
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_510" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -375,7 +376,7 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="LASER_IS_ON" />
+        <Component Name="LASER_READY" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -384,7 +385,7 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="FAULT_LASER" />
+        <Component Name="LASER_IS_ON" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -393,7 +394,7 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="EXT_ACTIV_ACTIVE" />
+        <Component Name="FAULT_LASER" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
@@ -402,21 +403,30 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="PROG_ACTIVE" />
+        <Component Name="EXT_ACTIV_ACTIVE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="M_ONE" />
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="PROG_ACTIVE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB1018_SAFETY_TAGS" />
         <Component Name="SAFE_DOORS_U01_CLOSED_AND_LOCKED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -425,19 +435,19 @@
         <Component Name="LASER_ASSIGNED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="35">
+    <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="36">
+    <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON_DELAYED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="37">
+    <Access Scope="GlobalVariable" UId="38">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -446,27 +456,27 @@
         <Component Name="LASER_WARNING_LAP_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="38">
+    <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="UNIT_01_ST_3_ANY_CYCLE_ACTIVE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="39">
+    <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB20230_TRUMPF_LASER_UNIT_01_ACTIVE" />
         <Component Name="DATA" />
         <Component Name="LASER ACTIVE START GENERAL CONDITIONS" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="40">
+    <Access Scope="LiteralConstant" UId="41">
       <Constant>
         <ConstantType>Byte</ConstantType>
         <ConstantValue>1</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="GlobalVariable" UId="41">
+    <Access Scope="GlobalVariable" UId="42">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -474,7 +484,7 @@
         <Component Name="LIGHTPATH" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="42">
+    <Access Scope="GlobalVariable" UId="43">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -482,7 +492,7 @@
         <Component Name="PROGRAMNO" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="43">
+    <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -490,7 +500,7 @@
         <Component Name="POWER_VALUE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="44">
+    <Access Scope="GlobalVariable" UId="45">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -498,21 +508,12 @@
         <Component Name="PROCESSING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="45">
-      <Symbol>
-        <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_01" />
-        <Component Name="OUTPUTS" />
-        <Component Name="POWER_PORTION_CORE" />
-      </Symbol>
-    </Access>
     <Access Scope="GlobalVariable" UId="46">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
         <Component Name="OUTPUTS" />
-        <Component Name="CONTROL" />
-        <Component Name="RESET" />
+        <Component Name="POWER_PORTION_CORE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="47">
@@ -521,7 +522,7 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="OUTPUTS" />
         <Component Name="CONTROL" />
-        <Component Name="LASER_REQUEST" />
+        <Component Name="RESET" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="48">
@@ -530,7 +531,7 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="OUTPUTS" />
         <Component Name="CONTROL" />
-        <Component Name="EXT_CONTROL" />
+        <Component Name="LASER_REQUEST" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="49">
@@ -539,110 +540,119 @@
         <Component Name="LASER_UNIT_01" />
         <Component Name="OUTPUTS" />
         <Component Name="CONTROL" />
-        <Component Name="LASER_ON" />
+        <Component Name="EXT_CONTROL" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="50">
       <Symbol>
-        <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
-        <Component Name="oREADY_TO_EMISSION" />
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_01" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="LASER_ON" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="51">
       <Symbol>
-        <Component Name="DB426_ALARMS_WARNINGS" />
-        <Component Name="LASER_SYSTEM" />
-        <Component Name="736000" />
+        <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="52">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736001" />
+        <Component Name="736000" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="53">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736002" />
+        <Component Name="736001" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="54">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736003" />
+        <Component Name="736002" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="55">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736004" />
+        <Component Name="736003" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="56">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736005" />
+        <Component Name="736004" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="57">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736006" />
+        <Component Name="736005" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="58">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736007" />
+        <Component Name="736006" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="59">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736008" />
+        <Component Name="736007" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="60">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736009" />
+        <Component Name="736008" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="61">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736010" />
+        <Component Name="736009" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="62">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736011" />
+        <Component Name="736010" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="63">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
+        <Component Name="736011" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
         <Component Name="736012" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="64" />
-    <Call UId="65">
+    <Part Name="Contact" UId="65" />
+    <Call UId="66">
       <CallInfo Name="FB20200_TRUMPF_READY" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="66">
+        <Instance Scope="GlobalVariable" UId="67">
           <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
         </Instance>
         <Parameter Name="iLIMIT_MIN_POWER" Section="Input" Type="Int" />
@@ -650,6 +660,7 @@
         <Parameter Name="iCOMMAND_POWER" Section="Input" Type="Int" />
         <Parameter Name="iCOMMAND_PROCESSING" Section="Input" Type="Int" />
         <Parameter Name="iCOMMAND_POWER_PORTION_CORE" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_PROGRAM_NUMBER" Section="Input" Type="Int" />
         <Parameter Name="iSTATUS_READY_LASER_READY" Section="Input" Type="Bool" />
         <Parameter Name="iLASER_IS_ON" Section="Input" Type="Bool" />
         <Parameter Name="iSYSTEM_ERROR_LASER_FAULT" Section="Input" Type="Bool" />
@@ -699,217 +710,221 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="75">
-      <Powerrail />
-      <NameCon UId="64" Name="in" />
-    </Wire>
     <Wire UId="76">
-      <IdentCon UId="21" />
-      <NameCon UId="64" Name="operand" />
+      <Powerrail />
+      <NameCon UId="65" Name="in" />
     </Wire>
     <Wire UId="77">
-      <NameCon UId="64" Name="out" />
-      <NameCon UId="65" Name="en" />
+      <IdentCon UId="21" />
+      <NameCon UId="65" Name="operand" />
     </Wire>
     <Wire UId="78">
-      <IdentCon UId="22" />
-      <NameCon UId="65" Name="iLIMIT_MIN_POWER" />
+      <NameCon UId="65" Name="out" />
+      <NameCon UId="66" Name="en" />
     </Wire>
     <Wire UId="79">
-      <IdentCon UId="23" />
-      <NameCon UId="65" Name="iLIMIT_MAX_POWER" />
+      <IdentCon UId="22" />
+      <NameCon UId="66" Name="iLIMIT_MIN_POWER" />
     </Wire>
     <Wire UId="80">
-      <IdentCon UId="24" />
-      <NameCon UId="65" Name="iCOMMAND_POWER" />
+      <IdentCon UId="23" />
+      <NameCon UId="66" Name="iLIMIT_MAX_POWER" />
     </Wire>
     <Wire UId="81">
-      <IdentCon UId="25" />
-      <NameCon UId="65" Name="iCOMMAND_PROCESSING" />
+      <IdentCon UId="24" />
+      <NameCon UId="66" Name="iCOMMAND_POWER" />
     </Wire>
     <Wire UId="82">
-      <IdentCon UId="26" />
-      <NameCon UId="65" Name="iCOMMAND_POWER_PORTION_CORE" />
+      <IdentCon UId="25" />
+      <NameCon UId="66" Name="iCOMMAND_PROCESSING" />
     </Wire>
     <Wire UId="83">
-      <IdentCon UId="27" />
-      <NameCon UId="65" Name="iSTATUS_READY_LASER_READY" />
+      <IdentCon UId="26" />
+      <NameCon UId="66" Name="iCOMMAND_POWER_PORTION_CORE" />
     </Wire>
     <Wire UId="84">
-      <IdentCon UId="28" />
-      <NameCon UId="65" Name="iLASER_IS_ON" />
+      <IdentCon UId="27" />
+      <NameCon UId="66" Name="iCOMMAND_PROGRAM_NUMBER" />
     </Wire>
     <Wire UId="85">
-      <IdentCon UId="29" />
-      <NameCon UId="65" Name="iSYSTEM_ERROR_LASER_FAULT" />
+      <IdentCon UId="28" />
+      <NameCon UId="66" Name="iSTATUS_READY_LASER_READY" />
     </Wire>
     <Wire UId="86">
-      <IdentCon UId="30" />
-      <NameCon UId="65" Name="iEXTERNAL_CONTROL_READY" />
+      <IdentCon UId="29" />
+      <NameCon UId="66" Name="iLASER_IS_ON" />
     </Wire>
     <Wire UId="87">
-      <IdentCon UId="31" />
-      <NameCon UId="65" Name="iPROGRAM_ACTIVE" />
+      <IdentCon UId="30" />
+      <NameCon UId="66" Name="iSYSTEM_ERROR_LASER_FAULT" />
     </Wire>
     <Wire UId="88">
-      <IdentCon UId="32" />
-      <NameCon UId="65" Name="iSOURCE_ENABLED" />
+      <IdentCon UId="31" />
+      <NameCon UId="66" Name="iEXTERNAL_CONTROL_READY" />
     </Wire>
     <Wire UId="89">
-      <OpenCon UId="67" />
-      <NameCon UId="65" Name="iCOOLING_UNIT_FLOW_PRESENT" />
+      <IdentCon UId="32" />
+      <NameCon UId="66" Name="iPROGRAM_ACTIVE" />
     </Wire>
     <Wire UId="90">
-      <OpenCon UId="68" />
-      <NameCon UId="65" Name="iCOOLING_UNIT_OVERTEMPERATURE" />
+      <IdentCon UId="33" />
+      <NameCon UId="66" Name="iSOURCE_ENABLED" />
     </Wire>
     <Wire UId="91">
-      <OpenCon UId="69" />
-      <NameCon UId="65" Name="iLASER_ENABLE_POWER_SEQ" />
+      <OpenCon UId="68" />
+      <NameCon UId="66" Name="iCOOLING_UNIT_FLOW_PRESENT" />
     </Wire>
     <Wire UId="92">
-      <OpenCon UId="70" />
-      <NameCon UId="65" Name="iLASER_DISABLE_POWER_SEQ" />
+      <OpenCon UId="69" />
+      <NameCon UId="66" Name="iCOOLING_UNIT_OVERTEMPERATURE" />
     </Wire>
     <Wire UId="93">
-      <IdentCon UId="33" />
-      <NameCon UId="65" Name="iSAFETY_GATES_CLOSED_LOCKED" />
+      <OpenCon UId="70" />
+      <NameCon UId="66" Name="iLASER_ENABLE_POWER_SEQ" />
     </Wire>
     <Wire UId="94">
-      <IdentCon UId="34" />
-      <NameCon UId="65" Name="iLASER_ASSIGNED" />
+      <OpenCon UId="71" />
+      <NameCon UId="66" Name="iLASER_DISABLE_POWER_SEQ" />
     </Wire>
     <Wire UId="95">
-      <IdentCon UId="35" />
-      <NameCon UId="65" Name="iMACHINE_ON" />
+      <IdentCon UId="34" />
+      <NameCon UId="66" Name="iSAFETY_GATES_CLOSED_LOCKED" />
     </Wire>
     <Wire UId="96">
-      <IdentCon UId="36" />
-      <NameCon UId="65" Name="iMACHINE_ON_DELAYED" />
+      <IdentCon UId="35" />
+      <NameCon UId="66" Name="iLASER_ASSIGNED" />
     </Wire>
     <Wire UId="97">
-      <OpenCon UId="71" />
-      <NameCon UId="65" Name="iLASER_READY_F_CIRCUIT_BRAKER" />
+      <IdentCon UId="36" />
+      <NameCon UId="66" Name="iMACHINE_ON" />
     </Wire>
     <Wire UId="98">
       <IdentCon UId="37" />
-      <NameCon UId="65" Name="iLASER_WARNING_LAP_ON" />
+      <NameCon UId="66" Name="iMACHINE_ON_DELAYED" />
     </Wire>
     <Wire UId="99">
-      <IdentCon UId="38" />
-      <NameCon UId="65" Name="iSTATION_UNIT_ANY_CYCLE_ACT" />
+      <OpenCon UId="72" />
+      <NameCon UId="66" Name="iLASER_READY_F_CIRCUIT_BRAKER" />
     </Wire>
     <Wire UId="100">
-      <IdentCon UId="39" />
-      <NameCon UId="65" Name="iLASER_ACT_START_GEN_CONDITION" />
+      <IdentCon UId="38" />
+      <NameCon UId="66" Name="iLASER_WARNING_LAP_ON" />
     </Wire>
     <Wire UId="101">
-      <IdentCon UId="40" />
-      <NameCon UId="65" Name="iUNIT_NO" />
+      <IdentCon UId="39" />
+      <NameCon UId="66" Name="iSTATION_UNIT_ANY_CYCLE_ACT" />
     </Wire>
     <Wire UId="102">
-      <NameCon UId="65" Name="oLIGHT_PATH" />
-      <IdentCon UId="41" />
+      <IdentCon UId="40" />
+      <NameCon UId="66" Name="iLASER_ACT_START_GEN_CONDITION" />
     </Wire>
     <Wire UId="103">
-      <NameCon UId="65" Name="oPROGRAM_NUMBER" />
-      <IdentCon UId="42" />
+      <IdentCon UId="41" />
+      <NameCon UId="66" Name="iUNIT_NO" />
     </Wire>
     <Wire UId="104">
-      <NameCon UId="65" Name="oPOWER_VALUE" />
-      <IdentCon UId="43" />
+      <NameCon UId="66" Name="oLIGHT_PATH" />
+      <IdentCon UId="42" />
     </Wire>
     <Wire UId="105">
-      <NameCon UId="65" Name="oPROCESSING_VALUE" />
-      <IdentCon UId="44" />
+      <NameCon UId="66" Name="oPROGRAM_NUMBER" />
+      <IdentCon UId="43" />
     </Wire>
     <Wire UId="106">
-      <NameCon UId="65" Name="oPOWER_PORTION_CORE_VALUE" />
-      <IdentCon UId="45" />
+      <NameCon UId="66" Name="oPOWER_VALUE" />
+      <IdentCon UId="44" />
     </Wire>
     <Wire UId="107">
-      <NameCon UId="65" Name="oLASER_RESET_FAULT_ERROR" />
-      <IdentCon UId="46" />
+      <NameCon UId="66" Name="oPROCESSING_VALUE" />
+      <IdentCon UId="45" />
     </Wire>
     <Wire UId="108">
-      <NameCon UId="65" Name="oLASER_REQUEST" />
-      <IdentCon UId="47" />
+      <NameCon UId="66" Name="oPOWER_PORTION_CORE_VALUE" />
+      <IdentCon UId="46" />
     </Wire>
     <Wire UId="109">
-      <NameCon UId="65" Name="oEXTERNAL_CONTROL" />
-      <IdentCon UId="48" />
+      <NameCon UId="66" Name="oLASER_RESET_FAULT_ERROR" />
+      <IdentCon UId="47" />
     </Wire>
     <Wire UId="110">
-      <NameCon UId="65" Name="oLASER_ON" />
-      <IdentCon UId="49" />
+      <NameCon UId="66" Name="oLASER_REQUEST" />
+      <IdentCon UId="48" />
     </Wire>
     <Wire UId="111">
-      <NameCon UId="65" Name="oLASER_ARM" />
-      <OpenCon UId="72" />
+      <NameCon UId="66" Name="oEXTERNAL_CONTROL" />
+      <IdentCon UId="49" />
     </Wire>
     <Wire UId="112">
-      <NameCon UId="65" Name="oSTATION_RHP_SEOC_ALARMS" />
-      <OpenCon UId="73" />
-    </Wire>
-    <Wire UId="113">
-      <NameCon UId="65" Name="oSTATION_WARNING" />
-      <OpenCon UId="74" />
-    </Wire>
-    <Wire UId="114">
-      <NameCon UId="65" Name="oREADY_TO_EMISSION" />
+      <NameCon UId="66" Name="oLASER_ON" />
       <IdentCon UId="50" />
     </Wire>
+    <Wire UId="113">
+      <NameCon UId="66" Name="oLASER_ARM" />
+      <OpenCon UId="73" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="66" Name="oSTATION_RHP_SEOC_ALARMS" />
+      <OpenCon UId="74" />
+    </Wire>
     <Wire UId="115">
-      <NameCon UId="65" Name="oALARM_CIRCUIT_BREAKER_ALARM" />
-      <IdentCon UId="51" />
+      <NameCon UId="66" Name="oSTATION_WARNING" />
+      <OpenCon UId="75" />
     </Wire>
     <Wire UId="116">
-      <NameCon UId="65" Name="oALARM_LASER_ERROR" />
-      <IdentCon UId="52" />
+      <NameCon UId="66" Name="oREADY_TO_EMISSION" />
+      <IdentCon UId="51" />
     </Wire>
     <Wire UId="117">
-      <NameCon UId="65" Name="oALARM_WARNING_LASER" />
-      <IdentCon UId="53" />
+      <NameCon UId="66" Name="oALARM_CIRCUIT_BREAKER_ALARM" />
+      <IdentCon UId="52" />
     </Wire>
     <Wire UId="118">
-      <NameCon UId="65" Name="oALARM_LASER_NOT_READY" />
-      <IdentCon UId="54" />
+      <NameCon UId="66" Name="oALARM_LASER_ERROR" />
+      <IdentCon UId="53" />
     </Wire>
     <Wire UId="119">
-      <NameCon UId="65" Name="oALARM_LASER_NOT_SWITCHED_ON" />
-      <IdentCon UId="55" />
+      <NameCon UId="66" Name="oALARM_WARNING_LASER" />
+      <IdentCon UId="54" />
     </Wire>
     <Wire UId="120">
-      <NameCon UId="65" Name="oALARM_ANALOG_CONTROL_ERROR" />
-      <IdentCon UId="56" />
+      <NameCon UId="66" Name="oALARM_LASER_NOT_READY" />
+      <IdentCon UId="55" />
     </Wire>
     <Wire UId="121">
-      <NameCon UId="65" Name="oALARM_LASER_NOT_ASSIGNED" />
-      <IdentCon UId="57" />
+      <NameCon UId="66" Name="oALARM_LASER_NOT_SWITCHED_ON" />
+      <IdentCon UId="56" />
     </Wire>
     <Wire UId="122">
-      <NameCon UId="65" Name="oALARM_OVERTEMPERATURE_ALARM" />
-      <IdentCon UId="58" />
+      <NameCon UId="66" Name="oALARM_ANALOG_CONTROL_ERROR" />
+      <IdentCon UId="57" />
     </Wire>
     <Wire UId="123">
-      <NameCon UId="65" Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" />
-      <IdentCon UId="59" />
+      <NameCon UId="66" Name="oALARM_LASER_NOT_ASSIGNED" />
+      <IdentCon UId="58" />
     </Wire>
     <Wire UId="124">
-      <NameCon UId="65" Name="oALARM_LASER_SC_STATUS_ACTIVE" />
-      <IdentCon UId="60" />
+      <NameCon UId="66" Name="oALARM_OVERTEMPERATURE_ALARM" />
+      <IdentCon UId="59" />
     </Wire>
     <Wire UId="125">
-      <NameCon UId="65" Name="oALARM_ACTIVE_PANEL_ERROR" />
-      <IdentCon UId="61" />
+      <NameCon UId="66" Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" />
+      <IdentCon UId="60" />
     </Wire>
     <Wire UId="126">
-      <NameCon UId="65" Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" />
-      <IdentCon UId="62" />
+      <NameCon UId="66" Name="oALARM_LASER_SC_STATUS_ACTIVE" />
+      <IdentCon UId="61" />
     </Wire>
     <Wire UId="127">
-      <NameCon UId="65" Name="oALARM_FAULT" />
+      <NameCon UId="66" Name="oALARM_ACTIVE_PANEL_ERROR" />
+      <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="128">
+      <NameCon UId="66" Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" />
       <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="66" Name="oALARM_FAULT" />
+      <IdentCon UId="64" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -980,7 +995,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB7263_UNIT_02_LASER_ENABLE_DISABLE" />
+        <Component Name="DB7264_UNIT_02_LASER_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -1016,11 +1031,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_02" />
-        <Component Name="INPUTS" />
-        <Component Name="STATUS" />
-        <Component Name="LASER_READY" />
+        <Component Name="DB2401_DBB_DEFINE" />
+        <Component Name="DBW_520" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
@@ -1029,7 +1041,7 @@
         <Component Name="LASER_UNIT_02" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="LASER_IS_ON" />
+        <Component Name="LASER_READY" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -1038,7 +1050,7 @@
         <Component Name="LASER_UNIT_02" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="FAULT_LASER" />
+        <Component Name="LASER_IS_ON" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
@@ -1047,7 +1059,7 @@
         <Component Name="LASER_UNIT_02" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="EXT_ACTIV_ACTIVE" />
+        <Component Name="FAULT_LASER" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
@@ -1056,21 +1068,30 @@
         <Component Name="LASER_UNIT_02" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
-        <Component Name="PROG_ACTIVE" />
+        <Component Name="EXT_ACTIV_ACTIVE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="M_ONE" />
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="INPUTS" />
+        <Component Name="STATUS" />
+        <Component Name="PROG_ACTIVE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB1018_SAFETY_TAGS" />
         <Component Name="SAFE_DOORS_U02_CLOSED_AND_LOCKED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -1079,19 +1100,19 @@
         <Component Name="LASER_ASSIGNED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="35">
+    <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="36">
+    <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON_DELAYED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="37">
+    <Access Scope="GlobalVariable" UId="38">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -1100,20 +1121,27 @@
         <Component Name="LASER_WARNING_LAP_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="38">
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB2440_GLOBAL_DATA" />
+        <Component Name="GLOBAL_DATA" />
+        <Component Name="UNIT_02_ST_3_ANY_CYCLE_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB20230_TRUMPF_LASER_UNIT_01_ACTIVE" />
         <Component Name="DATA" />
         <Component Name="LASER ACTIVE START GENERAL CONDITIONS" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="39">
+    <Access Scope="LiteralConstant" UId="41">
       <Constant>
         <ConstantType>Byte</ConstantType>
         <ConstantValue>2</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="GlobalVariable" UId="40">
+    <Access Scope="GlobalVariable" UId="42">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -1121,7 +1149,7 @@
         <Component Name="LIGHTPATH" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="41">
+    <Access Scope="GlobalVariable" UId="43">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -1129,7 +1157,7 @@
         <Component Name="PROGRAMNO" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="42">
+    <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -1137,7 +1165,7 @@
         <Component Name="POWER_VALUE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="43">
+    <Access Scope="GlobalVariable" UId="45">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -1145,30 +1173,12 @@
         <Component Name="PROCESSING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="44">
-      <Symbol>
-        <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_02" />
-        <Component Name="OUTPUTS" />
-        <Component Name="POWER_PORTION_CORE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="45">
-      <Symbol>
-        <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_02" />
-        <Component Name="OUTPUTS" />
-        <Component Name="CONTROL" />
-        <Component Name="RESET" />
-      </Symbol>
-    </Access>
     <Access Scope="GlobalVariable" UId="46">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
         <Component Name="OUTPUTS" />
-        <Component Name="CONTROL" />
-        <Component Name="LASER_REQUEST" />
+        <Component Name="POWER_PORTION_CORE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="47">
@@ -1177,7 +1187,7 @@
         <Component Name="LASER_UNIT_02" />
         <Component Name="OUTPUTS" />
         <Component Name="CONTROL" />
-        <Component Name="EXT_CONTROL" />
+        <Component Name="RESET" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="48">
@@ -1186,110 +1196,128 @@
         <Component Name="LASER_UNIT_02" />
         <Component Name="OUTPUTS" />
         <Component Name="CONTROL" />
-        <Component Name="LASER_ON" />
+        <Component Name="LASER_REQUEST" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="49">
       <Symbol>
-        <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
-        <Component Name="oREADY_TO_EMISSION" />
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="EXT_CONTROL" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="50">
       <Symbol>
-        <Component Name="DB426_ALARMS_WARNINGS" />
-        <Component Name="LASER_SYSTEM" />
-        <Component Name="736050" />
+        <Component Name="DB20202_INTERLOCK_TRUMPF" />
+        <Component Name="LASER_UNIT_02" />
+        <Component Name="OUTPUTS" />
+        <Component Name="CONTROL" />
+        <Component Name="LASER_ON" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="51">
       <Symbol>
-        <Component Name="DB426_ALARMS_WARNINGS" />
-        <Component Name="LASER_SYSTEM" />
-        <Component Name="736051" />
+        <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
+        <Component Name="oREADY_TO_EMISSION" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="52">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736052" />
+        <Component Name="736050" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="53">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736053" />
+        <Component Name="736051" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="54">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736054" />
+        <Component Name="736052" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="55">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736055" />
+        <Component Name="736053" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="56">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736056" />
+        <Component Name="736054" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="57">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736057" />
+        <Component Name="736055" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="58">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736058" />
+        <Component Name="736056" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="59">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736059" />
+        <Component Name="736057" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="60">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736060" />
+        <Component Name="736058" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="61">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
-        <Component Name="736061" />
+        <Component Name="736059" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="62">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
+        <Component Name="736060" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="736061" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
         <Component Name="736062" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="63" />
-    <Call UId="64">
+    <Part Name="Contact" UId="65" />
+    <Call UId="66">
       <CallInfo Name="FB20200_TRUMPF_READY" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="65">
+        <Instance Scope="GlobalVariable" UId="67">
           <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
         </Instance>
         <Parameter Name="iLIMIT_MIN_POWER" Section="Input" Type="Int" />
@@ -1297,6 +1325,7 @@
         <Parameter Name="iCOMMAND_POWER" Section="Input" Type="Int" />
         <Parameter Name="iCOMMAND_PROCESSING" Section="Input" Type="Int" />
         <Parameter Name="iCOMMAND_POWER_PORTION_CORE" Section="Input" Type="Int" />
+        <Parameter Name="iCOMMAND_PROGRAM_NUMBER" Section="Input" Type="Int" />
         <Parameter Name="iSTATUS_READY_LASER_READY" Section="Input" Type="Bool" />
         <Parameter Name="iLASER_IS_ON" Section="Input" Type="Bool" />
         <Parameter Name="iSYSTEM_ERROR_LASER_FAULT" Section="Input" Type="Bool" />
@@ -1346,217 +1375,221 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="75">
-      <Powerrail />
-      <NameCon UId="63" Name="in" />
-    </Wire>
     <Wire UId="76">
-      <IdentCon UId="21" />
-      <NameCon UId="63" Name="operand" />
+      <Powerrail />
+      <NameCon UId="65" Name="in" />
     </Wire>
     <Wire UId="77">
-      <NameCon UId="63" Name="out" />
-      <NameCon UId="64" Name="en" />
+      <IdentCon UId="21" />
+      <NameCon UId="65" Name="operand" />
     </Wire>
     <Wire UId="78">
-      <IdentCon UId="22" />
-      <NameCon UId="64" Name="iLIMIT_MIN_POWER" />
+      <NameCon UId="65" Name="out" />
+      <NameCon UId="66" Name="en" />
     </Wire>
     <Wire UId="79">
-      <IdentCon UId="23" />
-      <NameCon UId="64" Name="iLIMIT_MAX_POWER" />
+      <IdentCon UId="22" />
+      <NameCon UId="66" Name="iLIMIT_MIN_POWER" />
     </Wire>
     <Wire UId="80">
-      <IdentCon UId="24" />
-      <NameCon UId="64" Name="iCOMMAND_POWER" />
+      <IdentCon UId="23" />
+      <NameCon UId="66" Name="iLIMIT_MAX_POWER" />
     </Wire>
     <Wire UId="81">
-      <IdentCon UId="25" />
-      <NameCon UId="64" Name="iCOMMAND_PROCESSING" />
+      <IdentCon UId="24" />
+      <NameCon UId="66" Name="iCOMMAND_POWER" />
     </Wire>
     <Wire UId="82">
-      <IdentCon UId="26" />
-      <NameCon UId="64" Name="iCOMMAND_POWER_PORTION_CORE" />
+      <IdentCon UId="25" />
+      <NameCon UId="66" Name="iCOMMAND_PROCESSING" />
     </Wire>
     <Wire UId="83">
-      <IdentCon UId="27" />
-      <NameCon UId="64" Name="iSTATUS_READY_LASER_READY" />
+      <IdentCon UId="26" />
+      <NameCon UId="66" Name="iCOMMAND_POWER_PORTION_CORE" />
     </Wire>
     <Wire UId="84">
-      <IdentCon UId="28" />
-      <NameCon UId="64" Name="iLASER_IS_ON" />
+      <IdentCon UId="27" />
+      <NameCon UId="66" Name="iCOMMAND_PROGRAM_NUMBER" />
     </Wire>
     <Wire UId="85">
-      <IdentCon UId="29" />
-      <NameCon UId="64" Name="iSYSTEM_ERROR_LASER_FAULT" />
+      <IdentCon UId="28" />
+      <NameCon UId="66" Name="iSTATUS_READY_LASER_READY" />
     </Wire>
     <Wire UId="86">
-      <IdentCon UId="30" />
-      <NameCon UId="64" Name="iEXTERNAL_CONTROL_READY" />
+      <IdentCon UId="29" />
+      <NameCon UId="66" Name="iLASER_IS_ON" />
     </Wire>
     <Wire UId="87">
-      <IdentCon UId="31" />
-      <NameCon UId="64" Name="iPROGRAM_ACTIVE" />
+      <IdentCon UId="30" />
+      <NameCon UId="66" Name="iSYSTEM_ERROR_LASER_FAULT" />
     </Wire>
     <Wire UId="88">
-      <IdentCon UId="32" />
-      <NameCon UId="64" Name="iSOURCE_ENABLED" />
+      <IdentCon UId="31" />
+      <NameCon UId="66" Name="iEXTERNAL_CONTROL_READY" />
     </Wire>
     <Wire UId="89">
-      <OpenCon UId="66" />
-      <NameCon UId="64" Name="iCOOLING_UNIT_FLOW_PRESENT" />
+      <IdentCon UId="32" />
+      <NameCon UId="66" Name="iPROGRAM_ACTIVE" />
     </Wire>
     <Wire UId="90">
-      <OpenCon UId="67" />
-      <NameCon UId="64" Name="iCOOLING_UNIT_OVERTEMPERATURE" />
+      <IdentCon UId="33" />
+      <NameCon UId="66" Name="iSOURCE_ENABLED" />
     </Wire>
     <Wire UId="91">
       <OpenCon UId="68" />
-      <NameCon UId="64" Name="iLASER_ENABLE_POWER_SEQ" />
+      <NameCon UId="66" Name="iCOOLING_UNIT_FLOW_PRESENT" />
     </Wire>
     <Wire UId="92">
       <OpenCon UId="69" />
-      <NameCon UId="64" Name="iLASER_DISABLE_POWER_SEQ" />
+      <NameCon UId="66" Name="iCOOLING_UNIT_OVERTEMPERATURE" />
     </Wire>
     <Wire UId="93">
-      <IdentCon UId="33" />
-      <NameCon UId="64" Name="iSAFETY_GATES_CLOSED_LOCKED" />
+      <OpenCon UId="70" />
+      <NameCon UId="66" Name="iLASER_ENABLE_POWER_SEQ" />
     </Wire>
     <Wire UId="94">
-      <IdentCon UId="34" />
-      <NameCon UId="64" Name="iLASER_ASSIGNED" />
+      <OpenCon UId="71" />
+      <NameCon UId="66" Name="iLASER_DISABLE_POWER_SEQ" />
     </Wire>
     <Wire UId="95">
-      <IdentCon UId="35" />
-      <NameCon UId="64" Name="iMACHINE_ON" />
+      <IdentCon UId="34" />
+      <NameCon UId="66" Name="iSAFETY_GATES_CLOSED_LOCKED" />
     </Wire>
     <Wire UId="96">
-      <IdentCon UId="36" />
-      <NameCon UId="64" Name="iMACHINE_ON_DELAYED" />
+      <IdentCon UId="35" />
+      <NameCon UId="66" Name="iLASER_ASSIGNED" />
     </Wire>
     <Wire UId="97">
-      <OpenCon UId="70" />
-      <NameCon UId="64" Name="iLASER_READY_F_CIRCUIT_BRAKER" />
+      <IdentCon UId="36" />
+      <NameCon UId="66" Name="iMACHINE_ON" />
     </Wire>
     <Wire UId="98">
       <IdentCon UId="37" />
-      <NameCon UId="64" Name="iLASER_WARNING_LAP_ON" />
+      <NameCon UId="66" Name="iMACHINE_ON_DELAYED" />
     </Wire>
     <Wire UId="99">
-      <OpenCon UId="71" />
-      <NameCon UId="64" Name="iSTATION_UNIT_ANY_CYCLE_ACT" />
+      <OpenCon UId="72" />
+      <NameCon UId="66" Name="iLASER_READY_F_CIRCUIT_BRAKER" />
     </Wire>
     <Wire UId="100">
       <IdentCon UId="38" />
-      <NameCon UId="64" Name="iLASER_ACT_START_GEN_CONDITION" />
+      <NameCon UId="66" Name="iLASER_WARNING_LAP_ON" />
     </Wire>
     <Wire UId="101">
       <IdentCon UId="39" />
-      <NameCon UId="64" Name="iUNIT_NO" />
+      <NameCon UId="66" Name="iSTATION_UNIT_ANY_CYCLE_ACT" />
     </Wire>
     <Wire UId="102">
-      <NameCon UId="64" Name="oLIGHT_PATH" />
       <IdentCon UId="40" />
+      <NameCon UId="66" Name="iLASER_ACT_START_GEN_CONDITION" />
     </Wire>
     <Wire UId="103">
-      <NameCon UId="64" Name="oPROGRAM_NUMBER" />
       <IdentCon UId="41" />
+      <NameCon UId="66" Name="iUNIT_NO" />
     </Wire>
     <Wire UId="104">
-      <NameCon UId="64" Name="oPOWER_VALUE" />
+      <NameCon UId="66" Name="oLIGHT_PATH" />
       <IdentCon UId="42" />
     </Wire>
     <Wire UId="105">
-      <NameCon UId="64" Name="oPROCESSING_VALUE" />
+      <NameCon UId="66" Name="oPROGRAM_NUMBER" />
       <IdentCon UId="43" />
     </Wire>
     <Wire UId="106">
-      <NameCon UId="64" Name="oPOWER_PORTION_CORE_VALUE" />
+      <NameCon UId="66" Name="oPOWER_VALUE" />
       <IdentCon UId="44" />
     </Wire>
     <Wire UId="107">
-      <NameCon UId="64" Name="oLASER_RESET_FAULT_ERROR" />
+      <NameCon UId="66" Name="oPROCESSING_VALUE" />
       <IdentCon UId="45" />
     </Wire>
     <Wire UId="108">
-      <NameCon UId="64" Name="oLASER_REQUEST" />
+      <NameCon UId="66" Name="oPOWER_PORTION_CORE_VALUE" />
       <IdentCon UId="46" />
     </Wire>
     <Wire UId="109">
-      <NameCon UId="64" Name="oEXTERNAL_CONTROL" />
+      <NameCon UId="66" Name="oLASER_RESET_FAULT_ERROR" />
       <IdentCon UId="47" />
     </Wire>
     <Wire UId="110">
-      <NameCon UId="64" Name="oLASER_ON" />
+      <NameCon UId="66" Name="oLASER_REQUEST" />
       <IdentCon UId="48" />
     </Wire>
     <Wire UId="111">
-      <NameCon UId="64" Name="oLASER_ARM" />
-      <OpenCon UId="72" />
-    </Wire>
-    <Wire UId="112">
-      <NameCon UId="64" Name="oSTATION_RHP_SEOC_ALARMS" />
-      <OpenCon UId="73" />
-    </Wire>
-    <Wire UId="113">
-      <NameCon UId="64" Name="oSTATION_WARNING" />
-      <OpenCon UId="74" />
-    </Wire>
-    <Wire UId="114">
-      <NameCon UId="64" Name="oREADY_TO_EMISSION" />
+      <NameCon UId="66" Name="oEXTERNAL_CONTROL" />
       <IdentCon UId="49" />
     </Wire>
-    <Wire UId="115">
-      <NameCon UId="64" Name="oALARM_CIRCUIT_BREAKER_ALARM" />
+    <Wire UId="112">
+      <NameCon UId="66" Name="oLASER_ON" />
       <IdentCon UId="50" />
     </Wire>
+    <Wire UId="113">
+      <NameCon UId="66" Name="oLASER_ARM" />
+      <OpenCon UId="73" />
+    </Wire>
+    <Wire UId="114">
+      <NameCon UId="66" Name="oSTATION_RHP_SEOC_ALARMS" />
+      <OpenCon UId="74" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="66" Name="oSTATION_WARNING" />
+      <OpenCon UId="75" />
+    </Wire>
     <Wire UId="116">
-      <NameCon UId="64" Name="oALARM_LASER_ERROR" />
+      <NameCon UId="66" Name="oREADY_TO_EMISSION" />
       <IdentCon UId="51" />
     </Wire>
     <Wire UId="117">
-      <NameCon UId="64" Name="oALARM_WARNING_LASER" />
+      <NameCon UId="66" Name="oALARM_CIRCUIT_BREAKER_ALARM" />
       <IdentCon UId="52" />
     </Wire>
     <Wire UId="118">
-      <NameCon UId="64" Name="oALARM_LASER_NOT_READY" />
+      <NameCon UId="66" Name="oALARM_LASER_ERROR" />
       <IdentCon UId="53" />
     </Wire>
     <Wire UId="119">
-      <NameCon UId="64" Name="oALARM_LASER_NOT_SWITCHED_ON" />
+      <NameCon UId="66" Name="oALARM_WARNING_LASER" />
       <IdentCon UId="54" />
     </Wire>
     <Wire UId="120">
-      <NameCon UId="64" Name="oALARM_ANALOG_CONTROL_ERROR" />
+      <NameCon UId="66" Name="oALARM_LASER_NOT_READY" />
       <IdentCon UId="55" />
     </Wire>
     <Wire UId="121">
-      <NameCon UId="64" Name="oALARM_LASER_NOT_ASSIGNED" />
+      <NameCon UId="66" Name="oALARM_LASER_NOT_SWITCHED_ON" />
       <IdentCon UId="56" />
     </Wire>
     <Wire UId="122">
-      <NameCon UId="64" Name="oALARM_OVERTEMPERATURE_ALARM" />
+      <NameCon UId="66" Name="oALARM_ANALOG_CONTROL_ERROR" />
       <IdentCon UId="57" />
     </Wire>
     <Wire UId="123">
-      <NameCon UId="64" Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" />
+      <NameCon UId="66" Name="oALARM_LASER_NOT_ASSIGNED" />
       <IdentCon UId="58" />
     </Wire>
     <Wire UId="124">
-      <NameCon UId="64" Name="oALARM_LASER_SC_STATUS_ACTIVE" />
+      <NameCon UId="66" Name="oALARM_OVERTEMPERATURE_ALARM" />
       <IdentCon UId="59" />
     </Wire>
     <Wire UId="125">
-      <NameCon UId="64" Name="oALARM_ACTIVE_PANEL_ERROR" />
+      <NameCon UId="66" Name="oALARM_LASER_EMERGENCY_STOP_ACTIVE" />
       <IdentCon UId="60" />
     </Wire>
     <Wire UId="126">
-      <NameCon UId="64" Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" />
+      <NameCon UId="66" Name="oALARM_LASER_SC_STATUS_ACTIVE" />
       <IdentCon UId="61" />
     </Wire>
     <Wire UId="127">
-      <NameCon UId="64" Name="oALARM_FAULT" />
+      <NameCon UId="66" Name="oALARM_ACTIVE_PANEL_ERROR" />
       <IdentCon UId="62" />
+    </Wire>
+    <Wire UId="128">
+      <NameCon UId="66" Name="oALARM_LASER_MODULE_1_IN_TEST_MODE" />
+      <IdentCon UId="63" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="66" Name="oALARM_FAULT" />
+      <IdentCon UId="64" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
