@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-09T08:03:27.9855348Z</Created>
+    <Created>2025-04-22T12:08:42.1268677Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -38,10 +38,6 @@
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
-        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
-        <DisplayVersion>V17 Update 12</DisplayVersion>
-      </OptionPackage>
-      <OptionPackage>
         <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
@@ -50,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -152,6 +148,11 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="LTLP_DirectKeyGetMovNoData" />
         <Component Name="PowerUp" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -163,13 +164,13 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="pMinus" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -178,32 +179,32 @@
         <Component Name="EXT_ACTIV_ACTIVE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB20210_TRUMPF_LASER_UNIT_01_READY" />
         <Component Name="DATA" />
         <Component Name="LASER READY FEEDBACK ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="STOP_SERVICES_GLOBAL" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
+    <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON_DELAYED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="32">
+    <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB1018_SAFETY_TAGS" />
         <Component Name="SAFE_DOORS_U01_CLOSED_AND_LOCKED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -212,7 +213,7 @@
         <Component Name="PILOT_LASER_IS_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_01" />
@@ -221,14 +222,14 @@
         <Component Name="PILOT_LASER_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="35">
+    <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
         <Component Name="736108" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="36">
+    <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="ALARMS_UNIT_01" />
@@ -236,46 +237,47 @@
         <Component Name="SEOC_ALARMS" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="37">
+    <Access Scope="GlobalVariable" UId="38">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerupCondOff14" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="38">
+    <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerupCondOn14" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="39">
+    <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerup14ExecutableRight" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="40">
+    <Access Scope="GlobalVariable" UId="41">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerup14ExecutableLeft" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="41" />
     <Part Name="Contact" UId="42" />
     <Part Name="Contact" UId="43" />
     <Part Name="Contact" UId="44" />
-    <Part Name="TON" Version="1.0" UId="45">
-      <Instance Scope="GlobalVariable" UId="46">
+    <Part Name="Contact" UId="45" />
+    <Part Name="TON" Version="1.0" UId="46">
+      <Instance Scope="GlobalVariable" UId="47">
         <Component Name="DB20201_LASER_TRUMPF_TIMERS" />
         <Component Name="TIMER_TRUMPF_1" />
       </Instance>
       <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="47" />
     <Part Name="Contact" UId="48" />
-    <Call UId="49">
+    <Part Name="Contact" UId="49" />
+    <Part Name="Contact" UId="50" />
+    <Call UId="51">
       <CallInfo Name="FB20201_TRUMPF_GUIDE" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="50">
+        <Instance Scope="GlobalVariable" UId="52">
           <Component Name="DB20220_TRUMPF_LASER_UNIT_01_POINTER" />
         </Instance>
         <Parameter Name="iEXTERNAL_CONTROL_READY" Section="Input" Type="Bool" />
@@ -298,124 +300,132 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
-      <Powerrail />
-      <NameCon UId="41" Name="in" />
-      <NameCon UId="42" Name="in" />
-      <NameCon UId="44" Name="in" />
-      <NameCon UId="47" Name="in" />
-    </Wire>
-    <Wire UId="53">
-      <IdentCon UId="21" />
-      <NameCon UId="41" Name="operand" />
-    </Wire>
     <Wire UId="54">
-      <NameCon UId="41" Name="out" />
-      <NameCon UId="49" Name="en" />
+      <Powerrail />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="43" Name="in" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="49" Name="in" />
     </Wire>
     <Wire UId="55">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="42" Name="operand" />
     </Wire>
     <Wire UId="56">
       <NameCon UId="42" Name="out" />
-      <NameCon UId="43" Name="in" />
+      <NameCon UId="51" Name="en" />
     </Wire>
     <Wire UId="57">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="43" Name="operand" />
     </Wire>
     <Wire UId="58">
       <NameCon UId="43" Name="out" />
-      <NameCon UId="49" Name="iMANUAL_START_REQUEST" />
+      <NameCon UId="44" Name="in" />
     </Wire>
     <Wire UId="59">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="44" Name="operand" />
     </Wire>
     <Wire UId="60">
       <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="IN" />
+      <NameCon UId="51" Name="iMANUAL_START_REQUEST" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="25" />
-      <NameCon UId="45" Name="PT" />
+      <IdentCon UId="24" />
+      <NameCon UId="45" Name="operand" />
     </Wire>
     <Wire UId="62">
-      <NameCon UId="45" Name="Q" />
-      <NameCon UId="49" Name="iAUTO_START_REQUEST" />
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="IN" />
     </Wire>
     <Wire UId="63">
-      <NameCon UId="45" Name="ET" />
-      <OpenCon UId="51" />
+      <IdentCon UId="25" />
+      <NameCon UId="46" Name="PT" />
     </Wire>
     <Wire UId="64">
-      <IdentCon UId="26" />
-      <NameCon UId="47" Name="operand" />
-    </Wire>
-    <Wire UId="65">
-      <NameCon UId="47" Name="out" />
+      <NameCon UId="46" Name="Q" />
       <NameCon UId="48" Name="in" />
     </Wire>
+    <Wire UId="65">
+      <NameCon UId="46" Name="ET" />
+      <OpenCon UId="53" />
+    </Wire>
     <Wire UId="66">
-      <IdentCon UId="27" />
+      <IdentCon UId="26" />
       <NameCon UId="48" Name="operand" />
     </Wire>
     <Wire UId="67">
       <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="iMANUAL STOP REQUEST" />
+      <NameCon UId="51" Name="iAUTO_START_REQUEST" />
     </Wire>
     <Wire UId="68">
-      <IdentCon UId="28" />
-      <NameCon UId="49" Name="iEXTERNAL_CONTROL_READY" />
+      <IdentCon UId="27" />
+      <NameCon UId="49" Name="operand" />
     </Wire>
     <Wire UId="69">
-      <IdentCon UId="29" />
-      <NameCon UId="49" Name="iLASER_ACTIVE_ON" />
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
     </Wire>
     <Wire UId="70">
-      <IdentCon UId="30" />
-      <NameCon UId="49" Name="iAUTO STOP REQUEST" />
+      <IdentCon UId="28" />
+      <NameCon UId="50" Name="operand" />
     </Wire>
     <Wire UId="71">
-      <IdentCon UId="31" />
-      <NameCon UId="49" Name="iMACHINE_ON_DELAYED" />
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="iMANUAL STOP REQUEST" />
     </Wire>
     <Wire UId="72">
-      <IdentCon UId="32" />
-      <NameCon UId="49" Name="iSAFETY_GATES_CLOSED_LOCKED" />
+      <IdentCon UId="29" />
+      <NameCon UId="51" Name="iEXTERNAL_CONTROL_READY" />
     </Wire>
     <Wire UId="73">
-      <IdentCon UId="33" />
-      <NameCon UId="49" Name="iPILOT_LASER_IS_ON" />
+      <IdentCon UId="30" />
+      <NameCon UId="51" Name="iLASER_ACTIVE_ON" />
     </Wire>
     <Wire UId="74">
-      <NameCon UId="49" Name="oGUIDE_SWITCH_ON" />
-      <IdentCon UId="34" />
+      <IdentCon UId="31" />
+      <NameCon UId="51" Name="iAUTO STOP REQUEST" />
     </Wire>
     <Wire UId="75">
-      <NameCon UId="49" Name="oLASER_POINTER_NOT_READY_ALARM" />
-      <IdentCon UId="35" />
+      <IdentCon UId="32" />
+      <NameCon UId="51" Name="iMACHINE_ON_DELAYED" />
     </Wire>
     <Wire UId="76">
-      <NameCon UId="49" Name="oSTATION_SEOC_ALARMS" />
-      <IdentCon UId="36" />
+      <IdentCon UId="33" />
+      <NameCon UId="51" Name="iSAFETY_GATES_CLOSED_LOCKED" />
     </Wire>
     <Wire UId="77">
-      <NameCon UId="49" Name="oSwitchoncondition_off" />
-      <IdentCon UId="37" />
+      <IdentCon UId="34" />
+      <NameCon UId="51" Name="iPILOT_LASER_IS_ON" />
     </Wire>
     <Wire UId="78">
-      <NameCon UId="49" Name="oSwitchoncondition_on" />
-      <IdentCon UId="38" />
+      <NameCon UId="51" Name="oGUIDE_SWITCH_ON" />
+      <IdentCon UId="35" />
     </Wire>
     <Wire UId="79">
-      <NameCon UId="49" Name="oLimit_right" />
-      <IdentCon UId="39" />
+      <NameCon UId="51" Name="oLASER_POINTER_NOT_READY_ALARM" />
+      <IdentCon UId="36" />
     </Wire>
     <Wire UId="80">
-      <NameCon UId="49" Name="oLimit_left" />
+      <NameCon UId="51" Name="oSTATION_SEOC_ALARMS" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="51" Name="oSwitchoncondition_off" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="51" Name="oSwitchoncondition_on" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="51" Name="oLimit_right" />
       <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="51" Name="oLimit_left" />
+      <IdentCon UId="41" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -522,6 +532,11 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="LTLP_DirectKeyGetMovNoData" />
         <Component Name="PowerUp" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -533,13 +548,13 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="pMinus" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -548,32 +563,32 @@
         <Component Name="EXT_ACTIV_ACTIVE" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB20211_TRUMPF_LASER_UNIT_02_READY" />
         <Component Name="DATA" />
         <Component Name="LASER READY FEEDBACK ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="STOP_SERVICES_GLOBAL" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
+    <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON_DELAYED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="32">
+    <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB1018_SAFETY_TAGS" />
         <Component Name="SAFE_DOORS_U02_CLOSED_AND_LOCKED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -582,7 +597,7 @@
         <Component Name="PILOT_LASER_IS_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
         <Component Name="LASER_UNIT_02" />
@@ -591,14 +606,14 @@
         <Component Name="PILOT_LASER_ON" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="35">
+    <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
         <Component Name="LASER_SYSTEM" />
         <Component Name="736109" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="36">
+    <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="ALARMS_UNIT_02" />
@@ -606,22 +621,23 @@
         <Component Name="SEOC_ALARMS" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="37" />
     <Part Name="Contact" UId="38" />
     <Part Name="Contact" UId="39" />
     <Part Name="Contact" UId="40" />
-    <Part Name="TON" Version="1.0" UId="41">
-      <Instance Scope="GlobalVariable" UId="42">
+    <Part Name="Contact" UId="41" />
+    <Part Name="TON" Version="1.0" UId="42">
+      <Instance Scope="GlobalVariable" UId="43">
         <Component Name="DB20201_LASER_TRUMPF_TIMERS" />
         <Component Name="TIMER_TRUMPF_2" />
       </Instance>
       <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="43" />
     <Part Name="Contact" UId="44" />
-    <Call UId="45">
+    <Part Name="Contact" UId="45" />
+    <Part Name="Contact" UId="46" />
+    <Call UId="47">
       <CallInfo Name="FB20201_TRUMPF_GUIDE" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="46">
+        <Instance Scope="GlobalVariable" UId="48">
           <Component Name="DB20221_TRUMPF_LASER_UNIT_02_POINTER" />
         </Instance>
         <Parameter Name="iEXTERNAL_CONTROL_READY" Section="Input" Type="Bool" />
@@ -644,124 +660,132 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="52">
-      <Powerrail />
-      <NameCon UId="37" Name="in" />
-      <NameCon UId="38" Name="in" />
-      <NameCon UId="40" Name="in" />
-      <NameCon UId="43" Name="in" />
-    </Wire>
-    <Wire UId="53">
-      <IdentCon UId="21" />
-      <NameCon UId="37" Name="operand" />
-    </Wire>
     <Wire UId="54">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="45" Name="en" />
+      <Powerrail />
+      <NameCon UId="38" Name="in" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="55">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="38" Name="operand" />
     </Wire>
     <Wire UId="56">
       <NameCon UId="38" Name="out" />
-      <NameCon UId="39" Name="in" />
+      <NameCon UId="47" Name="en" />
     </Wire>
     <Wire UId="57">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="58">
       <NameCon UId="39" Name="out" />
-      <NameCon UId="45" Name="iMANUAL_START_REQUEST" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="59">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="60">
       <NameCon UId="40" Name="out" />
-      <NameCon UId="41" Name="IN" />
+      <NameCon UId="47" Name="iMANUAL_START_REQUEST" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="25" />
-      <NameCon UId="41" Name="PT" />
+      <IdentCon UId="24" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
     <Wire UId="62">
-      <NameCon UId="41" Name="Q" />
-      <NameCon UId="45" Name="iAUTO_START_REQUEST" />
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="IN" />
     </Wire>
     <Wire UId="63">
-      <NameCon UId="41" Name="ET" />
-      <OpenCon UId="47" />
+      <IdentCon UId="25" />
+      <NameCon UId="42" Name="PT" />
     </Wire>
     <Wire UId="64">
-      <IdentCon UId="26" />
-      <NameCon UId="43" Name="operand" />
-    </Wire>
-    <Wire UId="65">
-      <NameCon UId="43" Name="out" />
+      <NameCon UId="42" Name="Q" />
       <NameCon UId="44" Name="in" />
     </Wire>
+    <Wire UId="65">
+      <NameCon UId="42" Name="ET" />
+      <OpenCon UId="49" />
+    </Wire>
     <Wire UId="66">
-      <IdentCon UId="27" />
+      <IdentCon UId="26" />
       <NameCon UId="44" Name="operand" />
     </Wire>
     <Wire UId="67">
       <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="iMANUAL STOP REQUEST" />
+      <NameCon UId="47" Name="iAUTO_START_REQUEST" />
     </Wire>
     <Wire UId="68">
-      <IdentCon UId="28" />
-      <NameCon UId="45" Name="iEXTERNAL_CONTROL_READY" />
+      <IdentCon UId="27" />
+      <NameCon UId="45" Name="operand" />
     </Wire>
     <Wire UId="69">
-      <IdentCon UId="29" />
-      <NameCon UId="45" Name="iLASER_ACTIVE_ON" />
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
     </Wire>
     <Wire UId="70">
-      <IdentCon UId="30" />
-      <NameCon UId="45" Name="iAUTO STOP REQUEST" />
+      <IdentCon UId="28" />
+      <NameCon UId="46" Name="operand" />
     </Wire>
     <Wire UId="71">
-      <IdentCon UId="31" />
-      <NameCon UId="45" Name="iMACHINE_ON_DELAYED" />
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="iMANUAL STOP REQUEST" />
     </Wire>
     <Wire UId="72">
-      <IdentCon UId="32" />
-      <NameCon UId="45" Name="iSAFETY_GATES_CLOSED_LOCKED" />
+      <IdentCon UId="29" />
+      <NameCon UId="47" Name="iEXTERNAL_CONTROL_READY" />
     </Wire>
     <Wire UId="73">
-      <IdentCon UId="33" />
-      <NameCon UId="45" Name="iPILOT_LASER_IS_ON" />
+      <IdentCon UId="30" />
+      <NameCon UId="47" Name="iLASER_ACTIVE_ON" />
     </Wire>
     <Wire UId="74">
-      <NameCon UId="45" Name="oGUIDE_SWITCH_ON" />
-      <IdentCon UId="34" />
+      <IdentCon UId="31" />
+      <NameCon UId="47" Name="iAUTO STOP REQUEST" />
     </Wire>
     <Wire UId="75">
-      <NameCon UId="45" Name="oLASER_POINTER_NOT_READY_ALARM" />
-      <IdentCon UId="35" />
+      <IdentCon UId="32" />
+      <NameCon UId="47" Name="iMACHINE_ON_DELAYED" />
     </Wire>
     <Wire UId="76">
-      <NameCon UId="45" Name="oSTATION_SEOC_ALARMS" />
-      <IdentCon UId="36" />
+      <IdentCon UId="33" />
+      <NameCon UId="47" Name="iSAFETY_GATES_CLOSED_LOCKED" />
     </Wire>
     <Wire UId="77">
-      <NameCon UId="45" Name="oSwitchoncondition_off" />
-      <OpenCon UId="48" />
+      <IdentCon UId="34" />
+      <NameCon UId="47" Name="iPILOT_LASER_IS_ON" />
     </Wire>
     <Wire UId="78">
-      <NameCon UId="45" Name="oSwitchoncondition_on" />
-      <OpenCon UId="49" />
+      <NameCon UId="47" Name="oGUIDE_SWITCH_ON" />
+      <IdentCon UId="35" />
     </Wire>
     <Wire UId="79">
-      <NameCon UId="45" Name="oLimit_right" />
-      <OpenCon UId="50" />
+      <NameCon UId="47" Name="oLASER_POINTER_NOT_READY_ALARM" />
+      <IdentCon UId="36" />
     </Wire>
     <Wire UId="80">
-      <NameCon UId="45" Name="oLimit_left" />
+      <NameCon UId="47" Name="oSTATION_SEOC_ALARMS" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="47" Name="oSwitchoncondition_off" />
+      <OpenCon UId="50" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="47" Name="oSwitchoncondition_on" />
       <OpenCon UId="51" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="47" Name="oLimit_right" />
+      <OpenCon UId="52" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="47" Name="oLimit_left" />
+      <OpenCon UId="53" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
