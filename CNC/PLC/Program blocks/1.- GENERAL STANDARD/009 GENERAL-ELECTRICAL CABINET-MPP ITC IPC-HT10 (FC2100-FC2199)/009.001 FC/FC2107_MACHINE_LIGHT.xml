@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-13T10:30:02.6715553Z</Created>
+    <Created>2025-04-25T10:07:24.9396604Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -112,75 +112,115 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="M_ONE" />
+        <Component Name="MACH_LIGHT_SELECTOR_ON_I" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB2103_ELECTRICAL_CABINET" />
         <Component Name="INPUT_110/120/220/230VAC_BREAKER" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="I_CIRCUIT_BREAKER" />
-      </Symbol>
-    </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="MACH_LIGHT_SELECTOR_ON_I" />
+        <Component Name="M_ZERO" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="I_SELECTOR_ON" />
+        <Component Name="M_ZERO" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="26" />
-    <Part Name="Contact" UId="27" />
-    <Part Name="Coil" UId="28" />
-    <Part Name="Contact" UId="29" />
-    <Part Name="Coil" UId="30" />
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="MACH_LIGHT_ON_1_Q" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="28">
+      <Negated Name="operand" />
+    </Part>
+    <Call UId="29">
+      <CallInfo Name="FB2107_LIGHTS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="30">
+          <Component Name="DB2107_MACHINE_LIGHT" />
+        </Instance>
+        <Parameter Name="GENERAL_MACHINE_LIGHT_OPTION" Section="Input" Type="Bool" />
+        <Parameter Name="CIRCUIT_BRAKER_IN" Section="Input" Type="Bool" />
+        <Parameter Name="LIGHT_ON_SELECTOR" Section="Input" Type="Bool" />
+        <Parameter Name="MANUAL_REQ_LINE" Section="Input" Type="Bool" />
+        <Parameter Name="SWITCH_ON_AUTO_REQ" Section="Input" Type="Bool" />
+        <Parameter Name="SWITCH_OFF_AUTO_REQ" Section="Input" Type="Bool" />
+        <Parameter Name="LIGHTS_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_ON_EXEC" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_OFF_EXEC" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_ON_STATUS" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_OFF_STATUS" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
   </Parts>
   <Wires>
-    <Wire UId="31">
-      <Powerrail />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="32">
-      <IdentCon UId="21" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-    <Wire UId="33">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="in" />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="22" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
     <Wire UId="35">
-      <NameCon UId="27" Name="out" />
+      <Powerrail />
+      <NameCon UId="29" Name="en" />
       <NameCon UId="28" Name="in" />
     </Wire>
     <Wire UId="36">
-      <IdentCon UId="23" />
+      <IdentCon UId="21" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="37">
-      <IdentCon UId="24" />
-      <NameCon UId="29" Name="operand" />
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="LIGHT_ON_SELECTOR" />
     </Wire>
     <Wire UId="38">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="GENERAL_MACHINE_LIGHT_OPTION" />
     </Wire>
     <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="CIRCUIT_BRAKER_IN" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="MANUAL_REQ_LINE" />
+    </Wire>
+    <Wire UId="41">
       <IdentCon UId="25" />
-      <NameCon UId="30" Name="operand" />
+      <NameCon UId="29" Name="SWITCH_ON_AUTO_REQ" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="SWITCH_OFF_AUTO_REQ" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="29" Name="LIGHTS_ON" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="29" Name="HMI_LINE_ON_EXEC" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="29" Name="HMI_LINE_OFF_EXEC" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="29" Name="HMI_LINE_ON_STATUS" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="29" Name="HMI_LINE_OFF_STATUS" />
+      <OpenCon UId="34" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -220,7 +260,7 @@
               <MultilingualTextItem ID="D" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>INPUTS</Text>
+                  <Text>MACHINE LIGHT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="E" CompositionName="Items">
@@ -251,62 +291,312 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="I_CIRCUIT_BREAKER" />
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB2120_MPP_ITC_IPC" />
-        <Component Name="INPUT_CONTROL_ON" />
+        <Component Name="DB1201_PART_CYCLE_UNIT_1" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GENERAL_CONDITIONS" />
+        <Component Name="DB1205_UNIT_1_STATION_3_CYCLE" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="24">
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB347_M_UNIT_01_STA_3" />
+        <Component Name="M_CODES_UNIT_01_STA_3" />
+        <Component Name="M142" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB1201_PART_CYCLE_UNIT_1" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB1205_UNIT_1_STATION_3_CYCLE" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB1237_UNIT_1_STATION_3_CAM_NOZZLE_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB16010_MEASURE_SENSORS_CALIBRATION_STATUS" />
+        <Component Name="UNIT_1_AUX" />
+        <Component Name="DOOR_OPEN_NOZZLE_CALIBRATION_MEM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB347_M_UNIT_01_STA_3" />
+        <Component Name="M_CODES_UNIT_01_STA_3" />
+        <Component Name="M143" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB2103_ELECTRICAL_CABINET" />
+        <Component Name="INPUT_CIRCUIT_BREAKER_TRIPPED_LIGHT_STA_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="LTLP_DirectKeyGetMovNoData" />
+        <Component Name="PowerUp" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>30</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="STATION_3_LIGHT_U01_Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup30ExecutableRight" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup30ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOn30" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOff30" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="40">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="25">
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
-    <Part Name="O" UId="26">
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="43">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="44" />
+    <Part Name="Contact" UId="45">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="48">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="49">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="50" />
+    <Part Name="O" UId="51">
       <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Part Name="Coil" UId="27" />
+    <Call UId="52">
+      <CallInfo Name="FB2107_LIGHTS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="53">
+          <Component Name="DB2108_UNIT_1_STATION_3_LIGHT" />
+        </Instance>
+        <Parameter Name="GENERAL_MACHINE_LIGHT_OPTION" Section="Input" Type="Bool" />
+        <Parameter Name="CIRCUIT_BRAKER_IN" Section="Input" Type="Bool" />
+        <Parameter Name="LIGHT_ON_SELECTOR" Section="Input" Type="Bool" />
+        <Parameter Name="MANUAL_REQ_LINE" Section="Input" Type="Bool" />
+        <Parameter Name="SWITCH_ON_AUTO_REQ" Section="Input" Type="Bool" />
+        <Parameter Name="SWITCH_OFF_AUTO_REQ" Section="Input" Type="Bool" />
+        <Parameter Name="LIGHTS_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_ON_EXEC" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_OFF_EXEC" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_ON_STATUS" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_OFF_STATUS" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
   </Parts>
   <Wires>
-    <Wire UId="28">
+    <Wire UId="54">
       <Powerrail />
-      <NameCon UId="24" Name="in" />
-      <NameCon UId="25" Name="in" />
+      <NameCon UId="52" Name="en" />
+      <NameCon UId="40" Name="in" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="50" Name="in" />
     </Wire>
-    <Wire UId="29">
+    <Wire UId="55">
       <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
+      <NameCon UId="40" Name="operand" />
     </Wire>
-    <Wire UId="30">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="26" Name="in1" />
+    <Wire UId="56">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
     </Wire>
-    <Wire UId="31">
+    <Wire UId="57">
       <IdentCon UId="22" />
-      <NameCon UId="25" Name="operand" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
-    <Wire UId="32">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in2" />
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
     </Wire>
-    <Wire UId="33">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="34">
+    <Wire UId="59">
       <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="24" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="52" Name="SWITCH_ON_AUTO_REQ" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="48" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="48" Name="out" />
+      <NameCon UId="49" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="51" Name="in1" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="30" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in2" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="SWITCH_OFF_AUTO_REQ" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="31" />
+      <NameCon UId="52" Name="GENERAL_MACHINE_LIGHT_OPTION" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="32" />
+      <NameCon UId="52" Name="CIRCUIT_BRAKER_IN" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="33" />
+      <NameCon UId="52" Name="LIGHT_ON_SELECTOR" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="MANUAL_REQ_LINE" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="LIGHTS_ON" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="52" Name="HMI_LINE_ON_EXEC" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="52" Name="HMI_LINE_OFF_EXEC" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="52" Name="HMI_LINE_ON_STATUS" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="52" Name="HMI_LINE_OFF_STATUS" />
+      <IdentCon UId="39" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -346,7 +636,7 @@
               <MultilingualTextItem ID="18" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SWITCH ON GENERAL CONDITIONS</Text>
+                  <Text>UNIT 1 STATION 3 LIGHT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="19" CompositionName="Items">
@@ -377,37 +667,313 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_INITIAL_CONDITIONS" />
+        <Component Name="DB1251_PART_CYCLE_UNIT_2" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="23">
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB1255_UNIT_2_STATION_3_CYCLE" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB362_M_UNIT_02_STA_3" />
+        <Component Name="M_CODES_UNIT_02_STA_3" />
+        <Component Name="M142" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB1101_MACHINE_SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB1251_PART_CYCLE_UNIT_2" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB1255_UNIT_2_STATION_3_CYCLE" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB1277_UNIT_2_STATION_3_CAM_NOZZLE_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB16010_MEASURE_SENSORS_CALIBRATION_STATUS" />
+        <Component Name="UNIT_2_AUX" />
+        <Component Name="STATION_3" />
+        <Component Name="DOOR_OPEN_NOZZLE_CALIBRATION_MEM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB362_M_UNIT_02_STA_3" />
+        <Component Name="M_CODES_UNIT_02_STA_3" />
+        <Component Name="Ack_M143" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB2103_ELECTRICAL_CABINET" />
+        <Component Name="INPUT_CIRCUIT_BREAKER_TRIPPED_LIGHT_STA_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="LTLP_DirectKeyGetMovNoData" />
+        <Component Name="PowerUp" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>31</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="STATION_3_LIGHT_U02_Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup31ExecutableRight" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup31ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOn31" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOff31" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="40">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="24" />
+    <Part Name="Contact" UId="41">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="42">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="43">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="44" />
+    <Part Name="Contact" UId="45">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="46">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="47">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="48">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="49">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="50" />
+    <Part Name="O" UId="51">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Call UId="52">
+      <CallInfo Name="FB2107_LIGHTS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="53">
+          <Component Name="DB2109_UNIT_2_STATION_3_LIGHT" />
+        </Instance>
+        <Parameter Name="GENERAL_MACHINE_LIGHT_OPTION" Section="Input" Type="Bool" />
+        <Parameter Name="CIRCUIT_BRAKER_IN" Section="Input" Type="Bool" />
+        <Parameter Name="LIGHT_ON_SELECTOR" Section="Input" Type="Bool" />
+        <Parameter Name="MANUAL_REQ_LINE" Section="Input" Type="Bool" />
+        <Parameter Name="SWITCH_ON_AUTO_REQ" Section="Input" Type="Bool" />
+        <Parameter Name="SWITCH_OFF_AUTO_REQ" Section="Input" Type="Bool" />
+        <Parameter Name="LIGHTS_ON" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_ON_EXEC" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_OFF_EXEC" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_ON_STATUS" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_LINE_OFF_STATUS" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
   </Parts>
   <Wires>
-    <Wire UId="25">
+    <Wire UId="54">
       <Powerrail />
-      <NameCon UId="23" Name="in" />
+      <NameCon UId="52" Name="en" />
+      <NameCon UId="40" Name="in" />
+      <NameCon UId="45" Name="in" />
+      <NameCon UId="50" Name="in" />
     </Wire>
-    <Wire UId="26">
+    <Wire UId="55">
       <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
+      <NameCon UId="40" Name="operand" />
     </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
+    <Wire UId="56">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
     </Wire>
-    <Wire UId="28">
+    <Wire UId="57">
       <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="23" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="24" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="52" Name="SWITCH_ON_AUTO_REQ" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="25" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="26" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="27" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="28" />
+      <NameCon UId="48" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="48" Name="out" />
+      <NameCon UId="49" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="29" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="51" Name="in1" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="30" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in2" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="SWITCH_OFF_AUTO_REQ" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="31" />
+      <NameCon UId="52" Name="GENERAL_MACHINE_LIGHT_OPTION" />
+    </Wire>
+    <Wire UId="78">
+      <IdentCon UId="32" />
+      <NameCon UId="52" Name="CIRCUIT_BRAKER_IN" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="33" />
+      <NameCon UId="52" Name="LIGHT_ON_SELECTOR" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="34" />
+      <NameCon UId="52" Name="MANUAL_REQ_LINE" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="52" Name="LIGHTS_ON" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="82">
+      <NameCon UId="52" Name="HMI_LINE_ON_EXEC" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="52" Name="HMI_LINE_OFF_EXEC" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="52" Name="HMI_LINE_ON_STATUS" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="52" Name="HMI_LINE_OFF_STATUS" />
+      <IdentCon UId="39" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -447,7 +1013,7 @@
               <MultilingualTextItem ID="23" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SWITCH ON INITIAL CONDITIONS</Text>
+                  <Text>UNIT 2 STATION 3 LIGHT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="24" CompositionName="Items">
@@ -472,2292 +1038,27 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="LTLP_DirectKeyGetMovNoData" />
-        <Component Name="PowerUp" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>6</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="pPlus" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="I_SELECTOR_ON" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_MANUAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="25" />
-    <Part Name="Contact" UId="26" />
-    <Part Name="Contact" UId="27" />
-    <Part Name="O" UId="28">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="29" />
-  </Parts>
-  <Wires>
-    <Wire UId="30">
-      <Powerrail />
-      <NameCon UId="25" Name="in" />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="31">
-      <IdentCon UId="21" />
-      <NameCon UId="25" Name="operand" />
-    </Wire>
-    <Wire UId="32">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="33">
-      <IdentCon UId="22" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-    <Wire UId="34">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="28" Name="in1" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="36">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="28" Name="in2" />
-    </Wire>
-    <Wire UId="37">
-      <NameCon UId="28" Name="out" />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="24" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
+      <MultilingualText ID="27" CompositionName="Title">
         <ObjectList>
-          <MultilingualText ID="28" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="29" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="2A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="2B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="2C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="2D" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="2E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH ON MANUAL REQUEST</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="2F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="30" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="31" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_MANUAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="pLamptest" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GLOBAL_REQUEST_AUX1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB1101_MACHINE_SEQUENCE" />
-        <Component Name="RUNNING" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB2440_GLOBAL_DATA" />
-        <Component Name="GLOBAL_DATA" />
-        <Component Name="ANY_MACHINE_CYCLE_RUN" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GLOBAL_REQUEST_AUX2" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB2100_GENERAL" />
-        <Component Name="SAFETY_GATES_CLOSED_LOCKED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GLOBAL_REQUEST_AUX3" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="29">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="OUT_OF_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="30">
-      <Symbol>
-        <Component Name="M_ZERO" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GLOBAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="32">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Not" UId="33" />
-    <Part Name="Contact" UId="34" />
-    <Part Name="PBox" UId="35" />
-    <Part Name="Contact" UId="36">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="37">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="PBox" UId="38" />
-    <Part Name="Contact" UId="39">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="PBox" UId="40" />
-    <Part Name="O" UId="41">
-      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="42" />
-    <Part Name="Contact" UId="43" />
-    <Part Name="O" UId="44">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="45" />
-  </Parts>
-  <Wires>
-    <Wire UId="46">
-      <Powerrail />
-      <NameCon UId="32" Name="in" />
-      <NameCon UId="34" Name="in" />
-      <NameCon UId="36" Name="in" />
-      <NameCon UId="39" Name="in" />
-    </Wire>
-    <Wire UId="47">
-      <IdentCon UId="21" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="48">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="49">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="44" Name="in1" />
-    </Wire>
-    <Wire UId="50">
-      <IdentCon UId="22" />
-      <NameCon UId="34" Name="operand" />
-    </Wire>
-    <Wire UId="51">
-      <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
-    </Wire>
-    <Wire UId="52">
-      <IdentCon UId="23" />
-      <NameCon UId="35" Name="bit" />
-    </Wire>
-    <Wire UId="53">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="41" Name="in1" />
-    </Wire>
-    <Wire UId="54">
-      <IdentCon UId="24" />
-      <NameCon UId="36" Name="operand" />
-    </Wire>
-    <Wire UId="55">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
-    </Wire>
-    <Wire UId="56">
-      <IdentCon UId="25" />
-      <NameCon UId="37" Name="operand" />
-    </Wire>
-    <Wire UId="57">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
-    <Wire UId="58">
-      <IdentCon UId="26" />
-      <NameCon UId="38" Name="bit" />
-    </Wire>
-    <Wire UId="59">
-      <NameCon UId="38" Name="out" />
-      <NameCon UId="41" Name="in2" />
-    </Wire>
-    <Wire UId="60">
-      <IdentCon UId="27" />
-      <NameCon UId="39" Name="operand" />
-    </Wire>
-    <Wire UId="61">
-      <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="in" />
-    </Wire>
-    <Wire UId="62">
-      <IdentCon UId="28" />
-      <NameCon UId="40" Name="bit" />
-    </Wire>
-    <Wire UId="63">
-      <NameCon UId="40" Name="out" />
-      <NameCon UId="41" Name="in3" />
-    </Wire>
-    <Wire UId="64">
-      <NameCon UId="41" Name="out" />
-      <NameCon UId="42" Name="in" />
-    </Wire>
-    <Wire UId="65">
-      <IdentCon UId="29" />
-      <NameCon UId="42" Name="operand" />
-    </Wire>
-    <Wire UId="66">
-      <NameCon UId="42" Name="out" />
-      <NameCon UId="43" Name="in" />
-    </Wire>
-    <Wire UId="67">
-      <IdentCon UId="30" />
-      <NameCon UId="43" Name="operand" />
-    </Wire>
-    <Wire UId="68">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in2" />
-    </Wire>
-    <Wire UId="69">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-    </Wire>
-    <Wire UId="70">
-      <IdentCon UId="31" />
-      <NameCon UId="45" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="33" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="34" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="35" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="36" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="37" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="38" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="39" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH ON GLOBAL REQUEST</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="3A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="3B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="3C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="3D" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GLOBAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GENERAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_INITIAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_COMMAND" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="25" />
-    <Part Name="Contact" UId="26" />
-    <Part Name="Contact" UId="27" />
-    <Part Name="Coil" UId="28" />
-  </Parts>
-  <Wires>
-    <Wire UId="29">
-      <Powerrail />
-      <NameCon UId="25" Name="in" />
-    </Wire>
-    <Wire UId="30">
-      <IdentCon UId="21" />
-      <NameCon UId="25" Name="operand" />
-    </Wire>
-    <Wire UId="31">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="32">
-      <IdentCon UId="22" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-    <Wire UId="33">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="35">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="28" Name="in" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="24" />
-      <NameCon UId="28" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="3E" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="3F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="40" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="41" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="42" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="43" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="44" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH ON COMMAND</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="45" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="46" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="47" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="48" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_COMMAND" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GENERAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_AUTO_REQUEST" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="27" />
-    <Part Name="Contact" UId="28" />
-    <Part Name="O" UId="29">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="30" />
-    <Part Name="Contact" UId="31">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="32" />
-    <Part Name="O" UId="33">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="34" />
-  </Parts>
-  <Wires>
-    <Wire UId="35">
-      <Powerrail />
-      <NameCon UId="27" Name="in" />
-      <NameCon UId="28" Name="in" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="21" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="37">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="29" Name="in1" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="22" />
-      <NameCon UId="28" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="28" Name="out" />
-      <NameCon UId="29" Name="in2" />
-    </Wire>
-    <Wire UId="40">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="42">
-      <NameCon UId="30" Name="out" />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="24" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="33" Name="in1" />
-    </Wire>
-    <Wire UId="45">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="46">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in2" />
-    </Wire>
-    <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="48">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="49" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="4A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="4B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="4C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="4D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="4E" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="4F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH ON</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="50" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="51" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="52" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="53" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="54" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="55" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="56" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="57" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="58" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="59" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="5A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>IN SERVICE</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="5B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="5C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="5D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="5E" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_ONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_GENERAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="5F" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="60" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="61" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="62" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="63" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="64" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="65" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF GENERAL CONDITIONS</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="66" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="67" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="68" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="69" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="OUT_OF_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_INITIAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="6A" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="6B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="6C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="6D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="6E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="6F" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="70" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF INITIAL CONDITIONS</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="71" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="72" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="73" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="74" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_ZERO" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="pMinus" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="I_SELECTOR_ON" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_MANUAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="25" />
-    <Part Name="Contact" UId="26" />
-    <Part Name="Contact" UId="27">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="O" UId="28">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="29" />
-  </Parts>
-  <Wires>
-    <Wire UId="30">
-      <Powerrail />
-      <NameCon UId="25" Name="in" />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="31">
-      <IdentCon UId="21" />
-      <NameCon UId="25" Name="operand" />
-    </Wire>
-    <Wire UId="32">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="33">
-      <IdentCon UId="22" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-    <Wire UId="34">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="28" Name="in1" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="36">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="28" Name="in2" />
-    </Wire>
-    <Wire UId="37">
-      <NameCon UId="28" Name="out" />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="24" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="75" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="76" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="77" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="78" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="79" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="7A" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="7B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF MANUAL REQUEST</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="7C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="7D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="7E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="7F" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2100_GENERAL" />
-        <Component Name="SAFETY_GATES_CLOSED_LOCKED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="TIMER_SWITCH_OFF_1" />
-        <Component Name="PT" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_AUTO_REQUEST_AUX" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="TIMER_SWITCH_OFF_2" />
-        <Component Name="PT" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_AUTO_REQUEST" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="27" />
-    <Part Name="TON" Version="1.0" UId="28">
-      <Instance Scope="GlobalVariable" UId="29">
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="TIMER_SWITCH_OFF_1" />
-      </Instance>
-      <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
-    </Part>
-    <Part Name="PBox" UId="30" />
-    <Part Name="Contact" UId="31" />
-    <Part Name="TON" Version="1.0" UId="32">
-      <Instance Scope="GlobalVariable" UId="33">
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="TIMER_SWITCH_OFF_2" />
-      </Instance>
-      <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
-    </Part>
-    <Part Name="O" UId="34">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="35" />
-  </Parts>
-  <Wires>
-    <Wire UId="38">
-      <Powerrail />
-      <NameCon UId="27" Name="in" />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="39">
-      <IdentCon UId="21" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="40">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="28" Name="IN" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="22" />
-      <NameCon UId="28" Name="PT" />
-    </Wire>
-    <Wire UId="42">
-      <NameCon UId="28" Name="Q" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <NameCon UId="28" Name="ET" />
-      <OpenCon UId="36" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="23" />
-      <NameCon UId="30" Name="bit" />
-    </Wire>
-    <Wire UId="45">
-      <NameCon UId="30" Name="out" />
-      <NameCon UId="34" Name="in1" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="24" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="47">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="IN" />
-    </Wire>
-    <Wire UId="48">
-      <IdentCon UId="25" />
-      <NameCon UId="32" Name="PT" />
-    </Wire>
-    <Wire UId="49">
-      <NameCon UId="32" Name="Q" />
-      <NameCon UId="34" Name="in2" />
-    </Wire>
-    <Wire UId="50">
-      <NameCon UId="32" Name="ET" />
-      <OpenCon UId="37" />
-    </Wire>
-    <Wire UId="51">
-      <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
-    </Wire>
-    <Wire UId="52">
-      <IdentCon UId="26" />
-      <NameCon UId="35" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="80" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="81" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="82" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="83" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="84" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="85" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="86" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF AUTO REQUEST</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="87" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="88" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="89" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="8A" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_MANUAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_AUTO_REQUEST" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="pLamptest" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_GLOBAL_REQUEST_AUX" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_GLOBAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="27" />
-    <Part Name="Contact" UId="28" />
-    <Part Name="Contact" UId="29" />
-    <Part Name="PBox" UId="30" />
-    <Part Name="Contact" UId="31" />
-    <Part Name="O" UId="32">
-      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="33" />
-  </Parts>
-  <Wires>
-    <Wire UId="34">
-      <Powerrail />
-      <NameCon UId="27" Name="in" />
-      <NameCon UId="28" Name="in" />
-      <NameCon UId="29" Name="in" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="21" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="36">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="32" Name="in1" />
-    </Wire>
-    <Wire UId="37">
-      <IdentCon UId="22" />
-      <NameCon UId="28" Name="operand" />
-    </Wire>
-    <Wire UId="38">
-      <NameCon UId="28" Name="out" />
-      <NameCon UId="32" Name="in2" />
-    </Wire>
-    <Wire UId="39">
-      <IdentCon UId="23" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="40">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="24" />
-      <NameCon UId="30" Name="bit" />
-    </Wire>
-    <Wire UId="42">
-      <NameCon UId="30" Name="out" />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="25" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in3" />
-    </Wire>
-    <Wire UId="45">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="26" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="8B" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="8C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="8D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="8E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="8F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="90" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="91" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF GLOBAL REQUEST</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="92" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="93" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="94" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="95" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_GLOBAL_REQUEST" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_GENERAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_INITIAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_COMMAND" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="25" />
-    <Part Name="Contact" UId="26" />
-    <Part Name="Contact" UId="27" />
-    <Part Name="Coil" UId="28" />
-  </Parts>
-  <Wires>
-    <Wire UId="29">
-      <Powerrail />
-      <NameCon UId="25" Name="in" />
-    </Wire>
-    <Wire UId="30">
-      <IdentCon UId="21" />
-      <NameCon UId="25" Name="operand" />
-    </Wire>
-    <Wire UId="31">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="32">
-      <IdentCon UId="22" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-    <Wire UId="33">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-    <Wire UId="35">
-      <NameCon UId="27" Name="out" />
-      <NameCon UId="28" Name="in" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="24" />
-      <NameCon UId="28" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="96" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="97" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="98" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="99" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="9B" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="9C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF COMMAND</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="9F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="A0" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_COMMAND" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="A1" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="A2" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="A3" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="A4" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="A5" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="A6" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="A7" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>SWITCH OFF</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="A8" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="A9" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="AA" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="AB" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="OUT_OF_SERVICE" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="AC" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="AD" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="AE" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="AF" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="B0" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="B1" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="B2" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>OUT OF SERVICE</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="B3" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="B4" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="B5" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="B6" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_ONE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_GENERAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_OFF_INITIAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="OUT_OF_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup6ExecutableLeft" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_GENERAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON_INITIAL_CONDITIONS" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="29">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup6ExecutableRight" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="30" />
-    <Part Name="Contact" UId="31" />
-    <Part Name="Contact" UId="32" />
-    <Part Name="Contact" UId="33">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Coil" UId="34" />
-    <Part Name="Contact" UId="35" />
-    <Part Name="Contact" UId="36" />
-    <Part Name="Contact" UId="37">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Coil" UId="38" />
-  </Parts>
-  <Wires>
-    <Wire UId="39">
-      <Powerrail />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="21" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="30" Name="out" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="35" Name="in" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="22" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="43">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="23" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="45">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="24" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="48">
-      <IdentCon UId="25" />
-      <NameCon UId="34" Name="operand" />
-    </Wire>
-    <Wire UId="49">
-      <IdentCon UId="26" />
-      <NameCon UId="35" Name="operand" />
-    </Wire>
-    <Wire UId="50">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in" />
-    </Wire>
-    <Wire UId="51">
-      <IdentCon UId="27" />
-      <NameCon UId="36" Name="operand" />
-    </Wire>
-    <Wire UId="52">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
-    </Wire>
-    <Wire UId="53">
-      <IdentCon UId="28" />
-      <NameCon UId="37" Name="operand" />
-    </Wire>
-    <Wire UId="54">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="29" />
-      <NameCon UId="38" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="B7" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="B8" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="B9" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="BA" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="BB" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="BC" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="BD" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>HMI STATUS</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="BE" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="BF" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="C0" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="C1" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="IN_SERVICE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerupCondOn6" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerupCondOn6" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="24" />
-    <Part Name="Not" UId="25" />
-    <Part Name="Coil" UId="26" />
-    <Part Name="Coil" UId="27" />
-  </Parts>
-  <Wires>
-    <Wire UId="28">
-      <Powerrail />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="29">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-    <Wire UId="30">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="25" Name="in" />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="31">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="32">
-      <IdentCon UId="22" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-    <Wire UId="33">
-      <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="C2" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="C3" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="C4" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="C5" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="C6" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="C7" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="C8" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>HMI STATUS</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="C9" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="CA" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="CB" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="CC" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB2107_MACHINE_LIGHT" />
-        <Component Name="SWITCH_ON" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="MACH_LIGHT_ON_2_Q" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="MACH_LIGHT_ON_1_Q" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="24" />
-    <Part Name="Coil" UId="25" />
-    <Part Name="Coil" UId="26" />
-  </Parts>
-  <Wires>
-    <Wire UId="27">
-      <Powerrail />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-    <Wire UId="29">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="25" Name="in" />
-      <NameCon UId="26" Name="in" />
-    </Wire>
-    <Wire UId="30">
-      <IdentCon UId="22" />
-      <NameCon UId="25" Name="operand" />
-    </Wire>
-    <Wire UId="31">
-      <IdentCon UId="23" />
-      <NameCon UId="26" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="CD" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="CE" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="CF" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="D0" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="D1" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="D2" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="D3" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>MACHINE LIGHT ON OUTPUT</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="D4" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="D5" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="D6" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <MultilingualText ID="D7" CompositionName="Title">
-        <ObjectList>
-          <MultilingualTextItem ID="D8" CompositionName="Items">
+          <MultilingualTextItem ID="28" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="D9" CompositionName="Items">
+          <MultilingualTextItem ID="29" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="DA" CompositionName="Items">
+          <MultilingualTextItem ID="2A" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="DB" CompositionName="Items">
+          <MultilingualTextItem ID="2B" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />

@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-13T10:29:52.4698116Z</Created>
+    <Created>2025-04-25T10:07:05.0965489Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -715,7 +715,7 @@ BIT "LIFTING_ONLY_1_POS"
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC8002_UNIT_01_CLADDING" BlockType="FC" />
+      <CallInfo Name="FC8002_UNIT_1_CLADDING" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -791,7 +791,7 @@ BIT "LIFTING_ONLY_1_POS"
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC8003_UNIT_02_CLADDING" BlockType="FC" />
+      <CallInfo Name="FC8003_UNIT_2_CLADDING" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -867,7 +867,7 @@ BIT "LIFTING_ONLY_1_POS"
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Call UId="21">
-      <CallInfo Name="FC8004_UNIT_03_CLADDING" BlockType="FC" />
+      <CallInfo Name="FC8004_UNIT_3_CLADDING" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
@@ -942,28 +942,14 @@ BIT "LIFTING_ONLY_1_POS"
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_DUMMY_OFF" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="22" />
-    <Call UId="23">
-      <CallInfo Name="FC8005_UNIT_01_PART_STATUS_FULL_DEPTH" BlockType="FC" />
+    <Call UId="21">
+      <CallInfo Name="FC8101_MANUAL_LOADING_PART_STATUS_MANAGEMENT" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="24">
+    <Wire UId="22">
       <Powerrail />
-      <NameCon UId="22" Name="in" />
-    </Wire>
-    <Wire UId="25">
-      <IdentCon UId="21" />
-      <NameCon UId="22" Name="operand" />
-    </Wire>
-    <Wire UId="26">
-      <NameCon UId="22" Name="out" />
-      <NameCon UId="23" Name="en" />
+      <NameCon UId="21" Name="en" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1003,7 +989,7 @@ BIT "LIFTING_ONLY_1_POS"
               <MultilingualTextItem ID="5A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>CALL FC8005_UNIT_01_PART_STATUS_FULL_DEPTH</Text>
+                  <Text>CALL FC8101_MANUAL_LOADING_PART_STATUS_MANAGEMENT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="5B" CompositionName="Items">
@@ -1034,269 +1020,13 @@ BIT "LIFTING_ONLY_1_POS"
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="M_DUMMY_OFF" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="22" />
-    <Call UId="23">
-      <CallInfo Name="FC8006_UNIT_02_PART_STATUS_FULL_DEPTH" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="24">
-      <Powerrail />
-      <NameCon UId="22" Name="in" />
-    </Wire>
-    <Wire UId="25">
-      <IdentCon UId="21" />
-      <NameCon UId="22" Name="operand" />
-    </Wire>
-    <Wire UId="26">
-      <NameCon UId="22" Name="out" />
-      <NameCon UId="23" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="5F" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="60" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="61" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="62" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="63" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="64" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="65" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FC8006_UNIT_02_PART_STATUS_FULL_DEPTH</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="66" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="67" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="68" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="69" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_DUMMY_OFF" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="22" />
-    <Call UId="23">
-      <CallInfo Name="FC8007_UNIT_03_PART_STATUS_FULL_DEPTH" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="24">
-      <Powerrail />
-      <NameCon UId="22" Name="in" />
-    </Wire>
-    <Wire UId="25">
-      <IdentCon UId="21" />
-      <NameCon UId="22" Name="operand" />
-    </Wire>
-    <Wire UId="26">
-      <NameCon UId="22" Name="out" />
-      <NameCon UId="23" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="6A" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="6B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="6C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="6D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="6E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="6F" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="70" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FC8007_UNIT_03_PART_STATUS_FULL_DEPTH</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="71" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="72" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="73" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="74" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Call UId="21">
-      <CallInfo Name="FC8101_MANUAL_LOADING_PART_STATUS_MANAGEMENT" BlockType="FC" />
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="22">
-      <Powerrail />
-      <NameCon UId="21" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="75" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="76" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="77" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="78" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="79" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="7A" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="7B" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>CALL FC8101_MANUAL_LOADING_PART_STATUS_MANAGEMENT</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="7C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="7D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="7E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="7F" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
         <Component Name="M_ONE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1306,7 +1036,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1316,7 +1046,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1326,7 +1056,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1350,7 +1080,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1360,7 +1090,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1370,7 +1100,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1380,7 +1110,7 @@ BIT "LIFTING_ONLY_1_POS"
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1534,27 +1264,27 @@ BIT "LIFTING_ONLY_1_POS"
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="80" CompositionName="Comment">
+          <MultilingualText ID="5F" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="81" CompositionName="Items">
+              <MultilingualTextItem ID="60" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="82" CompositionName="Items">
+              <MultilingualTextItem ID="61" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="83" CompositionName="Items">
+              <MultilingualTextItem ID="62" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="84" CompositionName="Items">
+              <MultilingualTextItem ID="63" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -1562,27 +1292,27 @@ BIT "LIFTING_ONLY_1_POS"
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="85" CompositionName="Title">
+          <MultilingualText ID="64" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="86" CompositionName="Items">
+              <MultilingualTextItem ID="65" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>ONE PART LOADED FOR MACH</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="87" CompositionName="Items">
+              <MultilingualTextItem ID="66" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="88" CompositionName="Items">
+              <MultilingualTextItem ID="67" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="89" CompositionName="Items">
+              <MultilingualTextItem ID="68" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text>MINIMUM ONE PART LOADED FOR MACHINING</Text>
@@ -1592,27 +1322,27 @@ BIT "LIFTING_ONLY_1_POS"
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="8A" CompositionName="Title">
+      <MultilingualText ID="69" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="8B" CompositionName="Items">
+          <MultilingualTextItem ID="6A" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="8C" CompositionName="Items">
+          <MultilingualTextItem ID="6B" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="8D" CompositionName="Items">
+          <MultilingualTextItem ID="6C" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="8E" CompositionName="Items">
+          <MultilingualTextItem ID="6D" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />

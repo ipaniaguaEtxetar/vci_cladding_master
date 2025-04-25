@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-09T08:02:52.1072716Z</Created>
+    <Created>2025-04-25T10:06:52.4827664Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -38,10 +38,6 @@
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
-        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
-        <DisplayVersion>V17 Update 12</DisplayVersion>
-      </OptionPackage>
-      <OptionPackage>
         <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
@@ -50,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -245,16 +241,23 @@ Fixture 2 and Fixture 4 will do Face B</Text>
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M20" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -464,7 +467,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -474,7 +477,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -484,7 +487,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -602,7 +605,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -619,7 +622,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -629,8 +632,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -853,7 +863,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -863,7 +873,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -873,7 +883,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -884,7 +894,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -902,7 +912,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -920,7 +930,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1074,7 +1084,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1091,7 +1101,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1101,8 +1111,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -1325,7 +1342,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1335,7 +1352,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1345,7 +1362,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1356,7 +1373,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1487,8 +1504,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -1683,7 +1707,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1694,7 +1718,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1705,7 +1729,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1716,7 +1740,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1734,7 +1758,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1744,7 +1768,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1762,7 +1786,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1772,7 +1796,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1960,7 +1984,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -1977,7 +2001,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2216,7 +2240,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2234,7 +2258,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2245,7 +2269,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2373,7 +2397,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2383,7 +2407,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2393,7 +2417,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2411,7 +2435,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB7240_HARDWARE_SOFTWARE_ENABLE_DISABLE" />
         <Component Name="DISABLE_FIXTURE" />
-        <Component Name="SW_UNIT_02_FIX_1_4_ENABLED" />
+        <Component Name="SW_UNIT_2_FIX_1_4_ENABLED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -2639,16 +2663,23 @@ Fixture 2 and Fixture 4 will do Face B</Text>
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M20" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -2858,7 +2889,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2868,7 +2899,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2878,7 +2909,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2996,7 +3027,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3013,7 +3044,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3023,8 +3054,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -3247,7 +3285,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3257,7 +3295,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3267,7 +3305,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3278,7 +3316,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3296,7 +3334,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3314,7 +3352,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3468,7 +3506,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3485,7 +3523,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3495,8 +3533,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -3719,7 +3764,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3729,7 +3774,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3739,7 +3784,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3750,7 +3795,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3881,8 +3926,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -4077,7 +4129,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4088,7 +4140,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4099,7 +4151,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4110,7 +4162,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4128,7 +4180,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4138,7 +4190,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4156,7 +4208,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4166,7 +4218,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4354,7 +4406,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4371,7 +4423,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4610,7 +4662,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4628,7 +4680,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4639,7 +4691,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4767,7 +4819,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4777,7 +4829,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4787,7 +4839,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4805,7 +4857,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB7240_HARDWARE_SOFTWARE_ENABLE_DISABLE" />
         <Component Name="DISABLE_FIXTURE" />
-        <Component Name="SW_UNIT_02_FIX_2_3_ENABLED" />
+        <Component Name="SW_UNIT_2_FIX_2_3_ENABLED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -5033,16 +5085,23 @@ Fixture 2 and Fixture 4 will do Face B</Text>
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M20" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -5252,7 +5311,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5262,7 +5321,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5272,7 +5331,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5390,7 +5449,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5407,7 +5466,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5417,8 +5476,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -5641,7 +5707,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5651,7 +5717,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5661,7 +5727,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5672,7 +5738,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5690,7 +5756,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5708,7 +5774,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5862,7 +5928,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5879,7 +5945,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5889,8 +5955,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -6113,7 +6186,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6123,7 +6196,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6133,7 +6206,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6144,7 +6217,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6275,8 +6348,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -6471,7 +6551,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6482,7 +6562,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6493,7 +6573,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6504,7 +6584,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6522,7 +6602,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6532,7 +6612,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6550,7 +6630,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6560,7 +6640,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6748,7 +6828,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6765,7 +6845,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7004,7 +7084,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7022,7 +7102,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7033,7 +7113,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7161,7 +7241,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7171,7 +7251,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7181,7 +7261,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7199,7 +7279,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB7240_HARDWARE_SOFTWARE_ENABLE_DISABLE" />
         <Component Name="DISABLE_FIXTURE" />
-        <Component Name="SW_UNIT_02_FIX_2_3_ENABLED" />
+        <Component Name="SW_UNIT_2_FIX_2_3_ENABLED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -7427,16 +7507,23 @@ Fixture 2 and Fixture 4 will do Face B</Text>
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M20" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -7646,7 +7733,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7656,7 +7743,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7666,7 +7753,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7784,7 +7871,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7801,7 +7888,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7811,8 +7898,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -8035,7 +8129,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8045,7 +8139,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8055,7 +8149,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8066,7 +8160,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8084,7 +8178,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8102,7 +8196,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8256,7 +8350,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8273,7 +8367,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8283,8 +8377,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -8507,7 +8608,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8517,7 +8618,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8527,7 +8628,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8538,7 +8639,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8669,8 +8770,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -8865,7 +8973,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8876,7 +8984,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8887,7 +8995,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8898,7 +9006,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8916,7 +9024,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8926,7 +9034,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8944,7 +9052,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8954,7 +9062,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9142,7 +9250,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9159,7 +9267,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9398,7 +9506,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9416,7 +9524,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9427,7 +9535,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9555,7 +9663,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9565,7 +9673,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9575,7 +9683,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9593,7 +9701,7 @@ Fixture 2 and Fixture 4 will do Face B</Text>
       <Symbol>
         <Component Name="DB7240_HARDWARE_SOFTWARE_ENABLE_DISABLE" />
         <Component Name="DISABLE_FIXTURE" />
-        <Component Name="SW_UNIT_02_FIX_1_4_ENABLED" />
+        <Component Name="SW_UNIT_2_FIX_1_4_ENABLED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -9763,8 +9871,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -9779,8 +9894,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -9795,8 +9917,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -9811,8 +9940,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -10008,8 +10144,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -10024,8 +10167,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -10040,8 +10190,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -10056,8 +10213,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_MEASURING_STATION_2" />
       </Symbol>
     </Access>
@@ -10253,8 +10417,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -10269,8 +10440,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -10285,8 +10463,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -10301,8 +10486,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -10498,8 +10690,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -10514,8 +10713,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -10530,8 +10736,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>
@@ -10546,8 +10759,15 @@ Fixture 2 and Fixture 4 will do Face B</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLEAN_STATION_4" />
       </Symbol>
     </Access>

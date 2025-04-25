@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-09T08:03:07.7334995Z</Created>
+    <Created>2025-04-25T10:07:25.2689502Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -38,10 +38,6 @@
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
-        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
-        <DisplayVersion>V17 Update 12</DisplayVersion>
-      </OptionPackage>
-      <OptionPackage>
         <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
@@ -50,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -162,14 +158,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB6600_UNIT_01_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6600_UNIT_1_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB6601_UNIT_01_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6601_UNIT_1_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
@@ -178,7 +174,7 @@
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_01" />
+        <Component Name="FROM_ROBOT_TO_UNIT_1" />
         <Component Name="OUT_OF_COLLISION_MACHINE" />
       </Symbol>
     </Access>
@@ -258,7 +254,7 @@
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -281,7 +277,7 @@
     <Access Scope="GlobalVariable" UId="43">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -291,7 +287,7 @@
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -314,7 +310,7 @@
     <Access Scope="GlobalVariable" UId="47">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -324,7 +320,7 @@
     <Access Scope="GlobalVariable" UId="48">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -347,7 +343,7 @@
     <Access Scope="GlobalVariable" UId="51">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -357,7 +353,7 @@
     <Access Scope="GlobalVariable" UId="52">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -380,7 +376,7 @@
     <Access Scope="GlobalVariable" UId="55">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -390,8 +386,15 @@
     <Access Scope="GlobalVariable" UId="56">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -404,8 +407,15 @@
     <Access Scope="GlobalVariable" UId="58">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -418,8 +428,15 @@
     <Access Scope="GlobalVariable" UId="60">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -432,8 +449,15 @@
     <Access Scope="GlobalVariable" UId="62">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -446,7 +470,7 @@
     <Access Scope="GlobalVariable" UId="64">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_NOT_DEFINED_POS" />
       </Symbol>
     </Access>
@@ -1782,14 +1806,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="46">
       <Symbol>
-        <Component Name="DB6600_UNIT_01_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6600_UNIT_1_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="47">
       <Symbol>
-        <Component Name="DB6601_UNIT_01_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6601_UNIT_1_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
@@ -1804,7 +1828,7 @@
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_01" />
+        <Component Name="FROM_ROBOT_TO_UNIT_1" />
         <Component Name="OUT_OF_COLLISION_MACHINE" />
       </Symbol>
     </Access>
@@ -2341,20 +2365,20 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_HOME_POS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6600_UNIT_01_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6600_UNIT_1_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6601_UNIT_01_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6601_UNIT_1_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -2395,7 +2419,7 @@
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2412,7 +2436,7 @@
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -2422,7 +2446,7 @@
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3254,14 +3278,14 @@ DISCO AMARRADO</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6600_UNIT_01_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6600_UNIT_1_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6601_UNIT_01_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6601_UNIT_1_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -3281,7 +3305,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3304,7 +3328,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3538,7 +3562,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_HOME_POS" />
       </Symbol>
     </Access>
@@ -3565,7 +3589,7 @@ DISCO AMARRADO</Text>
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_01" />
+        <Component Name="FROM_ROBOT_TO_UNIT_1" />
         <Component Name="OUT_OF_COLLISION_MACHINE" />
       </Symbol>
     </Access>
@@ -3578,7 +3602,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3602,7 +3626,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3612,7 +3636,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -3622,7 +3646,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_2_OR_4_IN_STA_1" />
       </Symbol>
     </Access>
@@ -3649,7 +3673,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_1_OR_3_IN_STA_1" />
       </Symbol>
     </Access>
@@ -4714,7 +4738,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_HOME_POS" />
       </Symbol>
     </Access>
@@ -4740,7 +4764,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -4750,7 +4774,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5349,20 +5373,20 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_HOME_POS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6600_UNIT_01_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6600_UNIT_1_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6601_UNIT_01_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6601_UNIT_1_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -5395,7 +5419,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5412,7 +5436,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -5422,7 +5446,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6444,14 +6468,14 @@ DISCO AMARRADO</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6600_UNIT_01_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6600_UNIT_1_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6601_UNIT_01_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6601_UNIT_1_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -6465,7 +6489,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -6482,7 +6506,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7026,14 +7050,14 @@ DISCO AMARRADO</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB6800_UNIT_02_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6800_UNIT_2_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB6801_UNIT_02_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6801_UNIT_2_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
@@ -7042,7 +7066,7 @@ DISCO AMARRADO</Text>
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
+        <Component Name="FROM_ROBOT_TO_UNIT_2" />
         <Component Name="OUT_OF_COLLISION_MACHINE" />
       </Symbol>
     </Access>
@@ -7122,7 +7146,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7145,7 +7169,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="43">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7155,7 +7179,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7178,7 +7202,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="47">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7188,7 +7212,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="48">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7211,7 +7235,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="51">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7221,7 +7245,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="52">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7244,7 +7268,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="55">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -7254,8 +7278,15 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="56">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -7268,8 +7299,15 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="58">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -7282,8 +7320,15 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="60">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -7296,8 +7341,15 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="62">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -7310,7 +7362,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="64">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_NOT_DEFINED_POS" />
       </Symbol>
     </Access>
@@ -8599,7 +8651,7 @@ DISCO AMARRADO</Text>
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
+        <Component Name="FROM_ROBOT_TO_UNIT_2" />
         <Component Name="OUT_OF_COLLISION_MACHINE" />
       </Symbol>
     </Access>
@@ -8611,14 +8663,14 @@ DISCO AMARRADO</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
-        <Component Name="DB6800_UNIT_02_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6800_UNIT_2_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="42">
       <Symbol>
-        <Component Name="DB6801_UNIT_02_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6801_UNIT_2_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_OPENED" />
       </Symbol>
@@ -8654,7 +8706,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="47">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8671,7 +8723,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="49">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8688,7 +8740,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="51">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -8705,7 +8757,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="53">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_4" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9514,7 +9566,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9531,7 +9583,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -9541,7 +9593,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_2" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -10884,20 +10936,20 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6800_UNIT_02_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6800_UNIT_2_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6801_UNIT_02_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6801_UNIT_2_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -10938,7 +10990,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -10955,7 +11007,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -10965,7 +11017,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -11817,14 +11869,14 @@ DISCO AMARRADO</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6800_UNIT_02_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6800_UNIT_2_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6801_UNIT_02_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6801_UNIT_2_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -11844,7 +11896,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -11867,7 +11919,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -12353,7 +12405,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
     </Access>
@@ -12380,7 +12432,7 @@ DISCO AMARRADO</Text>
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_02" />
+        <Component Name="FROM_ROBOT_TO_UNIT_2" />
         <Component Name="OUT_OF_COLLISION_MACHINE" />
       </Symbol>
     </Access>
@@ -12393,7 +12445,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -12417,7 +12469,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -12427,7 +12479,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -12437,7 +12489,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_2_OR_4_IN_STA_1" />
       </Symbol>
     </Access>
@@ -12464,7 +12516,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FIXTURE_1_OR_3_IN_STA_1" />
       </Symbol>
     </Access>
@@ -13529,7 +13581,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
     </Access>
@@ -13555,7 +13607,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -13565,7 +13617,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -14164,20 +14216,20 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6800_UNIT_02_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6800_UNIT_2_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6801_UNIT_02_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6801_UNIT_2_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -14210,7 +14262,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -14227,7 +14279,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -14237,7 +14289,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -15259,14 +15311,14 @@ DISCO AMARRADO</Text>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB6800_UNIT_02_UP_SEALING_STRUCTURE" />
+        <Component Name="DB6800_UNIT_2_UP_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB6801_UNIT_02_DOWN_SEALING_STRUCTURE" />
+        <Component Name="DB6801_UNIT_2_DOWN_SEALING_STRUCTURE" />
         <Component Name="CYL" />
         <Component Name="FULL_CLOSED" />
       </Symbol>
@@ -15280,7 +15332,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -15297,7 +15349,7 @@ DISCO AMARRADO</Text>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_3" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />

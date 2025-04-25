@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-09T08:03:24.1385668Z</Created>
+    <Created>2025-04-25T10:07:40.3751815Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -38,10 +38,6 @@
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
-        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
-        <DisplayVersion>V17 Update 12</DisplayVersion>
-      </OptionPackage>
-      <OptionPackage>
         <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
@@ -50,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -139,14 +135,14 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="RESET_ALL_SEQUENCES" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="RESET_LOCAL_SEQUENCES" />
       </Symbol>
     </Access>
@@ -185,7 +181,7 @@
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_03" />
+        <Component Name="UNIT_3" />
         <Component Name="FIXTURE_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -212,157 +208,141 @@
         <Component Name="GENERAL_CONDITIONS" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
-      <Symbol>
-        <Component Name="Tag_1" />
-      </Symbol>
-    </Access>
+    <Part Name="Contact" UId="33">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Contact" UId="34">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="35">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="36">
-      <Negated Name="operand" />
-    </Part>
+    <Part Name="Contact" UId="36" />
     <Part Name="Contact" UId="37" />
-    <Part Name="Contact" UId="38" />
-    <Part Name="Contact" UId="39">
+    <Part Name="Contact" UId="38">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="40" />
-    <Part Name="O" UId="41">
+    <Part Name="Contact" UId="39" />
+    <Part Name="O" UId="40">
       <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="42">
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
+    <Part Name="Contact" UId="42" />
     <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="O" UId="45">
+    <Part Name="O" UId="44">
       <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="46" />
-    <Part Name="Coil" UId="47" />
-    <Part Name="Not" UId="48" />
-    <Part Name="SCoil" UId="49" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="Coil" UId="46" />
   </Parts>
   <Wires>
-    <Wire UId="50">
+    <Wire UId="47">
       <Powerrail />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="21" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="33" Name="out" />
       <NameCon UId="34" Name="in" />
     </Wire>
-    <Wire UId="51">
-      <IdentCon UId="21" />
+    <Wire UId="50">
+      <IdentCon UId="22" />
       <NameCon UId="34" Name="operand" />
     </Wire>
-    <Wire UId="52">
+    <Wire UId="51">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="53">
-      <IdentCon UId="22" />
+    <Wire UId="52">
+      <IdentCon UId="23" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="53">
       <NameCon UId="35" Name="out" />
       <NameCon UId="36" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="23" />
-      <NameCon UId="36" Name="operand" />
-    </Wire>
-    <Wire UId="56">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
-      <NameCon UId="39" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="24" />
-      <NameCon UId="37" Name="operand" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="37" Name="out" />
       <NameCon UId="38" Name="in" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="54">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="56">
       <IdentCon UId="25" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="40" Name="in1" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="26" />
       <NameCon UId="38" Name="operand" />
     </Wire>
-    <Wire UId="60">
+    <Wire UId="59">
       <NameCon UId="38" Name="out" />
-      <NameCon UId="41" Name="in1" />
+      <NameCon UId="39" Name="in" />
     </Wire>
-    <Wire UId="61">
-      <IdentCon UId="26" />
+    <Wire UId="60">
+      <IdentCon UId="27" />
       <NameCon UId="39" Name="operand" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="61">
       <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="in" />
+      <NameCon UId="40" Name="in2" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="63">
-      <IdentCon UId="27" />
-      <NameCon UId="40" Name="operand" />
+      <IdentCon UId="28" />
+      <NameCon UId="41" Name="operand" />
     </Wire>
     <Wire UId="64">
-      <NameCon UId="40" Name="out" />
-      <NameCon UId="41" Name="in2" />
-    </Wire>
-    <Wire UId="65">
       <NameCon UId="41" Name="out" />
       <NameCon UId="42" Name="in" />
+      <NameCon UId="43" Name="in" />
     </Wire>
-    <Wire UId="66">
-      <IdentCon UId="28" />
+    <Wire UId="65">
+      <IdentCon UId="29" />
       <NameCon UId="42" Name="operand" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="66">
       <NameCon UId="42" Name="out" />
-      <NameCon UId="43" Name="in" />
-      <NameCon UId="44" Name="in" />
+      <NameCon UId="44" Name="in1" />
     </Wire>
-    <Wire UId="68">
-      <IdentCon UId="29" />
+    <Wire UId="67">
+      <IdentCon UId="30" />
       <NameCon UId="43" Name="operand" />
     </Wire>
-    <Wire UId="69">
+    <Wire UId="68">
       <NameCon UId="43" Name="out" />
-      <NameCon UId="45" Name="in1" />
+      <NameCon UId="44" Name="in2" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="70">
-      <IdentCon UId="30" />
-      <NameCon UId="44" Name="operand" />
+      <IdentCon UId="31" />
+      <NameCon UId="45" Name="operand" />
     </Wire>
     <Wire UId="71">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in2" />
-    </Wire>
-    <Wire UId="72">
       <NameCon UId="45" Name="out" />
       <NameCon UId="46" Name="in" />
-      <NameCon UId="48" Name="in" />
     </Wire>
-    <Wire UId="73">
-      <IdentCon UId="31" />
-      <NameCon UId="46" Name="operand" />
-    </Wire>
-    <Wire UId="74">
-      <NameCon UId="46" Name="out" />
-      <NameCon UId="47" Name="in" />
-    </Wire>
-    <Wire UId="75">
+    <Wire UId="72">
       <IdentCon UId="32" />
-      <NameCon UId="47" Name="operand" />
-    </Wire>
-    <Wire UId="76">
-      <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in" />
-    </Wire>
-    <Wire UId="77">
-      <IdentCon UId="33" />
-      <NameCon UId="49" Name="operand" />
+      <NameCon UId="46" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -458,14 +438,14 @@
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="RESET_ALL_SEQUENCES" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="RESET_LOCAL_SEQUENCES" />
       </Symbol>
     </Access>
@@ -822,7 +802,7 @@
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="ALARM" />
       </Symbol>
     </Access>
@@ -836,13 +816,13 @@
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="SEOC_WARNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16006_U03_MEAS_STA_MEAS_A_CLIENT_INTERFACE" />
+        <Component Name="DB16006_U3_MEAS_STA_MEAS_A_CLIENT_INTERFACE" />
         <Component Name="U03_FACE_A_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -856,13 +836,13 @@
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB7258_UNIT_03_STA_MEAS_A_ENABLE_DISABLE" />
+        <Component Name="DB7258_UNIT_3_STA_MEAS_A_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB16007_U03_MEAS_STA_MEAS_B_CLIENT_INTERFACE" />
+        <Component Name="DB16007_U3_MEAS_STA_MEAS_B_CLIENT_INTERFACE" />
         <Component Name="U03_FACE_B_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -876,7 +856,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB7259_UNIT_03_STA_MEAS_B_ENABLE_DISABLE" />
+        <Component Name="DB7259_UNIT_3_STA_MEAS_B_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -1206,7 +1186,7 @@
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="ALARM" />
       </Symbol>
     </Access>
@@ -1220,7 +1200,7 @@
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="SEOC_WARNING" />
       </Symbol>
     </Access>
@@ -3228,7 +3208,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB16006_U03_MEAS_STA_MEAS_A_CLIENT_INTERFACE" />
+        <Component Name="DB16006_U3_MEAS_STA_MEAS_A_CLIENT_INTERFACE" />
         <Component Name="U03_FACE_A_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -3242,13 +3222,13 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7258_UNIT_03_STA_MEAS_A_ENABLE_DISABLE" />
+        <Component Name="DB7258_UNIT_3_STA_MEAS_A_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16007_U03_MEAS_STA_MEAS_B_CLIENT_INTERFACE" />
+        <Component Name="DB16007_U3_MEAS_STA_MEAS_B_CLIENT_INTERFACE" />
         <Component Name="U03_FACE_B_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -3262,7 +3242,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB7259_UNIT_03_STA_MEAS_B_ENABLE_DISABLE" />
+        <Component Name="DB7259_UNIT_3_STA_MEAS_B_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -3717,7 +3697,7 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_03" />
+        <Component Name="ALARMS_UNIT_3" />
         <Component Name="IS_SEOC_ALARMS" />
       </Symbol>
     </Access>

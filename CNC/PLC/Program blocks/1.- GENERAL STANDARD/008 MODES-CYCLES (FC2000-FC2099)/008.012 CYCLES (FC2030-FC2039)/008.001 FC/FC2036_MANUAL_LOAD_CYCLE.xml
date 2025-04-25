@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-03-21T11:11:09.4572742Z</Created>
+    <Created>2025-04-25T10:07:23.7575693Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -38,10 +38,6 @@
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
-        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
-        <DisplayVersion>V17 Update 12</DisplayVersion>
-      </OptionPackage>
-      <OptionPackage>
         <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
@@ -50,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -1596,236 +1592,35 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="MANUAL_LOAD_CYCLE" />
-        <Component Name="CYCLE_SELECTED" />
+        <Component Name="M_ZERO" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB1101_MACHINE_SEQUENCE" />
-        <Component Name="RUNNING" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="DB2440_GLOBAL_DATA" />
-        <Component Name="GLOBAL_DATA" />
-        <Component Name="ANY_MACHINE_CYCLE_RUN" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2440_GLOBAL_DATA" />
-        <Component Name="GLOBAL_DATA" />
-        <Component Name="ALL_STATIONS_UNIT_01_RETURNED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB2500_UNIT_01_FIXTURE_1" />
-        <Component Name="UNCLAMPED_ANALOG" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
-      <Symbol>
-        <Component Name="DB7215_PART_TYPE" />
-        <Component Name="PART_TYPE_U01_FIXTURES" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_01" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="FULL_DEPTH" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="28">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_01" />
-        <Component Name="FIXTURE_1" />
-        <Component Name="PART_REJECTED_FIXTURE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="29">
-      <Symbol>
-        <Component Name="DB3500_UNIT_02_FIXTURE_1" />
-        <Component Name="UNCLAMPED_ANALOG" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="30">
-      <Symbol>
-        <Component Name="DB7215_PART_TYPE" />
-        <Component Name="PART_TYPE_U02_FIXTURES" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_01" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="FULL_DEPTH" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="32">
-      <Symbol>
-        <Component Name="DB2430_FULL_DEPTH" />
-        <Component Name="FD_UNIT_01" />
-        <Component Name="FIXTURE_2" />
-        <Component Name="PART_REJECTED_FIXTURE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="33">
-      <Symbol>
-        <Component Name="M_DUMMY_OFF" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
         <Component Name="MANUAL_LOAD_CYCLE" />
         <Component Name="CYCLE_SEOC" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="35" />
-    <Part Name="Contact" UId="36" />
-    <Part Name="Contact" UId="37" />
-    <Part Name="Contact" UId="38" />
-    <Part Name="Contact" UId="39" />
-    <Part Name="Contact" UId="40" />
-    <Part Name="Contact" UId="41" />
-    <Part Name="Contact" UId="42" />
-    <Part Name="Contact" UId="43" />
-    <Part Name="Contact" UId="44" />
-    <Part Name="Contact" UId="45" />
-    <Part Name="Contact" UId="46" />
-    <Part Name="O" UId="47">
-      <TemplateValue Name="Card" Type="Cardinality">4</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="48" />
-    <Part Name="Coil" UId="49" />
+    <Part Name="Contact" UId="23" />
+    <Part Name="Coil" UId="24" />
   </Parts>
   <Wires>
-    <Wire UId="50">
+    <Wire UId="25">
       <Powerrail />
-      <NameCon UId="35" Name="in" />
+      <NameCon UId="23" Name="in" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="26">
       <IdentCon UId="21" />
-      <NameCon UId="35" Name="operand" />
+      <NameCon UId="23" Name="operand" />
     </Wire>
-    <Wire UId="52">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="in" />
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="28">
       <IdentCon UId="22" />
-      <NameCon UId="36" Name="operand" />
-    </Wire>
-    <Wire UId="54">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="23" />
-      <NameCon UId="37" Name="operand" />
-    </Wire>
-    <Wire UId="56">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="24" />
-      <NameCon UId="38" Name="operand" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="38" Name="out" />
-      <NameCon UId="39" Name="in" />
-      <NameCon UId="43" Name="in" />
-    </Wire>
-    <Wire UId="59">
-      <IdentCon UId="25" />
-      <NameCon UId="39" Name="operand" />
-    </Wire>
-    <Wire UId="60">
-      <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="in" />
-    </Wire>
-    <Wire UId="61">
-      <IdentCon UId="26" />
-      <NameCon UId="40" Name="operand" />
-    </Wire>
-    <Wire UId="62">
-      <NameCon UId="40" Name="out" />
-      <NameCon UId="41" Name="in" />
-      <NameCon UId="42" Name="in" />
-    </Wire>
-    <Wire UId="63">
-      <IdentCon UId="27" />
-      <NameCon UId="41" Name="operand" />
-    </Wire>
-    <Wire UId="64">
-      <NameCon UId="41" Name="out" />
-      <NameCon UId="47" Name="in1" />
-    </Wire>
-    <Wire UId="65">
-      <IdentCon UId="28" />
-      <NameCon UId="42" Name="operand" />
-    </Wire>
-    <Wire UId="66">
-      <NameCon UId="42" Name="out" />
-      <NameCon UId="47" Name="in2" />
-    </Wire>
-    <Wire UId="67">
-      <IdentCon UId="29" />
-      <NameCon UId="43" Name="operand" />
-    </Wire>
-    <Wire UId="68">
-      <NameCon UId="43" Name="out" />
-      <NameCon UId="44" Name="in" />
-    </Wire>
-    <Wire UId="69">
-      <IdentCon UId="30" />
-      <NameCon UId="44" Name="operand" />
-    </Wire>
-    <Wire UId="70">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="46" Name="in" />
-    </Wire>
-    <Wire UId="71">
-      <IdentCon UId="31" />
-      <NameCon UId="45" Name="operand" />
-    </Wire>
-    <Wire UId="72">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="47" Name="in3" />
-    </Wire>
-    <Wire UId="73">
-      <IdentCon UId="32" />
-      <NameCon UId="46" Name="operand" />
-    </Wire>
-    <Wire UId="74">
-      <NameCon UId="46" Name="out" />
-      <NameCon UId="47" Name="in4" />
-    </Wire>
-    <Wire UId="75">
-      <NameCon UId="47" Name="out" />
-      <NameCon UId="48" Name="in" />
-    </Wire>
-    <Wire UId="76">
-      <IdentCon UId="33" />
-      <NameCon UId="48" Name="operand" />
-    </Wire>
-    <Wire UId="77">
-      <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in" />
-    </Wire>
-    <Wire UId="78">
-      <IdentCon UId="34" />
-      <NameCon UId="49" Name="operand" />
+      <NameCon UId="24" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -2651,7 +2446,7 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_1_OR_3_IN_STA_1" />
       </Symbol>
     </Access>
@@ -2665,7 +2460,7 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_2_OR_4_IN_STA_1" />
       </Symbol>
     </Access>
@@ -10618,8 +10413,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB341_M_UNIT_01_STA_0" />
-        <Component Name="M_CODES_UNIT_01_STA_0" />
+        <Component Name="DB341_M_UNIT_1_STA_0" />
+        <Component Name="M_CODES_UNIT_1_STA_0" />
         <Component Name="M50" />
       </Symbol>
     </Access>
@@ -10657,8 +10452,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB341_M_UNIT_01_STA_0" />
-        <Component Name="M_CODES_UNIT_01_STA_0" />
+        <Component Name="DB341_M_UNIT_1_STA_0" />
+        <Component Name="M_CODES_UNIT_1_STA_0" />
         <Component Name="M50" />
       </Symbol>
     </Access>
@@ -10679,8 +10474,15 @@
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -10728,8 +10530,15 @@
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -10777,8 +10586,15 @@
     <Access Scope="GlobalVariable" UId="45">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -10826,8 +10642,15 @@
     <Access Scope="GlobalVariable" UId="52">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -10888,7 +10711,7 @@
     <Access Scope="GlobalVariable" UId="61">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -10898,7 +10721,7 @@
     <Access Scope="GlobalVariable" UId="62">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_HOME_POS" />
       </Symbol>
     </Access>
@@ -11479,8 +11302,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M50" />
       </Symbol>
     </Access>
@@ -11523,8 +11346,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M50" />
       </Symbol>
     </Access>
@@ -11545,8 +11368,15 @@
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -11602,8 +11432,15 @@
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -11659,8 +11496,15 @@
     <Access Scope="GlobalVariable" UId="48">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -11716,8 +11560,15 @@
     <Access Scope="GlobalVariable" UId="56">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -11786,7 +11637,7 @@
     <Access Scope="GlobalVariable" UId="66">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -11796,7 +11647,7 @@
     <Access Scope="GlobalVariable" UId="67">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
     </Access>
@@ -12422,8 +12273,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB341_M_UNIT_01_STA_0" />
-        <Component Name="M_CODES_UNIT_01_STA_0" />
+        <Component Name="DB341_M_UNIT_1_STA_0" />
+        <Component Name="M_CODES_UNIT_1_STA_0" />
         <Component Name="M51" />
       </Symbol>
     </Access>
@@ -12476,8 +12327,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB341_M_UNIT_01_STA_0" />
-        <Component Name="M_CODES_UNIT_01_STA_0" />
+        <Component Name="DB341_M_UNIT_1_STA_0" />
+        <Component Name="M_CODES_UNIT_1_STA_0" />
         <Component Name="M51" />
       </Symbol>
     </Access>
@@ -12498,8 +12349,15 @@
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -12555,8 +12413,15 @@
     <Access Scope="GlobalVariable" UId="42">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -12612,8 +12477,15 @@
     <Access Scope="GlobalVariable" UId="50">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -12669,8 +12541,15 @@
     <Access Scope="GlobalVariable" UId="58">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -12733,7 +12612,7 @@
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="LOAD_UNLOAD" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FROM_ROBOT_CELL" />
         <Component Name="PART_LOADED" />
       </Symbol>
@@ -12741,7 +12620,7 @@
     <Access Scope="GlobalVariable" UId="68">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -12751,7 +12630,7 @@
     <Access Scope="GlobalVariable" UId="69">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="AXIS_E10_HOME_POS" />
       </Symbol>
     </Access>
@@ -13410,8 +13289,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M51" />
       </Symbol>
     </Access>
@@ -13464,8 +13343,8 @@
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB356_M_UNIT_02_STA_0" />
-        <Component Name="M_CODES_UNIT_02_STA_0" />
+        <Component Name="DB356_M_UNIT_2_STA_0" />
+        <Component Name="M_CODES_UNIT_2_STA_0" />
         <Component Name="M51" />
       </Symbol>
     </Access>
@@ -13486,8 +13365,15 @@
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -13535,8 +13421,15 @@
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -13584,8 +13477,15 @@
     <Access Scope="GlobalVariable" UId="48">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -13633,8 +13533,15 @@
     <Access Scope="GlobalVariable" UId="55">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_2" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_LOAD_UNLOAD_STATION_1" />
       </Symbol>
     </Access>
@@ -13689,7 +13596,7 @@
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="LOAD_UNLOAD" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="FROM_ROBOT_CELL" />
         <Component Name="PART_LOADED" />
       </Symbol>
@@ -13697,7 +13604,7 @@
     <Access Scope="GlobalVariable" UId="64">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="STATION_1" />
         <Component Name="PART_A" />
         <Component Name="STATUS" />
@@ -13707,7 +13614,7 @@
     <Access Scope="GlobalVariable" UId="65">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_02" />
+        <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
     </Access>

@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-22T12:08:40.6512098Z</Created>
+    <Created>2025-04-25T10:07:40.6436318Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -208,9 +208,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="GLOBAL_ALARMS_MACHINE" />
-        <Component Name="ALARM" />
+        <Component Name="M_ZERO" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
@@ -230,31 +228,38 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerupCondOff27" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="SERVICES" />
+        <Component Name="708960" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerupCondOn27" />
+        <Component Name="powerupCondOff27" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup27ExecutableLeft" />
+        <Component Name="powerupCondOn27" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup27ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerup27ExecutableRight" />
       </Symbol>
     </Access>
-    <Call UId="33">
+    <Call UId="34">
       <CallInfo Name="FB1701_KELLER_ASPIRATION_CONTROL" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="34">
+        <Instance Scope="GlobalVariable" UId="35">
           <Component Name="DB1701_KELLER_ASPIRATION_CONTROL" />
         </Instance>
         <Parameter Name="IN_PRODUCTION" Section="Input" Type="Bool" />
@@ -265,6 +270,7 @@
         <Parameter Name="SWITCH_ON" Section="Output" Type="Bool" />
         <Parameter Name="MACHINE_OK" Section="Output" Type="Bool" />
         <Parameter Name="ALLOW_CLEANING" Section="Output" Type="Bool" />
+        <Parameter Name="EXTRACTION_SYS_ALARM" Section="Output" Type="Bool" />
         <Parameter Name="HMI_POWER_UP_COND_OFF" Section="Output" Type="Bool" />
         <Parameter Name="HMI_POWER_UP_COND_ON" Section="Output" Type="Bool" />
         <Parameter Name="HMI_POWER_UP_EXECU_LEFT" Section="Output" Type="Bool" />
@@ -273,57 +279,61 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="35">
-      <Powerrail />
-      <NameCon UId="33" Name="en" />
-    </Wire>
     <Wire UId="36">
-      <IdentCon UId="21" />
-      <NameCon UId="33" Name="IN_PRODUCTION" />
+      <Powerrail />
+      <NameCon UId="34" Name="en" />
     </Wire>
     <Wire UId="37">
-      <IdentCon UId="22" />
-      <NameCon UId="33" Name="NOT_FAULT" />
+      <IdentCon UId="21" />
+      <NameCon UId="34" Name="IN_PRODUCTION" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="23" />
-      <NameCon UId="33" Name="REQ_FILTER_CLEAN" />
+      <IdentCon UId="22" />
+      <NameCon UId="34" Name="NOT_FAULT" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="24" />
-      <NameCon UId="33" Name="HMI_REQ_LINE" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="REQ_FILTER_CLEAN" />
     </Wire>
     <Wire UId="40">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="MACHINE_ALARM" />
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="HMI_REQ_LINE" />
     </Wire>
     <Wire UId="41">
-      <NameCon UId="33" Name="SWITCH_ON" />
-      <IdentCon UId="26" />
+      <IdentCon UId="25" />
+      <NameCon UId="34" Name="MACHINE_ALARM" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="33" Name="MACHINE_OK" />
-      <IdentCon UId="27" />
+      <NameCon UId="34" Name="SWITCH_ON" />
+      <IdentCon UId="26" />
     </Wire>
     <Wire UId="43">
-      <NameCon UId="33" Name="ALLOW_CLEANING" />
-      <IdentCon UId="28" />
+      <NameCon UId="34" Name="MACHINE_OK" />
+      <IdentCon UId="27" />
     </Wire>
     <Wire UId="44">
-      <NameCon UId="33" Name="HMI_POWER_UP_COND_OFF" />
-      <IdentCon UId="29" />
+      <NameCon UId="34" Name="ALLOW_CLEANING" />
+      <IdentCon UId="28" />
     </Wire>
     <Wire UId="45">
-      <NameCon UId="33" Name="HMI_POWER_UP_COND_ON" />
-      <IdentCon UId="30" />
+      <NameCon UId="34" Name="EXTRACTION_SYS_ALARM" />
+      <IdentCon UId="29" />
     </Wire>
     <Wire UId="46">
-      <NameCon UId="33" Name="HMI_POWER_UP_EXECU_LEFT" />
-      <IdentCon UId="31" />
+      <NameCon UId="34" Name="HMI_POWER_UP_COND_OFF" />
+      <IdentCon UId="30" />
     </Wire>
     <Wire UId="47">
-      <NameCon UId="33" Name="HMI_POWER_UP_EXECU_RIGHT" />
+      <NameCon UId="34" Name="HMI_POWER_UP_COND_ON" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="34" Name="HMI_POWER_UP_EXECU_LEFT" />
       <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="34" Name="HMI_POWER_UP_EXECU_RIGHT" />
+      <IdentCon UId="33" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

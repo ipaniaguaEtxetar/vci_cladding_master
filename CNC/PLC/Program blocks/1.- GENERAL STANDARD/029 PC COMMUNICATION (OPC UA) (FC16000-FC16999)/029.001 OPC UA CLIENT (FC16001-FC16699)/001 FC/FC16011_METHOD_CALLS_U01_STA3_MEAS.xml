@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-22T12:08:43.510347Z</Created>
+    <Created>2025-04-25T10:07:47.4156555Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -83,7 +83,7 @@
 </Sections></Interface>
       <IsIECCheckEnabled>false</IsIECCheckEnabled>
       <MemoryLayout>Optimized</MemoryLayout>
-      <Name>FC16011_METHOD_CALLS_U01_STA3_MEAS</Name>
+      <Name>FC16011_METHOD_CALLS_U1_STA3_MEAS</Name>
       <Number>16011</Number>
       <ProgrammingLanguage>LAD</ProgrammingLanguage>
       <SetENOAutomatically>false</SetENOAutomatically>
@@ -178,7 +178,7 @@
           <Symbol UId="60">
             <Component Name="DB8000_PART_STATUS" UId="61" />
             <Token Text="." UId="62" />
-            <Component Name="UNIT_01" UId="63" />
+            <Component Name="UNIT_1" UId="63" />
             <Token Text="." UId="64" />
             <Component Name="STATION_3" UId="65" />
             <Token Text="." UId="66" />
@@ -438,15 +438,22 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -687,15 +694,22 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -936,15 +950,22 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -1185,15 +1206,22 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -1389,7 +1417,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -1410,7 +1438,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -1562,7 +1590,7 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_01" />
+        <Component Name="LASER_UNIT_1" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
         <Component Name="PROG_ACTIVE" />
@@ -1570,7 +1598,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -1598,7 +1626,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -1770,7 +1798,7 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB20202_INTERLOCK_TRUMPF" />
-        <Component Name="LASER_UNIT_01" />
+        <Component Name="LASER_UNIT_1" />
         <Component Name="INPUTS" />
         <Component Name="STATUS" />
         <Component Name="PROG_ACTIVE" />
@@ -1778,7 +1806,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -1806,7 +1834,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -1975,7 +2003,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -1996,7 +2024,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -2146,7 +2174,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -2160,7 +2188,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -2298,7 +2326,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -2426,14 +2454,14 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_NUMBER_IN" />
         <Component Name="STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calibration" />
         <Component Name="Inputs" />
@@ -2443,8 +2471,15 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -2458,8 +2493,15 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -2473,8 +2515,15 @@
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -2488,8 +2537,15 @@
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -2502,7 +2558,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calibration" />
         <Component Name="Inputs" />
@@ -2709,7 +2765,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calculate distance" />
         <Component Name="Inputs" />
@@ -2719,14 +2775,14 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_NUMBER_IN" />
         <Component Name="STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calculate distance" />
         <Component Name="Inputs" />
@@ -2741,7 +2797,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calculate distance" />
         <Component Name="Inputs" />
@@ -2765,28 +2821,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ServerEndpointUrl" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ConnectInfo" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceCount" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodCount" />
@@ -2794,7 +2850,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" AccessModifier="Array">
@@ -2809,28 +2865,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceURIs" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="ServerNamespaceIndexes" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="ObjectNodes" />
@@ -2838,7 +2894,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodNodes" />
@@ -2846,7 +2902,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" />
@@ -2854,14 +2910,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="42">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodResultList" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -2875,7 +2931,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="43">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calculate distance" />
         <Component Name="Inputs" />
@@ -2883,7 +2939,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calculate distance" />
         <Component Name="Outputs" />
@@ -2900,7 +2956,7 @@
     <Part Name="PBox" UId="49" />
     <Part Name="OPC_UA_MethodCall_C" Version="1.0" UId="50">
       <Instance Scope="GlobalVariable" UId="51">
-        <Component Name="DB16201_METHODCALL_U01_STA3_MEAS_MEAS_NOOZLE_TRIGGER" />
+        <Component Name="DB16201_METHODCALL_U1_STA3_MEAS_MEAS_NOOZLE_TRIGGER" />
       </Instance>
     </Part>
   </Parts>
@@ -3125,7 +3181,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger start layer thickness acquisition" />
         <Component Name="Inputs" />
@@ -3135,14 +3191,14 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
+        <Component Name="UNIT_1" />
         <Component Name="FIXTURE_NUMBER_IN" />
         <Component Name="STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger start layer thickness acquisition" />
         <Component Name="Inputs" />
@@ -3157,7 +3213,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger start layer thickness acquisition" />
         <Component Name="Inputs" />
@@ -3181,28 +3237,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ServerEndpointUrl" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ConnectInfo" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceCount" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodCount" />
@@ -3210,7 +3266,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" AccessModifier="Array">
@@ -3225,28 +3281,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceURIs" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="ServerNamespaceIndexes" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="ObjectNodes" />
@@ -3254,7 +3310,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodNodes" />
@@ -3262,7 +3318,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" />
@@ -3270,14 +3326,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="42">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodResultList" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -3291,7 +3347,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="43">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger start layer thickness acquisition" />
         <Component Name="Inputs" />
@@ -3299,7 +3355,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger start layer thickness acquisition" />
         <Component Name="Outputs" />
@@ -3316,7 +3372,7 @@
     <Part Name="PBox" UId="49" />
     <Part Name="OPC_UA_MethodCall_C" Version="1.0" UId="50">
       <Instance Scope="GlobalVariable" UId="51">
-        <Component Name="DB16203_METHODCALL_U01_STA3_MEAS_MEAS_LAYER_START_TRIGGER" />
+        <Component Name="DB16203_METHODCALL_U1_STA3_MEAS_MEAS_LAYER_START_TRIGGER" />
       </Instance>
     </Part>
   </Parts>
@@ -3551,28 +3607,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ServerEndpointUrl" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ConnectInfo" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceCount" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodCount" />
@@ -3580,7 +3636,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" AccessModifier="Array">
@@ -3595,28 +3651,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceURIs" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="ServerNamespaceIndexes" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="ObjectNodes" />
@@ -3624,7 +3680,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodNodes" />
@@ -3632,7 +3688,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" />
@@ -3640,14 +3696,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodResultList" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -3661,7 +3717,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger stop layer thickness acquisition" />
         <Component Name="Outputs" />
@@ -3671,7 +3727,7 @@
     <Part Name="PBox" UId="39" />
     <Part Name="OPC_UA_MethodCall_C" Version="1.0" UId="40">
       <Instance Scope="GlobalVariable" UId="41">
-        <Component Name="DB16204_METHODCALL_U01_STA3_MEAS_MEAS_LAYER_STOP_TRIGGER" />
+        <Component Name="DB16204_METHODCALL_U1_STA3_MEAS_MEAS_LAYER_STOP_TRIGGER" />
       </Instance>
     </Part>
   </Parts>
@@ -3870,28 +3926,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ServerEndpointUrl" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ConnectInfo" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceCount" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodCount" />
@@ -3899,7 +3955,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" AccessModifier="Array">
@@ -3914,28 +3970,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceURIs" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="ServerNamespaceIndexes" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="ObjectNodes" />
@@ -3943,7 +3999,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodNodes" />
@@ -3951,7 +4007,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" />
@@ -3959,14 +4015,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodResultList" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -3980,7 +4036,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calibration" />
         <Component Name="Inputs" />
@@ -3988,7 +4044,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calibration" />
         <Component Name="Outputs" />
@@ -3998,7 +4054,7 @@
     <Part Name="PBox" UId="40" />
     <Part Name="OPC_UA_MethodCall_C" Version="1.0" UId="41">
       <Instance Scope="GlobalVariable" UId="42">
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
       </Instance>
     </Part>
   </Parts>
@@ -4197,28 +4253,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ServerEndpointUrl" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ConnectInfo" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceCount" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodCount" />
@@ -4226,7 +4282,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" AccessModifier="Array">
@@ -4241,28 +4297,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceURIs" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="ServerNamespaceIndexes" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="ObjectNodes" />
@@ -4270,7 +4326,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodNodes" />
@@ -4278,7 +4334,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="MethodLists" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodHdls" />
@@ -4286,14 +4342,14 @@
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="MethodResultList" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -4307,7 +4363,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger reset" />
         <Component Name="Outputs" />
@@ -4317,7 +4373,7 @@
     <Part Name="PBox" UId="39" />
     <Part Name="OPC_UA_MethodCall_C" Version="1.0" UId="40">
       <Instance Scope="GlobalVariable" UId="41">
-        <Component Name="DB16207_METHODCALL_U01_STA3_MEAS_RESET_TRIGGER" />
+        <Component Name="DB16207_METHODCALL_U1_STA3_MEAS_RESET_TRIGGER" />
       </Instance>
     </Part>
   </Parts>
@@ -4507,28 +4563,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ServerEndpointUrl" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Connection" />
         <Component Name="ConnectInfo" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceCount" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="ReadLists" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="NodeCount" />
@@ -4536,28 +4592,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceURIs" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="NamespaceStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="Namespaces" />
         <Component Name="ServerNamespaceIndexes" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="ReadLists" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Nodes" />
@@ -4565,7 +4621,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB16101_U01_STA3_MEAS_CLIENT_CONFIGURATION" />
+        <Component Name="DB16101_U1_STA3_MEAS_CLIENT_CONFIGURATION" />
         <Component Name="ReadLists" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="NodeHdls" />
@@ -4573,28 +4629,28 @@
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="NodeStatusList" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="TimeStamps" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
       </Symbol>
     </Access>
     <Part Name="OPC_UA_ReadList_C" Version="1.0" UId="35">
       <Instance Scope="GlobalVariable" UId="36">
-        <Component Name="DB16200_READLIST_U01_STA3_MEAS" />
+        <Component Name="DB16200_READLIST_U1_STA3_MEAS" />
       </Instance>
     </Part>
   </Parts>
@@ -4749,7 +4805,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Distance surface to reference" />
@@ -4772,7 +4828,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Distance surface to reference" />
@@ -4792,22 +4848,36 @@
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Distance surface to reference" />
@@ -4822,22 +4892,36 @@
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Distance surface to reference" />
@@ -5211,7 +5295,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status Fixture 1" />
@@ -5245,7 +5329,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status Fixture 2" />
@@ -5279,7 +5363,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status Fixture 3" />
@@ -5313,7 +5397,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status Fixture 4" />
@@ -5580,7 +5664,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16201_METHODCALL_U01_STA3_MEAS_MEAS_NOOZLE_TRIGGER" />
+        <Component Name="DB16201_METHODCALL_U1_STA3_MEAS_MEAS_NOOZLE_TRIGGER" />
         <Component Name="Error" />
       </Symbol>
     </Access>
@@ -5601,7 +5685,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -5754,13 +5838,13 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16201_METHODCALL_U01_STA3_MEAS_MEAS_NOOZLE_TRIGGER" />
+        <Component Name="DB16201_METHODCALL_U1_STA3_MEAS_MEAS_NOOZLE_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calculate distance" />
         <Component Name="Outputs" />
@@ -5784,7 +5868,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -5948,7 +6032,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16203_METHODCALL_U01_STA3_MEAS_MEAS_LAYER_START_TRIGGER" />
+        <Component Name="DB16203_METHODCALL_U1_STA3_MEAS_MEAS_LAYER_START_TRIGGER" />
         <Component Name="Error" />
       </Symbol>
     </Access>
@@ -5969,7 +6053,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -6122,13 +6206,13 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16203_METHODCALL_U01_STA3_MEAS_MEAS_LAYER_START_TRIGGER" />
+        <Component Name="DB16203_METHODCALL_U1_STA3_MEAS_MEAS_LAYER_START_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger start layer thickness acquisition" />
         <Component Name="Outputs" />
@@ -6152,7 +6236,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -6316,7 +6400,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16204_METHODCALL_U01_STA3_MEAS_MEAS_LAYER_STOP_TRIGGER" />
+        <Component Name="DB16204_METHODCALL_U1_STA3_MEAS_MEAS_LAYER_STOP_TRIGGER" />
         <Component Name="Error" />
       </Symbol>
     </Access>
@@ -6337,7 +6421,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -6490,13 +6574,13 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16204_METHODCALL_U01_STA3_MEAS_MEAS_LAYER_STOP_TRIGGER" />
+        <Component Name="DB16204_METHODCALL_U1_STA3_MEAS_MEAS_LAYER_STOP_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger stop layer thickness acquisition" />
         <Component Name="Outputs" />
@@ -6520,7 +6604,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -6684,7 +6768,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
         <Component Name="Error" />
       </Symbol>
     </Access>
@@ -6705,7 +6789,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -6858,13 +6942,13 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16205_METHODCALL_U01_STA3_MEAS_CALIBRATE_TRIGGER" />
+        <Component Name="DB16205_METHODCALL_U1_STA3_MEAS_CALIBRATE_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger calibration" />
         <Component Name="Outputs" />
@@ -6888,7 +6972,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -7052,7 +7136,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16207_METHODCALL_U01_STA3_MEAS_RESET_TRIGGER" />
+        <Component Name="DB16207_METHODCALL_U1_STA3_MEAS_RESET_TRIGGER" />
         <Component Name="Error" />
       </Symbol>
     </Access>
@@ -7073,7 +7157,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -7226,13 +7310,13 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16207_METHODCALL_U01_STA3_MEAS_RESET_TRIGGER" />
+        <Component Name="DB16207_METHODCALL_U1_STA3_MEAS_RESET_TRIGGER" />
         <Component Name="Done" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Method" />
         <Component Name="Trigger reset" />
         <Component Name="Outputs" />
@@ -7256,7 +7340,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -7420,7 +7504,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16200_READLIST_U01_STA3_MEAS" />
+        <Component Name="DB16200_READLIST_U1_STA3_MEAS" />
         <Component Name="Error" />
       </Symbol>
     </Access>
@@ -7441,7 +7525,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -7594,7 +7678,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16200_READLIST_U01_STA3_MEAS" />
+        <Component Name="DB16200_READLIST_U1_STA3_MEAS" />
         <Component Name="Done" />
       </Symbol>
     </Access>
@@ -7620,7 +7704,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -7782,7 +7866,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -7796,7 +7880,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="ProfilerConfiguration" />
@@ -7819,7 +7903,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -7987,7 +8071,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -8001,7 +8085,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="AnalyzerConfiguration" />
@@ -8024,7 +8108,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -8192,7 +8276,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -8226,7 +8310,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -8394,7 +8478,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -8408,7 +8492,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Acquisition" />
@@ -8431,7 +8515,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -8599,7 +8683,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -8613,7 +8697,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="ProfilerInitialization" />
@@ -8636,7 +8720,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -8804,7 +8888,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -8818,7 +8902,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="DistanceCalculation" />
@@ -8841,7 +8925,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -9009,7 +9093,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -9023,7 +9107,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="LayerThicknessAnalysis" />
@@ -9046,7 +9130,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -9214,7 +9298,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -9228,7 +9312,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="StorageError" />
@@ -9251,7 +9335,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -9419,7 +9503,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -9433,7 +9517,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="DatabaseConnection" />
@@ -9456,7 +9540,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -9666,7 +9750,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -9889,7 +9973,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -10112,7 +10196,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -10335,7 +10419,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -10544,7 +10628,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -10731,7 +10815,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -10918,7 +11002,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -11105,7 +11189,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -11264,7 +11348,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Status" />
@@ -11288,8 +11372,15 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_1" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -11309,8 +11400,15 @@
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_2" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -11330,8 +11428,15 @@
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_3" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>3</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -11351,8 +11456,15 @@
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB4000_FIX_TABLE_POSITIONS" />
-        <Component Name="UNIT_01" />
-        <Component Name="FIXTURE_4" />
+        <Component Name="UNIT_1" />
+        <Component Name="FIXTURE" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>4</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
         <Component Name="IN_CLADDING_STATION_3" />
       </Symbol>
     </Access>
@@ -11386,7 +11498,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -11653,7 +11765,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Version.Minor" />
@@ -11664,7 +11776,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -11794,7 +11906,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="DB16001_U01_STA3_MEAS_CLIENT_INTERFACE" />
+        <Component Name="DB16001_U1_STA3_MEAS_CLIENT_INTERFACE" />
         <Component Name="U01_STA3_MEAS_Read" />
         <Component Name="Variable" />
         <Component Name="Version.Major" />
@@ -11820,7 +11932,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB7253_UNIT_01_STA_3_MEAS_ENABLE_DISABLE" />
+        <Component Name="DB7253_UNIT_1_STA_3_MEAS_ENABLE_DISABLE" />
         <Component Name="ENABLED" />
       </Symbol>
     </Access>
@@ -12297,7 +12409,7 @@
     <Access Scope="GlobalVariable" UId="59">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
-        <Component Name="ALARMS_UNIT_01" />
+        <Component Name="ALARMS_UNIT_1" />
         <Component Name="ST3_CLADDING" />
         <Component Name="IS_SEOC_ALARMS" />
       </Symbol>
