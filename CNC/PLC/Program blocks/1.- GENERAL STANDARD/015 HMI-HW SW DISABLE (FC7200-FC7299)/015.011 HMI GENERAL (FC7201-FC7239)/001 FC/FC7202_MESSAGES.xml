@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-05-06T14:28:26.8200447Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17 SP2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK 840D sl STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>ETXETAR</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="DB" Datatype="DB_ANY" Accessibility="Public" />
+    <Member Name="BEGIN" Datatype="Int" Accessibility="Public" />
+    <Member Name="BYTES" Datatype="Int" Accessibility="Public" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="OUTPUT" Datatype="Bool" Accessibility="Public" />
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="AUX_1" Datatype="Word" />
+    <Member Name="AUX_2" Datatype="Word" />
+    <Member Name="AUX_OUT_1" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>FC7202_MESSAGES</Name>
+      <Number>7202</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text>Gestiona si el grupo de datos son diferentes a cero
+DB1980.DBX0.0 debe ser =0
+DB1980.DBX0.1 debe ser =1</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="21">
+    <StlToken Text="A" />
+    <Access Scope="GlobalVariable">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="23">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="OUTPUT" />
+      </Symbol>
+      <LineComment Inserted="false">
+        <Text> INITIALIZE OUTPUT</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="26">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="28">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_1" />
+      </Symbol>
+      <LineComment Inserted="false">
+        <Text> INITIALIZE LOCAL VARIABLES</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="31">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="33">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>ARef</ConstantType>
+        <ConstantValue>P#0.0</ConstantValue>
+      </Constant>
+      <LineComment Inserted="false">
+        <Text> INITIALIZE POINTER</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="36">
+    <StlToken Text="LAR1_ACCU1" />
+  </StlStatement>
+  <StlStatement UId="37">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="38">
+    <StlToken Text="OPEN_DB" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DB" />
+      </Symbol>
+      <LineComment Inserted="false">
+        <Text> OPEN DB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="41">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="BEGIN" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="43">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="45">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="BYTES" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="47">
+    <LabelDeclaration>
+      <Label Name="M002" />
+    </LabelDeclaration>
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="50">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="52">
+    <StlToken Text="SLW" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="54">
+    <StlToken Text="LAR1_ACCU1" />
+  </StlStatement>
+  <StlStatement UId="55">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="56">
+    <StlToken Text="OPEN_DB" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DB" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="58">
+    <StlToken Text="L" />
+    <Access Scope="Address">
+      <Indirect Width="Byte" Area="DB" Register="AR1" BitOffset="0" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="61">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="63">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="64">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="M005" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="66">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="M001" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="68">
+    <LabelDeclaration>
+      <Label Name="M005" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="71">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="73">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="74">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="76">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="78">
+    <StlToken Text="LOOP" />
+    <Access Scope="Label">
+      <Label Name="M002" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="80">
+    <StlToken Text="A" />
+    <Access Scope="GlobalVariable">
+      <Symbol>
+        <Component Name="M_ZERO" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="82">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_OUT_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="84">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="M003" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="86">
+    <LabelDeclaration>
+      <Label Name="M001" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="GlobalVariable">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="89">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="AUX_OUT_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="91">
+    <LabelDeclaration>
+      <Label Name="M003" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="93">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>Grupo de datos:</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="11" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="AUX_OUT_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="OUTPUT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Part Name="Coil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="12" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text>Activa la salida</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="1C" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="1D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="1E" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="1F" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="20" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-MX</Culture>
+              <Text>GRUPOS DATOS DIFERENTES A CERO</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>
