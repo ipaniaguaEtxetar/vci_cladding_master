@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-25T10:07:03.1416503Z</Created>
+    <Created>2025-05-06T13:48:27.6644792Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayName>WinCC Advanced</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -65,6 +65,7 @@
   <Section Name="Temp">
     <Member Name="COUNT_FOR_ERROR" Datatype="Int" />
     <Member Name="RET_VAL_1" Datatype="Int" />
+    <Member Name="DATE" Datatype="DTL" Version="1.0" />
   </Section>
   <Section Name="Constant">
     <Member Name="FC_NUMBER" Datatype="DInt" Accessibility="Public">
@@ -1103,7 +1104,7 @@
       <Symbol>
         <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
         <Component Name="POWDER_TO_NCU" />
-        <Component Name="POWDER_UNIT_01_ALARM" />
+        <Component Name="U1_PF_1_LINE_1_LOW_POWDER" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
@@ -1111,28 +1112,99 @@
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="POWDER_PLC" />
         <Component Name="FROM_POWDER_TO_UNIT_1" />
-        <Component Name="POWDER_UNIT_1_ALARM" />
+        <Component Name="U1_PF_1_LINE_1_LOW_POWDER" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="U1_PF_1_LINE_1_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736808" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
   </Parts>
   <Wires>
-    <Wire UId="25">
+    <Wire UId="34">
       <Powerrail />
-      <NameCon UId="23" Name="in" />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
     </Wire>
-    <Wire UId="26">
+    <Wire UId="35">
       <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
+      <NameCon UId="27" Name="operand" />
     </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
     </Wire>
-    <Wire UId="28">
+    <Wire UId="37">
       <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1172,7 +1244,7 @@
               <MultilingualTextItem ID="7B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>POWDER UNIT 01 ALARM</Text>
+                  <Text>UNIT 1 POWDER FEEDER 1 LINE 1 LOW POWDER LEVEL</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="7C" CompositionName="Items">
@@ -1198,6 +1270,352 @@
         </ObjectList>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="7F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="U1_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="U1_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="U1_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736809" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="80" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="81" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="82" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="83" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="84" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="85" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="86" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>UNIT 1 POWDER FEEDER 1 LINE 2 LOW POWDER LEVEL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="87" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="88" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="89" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="POWDER_UNIT_01_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="POWDER_UNIT_1_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="POWDER_UNIT_1_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736800" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="8B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="90" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="91" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>POWDER UNIT 01 ALARM</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="92" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="93" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="94" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="95" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -1459,172 +1877,6 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="80" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="81" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="82" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="83" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="84" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="85" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="86" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>POWDER FEEDER 1 ACTUAL VALUES</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="87" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="88" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="89" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="8A" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource />
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="8B" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="8C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="8D" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="8E" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="8F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="90" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="91" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text>//////////_UNIT_02_//////////</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="92" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-ES</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="93" CompositionName="Items">
-                <AttributeList>
-                  <Culture>de-DE</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="94" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="95" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
-        <Component Name="POWDER_TO_NCU" />
-        <Component Name="POWDER_UNIT_02_READY_TO_RUN" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="POWDER_PLC" />
-        <Component Name="FROM_POWDER_TO_UNIT_2" />
-        <Component Name="POWDER_UNIT_2_READY_TO_RUN" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
           <MultilingualText ID="96" CompositionName="Comment">
             <ObjectList>
               <MultilingualTextItem ID="97" CompositionName="Items">
@@ -1658,7 +1910,7 @@
               <MultilingualTextItem ID="9C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>POWDER UNIT 02 READY TO RUN</Text>
+                  <Text>POWDER FEEDER 1 ACTUAL VALUES</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="9D" CompositionName="Items">
@@ -1685,45 +1937,7 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="A0" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
-        <Component Name="POWDER_TO_NCU" />
-        <Component Name="POWDER_UNIT_02_STOPPED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="POWDER_PLC" />
-        <Component Name="FROM_POWDER_TO_UNIT_2" />
-        <Component Name="POWDER_UNIT_2_STOPPED" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
+          <NetworkSource />
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
@@ -1760,7 +1974,7 @@
               <MultilingualTextItem ID="A7" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>POWDER UNIT 02 STOPPED</Text>
+                  <Text>//////////_UNIT_02_//////////</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="A8" CompositionName="Items">
@@ -1793,7 +2007,7 @@
       <Symbol>
         <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
         <Component Name="POWDER_TO_NCU" />
-        <Component Name="SWITCHED_ON_POWDER_UNIT_02" />
+        <Component Name="POWDER_UNIT_02_READY_TO_RUN" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
@@ -1801,7 +2015,7 @@
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="POWDER_PLC" />
         <Component Name="FROM_POWDER_TO_UNIT_2" />
-        <Component Name="SWITCHED_ON_POWDER_UNIT_2" />
+        <Component Name="POWDER_UNIT_2_READY_TO_RUN" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="23" />
@@ -1862,7 +2076,7 @@
               <MultilingualTextItem ID="B2" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SWITCHED ON POWDER UNIT 02</Text>
+                  <Text>POWDER UNIT 02 READY TO RUN</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="B3" CompositionName="Items">
@@ -1895,7 +2109,7 @@
       <Symbol>
         <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
         <Component Name="POWDER_TO_NCU" />
-        <Component Name="SWITCHED_OFF_POWDER_UNIT_02" />
+        <Component Name="POWDER_UNIT_02_STOPPED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
@@ -1903,7 +2117,7 @@
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="POWDER_PLC" />
         <Component Name="FROM_POWDER_TO_UNIT_2" />
-        <Component Name="SWITCHED_OFF_POWDER_UNIT_2" />
+        <Component Name="POWDER_UNIT_2_STOPPED" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="23" />
@@ -1964,7 +2178,7 @@
               <MultilingualTextItem ID="BD" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SWITCHED OFF POWDER UNIT 02</Text>
+                  <Text>POWDER UNIT 02 STOPPED</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="BE" CompositionName="Items">
@@ -1997,15 +2211,15 @@
       <Symbol>
         <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
         <Component Name="POWDER_TO_NCU" />
-        <Component Name="SWITCHED_ON_TEMPERATURE_JACKET_UNIT_02" />
+        <Component Name="SWITCHED_ON_POWDER_UNIT_02" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="POWDER_PLC" />
-        <Component Name="FROM_POWDER_TO_UNIT_1" />
-        <Component Name="SWITCHED_ON_TEMPERATURE_JACKET_UNIT_1" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="SWITCHED_ON_POWDER_UNIT_2" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="23" />
@@ -2066,7 +2280,7 @@
               <MultilingualTextItem ID="C8" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SWITCHED ON TEMPERATURE JACKET UNIT 02</Text>
+                  <Text>SWITCHED ON POWDER UNIT 02</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="C9" CompositionName="Items">
@@ -2099,7 +2313,7 @@
       <Symbol>
         <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
         <Component Name="POWDER_TO_NCU" />
-        <Component Name="SWITCHED_OFF_TEMPERATURE_JACKET_UNIT_02" />
+        <Component Name="SWITCHED_OFF_POWDER_UNIT_02" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
@@ -2107,7 +2321,7 @@
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="POWDER_PLC" />
         <Component Name="FROM_POWDER_TO_UNIT_2" />
-        <Component Name="SWITCHED_OFF_TEMPERATURE_JACKET_UNIT_2" />
+        <Component Name="SWITCHED_OFF_POWDER_UNIT_2" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="23" />
@@ -2168,7 +2382,7 @@
               <MultilingualTextItem ID="D3" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SWITCHED OFF TEMPERATURE JACKET UNIT 02</Text>
+                  <Text>SWITCHED OFF POWDER UNIT 02</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="D4" CompositionName="Items">
@@ -2201,15 +2415,15 @@
       <Symbol>
         <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
         <Component Name="POWDER_TO_NCU" />
-        <Component Name="POWDER_UNIT_02_ALARM" />
+        <Component Name="SWITCHED_ON_TEMPERATURE_JACKET_UNIT_02" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="POWDER_PLC" />
-        <Component Name="FROM_POWDER_TO_UNIT_2" />
-        <Component Name="POWDER_UNIT_2_ALARM" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="SWITCHED_ON_TEMPERATURE_JACKET_UNIT_1" />
       </Symbol>
     </Access>
     <Part Name="Contact" UId="23" />
@@ -2270,7 +2484,7 @@
               <MultilingualTextItem ID="DE" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>POWDER UNIT 02 ALARM</Text>
+                  <Text>SWITCHED ON TEMPERATURE JACKET UNIT 02</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="DF" CompositionName="Items">
@@ -2296,6 +2510,800 @@
         </ObjectList>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="E2" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="SWITCHED_OFF_TEMPERATURE_JACKET_UNIT_02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="SWITCHED_OFF_TEMPERATURE_JACKET_UNIT_2" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Part Name="Coil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E3" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="E4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="E8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="E9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>SWITCHED OFF TEMPERATURE JACKET UNIT 02</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="EA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="EB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="EC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="ED" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="U2_PF_1_LINE_1_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_1_LINE_1_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_1_LINE_1_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736810" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="EE" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="EF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F3" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="F4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>UNIT 2 POWDER FEEDER 1 LINE 1 LOW POWDER LEVEL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="F8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="U2_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736811" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="F9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="FA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="FB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="FC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="FD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="FE" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="FF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>UNIT 2 POWDER FEEDER 1 LINE 2 LOW POWDER LEVEL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="100" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="101" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="102" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="103" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="U2_PF_2_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_2_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_2_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736812" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="104" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="105" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="106" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="107" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="108" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="109" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>UNIT 2 POWDER FEEDER 1 LINE 2 LOW POWDER LEVEL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="10E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB7340_POWDER_PLC_INTERLOCK" />
+        <Component Name="POWDER_TO_NCU" />
+        <Component Name="POWDER_UNIT_02_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="POWDER_UNIT_2_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="MACHINE_ON_DELAYED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="POWDER_UNIT_2_ALARM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736801" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="27" />
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="27" Name="in" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="10F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="110" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="111" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="112" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="113" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="114" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="115" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>POWDER UNIT 02 ALARM</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="116" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="117" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="118" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="119" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -2557,27 +3565,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="E3" CompositionName="Comment">
+          <MultilingualText ID="11A" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="E4" CompositionName="Items">
+              <MultilingualTextItem ID="11B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E5" CompositionName="Items">
+              <MultilingualTextItem ID="11C" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E6" CompositionName="Items">
+              <MultilingualTextItem ID="11D" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E7" CompositionName="Items">
+              <MultilingualTextItem ID="11E" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -2585,27 +3593,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="E8" CompositionName="Title">
+          <MultilingualText ID="11F" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="E9" CompositionName="Items">
+              <MultilingualTextItem ID="120" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>POWDER FEEDER 1 ACTUAL VALUES</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="EA" CompositionName="Items">
+              <MultilingualTextItem ID="121" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="EB" CompositionName="Items">
+              <MultilingualTextItem ID="122" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="EC" CompositionName="Items">
+              <MultilingualTextItem ID="123" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -2615,7 +3623,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="ED" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="124" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -2877,27 +3885,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="EE" CompositionName="Comment">
+          <MultilingualText ID="125" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="EF" CompositionName="Items">
+              <MultilingualTextItem ID="126" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F0" CompositionName="Items">
+              <MultilingualTextItem ID="127" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F1" CompositionName="Items">
+              <MultilingualTextItem ID="128" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F2" CompositionName="Items">
+              <MultilingualTextItem ID="129" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -2905,27 +3913,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="F3" CompositionName="Title">
+          <MultilingualText ID="12A" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="F4" CompositionName="Items">
+              <MultilingualTextItem ID="12B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>POWDER FEEDER 2 ACTUAL VALUES</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F5" CompositionName="Items">
+              <MultilingualTextItem ID="12C" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F6" CompositionName="Items">
+              <MultilingualTextItem ID="12D" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F7" CompositionName="Items">
+              <MultilingualTextItem ID="12E" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -2935,7 +3943,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="F8" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="12F" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -3180,27 +4188,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="F9" CompositionName="Comment">
+          <MultilingualText ID="130" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="FA" CompositionName="Items">
+              <MultilingualTextItem ID="131" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="FB" CompositionName="Items">
+              <MultilingualTextItem ID="132" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="FC" CompositionName="Items">
+              <MultilingualTextItem ID="133" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="FD" CompositionName="Items">
+              <MultilingualTextItem ID="134" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3208,27 +4216,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="FE" CompositionName="Title">
+          <MultilingualText ID="135" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="FF" CompositionName="Items">
+              <MultilingualTextItem ID="136" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>LIFE BIT ALARM</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="100" CompositionName="Items">
+              <MultilingualTextItem ID="137" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="101" CompositionName="Items">
+              <MultilingualTextItem ID="138" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="102" CompositionName="Items">
+              <MultilingualTextItem ID="139" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3238,7 +4246,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="103" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="13A" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -3469,27 +4477,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="104" CompositionName="Comment">
+          <MultilingualText ID="13B" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="105" CompositionName="Items">
+              <MultilingualTextItem ID="13C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="106" CompositionName="Items">
+              <MultilingualTextItem ID="13D" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="107" CompositionName="Items">
+              <MultilingualTextItem ID="13E" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="108" CompositionName="Items">
+              <MultilingualTextItem ID="13F" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3497,27 +4505,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="109" CompositionName="Title">
+          <MultilingualText ID="140" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="10A" CompositionName="Items">
+              <MultilingualTextItem ID="141" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>IMMEDIATE STOP AND STOP END OF CYCLE ALARMS</Text>
+                  <Text>IMMEDIATE STOP ALARMS</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="10B" CompositionName="Items">
+              <MultilingualTextItem ID="142" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="10C" CompositionName="Items">
+              <MultilingualTextItem ID="143" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="10D" CompositionName="Items">
+              <MultilingualTextItem ID="144" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3527,27 +4535,479 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="10E" CompositionName="Title">
+      <SW.Blocks.CompileUnit ID="145" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="M_ONE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="U1_PF_1_LINE_1_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_1" />
+        <Component Name="U1_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="24">
+      <Constant Name="FC_NUMBER" />
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="GLOBAL_ALARMS_MACHINE" />
+        <Component Name="ALARM_DECODING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_1" />
+        <Component Name="GLOBAL" />
+        <Component Name="SEOC_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_1_LINE_1_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_1_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB7300_INTERLOCK_GENERAL" />
+        <Component Name="POWDER_PLC" />
+        <Component Name="FROM_POWDER_TO_UNIT_2" />
+        <Component Name="U2_PF_2_LINE_2_LOW_POWDER" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="30">
+      <Constant Name="FC_NUMBER" />
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="GLOBAL_ALARMS_MACHINE" />
+        <Component Name="ALARM_DECODING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB440_MACHINE_ALARM_DECODING" />
+        <Component Name="ALARMS_UNIT_2" />
+        <Component Name="GLOBAL" />
+        <Component Name="SEOC_ALARMS" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="33" />
+    <Part Name="Contact" UId="34">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="35">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="36" />
+    <Part Name="Move" UId="37" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="38" />
+    <Part Name="Contact" UId="39">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="40">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="41">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="42" />
+    <Part Name="Move" UId="43" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="44" />
+  </Parts>
+  <Wires>
+    <Wire UId="45">
+      <Powerrail />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="21" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="22" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="34" Name="out" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="eno" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="27" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="28" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="29" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="43" Name="eno" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <NameCon UId="43" Name="out1" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="32" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
         <ObjectList>
-          <MultilingualTextItem ID="10F" CompositionName="Items">
+          <MultilingualText ID="146" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="147" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="148" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="149" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="14B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="14C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STOP END OF CYCLE ALARMS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="150" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB16701_OPC_UA_MASTER_MACHINE_DATA_UPDATE_2" />
+        <Component Name="STATUS" />
+        <Component Name="ACK_BUTTON" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Tag_30" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="RET_VAL_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="DATE" />
+      </Symbol>
+    </Access>
+    <Part Name="PContact" UId="25" />
+    <Part Name="RD_SYS_T" Version="1.0" UId="26">
+      <TemplateValue Name="date_type" Type="Type">DTL</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="27">
+      <Powerrail />
+      <NameCon UId="25" Name="pre" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="bit" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="30">
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="31">
+      <NameCon UId="26" Name="RET_VAL" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="OUT" />
+      <IdentCon UId="24" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="151" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="152" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="153" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="154" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="155" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="156" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="157" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="158" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="159" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="15B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="15C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="15D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="160" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="161" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="162" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="163" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="164" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="165" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="166" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="167" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="110" CompositionName="Items">
+          <MultilingualTextItem ID="168" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="111" CompositionName="Items">
+          <MultilingualTextItem ID="169" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="112" CompositionName="Items">
+          <MultilingualTextItem ID="16A" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />

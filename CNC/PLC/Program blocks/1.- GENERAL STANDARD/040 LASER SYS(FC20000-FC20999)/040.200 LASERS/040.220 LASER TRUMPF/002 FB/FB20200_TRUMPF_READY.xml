@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-25T10:06:49.6243576Z</Created>
+    <Created>2025-05-06T13:48:21.910061Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayName>WinCC Advanced</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -3114,50 +3114,53 @@
     <Part Name="Contact" UId="26">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Move" UId="27" DisabledENO="true">
+    <Part Name="Not" UId="27" />
+    <Part Name="Move" UId="28" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="28">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="SCoil" UId="29" />
+    <Part Name="Contact" UId="29" />
+    <Part Name="SCoil" UId="30" />
   </Parts>
   <Wires>
-    <Wire UId="30">
+    <Wire UId="31">
       <Powerrail />
       <NameCon UId="26" Name="in" />
     </Wire>
-    <Wire UId="31">
+    <Wire UId="32">
       <IdentCon UId="21" />
       <NameCon UId="26" Name="operand" />
     </Wire>
-    <Wire UId="32">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="en" />
-    </Wire>
     <Wire UId="33">
-      <IdentCon UId="22" />
+      <NameCon UId="26" Name="out" />
       <NameCon UId="27" Name="in" />
     </Wire>
     <Wire UId="34">
-      <NameCon UId="27" Name="eno" />
-      <NameCon UId="28" Name="in" />
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="en" />
     </Wire>
     <Wire UId="35">
-      <NameCon UId="27" Name="out1" />
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="in" />
     </Wire>
     <Wire UId="36">
-      <IdentCon UId="24" />
-      <NameCon UId="28" Name="operand" />
-    </Wire>
-    <Wire UId="37">
-      <NameCon UId="28" Name="out" />
+      <NameCon UId="28" Name="eno" />
       <NameCon UId="29" Name="in" />
     </Wire>
+    <Wire UId="37">
+      <NameCon UId="28" Name="out1" />
+      <IdentCon UId="23" />
+    </Wire>
     <Wire UId="38">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -3345,29 +3348,34 @@
     <Part Name="Contact" UId="24">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Move" UId="25" DisabledENO="true">
+    <Part Name="Not" UId="25" />
+    <Part Name="Move" UId="26" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="26">
+    <Wire UId="27">
       <Powerrail />
       <NameCon UId="24" Name="in" />
     </Wire>
-    <Wire UId="27">
+    <Wire UId="28">
       <IdentCon UId="21" />
       <NameCon UId="24" Name="operand" />
     </Wire>
-    <Wire UId="28">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="25" Name="en" />
-    </Wire>
     <Wire UId="29">
-      <IdentCon UId="22" />
+      <NameCon UId="24" Name="out" />
       <NameCon UId="25" Name="in" />
     </Wire>
     <Wire UId="30">
-      <NameCon UId="25" Name="out1" />
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out1" />
       <IdentCon UId="23" />
     </Wire>
   </Wires>

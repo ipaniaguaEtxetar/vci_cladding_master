@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-25T10:07:24.9396604Z</Created>
+    <Created>2025-05-06T13:48:38.3294938Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayName>WinCC Advanced</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -338,42 +338,63 @@
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB1237_UNIT_1_STATION_3_CAM_NOZZLE_CALIBRATION" />
+        <Component Name="DB1236_UNIT_1_STATION_3_CAM_LASER_CALIBRATION" />
         <Component Name="SEQUENCE" />
         <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
+        <Component Name="DB1237_UNIT_1_STATION_3_CAM_NOZZLE_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB1238_UNIT_1_STATION_3_CAM_JET_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB1239_UNIT_1_STATION_3_CAM_CLADDING_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
         <Component Name="DB16010_MEASURE_SENSORS_CALIBRATION_STATUS" />
         <Component Name="UNIT_1_AUX" />
         <Component Name="DOOR_OPEN_NOZZLE_CALIBRATION_MEM" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB347_M_UNIT_01_STA_3" />
         <Component Name="M_CODES_UNIT_01_STA_3" />
         <Component Name="M143" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="M_ZERO" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="32">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB2103_ELECTRICAL_CABINET" />
         <Component Name="INPUT_CIRCUIT_BREAKER_TRIPPED_LIGHT_STA_3" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
+    <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="M_ZERO" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="LTLP_DirectKeyGetMovNoData" />
         <Component Name="PowerUp" AccessModifier="Array">
@@ -386,70 +407,79 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="35">
-      <Symbol>
-        <Component Name="STATION_3_LIGHT_U01_Q" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="36">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup30ExecutableRight" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup30ExecutableLeft" />
-      </Symbol>
-    </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerupCondOn30" />
+        <Component Name="STATION_3_LIGHT_U01_Q" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup30ExecutableRight" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup30ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOn30" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerupCondOff30" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="40">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="41">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="42">
-      <Negated Name="operand" />
-    </Part>
     <Part Name="Contact" UId="43">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Not" UId="44" />
+    <Part Name="Contact" UId="44">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Contact" UId="45">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="46">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="47">
-      <Negated Name="operand" />
-    </Part>
+    <Part Name="Not" UId="47" />
     <Part Name="Contact" UId="48">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="49">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="50" />
-    <Part Name="O" UId="51">
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="52">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="56" />
+    <Part Name="O" UId="57">
       <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Call UId="52">
+    <Call UId="58">
       <CallInfo Name="FB2107_LIGHTS" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="53">
+        <Instance Scope="GlobalVariable" UId="59">
           <Component Name="DB2108_UNIT_1_STATION_3_LIGHT" />
         </Instance>
         <Parameter Name="GENERAL_MACHINE_LIGHT_OPTION" Section="Input" Type="Bool" />
@@ -467,39 +497,15 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="54">
-      <Powerrail />
-      <NameCon UId="52" Name="en" />
-      <NameCon UId="40" Name="in" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="21" />
-      <NameCon UId="40" Name="operand" />
-    </Wire>
-    <Wire UId="56">
-      <NameCon UId="40" Name="out" />
-      <NameCon UId="41" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="22" />
-      <NameCon UId="41" Name="operand" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="41" Name="out" />
-      <NameCon UId="42" Name="in" />
-    </Wire>
-    <Wire UId="59">
-      <IdentCon UId="23" />
-      <NameCon UId="42" Name="operand" />
-    </Wire>
     <Wire UId="60">
-      <NameCon UId="42" Name="out" />
+      <Powerrail />
+      <NameCon UId="58" Name="en" />
       <NameCon UId="43" Name="in" />
+      <NameCon UId="48" Name="in" />
+      <NameCon UId="56" Name="in" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="24" />
+      <IdentCon UId="21" />
       <NameCon UId="43" Name="operand" />
     </Wire>
     <Wire UId="62">
@@ -507,35 +513,35 @@
       <NameCon UId="44" Name="in" />
     </Wire>
     <Wire UId="63">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="52" Name="SWITCH_ON_AUTO_REQ" />
+      <IdentCon UId="22" />
+      <NameCon UId="44" Name="operand" />
     </Wire>
     <Wire UId="64">
-      <IdentCon UId="25" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="65">
+      <IdentCon UId="23" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="66">
       <NameCon UId="45" Name="out" />
       <NameCon UId="46" Name="in" />
     </Wire>
-    <Wire UId="66">
-      <IdentCon UId="26" />
+    <Wire UId="67">
+      <IdentCon UId="24" />
       <NameCon UId="46" Name="operand" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="68">
       <NameCon UId="46" Name="out" />
       <NameCon UId="47" Name="in" />
     </Wire>
-    <Wire UId="68">
-      <IdentCon UId="27" />
-      <NameCon UId="47" Name="operand" />
-    </Wire>
     <Wire UId="69">
       <NameCon UId="47" Name="out" />
-      <NameCon UId="48" Name="in" />
+      <NameCon UId="58" Name="SWITCH_ON_AUTO_REQ" />
     </Wire>
     <Wire UId="70">
-      <IdentCon UId="28" />
+      <IdentCon UId="25" />
       <NameCon UId="48" Name="operand" />
     </Wire>
     <Wire UId="71">
@@ -543,60 +549,108 @@
       <NameCon UId="49" Name="in" />
     </Wire>
     <Wire UId="72">
-      <IdentCon UId="29" />
+      <IdentCon UId="26" />
       <NameCon UId="49" Name="operand" />
     </Wire>
     <Wire UId="73">
       <NameCon UId="49" Name="out" />
-      <NameCon UId="51" Name="in1" />
+      <NameCon UId="50" Name="in" />
     </Wire>
     <Wire UId="74">
-      <IdentCon UId="30" />
+      <IdentCon UId="27" />
       <NameCon UId="50" Name="operand" />
     </Wire>
     <Wire UId="75">
       <NameCon UId="50" Name="out" />
-      <NameCon UId="51" Name="in2" />
+      <NameCon UId="51" Name="in" />
     </Wire>
     <Wire UId="76">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="SWITCH_OFF_AUTO_REQ" />
+      <IdentCon UId="28" />
+      <NameCon UId="51" Name="operand" />
     </Wire>
     <Wire UId="77">
-      <IdentCon UId="31" />
-      <NameCon UId="52" Name="GENERAL_MACHINE_LIGHT_OPTION" />
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="in" />
     </Wire>
     <Wire UId="78">
-      <IdentCon UId="32" />
-      <NameCon UId="52" Name="CIRCUIT_BRAKER_IN" />
+      <IdentCon UId="29" />
+      <NameCon UId="52" Name="operand" />
     </Wire>
     <Wire UId="79">
-      <IdentCon UId="33" />
-      <NameCon UId="52" Name="LIGHT_ON_SELECTOR" />
+      <NameCon UId="52" Name="out" />
+      <NameCon UId="53" Name="in" />
     </Wire>
     <Wire UId="80">
-      <IdentCon UId="34" />
-      <NameCon UId="52" Name="MANUAL_REQ_LINE" />
+      <IdentCon UId="30" />
+      <NameCon UId="53" Name="operand" />
     </Wire>
     <Wire UId="81">
-      <NameCon UId="52" Name="LIGHTS_ON" />
-      <IdentCon UId="35" />
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
     </Wire>
     <Wire UId="82">
-      <NameCon UId="52" Name="HMI_LINE_ON_EXEC" />
-      <IdentCon UId="36" />
+      <IdentCon UId="31" />
+      <NameCon UId="54" Name="operand" />
     </Wire>
     <Wire UId="83">
-      <NameCon UId="52" Name="HMI_LINE_OFF_EXEC" />
-      <IdentCon UId="37" />
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
     </Wire>
     <Wire UId="84">
-      <NameCon UId="52" Name="HMI_LINE_ON_STATUS" />
-      <IdentCon UId="38" />
+      <IdentCon UId="32" />
+      <NameCon UId="55" Name="operand" />
     </Wire>
     <Wire UId="85">
-      <NameCon UId="52" Name="HMI_LINE_OFF_STATUS" />
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="57" Name="in1" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="33" />
+      <NameCon UId="56" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="56" Name="out" />
+      <NameCon UId="57" Name="in2" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="57" Name="out" />
+      <NameCon UId="58" Name="SWITCH_OFF_AUTO_REQ" />
+    </Wire>
+    <Wire UId="89">
+      <IdentCon UId="34" />
+      <NameCon UId="58" Name="GENERAL_MACHINE_LIGHT_OPTION" />
+    </Wire>
+    <Wire UId="90">
+      <IdentCon UId="35" />
+      <NameCon UId="58" Name="CIRCUIT_BRAKER_IN" />
+    </Wire>
+    <Wire UId="91">
+      <IdentCon UId="36" />
+      <NameCon UId="58" Name="LIGHT_ON_SELECTOR" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="37" />
+      <NameCon UId="58" Name="MANUAL_REQ_LINE" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="58" Name="LIGHTS_ON" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="58" Name="HMI_LINE_ON_EXEC" />
       <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="58" Name="HMI_LINE_OFF_EXEC" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="58" Name="HMI_LINE_ON_STATUS" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="58" Name="HMI_LINE_OFF_STATUS" />
+      <IdentCon UId="42" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -714,12 +768,33 @@
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="DB1277_UNIT_2_STATION_3_CAM_NOZZLE_CALIBRATION" />
+        <Component Name="DB1276_UNIT_2_STATION_3_CAM_LASER_CALIBRATION" />
         <Component Name="SEQUENCE" />
         <Component Name="RUNNING" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB1277_UNIT_2_STATION_3_CAM_NOZZLE_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB1278_UNIT_2_STATION_3_CAM_JET_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB1279_UNIT_2_STATION_3_CAM_CLADDING_CALIBRATION" />
+        <Component Name="SEQUENCE" />
+        <Component Name="RUNNING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB16010_MEASURE_SENSORS_CALIBRATION_STATUS" />
         <Component Name="UNIT_2_AUX" />
@@ -727,30 +802,30 @@
         <Component Name="DOOR_OPEN_NOZZLE_CALIBRATION_MEM" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB362_M_UNIT_02_STA_3" />
         <Component Name="M_CODES_UNIT_02_STA_3" />
         <Component Name="Ack_M143" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="31">
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="M_ZERO" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="32">
+    <Access Scope="GlobalVariable" UId="35">
       <Symbol>
         <Component Name="DB2103_ELECTRICAL_CABINET" />
         <Component Name="INPUT_CIRCUIT_BREAKER_TRIPPED_LIGHT_STA_3" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
+    <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="M_ZERO" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="34">
+    <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="LTLP_DirectKeyGetMovNoData" />
         <Component Name="PowerUp" AccessModifier="Array">
@@ -763,70 +838,79 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="35">
-      <Symbol>
-        <Component Name="STATION_3_LIGHT_U02_Q" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="36">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup31ExecutableRight" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerup31ExecutableLeft" />
-      </Symbol>
-    </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="LTLP_HMIProInterfaceData" />
-        <Component Name="powerupCondOn31" />
+        <Component Name="STATION_3_LIGHT_U02_Q" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup31ExecutableRight" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerup31ExecutableLeft" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
+        <Component Name="powerupCondOn31" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerupCondOff31" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="40">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="41">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="42">
-      <Negated Name="operand" />
-    </Part>
     <Part Name="Contact" UId="43">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Not" UId="44" />
+    <Part Name="Contact" UId="44">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Contact" UId="45">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="46">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="47">
-      <Negated Name="operand" />
-    </Part>
+    <Part Name="Not" UId="47" />
     <Part Name="Contact" UId="48">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="49">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="50" />
-    <Part Name="O" UId="51">
+    <Part Name="Contact" UId="50">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="51">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="52">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="54">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="55">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="56" />
+    <Part Name="O" UId="57">
       <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Call UId="52">
+    <Call UId="58">
       <CallInfo Name="FB2107_LIGHTS" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="53">
+        <Instance Scope="GlobalVariable" UId="59">
           <Component Name="DB2109_UNIT_2_STATION_3_LIGHT" />
         </Instance>
         <Parameter Name="GENERAL_MACHINE_LIGHT_OPTION" Section="Input" Type="Bool" />
@@ -844,39 +928,15 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="54">
-      <Powerrail />
-      <NameCon UId="52" Name="en" />
-      <NameCon UId="40" Name="in" />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="21" />
-      <NameCon UId="40" Name="operand" />
-    </Wire>
-    <Wire UId="56">
-      <NameCon UId="40" Name="out" />
-      <NameCon UId="41" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="22" />
-      <NameCon UId="41" Name="operand" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="41" Name="out" />
-      <NameCon UId="42" Name="in" />
-    </Wire>
-    <Wire UId="59">
-      <IdentCon UId="23" />
-      <NameCon UId="42" Name="operand" />
-    </Wire>
     <Wire UId="60">
-      <NameCon UId="42" Name="out" />
+      <Powerrail />
+      <NameCon UId="58" Name="en" />
       <NameCon UId="43" Name="in" />
+      <NameCon UId="48" Name="in" />
+      <NameCon UId="56" Name="in" />
     </Wire>
     <Wire UId="61">
-      <IdentCon UId="24" />
+      <IdentCon UId="21" />
       <NameCon UId="43" Name="operand" />
     </Wire>
     <Wire UId="62">
@@ -884,35 +944,35 @@
       <NameCon UId="44" Name="in" />
     </Wire>
     <Wire UId="63">
-      <NameCon UId="44" Name="out" />
-      <NameCon UId="52" Name="SWITCH_ON_AUTO_REQ" />
+      <IdentCon UId="22" />
+      <NameCon UId="44" Name="operand" />
     </Wire>
     <Wire UId="64">
-      <IdentCon UId="25" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="65">
+      <IdentCon UId="23" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="66">
       <NameCon UId="45" Name="out" />
       <NameCon UId="46" Name="in" />
     </Wire>
-    <Wire UId="66">
-      <IdentCon UId="26" />
+    <Wire UId="67">
+      <IdentCon UId="24" />
       <NameCon UId="46" Name="operand" />
     </Wire>
-    <Wire UId="67">
+    <Wire UId="68">
       <NameCon UId="46" Name="out" />
       <NameCon UId="47" Name="in" />
     </Wire>
-    <Wire UId="68">
-      <IdentCon UId="27" />
-      <NameCon UId="47" Name="operand" />
-    </Wire>
     <Wire UId="69">
       <NameCon UId="47" Name="out" />
-      <NameCon UId="48" Name="in" />
+      <NameCon UId="58" Name="SWITCH_ON_AUTO_REQ" />
     </Wire>
     <Wire UId="70">
-      <IdentCon UId="28" />
+      <IdentCon UId="25" />
       <NameCon UId="48" Name="operand" />
     </Wire>
     <Wire UId="71">
@@ -920,60 +980,108 @@
       <NameCon UId="49" Name="in" />
     </Wire>
     <Wire UId="72">
-      <IdentCon UId="29" />
+      <IdentCon UId="26" />
       <NameCon UId="49" Name="operand" />
     </Wire>
     <Wire UId="73">
       <NameCon UId="49" Name="out" />
-      <NameCon UId="51" Name="in1" />
+      <NameCon UId="50" Name="in" />
     </Wire>
     <Wire UId="74">
-      <IdentCon UId="30" />
+      <IdentCon UId="27" />
       <NameCon UId="50" Name="operand" />
     </Wire>
     <Wire UId="75">
       <NameCon UId="50" Name="out" />
-      <NameCon UId="51" Name="in2" />
+      <NameCon UId="51" Name="in" />
     </Wire>
     <Wire UId="76">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="SWITCH_OFF_AUTO_REQ" />
+      <IdentCon UId="28" />
+      <NameCon UId="51" Name="operand" />
     </Wire>
     <Wire UId="77">
-      <IdentCon UId="31" />
-      <NameCon UId="52" Name="GENERAL_MACHINE_LIGHT_OPTION" />
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="in" />
     </Wire>
     <Wire UId="78">
-      <IdentCon UId="32" />
-      <NameCon UId="52" Name="CIRCUIT_BRAKER_IN" />
+      <IdentCon UId="29" />
+      <NameCon UId="52" Name="operand" />
     </Wire>
     <Wire UId="79">
-      <IdentCon UId="33" />
-      <NameCon UId="52" Name="LIGHT_ON_SELECTOR" />
+      <NameCon UId="52" Name="out" />
+      <NameCon UId="53" Name="in" />
     </Wire>
     <Wire UId="80">
-      <IdentCon UId="34" />
-      <NameCon UId="52" Name="MANUAL_REQ_LINE" />
+      <IdentCon UId="30" />
+      <NameCon UId="53" Name="operand" />
     </Wire>
     <Wire UId="81">
-      <NameCon UId="52" Name="LIGHTS_ON" />
-      <IdentCon UId="35" />
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
     </Wire>
     <Wire UId="82">
-      <NameCon UId="52" Name="HMI_LINE_ON_EXEC" />
-      <IdentCon UId="36" />
+      <IdentCon UId="31" />
+      <NameCon UId="54" Name="operand" />
     </Wire>
     <Wire UId="83">
-      <NameCon UId="52" Name="HMI_LINE_OFF_EXEC" />
-      <IdentCon UId="37" />
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
     </Wire>
     <Wire UId="84">
-      <NameCon UId="52" Name="HMI_LINE_ON_STATUS" />
-      <IdentCon UId="38" />
+      <IdentCon UId="32" />
+      <NameCon UId="55" Name="operand" />
     </Wire>
     <Wire UId="85">
-      <NameCon UId="52" Name="HMI_LINE_OFF_STATUS" />
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="57" Name="in1" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="33" />
+      <NameCon UId="56" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="56" Name="out" />
+      <NameCon UId="57" Name="in2" />
+    </Wire>
+    <Wire UId="88">
+      <NameCon UId="57" Name="out" />
+      <NameCon UId="58" Name="SWITCH_OFF_AUTO_REQ" />
+    </Wire>
+    <Wire UId="89">
+      <IdentCon UId="34" />
+      <NameCon UId="58" Name="GENERAL_MACHINE_LIGHT_OPTION" />
+    </Wire>
+    <Wire UId="90">
+      <IdentCon UId="35" />
+      <NameCon UId="58" Name="CIRCUIT_BRAKER_IN" />
+    </Wire>
+    <Wire UId="91">
+      <IdentCon UId="36" />
+      <NameCon UId="58" Name="LIGHT_ON_SELECTOR" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="37" />
+      <NameCon UId="58" Name="MANUAL_REQ_LINE" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="58" Name="LIGHTS_ON" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="58" Name="HMI_LINE_ON_EXEC" />
       <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="58" Name="HMI_LINE_OFF_EXEC" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="58" Name="HMI_LINE_ON_STATUS" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="58" Name="HMI_LINE_OFF_STATUS" />
+      <IdentCon UId="42" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

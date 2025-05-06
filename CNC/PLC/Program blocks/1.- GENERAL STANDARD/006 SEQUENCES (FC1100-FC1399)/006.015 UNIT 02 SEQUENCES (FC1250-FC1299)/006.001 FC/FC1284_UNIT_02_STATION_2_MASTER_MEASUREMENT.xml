@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-25T10:07:32.7924445Z</Created>
+    <Created>2025-05-06T13:48:44.7045063Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayName>WinCC Advanced</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -228,7 +228,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="DB4000_FIX_TABLE_POSITIONS" />
+        <Component Name="DB5000_FIX_TABLE_POSITIONS" />
         <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
@@ -789,7 +789,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="54">
       <Symbol>
-        <Component Name="DB4000_FIX_TABLE_POSITIONS" />
+        <Component Name="DB5000_FIX_TABLE_POSITIONS" />
         <Component Name="UNIT_2" />
         <Component Name="AXIS_E20_HOME_POS" />
       </Symbol>
@@ -932,16 +932,12 @@
       <Negated Name="operand" />
     </Part>
     <Part Name="SCoil" UId="104" />
-    <Part Name="Contact" UId="105">
-      <Negated Name="operand" />
+    <Part Name="Contact" UId="105" />
+    <Part Name="Contact" UId="106" />
+    <Part Name="Contact" UId="107" />
+    <Part Name="O" UId="108">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="106">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Contact" UId="107">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Not" UId="108" />
     <Part Name="SCoil" UId="109" />
     <Part Name="Contact" UId="110">
       <Negated Name="operand" />
@@ -988,6 +984,8 @@
       <NameCon UId="101" Name="in" />
       <NameCon UId="103" Name="in" />
       <NameCon UId="105" Name="in" />
+      <NameCon UId="106" Name="in" />
+      <NameCon UId="107" Name="in" />
       <NameCon UId="110" Name="in" />
     </Wire>
     <Wire UId="118">
@@ -1237,7 +1235,7 @@
     </Wire>
     <Wire UId="179">
       <NameCon UId="105" Name="out" />
-      <NameCon UId="106" Name="in" />
+      <NameCon UId="108" Name="in1" />
     </Wire>
     <Wire UId="180">
       <IdentCon UId="59" />
@@ -1245,7 +1243,7 @@
     </Wire>
     <Wire UId="181">
       <NameCon UId="106" Name="out" />
-      <NameCon UId="107" Name="in" />
+      <NameCon UId="108" Name="in2" />
     </Wire>
     <Wire UId="182">
       <IdentCon UId="60" />
@@ -1253,7 +1251,7 @@
     </Wire>
     <Wire UId="183">
       <NameCon UId="107" Name="out" />
-      <NameCon UId="108" Name="in" />
+      <NameCon UId="108" Name="in3" />
     </Wire>
     <Wire UId="184">
       <NameCon UId="108" Name="out" />
