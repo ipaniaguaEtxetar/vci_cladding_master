@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-04-25T10:07:50.369279Z</Created>
+    <Created>2025-05-06T14:30:58.4227818Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,7 +46,7 @@
         <DisplayVersion>V17 Update 6</DisplayVersion>
       </OptionPackage>
       <Product>
-        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayName>WinCC Advanced</DisplayName>
         <DisplayVersion>V17 Update 8</DisplayVersion>
       </Product>
     </InstalledProducts>
@@ -174,10 +174,11 @@
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_ONE" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0000</ConstantValue>
+      </Constant>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
@@ -186,195 +187,247 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="DEVICE_STATUS" />
+        <Component Name="U01_PYRO_PROCESS_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="U01_PYRO_PROCESS_TEMPERATURE" />
+        <Component Name="U01_PYRO_HEAD_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="PROCESS_TEMPERATURE" />
+        <Component Name="U01_PYRO_T1_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="U01_PYRO_HEAD_TEMPERATURE" />
+        <Component Name="U01_PYRO_T2_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="HEAD_TEMPERATURE" />
+        <Component Name="U01_PYRO_CURRENT_EMISSIVITY" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="U01_PYRO_T1_TEMPERATURE" />
+        <Component Name="U01_PYRO_CURRENT_TRANSMISSION" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
-      <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="T1_TEMPERATURE" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="U01_PYRO_T2_TEMPERATURE" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742140" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="T2_TEMPERATURE" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742141" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="U01_PYRO_CURRENT_EMISSIVITY" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736400" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="CURRENT_EMISSIVITY" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736401" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="U01_PYRO_CURRENT_TRANSMISSION" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742142" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_1_PYROMETER" />
-        <Component Name="CURRENT_TRANSMISSION" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742143" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="36" />
-    <Part Name="Move" UId="37" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="38" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="39" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="40" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="41" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="42" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="43" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736402" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736403" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742144" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742145" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736404" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736405" />
+      </Symbol>
+    </Access>
+    <Call UId="42">
+      <CallInfo Name="FB10200_PYROMETERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="43">
+          <Component Name="DB10201_UNIT_1_PYROMETER" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="DEVICE_STATUS_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="PROCESS_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="HEAD_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="T1_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="T2_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="CURRENT_EMISSIVITY_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="CURRENT_TRANSMISSION_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="UNIT_NUMBER" Section="Input" Type="Int" />
+        <Parameter Name="PROCESS_TEMP_LOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="PROCESS_TEMP_HIGH_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="PROCESS_TEMP_LOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="PROCESS_TEMP_HIGH_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_LOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_HIGH_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_LOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_HIGH_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_LOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_HIGH_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_LOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_HIGH_ALARM" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
   </Parts>
   <Wires>
     <Wire UId="44">
       <Powerrail />
-      <NameCon UId="36" Name="in" />
+      <NameCon UId="42" Name="en" />
     </Wire>
     <Wire UId="45">
       <IdentCon UId="21" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="42" Name="OPTIONS_0" />
     </Wire>
     <Wire UId="46">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="en" />
-      <NameCon UId="41" Name="en" />
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="DEVICE_STATUS_SENSOR_INPUT" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="22" />
-      <NameCon UId="37" Name="in" />
+      <IdentCon UId="23" />
+      <NameCon UId="42" Name="PROCESS_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="48">
-      <NameCon UId="37" Name="eno" />
-      <NameCon UId="38" Name="en" />
+      <IdentCon UId="24" />
+      <NameCon UId="42" Name="HEAD_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="49">
-      <NameCon UId="37" Name="out1" />
-      <IdentCon UId="23" />
+      <IdentCon UId="25" />
+      <NameCon UId="42" Name="T1_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="50">
-      <IdentCon UId="24" />
-      <NameCon UId="38" Name="in" />
+      <IdentCon UId="26" />
+      <NameCon UId="42" Name="T2_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="51">
-      <NameCon UId="38" Name="eno" />
-      <NameCon UId="39" Name="en" />
+      <IdentCon UId="27" />
+      <NameCon UId="42" Name="CURRENT_EMISSIVITY_SENSOR_INPUT" />
     </Wire>
     <Wire UId="52">
-      <NameCon UId="38" Name="out1" />
-      <IdentCon UId="25" />
+      <IdentCon UId="28" />
+      <NameCon UId="42" Name="CURRENT_TRANSMISSION_SENSOR_INPUT" />
     </Wire>
     <Wire UId="53">
-      <IdentCon UId="26" />
-      <NameCon UId="39" Name="in" />
+      <IdentCon UId="29" />
+      <NameCon UId="42" Name="UNIT_NUMBER" />
     </Wire>
     <Wire UId="54">
-      <NameCon UId="39" Name="eno" />
-      <NameCon UId="40" Name="en" />
+      <NameCon UId="42" Name="PROCESS_TEMP_LOW_WARNING" />
+      <IdentCon UId="30" />
     </Wire>
     <Wire UId="55">
-      <NameCon UId="39" Name="out1" />
-      <IdentCon UId="27" />
-    </Wire>
-    <Wire UId="56">
-      <IdentCon UId="28" />
-      <NameCon UId="40" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <NameCon UId="40" Name="out1" />
-      <IdentCon UId="29" />
-    </Wire>
-    <Wire UId="58">
-      <IdentCon UId="30" />
-      <NameCon UId="41" Name="in" />
-    </Wire>
-    <Wire UId="59">
-      <NameCon UId="41" Name="eno" />
-      <NameCon UId="42" Name="en" />
-    </Wire>
-    <Wire UId="60">
-      <NameCon UId="41" Name="out1" />
+      <NameCon UId="42" Name="PROCESS_TEMP_HIGH_WARNING" />
       <IdentCon UId="31" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="56">
+      <NameCon UId="42" Name="PROCESS_TEMP_LOW_ALARM" />
       <IdentCon UId="32" />
-      <NameCon UId="42" Name="in" />
     </Wire>
-    <Wire UId="62">
-      <NameCon UId="42" Name="eno" />
-      <NameCon UId="43" Name="en" />
-    </Wire>
-    <Wire UId="63">
-      <NameCon UId="42" Name="out1" />
+    <Wire UId="57">
+      <NameCon UId="42" Name="PROCESS_TEMP_HIGH_ALARM" />
       <IdentCon UId="33" />
     </Wire>
-    <Wire UId="64">
+    <Wire UId="58">
+      <NameCon UId="42" Name="HEAD_TEMP_LOW_WARNING" />
       <IdentCon UId="34" />
-      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="42" Name="HEAD_TEMP_HIGH_WARNING" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="42" Name="HEAD_TEMP_LOW_ALARM" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="HEAD_TEMP_HIGH_ALARM" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="42" Name="EMISSIVITY_LOW_WARNING" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="42" Name="EMISSIVITY_HIGH_WARNING" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="42" Name="EMISSIVITY_LOW_ALARM" />
+      <IdentCon UId="40" />
     </Wire>
     <Wire UId="65">
-      <NameCon UId="43" Name="out1" />
-      <IdentCon UId="35" />
+      <NameCon UId="42" Name="EMISSIVITY_HIGH_ALARM" />
+      <IdentCon UId="41" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -386,7 +439,14 @@
               <MultilingualTextItem ID="13" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 PROCESS TEMPERATURE WARNINGS/ALARMS ENABLED
+2#0000_0010 OPTIONS 0 BIT 1 HEAD TEMPERATURE WARNINGS/ALARMS ENABLED
+2#0000_0100 OPTIONS 0 BIT 2 EMISSIVITY WARNINGS/ALARMS ENABLED
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="14" CompositionName="Items">
@@ -414,7 +474,7 @@
               <MultilingualTextItem ID="18" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SENSOR INPUTS</Text>
+                  <Text>PYROMETER ALARMS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="19" CompositionName="Items">
@@ -507,10 +567,11 @@
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="M_ONE" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>2#0000_0000</ConstantValue>
+      </Constant>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
@@ -519,195 +580,247 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="DEVICE_STATUS" />
+        <Component Name="U02_PYRO_PROCESS_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="U02_PYRO_PROCESS_TEMPERATURE" />
+        <Component Name="U02_PYRO_HEAD_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="PROCESS_TEMPERATURE" />
+        <Component Name="U02_PYRO_T1_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="U02_PYRO_HEAD_TEMPERATURE" />
+        <Component Name="U02_PYRO_T2_TEMPERATURE" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="HEAD_TEMPERATURE" />
+        <Component Name="U02_PYRO_CURRENT_EMISSIVITY" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="U02_PYRO_T1_TEMPERATURE" />
+        <Component Name="U02_PYRO_CURRENT_TRANSMISSION" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
-      <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="T1_TEMPERATURE" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="29">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
-        <Component Name="U02_PYRO_T2_TEMPERATURE" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742148" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="T2_TEMPERATURE" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742149" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="32">
       <Symbol>
-        <Component Name="U02_PYRO_CURRENT_EMISSIVITY" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736408" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="CURRENT_EMISSIVITY" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736409" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
-        <Component Name="U02_PYRO_CURRENT_TRANSMISSION" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742150" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="DB10200_PYROMETERS" />
-        <Component Name="UNIT_2_PYROMETER" />
-        <Component Name="CURRENT_TRANSMISSION" />
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742151" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="36" />
-    <Part Name="Move" UId="37" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="38" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="39" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="40" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="41" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="42" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="43" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736410" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736411" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742152" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="WARNINGS" />
+        <Component Name="742153" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736412" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="LASER_SYSTEM" />
+        <Component Name="SPARE" />
+        <Component Name="736413" />
+      </Symbol>
+    </Access>
+    <Call UId="42">
+      <CallInfo Name="FB10200_PYROMETERS" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="43">
+          <Component Name="DB10202_UNIT_2_PYROMETER" />
+        </Instance>
+        <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
+        <Parameter Name="DEVICE_STATUS_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="PROCESS_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="HEAD_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="T1_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="T2_TEMP_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="CURRENT_EMISSIVITY_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="CURRENT_TRANSMISSION_SENSOR_INPUT" Section="Input" Type="Real" />
+        <Parameter Name="UNIT_NUMBER" Section="Input" Type="Int" />
+        <Parameter Name="PROCESS_TEMP_LOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="PROCESS_TEMP_HIGH_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="PROCESS_TEMP_LOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="PROCESS_TEMP_HIGH_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_LOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_HIGH_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_LOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="HEAD_TEMP_HIGH_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_LOW_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_HIGH_WARNING" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_LOW_ALARM" Section="Output" Type="Bool" />
+        <Parameter Name="EMISSIVITY_HIGH_ALARM" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
   </Parts>
   <Wires>
     <Wire UId="44">
       <Powerrail />
-      <NameCon UId="36" Name="in" />
+      <NameCon UId="42" Name="en" />
     </Wire>
     <Wire UId="45">
       <IdentCon UId="21" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="42" Name="OPTIONS_0" />
     </Wire>
     <Wire UId="46">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="en" />
-      <NameCon UId="41" Name="en" />
+      <IdentCon UId="22" />
+      <NameCon UId="42" Name="DEVICE_STATUS_SENSOR_INPUT" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="22" />
-      <NameCon UId="37" Name="in" />
+      <IdentCon UId="23" />
+      <NameCon UId="42" Name="PROCESS_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="48">
-      <NameCon UId="37" Name="eno" />
-      <NameCon UId="38" Name="en" />
+      <IdentCon UId="24" />
+      <NameCon UId="42" Name="HEAD_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="49">
-      <NameCon UId="37" Name="out1" />
-      <IdentCon UId="23" />
+      <IdentCon UId="25" />
+      <NameCon UId="42" Name="T1_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="50">
-      <IdentCon UId="24" />
-      <NameCon UId="38" Name="in" />
+      <IdentCon UId="26" />
+      <NameCon UId="42" Name="T2_TEMP_SENSOR_INPUT" />
     </Wire>
     <Wire UId="51">
-      <NameCon UId="38" Name="eno" />
-      <NameCon UId="39" Name="en" />
+      <IdentCon UId="27" />
+      <NameCon UId="42" Name="CURRENT_EMISSIVITY_SENSOR_INPUT" />
     </Wire>
     <Wire UId="52">
-      <NameCon UId="38" Name="out1" />
-      <IdentCon UId="25" />
+      <IdentCon UId="28" />
+      <NameCon UId="42" Name="CURRENT_TRANSMISSION_SENSOR_INPUT" />
     </Wire>
     <Wire UId="53">
-      <IdentCon UId="26" />
-      <NameCon UId="39" Name="in" />
+      <IdentCon UId="29" />
+      <NameCon UId="42" Name="UNIT_NUMBER" />
     </Wire>
     <Wire UId="54">
-      <NameCon UId="39" Name="eno" />
-      <NameCon UId="40" Name="en" />
+      <NameCon UId="42" Name="PROCESS_TEMP_LOW_WARNING" />
+      <IdentCon UId="30" />
     </Wire>
     <Wire UId="55">
-      <NameCon UId="39" Name="out1" />
-      <IdentCon UId="27" />
-    </Wire>
-    <Wire UId="56">
-      <IdentCon UId="28" />
-      <NameCon UId="40" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <NameCon UId="40" Name="out1" />
-      <IdentCon UId="29" />
-    </Wire>
-    <Wire UId="58">
-      <IdentCon UId="30" />
-      <NameCon UId="41" Name="in" />
-    </Wire>
-    <Wire UId="59">
-      <NameCon UId="41" Name="eno" />
-      <NameCon UId="42" Name="en" />
-    </Wire>
-    <Wire UId="60">
-      <NameCon UId="41" Name="out1" />
+      <NameCon UId="42" Name="PROCESS_TEMP_HIGH_WARNING" />
       <IdentCon UId="31" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="56">
+      <NameCon UId="42" Name="PROCESS_TEMP_LOW_ALARM" />
       <IdentCon UId="32" />
-      <NameCon UId="42" Name="in" />
     </Wire>
-    <Wire UId="62">
-      <NameCon UId="42" Name="eno" />
-      <NameCon UId="43" Name="en" />
-    </Wire>
-    <Wire UId="63">
-      <NameCon UId="42" Name="out1" />
+    <Wire UId="57">
+      <NameCon UId="42" Name="PROCESS_TEMP_HIGH_ALARM" />
       <IdentCon UId="33" />
     </Wire>
-    <Wire UId="64">
+    <Wire UId="58">
+      <NameCon UId="42" Name="HEAD_TEMP_LOW_WARNING" />
       <IdentCon UId="34" />
-      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="42" Name="HEAD_TEMP_HIGH_WARNING" />
+      <IdentCon UId="35" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="42" Name="HEAD_TEMP_LOW_ALARM" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="HEAD_TEMP_HIGH_ALARM" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="42" Name="EMISSIVITY_LOW_WARNING" />
+      <IdentCon UId="38" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="42" Name="EMISSIVITY_HIGH_WARNING" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="42" Name="EMISSIVITY_LOW_ALARM" />
+      <IdentCon UId="40" />
     </Wire>
     <Wire UId="65">
-      <NameCon UId="43" Name="out1" />
-      <IdentCon UId="35" />
+      <NameCon UId="42" Name="EMISSIVITY_HIGH_ALARM" />
+      <IdentCon UId="41" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -719,7 +832,14 @@
               <MultilingualTextItem ID="29" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>2#0000_0001 OPTIONS 0 BIT 0 PROCESS TEMPERATURE WARNINGS/ALARMS ENABLED
+2#0000_0010 OPTIONS 0 BIT 1 HEAD TEMPERATURE WARNINGS/ALARMS ENABLED
+2#0000_0100 OPTIONS 0 BIT 2 EMISSIVITY WARNINGS/ALARMS ENABLED
+2#0000_1000 OPTIONS 0 BIT 3 SPARE
+2#0001_0000 OPTIONS 0 BIT 4 SPARE
+2#0010_0000 OPTIONS 0 BIT 5 SPARE
+2#0100_0000 OPTIONS 0 BIT 6 SPARE
+2#1000_0000 OPTIONS 0 BIT 7 SPARE</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="2A" CompositionName="Items">
@@ -747,7 +867,7 @@
               <MultilingualTextItem ID="2E" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>SENSOR INPUTS</Text>
+                  <Text>PYROMETER ALARMS</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="2F" CompositionName="Items">
