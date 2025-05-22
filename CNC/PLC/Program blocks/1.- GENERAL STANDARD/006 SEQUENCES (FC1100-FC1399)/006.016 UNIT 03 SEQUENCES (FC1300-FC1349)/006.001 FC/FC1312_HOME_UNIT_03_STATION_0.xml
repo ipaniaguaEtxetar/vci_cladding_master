@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-08T13:17:58.5333815Z</Created>
+    <Created>2025-05-22T06:00:27.2726001Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -162,6 +166,7 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
         <Component Name="MODE_GROUP_ENABLED" />
         <Component Name="MG2" />
       </Symbol>
@@ -177,6 +182,7 @@
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
         <Component Name="MODE_GROUP_ENABLED" />
         <Component Name="MG2" />
       </Symbol>
@@ -444,6 +450,7 @@
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
         <Component Name="MODE_GROUP_ENABLED" />
         <Component Name="MG2" />
       </Symbol>
@@ -459,6 +466,7 @@
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
         <Component Name="MODE_GROUP_ENABLED" />
         <Component Name="MG2" />
       </Symbol>
@@ -1988,6 +1996,7 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
         <Component Name="MODE_GROUP_ENABLED" />
         <Component Name="MG2" />
       </Symbol>
@@ -2003,6 +2012,7 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
         <Component Name="MODE_GROUP_ENABLED" />
         <Component Name="MG2" />
       </Symbol>
@@ -2354,16 +2364,33 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB2120_MPP_ITC_IPC" />
-        <Component Name="RESET_FAULTS" />
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
+        <Component Name="MODE_GROUP_ENABLED" />
+        <Component Name="MG2" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
-        <Component Name="M_ZERO" />
+        <Component Name="DB2120_MPP_ITC_IPC" />
+        <Component Name="RESET_FAULTS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
+        <Component Name="AUX_BOOL" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
@@ -2371,79 +2398,90 @@
         <Component Name="MEAS_STA_RESET" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="26">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="RESET_PLC_AND_CNC" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="27" />
-    <Part Name="Contact" UId="28">
+    <Part Name="Contact" UId="28" />
+    <Part Name="Contact" UId="29">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Contact" UId="30" />
+    <Part Name="Contact" UId="30">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Contact" UId="31" />
-    <Part Name="O" UId="32">
+    <Part Name="Contact" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="O" UId="34">
       <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
     </Part>
-    <Part Name="Coil" UId="33" />
+    <Part Name="Coil" UId="35" />
   </Parts>
   <Wires>
-    <Wire UId="34">
-      <Powerrail />
-      <NameCon UId="27" Name="in" />
-      <NameCon UId="29" Name="in" />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="21" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
     <Wire UId="36">
-      <NameCon UId="27" Name="out" />
+      <Powerrail />
       <NameCon UId="28" Name="in" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="37">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="38">
       <NameCon UId="28" Name="out" />
-      <NameCon UId="32" Name="in1" />
+      <NameCon UId="29" Name="in" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="29" Name="operand" />
     </Wire>
     <Wire UId="40">
       <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
+      <NameCon UId="34" Name="in1" />
     </Wire>
     <Wire UId="41">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="30" Name="operand" />
     </Wire>
     <Wire UId="42">
       <NameCon UId="30" Name="out" />
-      <NameCon UId="32" Name="in2" />
+      <NameCon UId="31" Name="in" />
     </Wire>
     <Wire UId="43">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="31" Name="operand" />
     </Wire>
     <Wire UId="44">
       <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in3" />
+      <NameCon UId="34" Name="in2" />
     </Wire>
     <Wire UId="45">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
+    <Wire UId="47">
       <IdentCon UId="26" />
       <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in3" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="34" Name="out" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -2918,130 +2956,184 @@
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
+        <Component Name="MODE_GROUP_ENABLED" />
+        <Component Name="MG2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG2" />
+        <Component Name="STEP_BY_STEP" />
+        <Component Name="MODE_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
+        <Component Name="MODE_GROUP_ENABLED" />
+        <Component Name="MG2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
         <Component Name="MG1" />
         <Component Name="STEP_BY_STEP" />
         <Component Name="MODE_SELECTED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="UNIT_03_AT_HOME_POS" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="AXIS_MANAGEMENT" />
         <Component Name="CH8_PRMR_SET_SLCTD_A" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="STEP_3_RUN_CNC_PROGRAM" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="31" />
-    <Part Name="Contact" UId="32" />
-    <Part Name="Contact" UId="33" />
-    <Part Name="Eq" UId="34">
-      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="34" />
     <Part Name="Contact" UId="35" />
     <Part Name="Contact" UId="36" />
-    <Part Name="O" UId="37">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    <Part Name="Eq" UId="37">
+      <TemplateValue Name="SrcType" Type="Type">Byte</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="38">
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40" />
+    <Part Name="Contact" UId="41">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="39" />
-    <Part Name="Coil" UId="40" />
+    <Part Name="Contact" UId="42" />
+    <Part Name="O" UId="43">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="44">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="45" />
+    <Part Name="Coil" UId="46" />
   </Parts>
   <Wires>
-    <Wire UId="41">
-      <Powerrail />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
-    <Wire UId="43">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="22" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="45">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="46">
-      <IdentCon UId="23" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
     <Wire UId="47">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="pre" />
+      <Powerrail />
+      <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="24" />
-      <NameCon UId="34" Name="in1" />
+      <IdentCon UId="21" />
+      <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="25" />
-      <NameCon UId="34" Name="in2" />
-    </Wire>
-    <Wire UId="50">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
-      <NameCon UId="36" Name="in" />
     </Wire>
-    <Wire UId="51">
-      <IdentCon UId="26" />
+    <Wire UId="50">
+      <IdentCon UId="22" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="52">
+    <Wire UId="51">
       <NameCon UId="35" Name="out" />
-      <NameCon UId="37" Name="in1" />
+      <NameCon UId="36" Name="in" />
     </Wire>
-    <Wire UId="53">
-      <IdentCon UId="27" />
+    <Wire UId="52">
+      <IdentCon UId="23" />
       <NameCon UId="36" Name="operand" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="53">
       <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="in2" />
+      <NameCon UId="37" Name="pre" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="in1" />
     </Wire>
     <Wire UId="55">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="in2" />
     </Wire>
     <Wire UId="56">
-      <IdentCon UId="28" />
-      <NameCon UId="38" Name="operand" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="57">
-      <NameCon UId="38" Name="out" />
-      <NameCon UId="39" Name="in" />
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="operand" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="29" />
-      <NameCon UId="39" Name="operand" />
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="43" Name="in1" />
     </Wire>
     <Wire UId="59">
+      <IdentCon UId="27" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="60">
       <NameCon UId="39" Name="out" />
       <NameCon UId="40" Name="in" />
     </Wire>
-    <Wire UId="60">
-      <IdentCon UId="30" />
+    <Wire UId="61">
+      <IdentCon UId="28" />
       <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="43" Name="in2" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="29" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="66">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in3" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="31" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="32" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="33" />
+      <NameCon UId="46" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -3263,11 +3355,25 @@
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
+        <Component Name="DB2001_MODES_GENERAL" />
+        <Component Name="MG_AUX_OPTIONS" />
+        <Component Name="AUX_BOOL" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
         <Component Name="DB2120_MPP_ITC_IPC" />
         <Component Name="MACHINE_ON_DELAYED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
@@ -3275,78 +3381,74 @@
         <Component Name="PT" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="TIME_EXCEEDED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB426_ALARMS_WARNINGS" />
+        <Component Name="ALARMS" />
         <Component Name="GENERAL" />
         <Component Name="702518" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="30" />
-    <Part Name="Contact" UId="31">
+    <Part Name="Contact" UId="31" />
+    <Part Name="Contact" UId="32">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="32" />
-    <Part Name="Contact" UId="33">
-      <Negated Name="operand" />
-    </Part>
+    <Part Name="Contact" UId="33" />
     <Part Name="Contact" UId="34">
       <Negated Name="operand" />
     </Part>
-    <Part Name="O" UId="35">
-      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    <Part Name="Contact" UId="35">
+      <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="36" />
-    <Part Name="TON" Version="1.0" UId="37">
-      <Instance Scope="GlobalVariable" UId="38">
+    <Part Name="Contact" UId="36">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="O" UId="37">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="38" />
+    <Part Name="TON" Version="1.0" UId="39">
+      <Instance Scope="GlobalVariable" UId="40">
         <Component Name="DB1312_HOME_UNIT_3_STATION" />
         <Component Name="SEQUENCE" />
         <Component Name="TIMER_TIME_EXCEED" />
       </Instance>
       <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
     </Part>
-    <Part Name="Coil" UId="39" />
-    <Part Name="Coil" UId="40" />
+    <Part Name="Coil" UId="41" />
+    <Part Name="Coil" UId="42" />
   </Parts>
   <Wires>
-    <Wire UId="42">
-      <Powerrail />
-      <NameCon UId="30" Name="in" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="21" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
     <Wire UId="44">
-      <NameCon UId="30" Name="out" />
+      <Powerrail />
       <NameCon UId="31" Name="in" />
+      <NameCon UId="33" Name="in" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="31" Name="operand" />
     </Wire>
     <Wire UId="46">
       <NameCon UId="31" Name="out" />
-      <NameCon UId="35" Name="in1" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="in" />
+      <NameCon UId="37" Name="in1" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="50">
@@ -3354,45 +3456,62 @@
       <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="51">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="52">
       <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in2" />
-    </Wire>
-    <Wire UId="53">
-      <NameCon UId="35" Name="out" />
+      <NameCon UId="35" Name="in" />
       <NameCon UId="36" Name="in" />
     </Wire>
+    <Wire UId="53">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
     <Wire UId="54">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="37" Name="in2" />
+    </Wire>
+    <Wire UId="55">
       <IdentCon UId="26" />
       <NameCon UId="36" Name="operand" />
     </Wire>
-    <Wire UId="55">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="IN" />
-    </Wire>
     <Wire UId="56">
-      <IdentCon UId="27" />
-      <NameCon UId="37" Name="PT" />
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in3" />
     </Wire>
     <Wire UId="57">
-      <NameCon UId="37" Name="Q" />
-      <NameCon UId="39" Name="in" />
-      <NameCon UId="40" Name="in" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
     </Wire>
     <Wire UId="58">
-      <NameCon UId="37" Name="ET" />
-      <OpenCon UId="41" />
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="operand" />
     </Wire>
     <Wire UId="59">
-      <IdentCon UId="28" />
-      <NameCon UId="39" Name="operand" />
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="IN" />
     </Wire>
     <Wire UId="60">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="PT" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="39" Name="Q" />
+      <NameCon UId="41" Name="in" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="39" Name="ET" />
+      <OpenCon UId="43" />
+    </Wire>
+    <Wire UId="63">
       <IdentCon UId="29" />
-      <NameCon UId="40" Name="operand" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

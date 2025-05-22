@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-08T13:17:24.0654601Z</Created>
+    <Created>2025-05-22T05:59:28.93922Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -35,6 +35,10 @@
       </Product>
       <OptionPackage>
         <DisplayName>SINUMERIK ONE STEP 7 Toolbox</DisplayName>
+        <DisplayVersion>V17 Update 12</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINUMERIK ONE PLC Basic Program Plus</DisplayName>
         <DisplayVersion>V17 Update 12</DisplayVersion>
       </OptionPackage>
       <OptionPackage>
@@ -2687,7 +2691,7 @@
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
         <Component Name="VALVE" />
-        <Component Name="FULL_SWITCHED_ON" />
+        <Component Name="FULL_SWITCHED_OFF" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="23">
@@ -2697,7 +2701,9 @@
       </Symbol>
     </Access>
     <Part Name="Contact" UId="24" />
-    <Part Name="Contact" UId="25" />
+    <Part Name="Contact" UId="25">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Coil" UId="26" />
   </Parts>
   <Wires>
@@ -2800,7 +2806,7 @@
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
         <Component Name="VALVE" />
-        <Component Name="FULL_SWITCHED_OFF" />
+        <Component Name="FULL_SWITCHED_ON" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="23">
@@ -2810,7 +2816,9 @@
       </Symbol>
     </Access>
     <Part Name="Contact" UId="24" />
-    <Part Name="Contact" UId="25" />
+    <Part Name="Contact" UId="25">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Coil" UId="26" />
   </Parts>
   <Wires>
