@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-22T06:00:40.7130539Z</Created>
+    <Created>2025-05-22T12:27:02.8614335Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -10858,13 +10858,20 @@
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="32">
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB2031_CYCLES_GENERAL" />
+        <Component Name="ROBOT_DRY_CYCLE" />
+        <Component Name="CYCLE_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="33">
       <Constant>
         <ConstantType>Int</ConstantType>
         <ConstantValue>4</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="GlobalVariable" UId="33">
+    <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB16701_OPC_UA_MASTER_MACHINE_DATA_UPDATE_2" />
         <Component Name="STATUS" />
@@ -10872,103 +10879,120 @@
         <Component Name="CYCLE_ACTIVE" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="34" />
     <Part Name="Contact" UId="35" />
-    <Part Name="Move" UId="36" DisabledENO="true">
+    <Part Name="Contact" UId="36" />
+    <Part Name="Move" UId="37" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="37" />
-    <Part Name="Move" UId="38" DisabledENO="true">
+    <Part Name="Contact" UId="38" />
+    <Part Name="Move" UId="39" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="39" />
-    <Part Name="Move" UId="40" DisabledENO="true">
+    <Part Name="Contact" UId="40" />
+    <Part Name="Move" UId="41" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="Contact" UId="41" />
-    <Part Name="Move" UId="42" DisabledENO="true">
+    <Part Name="Contact" UId="42" />
+    <Part Name="Contact" UId="43" />
+    <Part Name="O" UId="44">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="45" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="43">
-      <Powerrail />
-      <NameCon UId="34" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="21" />
-      <NameCon UId="34" Name="operand" />
-    </Wire>
-    <Wire UId="45">
-      <NameCon UId="34" Name="out" />
-      <NameCon UId="35" Name="in" />
-      <NameCon UId="37" Name="in" />
-      <NameCon UId="39" Name="in" />
-      <NameCon UId="41" Name="in" />
-    </Wire>
     <Wire UId="46">
-      <IdentCon UId="22" />
-      <NameCon UId="35" Name="operand" />
+      <Powerrail />
+      <NameCon UId="35" Name="in" />
     </Wire>
     <Wire UId="47">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="en" />
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="23" />
+      <NameCon UId="35" Name="out" />
       <NameCon UId="36" Name="in" />
+      <NameCon UId="38" Name="in" />
+      <NameCon UId="40" Name="in" />
+      <NameCon UId="42" Name="in" />
+      <NameCon UId="43" Name="in" />
     </Wire>
     <Wire UId="49">
-      <NameCon UId="36" Name="out1" />
-      <IdentCon UId="24" />
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="50">
-      <IdentCon UId="25" />
-      <NameCon UId="37" Name="operand" />
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="en" />
     </Wire>
     <Wire UId="51">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="en" />
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="52">
-      <IdentCon UId="26" />
-      <NameCon UId="38" Name="in" />
+      <NameCon UId="37" Name="out1" />
+      <IdentCon UId="24" />
     </Wire>
     <Wire UId="53">
-      <NameCon UId="38" Name="out1" />
-      <IdentCon UId="27" />
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="operand" />
     </Wire>
     <Wire UId="54">
-      <IdentCon UId="28" />
-      <NameCon UId="39" Name="operand" />
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="en" />
     </Wire>
     <Wire UId="55">
-      <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="en" />
+      <IdentCon UId="26" />
+      <NameCon UId="39" Name="in" />
     </Wire>
     <Wire UId="56">
-      <IdentCon UId="29" />
-      <NameCon UId="40" Name="in" />
+      <NameCon UId="39" Name="out1" />
+      <IdentCon UId="27" />
     </Wire>
     <Wire UId="57">
-      <NameCon UId="40" Name="out1" />
-      <IdentCon UId="30" />
+      <IdentCon UId="28" />
+      <NameCon UId="40" Name="operand" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="31" />
-      <NameCon UId="41" Name="operand" />
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="en" />
     </Wire>
     <Wire UId="59">
-      <NameCon UId="41" Name="out" />
-      <NameCon UId="42" Name="en" />
+      <IdentCon UId="29" />
+      <NameCon UId="41" Name="in" />
     </Wire>
     <Wire UId="60">
-      <IdentCon UId="32" />
-      <NameCon UId="42" Name="in" />
+      <NameCon UId="41" Name="out1" />
+      <IdentCon UId="30" />
     </Wire>
     <Wire UId="61">
-      <NameCon UId="42" Name="out1" />
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="44" Name="in1" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="32" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in2" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="en" />
+    </Wire>
+    <Wire UId="66">
       <IdentCon UId="33" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="45" Name="out1" />
+      <IdentCon UId="34" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

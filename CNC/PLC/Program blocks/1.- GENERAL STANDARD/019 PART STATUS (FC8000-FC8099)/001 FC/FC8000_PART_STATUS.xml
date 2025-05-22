@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-22T05:59:47.0520576Z</Created>
+    <Created>2025-05-22T12:26:43.7421911Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -508,59 +508,69 @@ BIT "LIFTING_ONLY_1_POS"
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
+        <Component Name="DB2031_CYCLES_GENERAL" />
+        <Component Name="ROBOT_DRY_CYCLE" />
+        <Component Name="CYCLE_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="pPlus" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="26">
+    <Access Scope="LocalVariable" UId="27">
       <Symbol>
         <Component Name="Workpiece_Screen_selectd" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB2440_GLOBAL_DATA" />
         <Component Name="GLOBAL_DATA" />
         <Component Name="ANY_MACHINE_CYCLE_RUN" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB1101_MACHINE_SEQUENCE" />
         <Component Name="RUNNING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="pMinus" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="M_ONE" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="31" />
-    <Part Name="Contact" UId="32">
-      <Negated Name="operand" />
-    </Part>
+    <Part Name="Contact" UId="32" />
     <Part Name="Contact" UId="33">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="34">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="35" />
-    <Part Name="Contact" UId="36" />
-    <Part Name="Contact" UId="37">
+    <Part Name="Contact" UId="35">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="38">
+    <Part Name="Contact" UId="36">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="39" />
-    <Call UId="40">
+    <Part Name="Contact" UId="37" />
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="40">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="41" />
+    <Call UId="42">
       <CallInfo Name="FC8001_PART_CHANGE" BlockType="FC">
         <Parameter Name="Plus" Section="Input" Type="Bool" />
         <Parameter Name="Minus" Section="Input" Type="Bool" />
@@ -569,22 +579,14 @@ BIT "LIFTING_ONLY_1_POS"
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="41">
-      <Powerrail />
-      <NameCon UId="40" Name="en" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="36" Name="in" />
-    </Wire>
-    <Wire UId="42">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="operand" />
-    </Wire>
     <Wire UId="43">
-      <NameCon UId="31" Name="out" />
+      <Powerrail />
+      <NameCon UId="42" Name="en" />
       <NameCon UId="32" Name="in" />
+      <NameCon UId="38" Name="in" />
     </Wire>
     <Wire UId="44">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="45">
@@ -592,7 +594,7 @@ BIT "LIFTING_ONLY_1_POS"
       <NameCon UId="33" Name="in" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="47">
@@ -600,7 +602,7 @@ BIT "LIFTING_ONLY_1_POS"
       <NameCon UId="34" Name="in" />
     </Wire>
     <Wire UId="48">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="34" Name="operand" />
     </Wire>
     <Wire UId="49">
@@ -608,15 +610,15 @@ BIT "LIFTING_ONLY_1_POS"
       <NameCon UId="35" Name="in" />
     </Wire>
     <Wire UId="50">
-      <IdentCon UId="25" />
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="51">
       <NameCon UId="35" Name="out" />
-      <NameCon UId="40" Name="Plus" />
+      <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="52">
-      <IdentCon UId="26" />
+      <IdentCon UId="25" />
       <NameCon UId="36" Name="operand" />
     </Wire>
     <Wire UId="53">
@@ -624,15 +626,15 @@ BIT "LIFTING_ONLY_1_POS"
       <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="54">
-      <IdentCon UId="27" />
+      <IdentCon UId="26" />
       <NameCon UId="37" Name="operand" />
     </Wire>
     <Wire UId="55">
       <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
+      <NameCon UId="42" Name="Plus" />
     </Wire>
     <Wire UId="56">
-      <IdentCon UId="28" />
+      <IdentCon UId="27" />
       <NameCon UId="38" Name="operand" />
     </Wire>
     <Wire UId="57">
@@ -640,16 +642,32 @@ BIT "LIFTING_ONLY_1_POS"
       <NameCon UId="39" Name="in" />
     </Wire>
     <Wire UId="58">
-      <IdentCon UId="29" />
+      <IdentCon UId="28" />
       <NameCon UId="39" Name="operand" />
     </Wire>
     <Wire UId="59">
       <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="Minus" />
+      <NameCon UId="40" Name="in" />
     </Wire>
     <Wire UId="60">
+      <IdentCon UId="29" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="62">
       <IdentCon UId="30" />
-      <NameCon UId="40" Name="Change_type" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="Minus" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="Change_type" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
