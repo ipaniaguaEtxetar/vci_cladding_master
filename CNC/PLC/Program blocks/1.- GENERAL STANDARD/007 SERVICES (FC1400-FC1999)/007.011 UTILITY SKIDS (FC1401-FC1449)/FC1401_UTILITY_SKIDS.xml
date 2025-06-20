@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-22T06:00:28.3771667Z</Created>
+    <Created>2025-06-20T10:18:20.5307135Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -201,7 +201,7 @@
     <Access Scope="LiteralConstant" UId="24">
       <Constant>
         <ConstantType>Byte</ConstantType>
-        <ConstantValue>2#1111_1011</ConstantValue>
+        <ConstantValue>2#1111_1111</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="25">
@@ -262,35 +262,40 @@
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
-        <Component Name="PNM_S_PR_U02_GRIPPER_I" />
+        <Component Name="PNM_S_PR_U01_ST3_MEAS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
-        <Component Name="PNM_S_PR_U02_LABERINT_I" />
+        <Component Name="PNM_S_PR_U02_GRIPPER_I" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
-        <Component Name="PNM_S_PR_U02_UP_TABLE_I" />
+        <Component Name="PNM_S_PR_U02_LABERINT_I" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
-        <Component Name="PNM_S_PR_U02_DOWN_TABLE_I" />
+        <Component Name="PNM_S_PR_U02_UP_TABLE_I" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
-        <Component Name="PNM_S_PR_U02_X_CART_I" />
+        <Component Name="PNM_S_PR_U02_DOWN_TABLE_I" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
-        <Component Name="PNM_S_PR_U02_ST3_MEAS" />
+        <Component Name="PNM_S_PR_U02_X_CART_I" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="PNM_S_PR_U02_ST3_MEAS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
       <Symbol>
         <Component Name="LTLP_DirectKeyGetMovNoData" />
         <Component Name="PowerUp" AccessModifier="Array">
@@ -303,67 +308,67 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="43">
+    <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerupCondOff2" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="44">
+    <Access Scope="GlobalVariable" UId="45">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerupCondOn2" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="45">
+    <Access Scope="GlobalVariable" UId="46">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerup2ExecutableLeft" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="46">
+    <Access Scope="GlobalVariable" UId="47">
       <Symbol>
         <Component Name="LTLP_HMIProInterfaceData" />
         <Component Name="powerup2ExecutableRight" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="47">
+    <Access Scope="GlobalVariable" UId="48">
       <Symbol>
         <Component Name="PNM_M_VLV_ON_Q" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="48">
+    <Access Scope="GlobalVariable" UId="49">
       <Symbol>
         <Component Name="PNM_S_P_CON_SENSOR_1_Q" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="49">
+    <Access Scope="GlobalVariable" UId="50">
       <Symbol>
         <Component Name="PNM_S_P_CON_SENSOR_2_Q" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="50">
+    <Access Scope="GlobalVariable" UId="51">
       <Symbol>
         <Component Name="PNM_PRSZTN_ON_Q" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="51">
+    <Access Scope="GlobalVariable" UId="52">
       <Symbol>
         <Component Name="PNM_PRSZTN_OFF_Q" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="52">
+    <Access Scope="GlobalVariable" UId="53">
       <Symbol>
         <Component Name="PNM_DRIVE_UNBLCK_Q" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="53" />
-    <Part Name="Contact" UId="54">
+    <Part Name="Contact" UId="54" />
+    <Part Name="Contact" UId="55">
       <Negated Name="operand" />
     </Part>
-    <Call UId="55">
+    <Call UId="56">
       <CallInfo Name="FB1401_PNEUMATIC_SYSTEM" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="56">
+        <Instance Scope="GlobalVariable" UId="57">
           <Component Name="DB1401_PNEUMATIC_SYSTEM" />
         </Instance>
         <Parameter Name="OPTIONS_0" Section="Input" Type="Byte" />
@@ -405,149 +410,149 @@
   <Wires>
     <Wire UId="58">
       <Powerrail />
-      <NameCon UId="55" Name="en" />
-      <NameCon UId="53" Name="in" />
+      <NameCon UId="56" Name="en" />
       <NameCon UId="54" Name="in" />
+      <NameCon UId="55" Name="in" />
     </Wire>
     <Wire UId="59">
       <IdentCon UId="21" />
-      <NameCon UId="53" Name="operand" />
+      <NameCon UId="54" Name="operand" />
     </Wire>
     <Wire UId="60">
-      <NameCon UId="53" Name="out" />
-      <NameCon UId="55" Name="PRESSURE" />
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="56" Name="PRESSURE" />
     </Wire>
     <Wire UId="61">
       <IdentCon UId="22" />
-      <NameCon UId="54" Name="operand" />
+      <NameCon UId="55" Name="operand" />
     </Wire>
     <Wire UId="62">
-      <NameCon UId="54" Name="out" />
-      <NameCon UId="55" Name="DRIVE_UNBLOCKED" />
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="DRIVE_UNBLOCKED" />
     </Wire>
     <Wire UId="63">
       <IdentCon UId="23" />
-      <NameCon UId="55" Name="OPTIONS_0" />
+      <NameCon UId="56" Name="OPTIONS_0" />
     </Wire>
     <Wire UId="64">
       <IdentCon UId="24" />
-      <NameCon UId="55" Name="OPTIONS_1" />
+      <NameCon UId="56" Name="OPTIONS_1" />
     </Wire>
     <Wire UId="65">
       <IdentCon UId="25" />
-      <NameCon UId="55" Name="OPTIONS_2" />
+      <NameCon UId="56" Name="OPTIONS_2" />
     </Wire>
     <Wire UId="66">
       <IdentCon UId="26" />
-      <NameCon UId="55" Name="CONNECTION_1_SENSOR" />
+      <NameCon UId="56" Name="CONNECTION_1_SENSOR" />
     </Wire>
     <Wire UId="67">
       <IdentCon UId="27" />
-      <NameCon UId="55" Name="CONNECTION_2_SENSOR" />
+      <NameCon UId="56" Name="CONNECTION_2_SENSOR" />
     </Wire>
     <Wire UId="68">
       <IdentCon UId="28" />
-      <NameCon UId="55" Name="FLOW_SENSOR" />
+      <NameCon UId="56" Name="FLOW_SENSOR" />
     </Wire>
     <Wire UId="69">
       <IdentCon UId="29" />
-      <NameCon UId="55" Name="TEMPERATURE_SENSOR" />
+      <NameCon UId="56" Name="TEMPERATURE_SENSOR" />
     </Wire>
     <Wire UId="70">
       <IdentCon UId="30" />
-      <NameCon UId="55" Name="PRESSURIZED" />
+      <NameCon UId="56" Name="PRESSURIZED" />
     </Wire>
     <Wire UId="71">
       <IdentCon UId="31" />
-      <NameCon UId="55" Name="U01_GRIPPER_PRESSURIZED" />
+      <NameCon UId="56" Name="U01_GRIPPER_PRESSURIZED" />
     </Wire>
     <Wire UId="72">
       <IdentCon UId="32" />
-      <NameCon UId="55" Name="U01_LABERINT_PRESSURIZED" />
+      <NameCon UId="56" Name="U01_LABERINT_PRESSURIZED" />
     </Wire>
     <Wire UId="73">
       <IdentCon UId="33" />
-      <NameCon UId="55" Name="U01_UPPER_TABLE_PRESSURIZED" />
+      <NameCon UId="56" Name="U01_UPPER_TABLE_PRESSURIZED" />
     </Wire>
     <Wire UId="74">
       <IdentCon UId="34" />
-      <NameCon UId="55" Name="U01_LOWER_TABLE_PRESSURIZED" />
+      <NameCon UId="56" Name="U01_LOWER_TABLE_PRESSURIZED" />
     </Wire>
     <Wire UId="75">
       <IdentCon UId="35" />
-      <NameCon UId="55" Name="U01_CART_X_PRESSURIZED" />
+      <NameCon UId="56" Name="U01_CART_X_PRESSURIZED" />
     </Wire>
     <Wire UId="76">
-      <OpenCon UId="57" />
-      <NameCon UId="55" Name="U01_STA_3_MEAS_PRESSURIZED" />
+      <IdentCon UId="36" />
+      <NameCon UId="56" Name="U01_STA_3_MEAS_PRESSURIZED" />
     </Wire>
     <Wire UId="77">
-      <IdentCon UId="36" />
-      <NameCon UId="55" Name="U02_GRIPPER_PRESSURIZED" />
+      <IdentCon UId="37" />
+      <NameCon UId="56" Name="U02_GRIPPER_PRESSURIZED" />
     </Wire>
     <Wire UId="78">
-      <IdentCon UId="37" />
-      <NameCon UId="55" Name="U02_LABERINT_PRESSURIZED" />
+      <IdentCon UId="38" />
+      <NameCon UId="56" Name="U02_LABERINT_PRESSURIZED" />
     </Wire>
     <Wire UId="79">
-      <IdentCon UId="38" />
-      <NameCon UId="55" Name="U02_UPPER_TABLE_PRESSURIZED" />
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="U02_UPPER_TABLE_PRESSURIZED" />
     </Wire>
     <Wire UId="80">
-      <IdentCon UId="39" />
-      <NameCon UId="55" Name="U02_LOWER_TABLE_PRESSURIZED" />
+      <IdentCon UId="40" />
+      <NameCon UId="56" Name="U02_LOWER_TABLE_PRESSURIZED" />
     </Wire>
     <Wire UId="81">
-      <IdentCon UId="40" />
-      <NameCon UId="55" Name="U02_CART_X_PRESSURIZED" />
+      <IdentCon UId="41" />
+      <NameCon UId="56" Name="U02_CART_X_PRESSURIZED" />
     </Wire>
     <Wire UId="82">
-      <IdentCon UId="41" />
-      <NameCon UId="55" Name="U02_STA_3_MEAS_PRESSURIZED" />
+      <IdentCon UId="42" />
+      <NameCon UId="56" Name="U02_STA_3_MEAS_PRESSURIZED" />
     </Wire>
     <Wire UId="83">
-      <IdentCon UId="42" />
-      <NameCon UId="55" Name="HMI_REQ_LINE" />
+      <IdentCon UId="43" />
+      <NameCon UId="56" Name="HMI_REQ_LINE" />
     </Wire>
     <Wire UId="84">
-      <NameCon UId="55" Name="HMI_POWER_UP_COND_OFF" />
-      <IdentCon UId="43" />
-    </Wire>
-    <Wire UId="85">
-      <NameCon UId="55" Name="HMI_POWER_UP_COND_ON" />
+      <NameCon UId="56" Name="HMI_POWER_UP_COND_OFF" />
       <IdentCon UId="44" />
     </Wire>
-    <Wire UId="86">
-      <NameCon UId="55" Name="HMI_POWER_UP_EXECU_LEFT" />
+    <Wire UId="85">
+      <NameCon UId="56" Name="HMI_POWER_UP_COND_ON" />
       <IdentCon UId="45" />
     </Wire>
-    <Wire UId="87">
-      <NameCon UId="55" Name="HMI_POWER_UP_EXECU_RIGHT" />
+    <Wire UId="86">
+      <NameCon UId="56" Name="HMI_POWER_UP_EXECU_LEFT" />
       <IdentCon UId="46" />
     </Wire>
-    <Wire UId="88">
-      <NameCon UId="55" Name="MAIN_VALVE" />
+    <Wire UId="87">
+      <NameCon UId="56" Name="HMI_POWER_UP_EXECU_RIGHT" />
       <IdentCon UId="47" />
     </Wire>
-    <Wire UId="89">
-      <NameCon UId="55" Name="CONNECTION_1" />
+    <Wire UId="88">
+      <NameCon UId="56" Name="MAIN_VALVE" />
       <IdentCon UId="48" />
     </Wire>
-    <Wire UId="90">
-      <NameCon UId="55" Name="CONNECTION_2" />
+    <Wire UId="89">
+      <NameCon UId="56" Name="CONNECTION_1" />
       <IdentCon UId="49" />
     </Wire>
-    <Wire UId="91">
-      <NameCon UId="55" Name="PRESSURIZATION_ON" />
+    <Wire UId="90">
+      <NameCon UId="56" Name="CONNECTION_2" />
       <IdentCon UId="50" />
     </Wire>
-    <Wire UId="92">
-      <NameCon UId="55" Name="PRESSURIZATION_OFF" />
+    <Wire UId="91">
+      <NameCon UId="56" Name="PRESSURIZATION_ON" />
       <IdentCon UId="51" />
     </Wire>
-    <Wire UId="93">
-      <NameCon UId="55" Name="DRIVE_UNBLOCK" />
+    <Wire UId="92">
+      <NameCon UId="56" Name="PRESSURIZATION_OFF" />
       <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="56" Name="DRIVE_UNBLOCK" />
+      <IdentCon UId="53" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
