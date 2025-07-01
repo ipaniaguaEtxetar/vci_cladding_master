@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-22T12:26:44.5607755Z</Created>
+    <Created>2025-07-01T09:58:30.5635426Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -2063,16 +2063,12 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="M_DUMMY_OFF" />
+        <Component Name="DB368_M_UNIT_3" />
+        <Component Name="M_CODES_UNIT_3" />
+        <Component Name="M80" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="DB8000_PART_STATUS" />
-        <Component Name="PULSE_17" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB8000_PART_STATUS" />
         <Component Name="UNIT_3" />
@@ -2082,12 +2078,22 @@
         <Component Name="PART_REJECTED" />
       </Symbol>
     </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB8000_PART_STATUS" />
+        <Component Name="UNIT_3" />
+        <Component Name="FIXTURE_1" />
+        <Component Name="PART_A" />
+        <Component Name="STATUS" />
+        <Component Name="OK" />
+      </Symbol>
+    </Access>
     <Part Name="Contact" UId="24">
       <Negated Name="operand" />
     </Part>
     <Part Name="Not" UId="25" />
-    <Part Name="PBox" UId="26" />
-    <Part Name="SCoil" UId="27" />
+    <Part Name="SCoil" UId="26" />
+    <Part Name="RCoil" UId="27" />
   </Parts>
   <Wires>
     <Wire UId="28">
@@ -2108,7 +2114,7 @@
     </Wire>
     <Wire UId="32">
       <IdentCon UId="22" />
-      <NameCon UId="26" Name="bit" />
+      <NameCon UId="26" Name="operand" />
     </Wire>
     <Wire UId="33">
       <NameCon UId="26" Name="out" />
@@ -2156,7 +2162,7 @@
               <MultilingualTextItem ID="2E" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 FIXTURE 1 PART A PART REJECTED</Text>
+                  <Text>UNIT 3 FIXTURE 1 PART A PART REJECTED</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="2F" CompositionName="Items">
@@ -2348,7 +2354,7 @@
               <MultilingualTextItem ID="39" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>UNIT 01 FIXTURE 1 PART A PRESENT</Text>
+                  <Text>UNIT 3 FIXTURE 1 PART A PRESENT</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="3A" CompositionName="Items">

@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-22T06:00:11.3978493Z</Created>
+    <Created>2025-07-01T09:58:45.3408465Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -3033,6 +3033,155 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2101_LINE_CONTACTOR" />
+        <Component Name="FEEDBACK_1_ALM" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB2101_LINE_CONTACTOR" />
+        <Component Name="FEEDBACK_2_ALM" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="23">
+      <Constant Name="FC_NUMBER" />
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB441_MACHINE_POWDER_ALARM_DECODING" />
+        <Component Name="POWDER_ALARMS_GENERAL" />
+        <Component Name="ALARM_DECODING" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB441_MACHINE_POWDER_ALARM_DECODING" />
+        <Component Name="POWDER_ALARMS_GENERAL" />
+        <Component Name="PSP_ALARMS" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="26">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="27">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="28" />
+    <Part Name="Move" UId="29" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <Powerrail />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="33">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="eno" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="D8" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="DA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="DB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="DC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="DD" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="DE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>PROGRESSIVE STOP POWDER ALARMS</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="DF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-MX</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="E2" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB2101_LINE_CONTACTOR" />
         <Component Name="IS_ALARMS" />
       </Symbol>
     </Access>
@@ -3074,27 +3223,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="D8" CompositionName="Comment">
+          <MultilingualText ID="E3" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="D9" CompositionName="Items">
+              <MultilingualTextItem ID="E4" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="DA" CompositionName="Items">
+              <MultilingualTextItem ID="E5" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="DB" CompositionName="Items">
+              <MultilingualTextItem ID="E6" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="DC" CompositionName="Items">
+              <MultilingualTextItem ID="E7" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3102,27 +3251,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="DD" CompositionName="Title">
+          <MultilingualText ID="E8" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="DE" CompositionName="Items">
+              <MultilingualTextItem ID="E9" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>ANY ACTIVE ALARM</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="DF" CompositionName="Items">
+              <MultilingualTextItem ID="EA" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E0" CompositionName="Items">
+              <MultilingualTextItem ID="EB" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E1" CompositionName="Items">
+              <MultilingualTextItem ID="EC" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3132,7 +3281,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="E2" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="ED" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -3204,27 +3353,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="E3" CompositionName="Comment">
+          <MultilingualText ID="EE" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="E4" CompositionName="Items">
+              <MultilingualTextItem ID="EF" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E5" CompositionName="Items">
+              <MultilingualTextItem ID="F0" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E6" CompositionName="Items">
+              <MultilingualTextItem ID="F1" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="E7" CompositionName="Items">
+              <MultilingualTextItem ID="F2" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3232,27 +3381,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="E8" CompositionName="Title">
+          <MultilingualText ID="F3" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="E9" CompositionName="Items">
+              <MultilingualTextItem ID="F4" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>LINE CONTACTOR NOT SWITCHED ON WARNING</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="EA" CompositionName="Items">
+              <MultilingualTextItem ID="F5" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="EB" CompositionName="Items">
+              <MultilingualTextItem ID="F6" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="EC" CompositionName="Items">
+              <MultilingualTextItem ID="F7" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3262,7 +3411,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="ED" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="F8" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -3407,27 +3556,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="EE" CompositionName="Comment">
+          <MultilingualText ID="F9" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="EF" CompositionName="Items">
+              <MultilingualTextItem ID="FA" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F0" CompositionName="Items">
+              <MultilingualTextItem ID="FB" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F1" CompositionName="Items">
+              <MultilingualTextItem ID="FC" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F2" CompositionName="Items">
+              <MultilingualTextItem ID="FD" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3435,27 +3584,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="F3" CompositionName="Title">
+          <MultilingualText ID="FE" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="F4" CompositionName="Items">
+              <MultilingualTextItem ID="FF" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>WARNINGS</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F5" CompositionName="Items">
+              <MultilingualTextItem ID="100" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F6" CompositionName="Items">
+              <MultilingualTextItem ID="101" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="F7" CompositionName="Items">
+              <MultilingualTextItem ID="102" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3465,7 +3614,7 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="F8" CompositionName="CompileUnits">
+      <SW.Blocks.CompileUnit ID="103" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
@@ -3516,27 +3665,27 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="F9" CompositionName="Comment">
+          <MultilingualText ID="104" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="FA" CompositionName="Items">
+              <MultilingualTextItem ID="105" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="FB" CompositionName="Items">
+              <MultilingualTextItem ID="106" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="FC" CompositionName="Items">
+              <MultilingualTextItem ID="107" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="FD" CompositionName="Items">
+              <MultilingualTextItem ID="108" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3544,27 +3693,27 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="FE" CompositionName="Title">
+          <MultilingualText ID="109" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="FF" CompositionName="Items">
+              <MultilingualTextItem ID="10A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>OUTPUTS</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="100" CompositionName="Items">
+              <MultilingualTextItem ID="10B" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-ES</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="101" CompositionName="Items">
+              <MultilingualTextItem ID="10C" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="102" CompositionName="Items">
+              <MultilingualTextItem ID="10D" CompositionName="Items">
                 <AttributeList>
                   <Culture>es-MX</Culture>
                   <Text />
@@ -3574,27 +3723,27 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="103" CompositionName="Title">
+      <MultilingualText ID="10E" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="104" CompositionName="Items">
+          <MultilingualTextItem ID="10F" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="105" CompositionName="Items">
+          <MultilingualTextItem ID="110" CompositionName="Items">
             <AttributeList>
               <Culture>es-ES</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="106" CompositionName="Items">
+          <MultilingualTextItem ID="111" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text />
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="107" CompositionName="Items">
+          <MultilingualTextItem ID="112" CompositionName="Items">
             <AttributeList>
               <Culture>es-MX</Culture>
               <Text />

@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-05-22T06:00:27.2726001Z</Created>
+    <Created>2025-07-01T09:58:56.9718055Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -1251,12 +1251,20 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
+        <Component Name="DB442_MACHINE_RUN_OUT_ALARM_DECODING" />
+        <Component Name="UNIT_3" />
+        <Component Name="CONTROL_STATION" />
+        <Component Name="RHP_RO_ALARMS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="ALARMS_UNIT_3" />
         <Component Name="RHP_WARNING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="23">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
@@ -1264,38 +1272,33 @@
         <Component Name="MEAS_STA_HOME_REQ" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="24">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
         <Component Name="UNIT_03_LOCAL_E_RETURNS" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="25">
-      <Negated Name="operand" />
-    </Part>
     <Part Name="Contact" UId="26">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="27">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Not" UId="28" />
-    <Part Name="Coil" UId="29" />
+    <Part Name="Contact" UId="28">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="29">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Not" UId="30" />
+    <Part Name="Coil" UId="31" />
   </Parts>
   <Wires>
-    <Wire UId="30">
-      <Powerrail />
-      <NameCon UId="25" Name="in" />
-    </Wire>
-    <Wire UId="31">
-      <IdentCon UId="21" />
-      <NameCon UId="25" Name="operand" />
-    </Wire>
     <Wire UId="32">
-      <NameCon UId="25" Name="out" />
+      <Powerrail />
       <NameCon UId="26" Name="in" />
     </Wire>
     <Wire UId="33">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="26" Name="operand" />
     </Wire>
     <Wire UId="34">
@@ -1303,7 +1306,7 @@
       <NameCon UId="27" Name="in" />
     </Wire>
     <Wire UId="35">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="27" Name="operand" />
     </Wire>
     <Wire UId="36">
@@ -1311,12 +1314,28 @@
       <NameCon UId="28" Name="in" />
     </Wire>
     <Wire UId="37">
+      <IdentCon UId="23" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="38">
       <NameCon UId="28" Name="out" />
       <NameCon UId="29" Name="in" />
     </Wire>
-    <Wire UId="38">
+    <Wire UId="39">
       <IdentCon UId="24" />
       <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

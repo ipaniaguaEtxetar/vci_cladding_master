@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2025-06-20T10:18:10.7464243Z</Created>
+    <Created>2025-07-01T09:58:42.8982077Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -368,22 +368,26 @@
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
+        <Component Name="DB2031_CYCLES_GENERAL" />
+        <Component Name="RUN_OUT_UNIT_2" />
+        <Component Name="INITIAL_CONDITIONS" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
         <Component Name="DB2001_MODES_GENERAL" />
         <Component Name="MG1" />
         <Component Name="GENERAL" />
         <Component Name="SINGLE_SELECTED" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="26">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="27">
-      <Negated Name="operand" />
-    </Part>
     <Part Name="Contact" UId="28">
       <Negated Name="operand" />
     </Part>
@@ -393,27 +397,25 @@
     <Part Name="Contact" UId="30">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Not" UId="31" />
+    <Part Name="Contact" UId="31">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="Contact" UId="32">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Coil" UId="33" />
+    <Part Name="Not" UId="33" />
+    <Part Name="Contact" UId="34">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="35" />
   </Parts>
   <Wires>
-    <Wire UId="34">
-      <Powerrail />
-      <NameCon UId="27" Name="in" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="21" />
-      <NameCon UId="27" Name="operand" />
-    </Wire>
     <Wire UId="36">
-      <NameCon UId="27" Name="out" />
+      <Powerrail />
       <NameCon UId="28" Name="in" />
     </Wire>
     <Wire UId="37">
-      <IdentCon UId="22" />
+      <IdentCon UId="21" />
       <NameCon UId="28" Name="operand" />
     </Wire>
     <Wire UId="38">
@@ -421,7 +423,7 @@
       <NameCon UId="29" Name="in" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="23" />
+      <IdentCon UId="22" />
       <NameCon UId="29" Name="operand" />
     </Wire>
     <Wire UId="40">
@@ -429,7 +431,7 @@
       <NameCon UId="30" Name="in" />
     </Wire>
     <Wire UId="41">
-      <IdentCon UId="24" />
+      <IdentCon UId="23" />
       <NameCon UId="30" Name="operand" />
     </Wire>
     <Wire UId="42">
@@ -437,20 +439,36 @@
       <NameCon UId="31" Name="in" />
     </Wire>
     <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="44">
       <NameCon UId="31" Name="out" />
       <NameCon UId="32" Name="in" />
     </Wire>
-    <Wire UId="44">
+    <Wire UId="45">
       <IdentCon UId="25" />
       <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="45">
+    <Wire UId="46">
       <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
+    <Wire UId="47">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="48">
       <IdentCon UId="26" />
-      <NameCon UId="33" Name="operand" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="34" Name="out" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -562,7 +580,7 @@
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
@@ -577,7 +595,7 @@
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
@@ -733,7 +751,7 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS_HELP" />
       </Symbol>
     </Access>
@@ -978,7 +996,7 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="INITIAL_CONDITIONS_HELP" />
       </Symbol>
     </Access>
@@ -1481,41 +1499,40 @@
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_2" />
-        <Component Name="PART_TYPE_CHANGE_REQ" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
         <Component Name="DB2391_SAVE_ENERGY" />
         <Component Name="RUN_OUT_REQ" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB1701_KELLER_ASPIRATION_CONTROL" />
         <Component Name="RUNOUT_REQ_CLEAN_FILTER" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="26">
+    <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="M_DUMMY_OFF" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
         <Component Name="CALIBRATION_CYCLE" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB442_MACHINE_RUN_OUT_ALARM_DECODING" />
+        <Component Name="GLOBAL" />
+        <Component Name="ANY_RO_ACTIVE" />
+      </Symbol>
+    </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="MASTER_MEASUREMENT" />
-        <Component Name="CYCLE_SELECTED_AUX" />
+        <Component Name="CALIBRATION_CYCLE" />
+        <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -1528,14 +1545,14 @@
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -1556,7 +1573,7 @@
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -1597,7 +1614,7 @@
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -1608,9 +1625,11 @@
     <Part Name="Contact" UId="45" />
     <Part Name="Contact" UId="46" />
     <Part Name="Contact" UId="47" />
-    <Part Name="Contact" UId="48" />
+    <Part Name="Contact" UId="48">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="O" UId="49">
-      <TemplateValue Name="Card" Type="Cardinality">7</TemplateValue>
+      <TemplateValue Name="Card" Type="Cardinality">6</TemplateValue>
     </Part>
     <Part Name="Contact" UId="50" />
     <Part Name="Contact" UId="51" />
@@ -1660,9 +1679,8 @@
       <NameCon UId="42" Name="in" />
       <NameCon UId="43" Name="in" />
       <NameCon UId="44" Name="in" />
-      <NameCon UId="45" Name="in" />
+      <NameCon UId="46" Name="in" />
       <NameCon UId="47" Name="in" />
-      <NameCon UId="48" Name="in" />
       <NameCon UId="52" Name="in" />
     </Wire>
     <Wire UId="67">
@@ -1695,7 +1713,7 @@
     </Wire>
     <Wire UId="74">
       <NameCon UId="44" Name="out" />
-      <NameCon UId="49" Name="in4" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="75">
       <IdentCon UId="25" />
@@ -1703,7 +1721,7 @@
     </Wire>
     <Wire UId="76">
       <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="49" Name="in4" />
     </Wire>
     <Wire UId="77">
       <IdentCon UId="26" />
@@ -1719,7 +1737,7 @@
     </Wire>
     <Wire UId="80">
       <NameCon UId="47" Name="out" />
-      <NameCon UId="49" Name="in6" />
+      <NameCon UId="48" Name="in" />
     </Wire>
     <Wire UId="81">
       <IdentCon UId="28" />
@@ -1727,7 +1745,7 @@
     </Wire>
     <Wire UId="82">
       <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in7" />
+      <NameCon UId="49" Name="in6" />
     </Wire>
     <Wire UId="83">
       <NameCon UId="49" Name="out" />
@@ -1922,47 +1940,46 @@
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_1" />
+        <Component Name="FROM_ROBOT_TO_UNIT_2" />
         <Component Name="PART_TYPE_CHANGE_REQ" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DB7300_INTERLOCK_GENERAL" />
-        <Component Name="GENERAL_MACHINE" />
-        <Component Name="FROM_ROBOT_TO_UNIT_2" />
-        <Component Name="PART_TYPE_CHANGE_REQ" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
         <Component Name="DB2391_SAVE_ENERGY" />
         <Component Name="RUN_OUT_REQ" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB1701_KELLER_ASPIRATION_CONTROL" />
         <Component Name="RUNOUT_REQ_CLEAN_FILTER" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="26">
+    <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="M_DUMMY_OFF" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
         <Component Name="CALIBRATION_CYCLE" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB442_MACHINE_RUN_OUT_ALARM_DECODING" />
+        <Component Name="GLOBAL" />
+        <Component Name="ANY_RO_ACTIVE" />
+      </Symbol>
+    </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="MASTER_MEASUREMENT" />
-        <Component Name="CYCLE_SELECTED_AUX" />
+        <Component Name="CALIBRATION_CYCLE" />
+        <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
@@ -1975,14 +1992,14 @@
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -2003,7 +2020,7 @@
     <Access Scope="GlobalVariable" UId="34">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -2044,7 +2061,7 @@
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -2055,9 +2072,11 @@
     <Part Name="Contact" UId="45" />
     <Part Name="Contact" UId="46" />
     <Part Name="Contact" UId="47" />
-    <Part Name="Contact" UId="48" />
+    <Part Name="Contact" UId="48">
+      <Negated Name="operand" />
+    </Part>
     <Part Name="O" UId="49">
-      <TemplateValue Name="Card" Type="Cardinality">7</TemplateValue>
+      <TemplateValue Name="Card" Type="Cardinality">6</TemplateValue>
     </Part>
     <Part Name="Contact" UId="50" />
     <Part Name="Contact" UId="51" />
@@ -2107,9 +2126,8 @@
       <NameCon UId="42" Name="in" />
       <NameCon UId="43" Name="in" />
       <NameCon UId="44" Name="in" />
-      <NameCon UId="45" Name="in" />
+      <NameCon UId="46" Name="in" />
       <NameCon UId="47" Name="in" />
-      <NameCon UId="48" Name="in" />
       <NameCon UId="52" Name="in" />
     </Wire>
     <Wire UId="67">
@@ -2142,7 +2160,7 @@
     </Wire>
     <Wire UId="74">
       <NameCon UId="44" Name="out" />
-      <NameCon UId="49" Name="in4" />
+      <NameCon UId="45" Name="in" />
     </Wire>
     <Wire UId="75">
       <IdentCon UId="25" />
@@ -2150,7 +2168,7 @@
     </Wire>
     <Wire UId="76">
       <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="49" Name="in4" />
     </Wire>
     <Wire UId="77">
       <IdentCon UId="26" />
@@ -2166,7 +2184,7 @@
     </Wire>
     <Wire UId="80">
       <NameCon UId="47" Name="out" />
-      <NameCon UId="49" Name="in6" />
+      <NameCon UId="48" Name="in" />
     </Wire>
     <Wire UId="81">
       <IdentCon UId="28" />
@@ -2174,7 +2192,7 @@
     </Wire>
     <Wire UId="82">
       <NameCon UId="48" Name="out" />
-      <NameCon UId="49" Name="in7" />
+      <NameCon UId="49" Name="in6" />
     </Wire>
     <Wire UId="83">
       <NameCon UId="49" Name="out" />
@@ -2361,7 +2379,7 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -2376,7 +2394,7 @@
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
@@ -2488,7 +2506,7 @@
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -2523,14 +2541,14 @@
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="45">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -2890,7 +2908,7 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -2905,7 +2923,7 @@
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
@@ -3017,14 +3035,14 @@
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -3059,14 +3077,14 @@
     <Access Scope="GlobalVariable" UId="45">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="46">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -3436,7 +3454,7 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -3533,7 +3551,7 @@
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -3554,7 +3572,7 @@
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -3811,7 +3829,7 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
@@ -3908,7 +3926,7 @@
     <Access Scope="GlobalVariable" UId="33">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -3929,7 +3947,7 @@
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -4186,14 +4204,14 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -4536,32 +4554,18 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="MASTER_MEASUREMENT" />
+        <Component Name="CALIBRATION_CYCLE" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="MASTER_MEASUREMENT" />
+        <Component Name="CALIBRATION_CYCLE" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="CALIBRATION_CYCLE" />
-        <Component Name="CYCLE_SELECTED_AUX" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="CALIBRATION_CYCLE" />
-        <Component Name="CYCLE_SELECTED" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB7300_INTERLOCK_GENERAL" />
         <Component Name="GENERAL_MACHINE" />
@@ -4569,119 +4573,189 @@
         <Component Name="CELL_CALIBRATION_CYCLE_REQUIRED" />
       </Symbol>
     </Access>
-    <Access Scope="LocalConstant" UId="27">
-      <Constant Name="FC_NUMBER" />
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB442_MACHINE_RUN_OUT_ALARM_DECODING" />
+        <Component Name="GLOBAL" />
+        <Component Name="ANY_RO_ACTIVE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB2031_CYCLES_GENERAL" />
+        <Component Name="CALIBRATION_CYCLE" />
+        <Component Name="CYCLE_SELECTED" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB7330_ETXETAR_ROBOT_CELL_INTERLOCK" />
+        <Component Name="INTERLOCKS_UNIT_1" />
+        <Component Name="MACHINE_TO_ROBOT" />
+        <Component Name="MCH_MASTER_PART_PRSNT" />
+      </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB7330_ETXETAR_ROBOT_CELL_INTERLOCK" />
+        <Component Name="INTERLOCKS_UNIT_2" />
+        <Component Name="MACHINE_TO_ROBOT" />
+        <Component Name="MCH_MASTER_PART_PRSNT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="M_DUMMY_OFF" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="30">
+      <Constant Name="FC_NUMBER" />
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="GLOBAL_ALARMS_MACHINE" />
         <Component Name="ALARM_DECODING" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="32">
       <Symbol>
         <Component Name="DB440_MACHINE_ALARM_DECODING" />
         <Component Name="ALARMS_CENTRAL" />
         <Component Name="SEOC_WARNING" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="30">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Not" UId="31" />
-    <Part Name="Contact" UId="32">
-      <Negated Name="operand" />
-    </Part>
     <Part Name="Contact" UId="33">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="34">
-      <Negated Name="operand" />
-    </Part>
+    <Part Name="Not" UId="34" />
     <Part Name="Contact" UId="35">
       <Negated Name="operand" />
     </Part>
     <Part Name="Contact" UId="36">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Move" UId="37" DisabledENO="false">
+    <Part Name="Contact" UId="37">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39" />
+    <Part Name="Contact" UId="40">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="41">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="42" />
+    <Part Name="O" UId="43">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="44" DisabledENO="false">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
-    <Part Name="SCoil" UId="38" />
+    <Part Name="SCoil" UId="45" />
   </Parts>
   <Wires>
-    <Wire UId="39">
+    <Wire UId="46">
       <Powerrail />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="21" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="30" Name="out" />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="42">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="22" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="32" Name="out" />
       <NameCon UId="33" Name="in" />
+      <NameCon UId="38" Name="in" />
     </Wire>
-    <Wire UId="45">
-      <IdentCon UId="23" />
+    <Wire UId="47">
+      <IdentCon UId="21" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="46">
+    <Wire UId="48">
       <NameCon UId="33" Name="out" />
       <NameCon UId="34" Name="in" />
     </Wire>
-    <Wire UId="47">
-      <IdentCon UId="24" />
-      <NameCon UId="34" Name="operand" />
-    </Wire>
-    <Wire UId="48">
+    <Wire UId="49">
       <NameCon UId="34" Name="out" />
       <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="49">
-      <IdentCon UId="25" />
+    <Wire UId="50">
+      <IdentCon UId="22" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="50">
+    <Wire UId="51">
       <NameCon UId="35" Name="out" />
       <NameCon UId="36" Name="in" />
     </Wire>
-    <Wire UId="51">
-      <IdentCon UId="26" />
+    <Wire UId="52">
+      <IdentCon UId="23" />
       <NameCon UId="36" Name="operand" />
     </Wire>
-    <Wire UId="52">
-      <NameCon UId="36" Name="out" />
-      <NameCon UId="37" Name="en" />
-    </Wire>
     <Wire UId="53">
-      <IdentCon UId="27" />
+      <NameCon UId="36" Name="out" />
       <NameCon UId="37" Name="in" />
     </Wire>
     <Wire UId="54">
-      <NameCon UId="37" Name="eno" />
-      <NameCon UId="38" Name="in" />
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="operand" />
     </Wire>
     <Wire UId="55">
-      <NameCon UId="37" Name="out1" />
-      <IdentCon UId="28" />
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="43" Name="in1" />
     </Wire>
     <Wire UId="56">
-      <IdentCon UId="29" />
+      <IdentCon UId="25" />
       <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="26" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="27" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="28" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="29" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in2" />
+    </Wire>
+    <Wire UId="66">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="en" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="30" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <NameCon UId="44" Name="eno" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="44" Name="out1" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="32" />
+      <NameCon UId="45" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -4753,28 +4827,28 @@
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -5162,28 +5236,28 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="INITIAL_CONDITIONS_HELP" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="INITIAL_CONDITIONS" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="INITIAL_CONDITIONS_HELP" />
       </Symbol>
     </Access>
@@ -5337,7 +5411,7 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -5363,7 +5437,7 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
@@ -5535,21 +5609,21 @@
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_01" />
+        <Component Name="RUN_OUT_UNIT_1" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
@@ -5574,21 +5648,21 @@
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_COMPLETED" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="DB2031_CYCLES_GENERAL" />
-        <Component Name="RUN_OUT_UNIT_02" />
+        <Component Name="RUN_OUT_UNIT_2" />
         <Component Name="CYCLE_SELECTED_AUX" />
       </Symbol>
     </Access>
